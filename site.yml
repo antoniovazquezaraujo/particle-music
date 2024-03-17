@@ -1,6 +1,6 @@
 site:
   title: Antora Demo Site
-  start_page: particle-music::start
+  start_page: particle-music::index
 content:
   sources:
   - url: https://github.com/antoniovazquezaraujo/particle-music.git
