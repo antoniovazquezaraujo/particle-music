@@ -1,10 +1,10 @@
 site:
   title: Antora Demo Site
-  start_page: particle-music::index
+  start_page: particle-music::start
 content:
   sources:
   - url: https://github.com/antoniovazquezaraujo/particle-music.git
-    branches: master
+    branches: main
   - url: https://github.com/antoniovazquezaraujo/particle-music.git
     branches: [v2.0, v1.0]
     start_path: docs
@@ -12,3 +12,9 @@ ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+  supplemental_files:
+  - path: ui.yml
+    contents: |
+      static_files:
+      - .nojekyll
+  - path: .nojekyll
