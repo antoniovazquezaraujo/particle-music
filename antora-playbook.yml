@@ -1,11 +1,11 @@
 site:
-  title: Antora Demo Site
-  url: https://antoniovazquezaraujo.github.io/particle-music
-  start_page: particle-music::ROOT::index
+  title: Particle music
+  start_page: particle-music::index.adoc 
 content:
-  sources:
-  - url: ./
-    branches: HEAD
+  sources: 
+  - url: https://github.com/antoniovazquezaraujo/particle-music
+    branches: [v1.0.0]
+    start_path: docs
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
