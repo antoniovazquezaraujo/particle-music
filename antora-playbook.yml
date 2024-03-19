@@ -3,7 +3,7 @@ site:
   start_page: particle-music::index.adoc 
 content:
   sources: 
-  - url: https://gitlab.com/antora/demo/demo-component-b.git
+  - url: https://github.com/antoniovazquezaraujo/particle-music
     branches: [v1.0.0]
     start_path: docs
 ui:
