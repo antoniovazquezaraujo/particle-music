@@ -70,8 +70,8 @@ Uno se siente casi avergonzado de tener que recurrir a toda esta dieciochesca te
 image::triads.png[tríadas, estas son tríadas]
 
 El caso es que las tríadas, son la estructura musical más utilizada en la música. No ofrecen ninguna duda, son como los átomos con los que se forma el resto de la materia: son indivisibles ( no hay nada con una estructura más básica ) e incluso cuando no están, el cerebro acaba encontrándo su huella. Forman la base sobre la que se asienta la música. +
-Las tríadas mayores forman una estructura menor/mayor (menor sobre mayor)  +
-Las tríadas menores forman una estructura mayor/menor (mayor sobre menor) +
+Las tríadas mayores forman una estructura menor/mayor (menor sobre mayor) y   
+las menores una estructura mayor/menor (mayor sobre menor).
 El subconsciente toma estas estructuras como formas reales e intenta intrepretarlas. +
 Es muy fácil observar esto con cualquier instrumento. Escuchar un acorde mayor y el mismo menor y preguntarse por qué el acorde mayor sugiere alegría y el menor tristeza es la primera pregunta que debemos hacernos, y no aceptar respuestas “mágicas”. Durante años, he escuchado muchas respuestas a esta cuestión, la más torpe la que dice que los temas fúnebres siempre se han hecho con acordes menores y los temas festivos con acordes mayores. A esta clase de “respuestas” me refiero.  +
 Para mí está muy claro que se trata de una simple estructura de algo grande colocado encima de algo pequeño, o al revés. Cuando escucho el acorde puedo verlo claramente, y si miro a las figuras todavía más, incluso puedo escuchar los acordes simplemente mirándolas. En el mundo en que vivimos, una cosa grande sobre una pequeña es algo... injusto, no está bien, no es correcto, da la impresión de que se necesita actuar, acudir en su auxilio, resolver su problema, dejar las cosas en su equilibrio natural. No es algo necesariamente inestable, ese no es el problema, sino algo incorrecto, algo que nos hace sentir de alguna forma insatisfechos, tristes. +
@@ -95,10 +95,10 @@ El formato de una tríada, nos permite suponer en qué grado de la escala estamo
 
 == Tritono
 
-Un tritono está formado por dos notas a 3 tonos de distancia. Entre ambas, caben dos terceras menores. Sería algo así como una estructura _menor / menor_. No sirve para expresar el caracter de una tríada normal, es equívoco, puesto que se puede invertir y queda igual. El oyente intenta suponer que se va a convertir en una tríada normal. Eso, en música se llama _resolver_.  +
-Cuando estamos hablando y deseamos que la persona que nos está escuchando intente encontrar una solución... ¿Qué hacemos? ¿Colocamos el problema entre signos de interrogación y esperamos a que nos dé una respuesta? ¿Eh?. Se llaman preguntas, y las hacemos a diario.  +
-Pues en la música también existen las preguntas. Son acordes sin resolver, acordes que no forman una estructura mayor ni menor, y que deben desaparecer cuanto antes o el oyente sentirá que falta algo.  +
-En una escala donde dos notas alternas queden a 3 tonos de distancia, el acorde que se formará en ese grado sonará raro, sin resolver. Qué casualidad: en la escala mayor (la que conoce todo el mundo, la que forman las teclas blancas del piano, _do, re, mi, fa_...) hay un grado en que se forma un tritono: el grado 7, el de la nota _si_. Las notas alternas a partir de _si _son _re _y _fa_. Entre cada par hay tono y medio, así que en total son 3 tonos, es decir, dos terceras menores una sobre la otra. Nadie querrá terminar una canción con ese acorde. +
+Un _tritono_ está formado por dos notas a 3 tonos de distancia. Entre ambas, caben dos terceras menores. Sería algo así como una estructura _menor / menor_. No sirve para expresar el caracter de una tríada normal, es equívoco, puesto que se puede invertir y queda igual. El oyente intenta suponer que se va a convertir en una tríada normal. Eso, en música se llama _resolver_.  +
+Cuando estamos hablando y deseamos que la persona que nos está escuchando intente encontrar una solución... ¿Qué hacemos? ¿Colocamos el problema entre signos de interrogación y esperamos a que el oyente lo resuelva? ¿Eh?. Se llaman preguntas, y las hacemos a diario.  +
+Pues en la música también existen las preguntas. Son acordes sin resolver, acordes que no forman una estructura mayor ni menor, y que el oyente no podrá evitar intentar resolver en su cabeza antes de escuchar la siguiente nota, acordes que requieren participación por su parte, escucha activa.  +
+En una escala donde dos notas alternas queden a 3 tonos de distancia, el acorde que se formará en ese grado sonará como una pregunta que necesita contestación. No es casualidad que en la escala mayor (la que conoce todo el mundo, la que forman las teclas blancas del piano, _do, re, mi, fa_...) hay un grado en que se forma un tritono: el grado 7, el de la nota _si_. Las notas alternas a partir de _si_ son _re_ y _fa_. Entre cada par hay tono y medio, así que en total son 3 tonos, es decir, dos terceras menores una sobre la otra. Nadie querrá terminar una canción con ese acorde. +
 Ningúna actuación musical terminará nunca (al menos si queremos que el público empiece a aplaudir ) con un acorde sin resolver. El oyente espera a que le demos una solución. Unas milésimas de segundo antes, imagina cuál vamos a darle. Si acierta se sentirá satisfecho, si no se sorprenderá. Muchas preguntas le resultarán demasiado estimulantes y probablemente se sature. Ninguna pregunta hará que pierda el interés.
 
 == Repulsión del tritono
@@ -106,7 +106,7 @@ Ningúna actuación musical terminará nunca (al menos si queremos que el públi
 Un tritono suena repulsivo, dos terceras menores no representan nada apiladas.  +
 Tienta al oyente a adivinar en qué se resolverá, le hace participar, le hace arriesgarse y posibilita engañarle y sorprenderle resolviéndolo de manera inesperada.  +
 Invade su tranquilidad, requiriendo de él una escucha activa y arriesgada. Le condena a equivocarse sin poder evitarlo. Es como el “_nada por aqui... nada por allá_...” de los magos. +
-En la edad media, a ese sonido se le llamaba "_Diabolus in musicae_". Solo el nombre ya denota el caracter molesto e incluso peligroso que puede llegar a tener, sobre todo si eres un estado medieval y utilizas la música para mantener adormecida a la masa. Prohibir el tritono es como cuando en el cine el poli malo dice “Aquí soy yo el que hace las preguntas!”.
+En la edad media, a ese sonido se le llamaba "_Diabolus in musicae_" y parece que representaba algún tipo de desafío para el poder. Solo el nombre ya denota el caracter molesto e incluso peligroso que puede llegar a tener, sobre todo si eres un estado medieval y utilizas la música para mantener adormecida a la masa. Prohibir el tritono es como cuando en el cine el poli malo dice “Aquí soy yo el que hace las preguntas!”.
 
 == Distancia al tritono
 
@@ -140,10 +140,16 @@ Eliminando el concepto de _modo_ de una escala, estas son las escalas que se usa
 |TONES |Escala por _tonos_
 |===
 
-En la notación creada se representan los grados de la escala como números. Se ha de prestar atención a que el primer grado de la escala no es, como en la notación tradicional, el grado más lejano al tritono (en la escala diatónica sería el DO), sino el grado que, como muestran las figuras, ocupa el centro de la estructura (en la escala diatónica sería el RE). Partiendo de la nota inicial y girando en sentido agujas del reloj se sube de tono hasta que se vuelve al tono inicial, es decir, se sube una octava. Téngase en cuenta que en la escala BLACK, la simetría no se basa en las notas, sino en el espacio entre ellas, y no hay una nota central, sino un espacio entre notas central. La sensación de simetría que percibe el oyente es idéntica y la notación así lo refleja. +
+En la notación creada se representan los grados de la escala como números. Se ha de prestar atención a que el primer grado de la escala no es, como en la notación tradicional, el grado más lejano al tritono (en la escala diatónica sería el DO), sino el grado que, como muestran las figuras, ocupa el centro de la estructura (en la escala diatónica sería el RE). Partiendo de la nota inicial y girando en sentido agujas del reloj se sube de tono hasta que se vuelve al tono inicial, es decir, se sube una octava.
+
+ 
+.Las doce notas en nuestra notación 
+image::scale-grades.svg[100,100]
+
+Téngase en cuenta que en la escala BLACK, la simetría no se basa en las notas, sino en el espacio entre ellas, y no hay una nota central, sino un espacio entre notas central. La sensación de simetría que percibe el oyente es idéntica y la notación así lo refleja. +
 Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se puede observar la simetría de todas las escalas. Si se compara con la notación tradicional, donde no se aprecia simetría alguna, se notará una increible mejoría en las posibilidades que ofrece para su análisis, estudio y asimilación.
 
-.The six scales
+.Las seis escalas
 image::scales.png[]
 
 == Nombres de las notas
@@ -151,19 +157,13 @@ image::scales.png[]
 Representaremos las notas de la escala mediante la notación americana, es decir, usando las letras desde la A hasta la G, pero con una pequeña modificación: no hay _sostenidos_.
 
 |===
-|A|A♯|B|C|C♯|D|D♯|E|F|F♯|G|G♯
+|A|A♯/B♭|B|C|C♯/D♭|D|D♯/E♭|E|F|F♯/G♭|G|G♯/A♭
 
 |A|b|B|C|d|D|e|E|F|g|G|a
 |===
 
 En la notación estandar, cuando se quiere subir una nota un semitono se le pone el signo de sostenido (♯) y cuando se desea bajarla un semitono, se le agrega un bemol (♭), así que DO♯ es en realidad la misma nota que RE♭. +
-En nuestra notación, para indicar bemoles usamos la misma letra pero en minúscula. Así que en una misma escala se puede encontrar una nota natural y también la misma nota bemol. Por ejemplo: +
-
-----
-    A = LA 
-    B = SI 
-    b = SI bemol 
-----
+En nuestra notación, para indicar bemoles usamos la misma letra pero en minúscula. Así que en una misma escala se puede encontrar una nota natural y también la misma nota bemol. Por ejemplo, la nota `b` equivale tanto a `LA♯` como a `SI♭`: +
 
 Esta sería la representación de la escala `BLUE` de `LA`, es decir de `A`. Observamos que aparece el `RE bemol (d)` y luego el `RE natural (D)`. 
 
@@ -172,7 +172,7 @@ image::blue-scale-of-a.png[]
 
 == Tríadas de PENTA
 
-La escala `PENTA` tiene tríadas como las demás. Si se toman como en la notación estandar, parece que en lugar de terceras, están formadas por cuartas, así que se habla de _acordes por cuartas_, o _armonía cuartal_. Es totalmente absurdo. Lo que ocurre es que en esa escala no hay esas notas. Solo son las terceras de esa escala. No hay por que hacer excepciones. La diferencia con las tríadas de una escala que contenga tritonos es que estas no llevan a ninguna parte, funcionan todas igual de bien. Son todas igual de estables y no hay que alejarse de ningún punto. 
+La escala `PENTA` tiene tríadas como las demás. Si se toman como en la notación estandar, parece que en lugar de terceras, están formadas por cuartas, así que se habla de _acordes por cuartas_, o _armonía cuartal_. Es innecesario. Lo que ocurre es que en esa escala no hay esas notas. Solo son las terceras de esa escala. No hay por que hacer excepciones. La diferencia con las tríadas de una escala que contenga tritonos es que estas no llevan a ninguna parte, funcionan todas igual de bien. Son todas igual de estables y no hay que alejarse de ningún punto. 
 
 == Tríadas no orientativas
 
@@ -274,7 +274,7 @@ image::more-scales.png[]
 
 == Orden de tríadas por distancias a los tritonos
 
-En estás dos escalas `BLUE` y `WHITE` se aprecian los tritonos sombreados. La primera tiene uno: `B-F`, y la segunda tiene dos: `A-e` y `B-F`. Para modular entre una y otra basta con cambiar la nota `E` por `e` (`Mi` por `Mi bemol`). El centro simétrico era la nota `D` en `WHITE` y ahora pasa a ser `G` en `BLUE`. Veamos todas las tríadas de la escala y la distancia que guardan con el siguiente tritono, es decir, la cantidad de terceras que habría que agregarle para que contuviese un tritono. Anotaremos también si la tríada incluye ya alguna nota perteneciente a algún tritono. La distancia que percibe el oyente debería calcularse mediante alguna fórmula que tenga en cuenta ambos parámetros. De momento no sabemos qué fórmula será esa. 
+En estás dos escalas `WHITE` y `BLUE` se aprecian los tritonos sombreados. La primera tiene uno: `B-F`, y la segunda tiene dos: `A-e` y `B-F`. Para modular entre una y otra basta con cambiar la nota `E` por `e` (`Mi` por `Mi bemol`). El centro simétrico era la nota `D` en `WHITE` y ahora pasa a ser `G` en `BLUE`. Veamos todas las tríadas de la escala y la distancia que guardan con el siguiente tritono, es decir, la cantidad de terceras que habría que agregarle para que contuviese un tritono. Anotaremos también si la tríada incluye ya alguna nota perteneciente a algún tritono. La distancia que percibe el oyente debería calcularse mediante alguna fórmula que tenga en cuenta ambos parámetros. De momento no sabemos qué fórmula será esa. 
 
 === Escala `WHITE`
 .Escala white
@@ -362,8 +362,14 @@ image::white-d-to-blue-d.png[]
 image::white-d-to-red-e.png[]
 
 En más resumen todavía: resulta que cambiando `E` por `e`, estamos cambiando el caracter de la tríada `CEG`, de mayor a menor. Estamos cambiando sigilosamente entre alegría y tristeza. Estamos _jugando_. +
-Posiblemente estemos mostrando disimuladamente la cruel dualidad de nuestro mundo, la diferencia entre oprimidos y poderosos, entre justicia e injusticia, entre opresión y libertad, entre triunfo y fracaso, entre vida y muerte... Probablemente estemos usando la música para dar una bofetada en la cara al cruel occidente y a sus estiradas reglas. Quizá estemos cantando una vitalizadora mezcla de humilde y resignado lamento y de alegría de vivir. Quizá descendamos de un pueblo oprimido, traido de otro continente y nuestros antepasados fuesen vendidos como esclavos.  +
-_Estamos tocando jazz?_
+
+== El espiritu del jazz
+Posiblemente, mezclando tristeza y alegría de forma tan directa estemos poniendo en evidencia la cruel dualidad de nuestro mundo, la diferencia entre oprimidos y poderosos, entre justicia e injusticia, entre opresión y libertad, entre triunfo y fracaso, entre vida y muerte... +
+Probablemente estemos usando la música para dar una bofetada en la cara al cruel occidente y a sus estiradas reglas. Quizá estemos cantando una vitalizadora mezcla de humilde y resignado lamento y de alegría de vivir. Quizá descendamos de un pueblo oprimido, traido de otro continente y nuestros antepasados fuesen vendidos como esclavos.  +
+_Probablemente estamos tocando jazz_. +
+Esa actitud (tan "_jazzera_") de juguetear de forma descarada y hasta desafiante, cambiando constantemente entre algo que representa la tristeza y la alegría, la justicia y la injusticia, el sufrimiento y el goce es el sello propio de toda la música de jazz (y de su madre, la de blues). +
+En el jazz no se expresa la tristeza con un lamento pesimista y abatido, con una intensa y pomposa armonización y con coros quejumbrosos que subrayan la tragedia. No se hace lo que harían Mahler o Chopin, nada de eso. Se mira la vida desde otro punto de vista: se pasea por la barandilla con total tranquilidad, se sienta uno con los pies colgando al vacío y se silba la melodía, se juega con el caracter de los acordes, se engaña al oyente, se le torea, se le incita, se le excita, se cambia la sombra mortal de la imposición oficial, de las reglas formales y del sometimiento al poder por valientes, inesperadas y revolucionarias _preguntas_, reforzando la idea de que no hay respuestas, de que no hay soluciones, de que da igual lo que hagas, que nunca cambiará nuestro destino. +
+La música de jazz no solamente requiere una escucha activa (y cierta cantidad de horas de práctica) para entender el lenguaje: también requiere entender _esa_ actitud y apreciarla. Requiere aprender a darle valor a esa informalidad natural, a esa humanidad real y cercana que no necesita ningún tipo de adornos, orquestaciones ni obligaciones. Porque se basa precísamente en eso: _el juego_, en apostar a cada nota, en jugarse la vida en cada _beat_, en expresar lo que tu alma construye en el momento, sin que tú conciencia intervenga. Por eso, la parte fundamental en la música de jazz es la _improvisación_. 
 
 Otro ejemplo de modulación muy utilizado, entre `WHITE` de `D` y `RED` de `E`. Simplemente agregamos un tritono pero la orientación sigue manteniéndose. Aquí las dos tríada más lejanas a un tritono pasan a ser `EaB` y `FAC`, puesto que `CEG` pasa a ser `CEa` (dos terceras mayores apiladas). +
 Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos no se cansan nunca de esos dos acordes, `EaB` y `FAC`. Ahora lo veo claro, son los dos más estables de la escala, y de los pocos que tienen una tercera. Puedes estar pasando de uno a otro constantemente sin ver la posibilidad de salir de ahí, a no ser que vuelvas a la escala `WHITE`, haciéndo desaparecer el amenazante tritono entre `A` y `e`. Basta con saltar a la tríada `ACE`, lo cual hacen la mayor parte de las veces, para luego volver a `GBD`, a `FAC` y de nuevo a `EaB`. Olé!
