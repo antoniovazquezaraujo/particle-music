@@ -67,7 +67,7 @@ Uno se siente casi avergonzado de tener que recurrir a toda esta dieciochesca te
 == Estructura mayor/menor y su significado
 
 .Esquema geométrico de las tríadas 
-image::../images/triads.png[tríadas, estas son tríadas]
+image::triads.png[tríadas, estas son tríadas]
 
 El caso es que las tríadas, son la estructura musical más utilizada en la música. No ofrecen ninguna duda, son como los átomos con los que se forma el resto de la materia: son indivisibles ( no hay nada con una estructura más básica ) e incluso cuando no están, el cerebro acaba encontrándo su huella. Forman la base sobre la que se asienta la música. +
 Las tríadas mayores forman una estructura menor/mayor (menor sobre mayor)  +
@@ -144,7 +144,7 @@ En la notación creada se representan los grados de la escala como números. Se 
 Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se puede observar la simetría de todas las escalas. Si se compara con la notación tradicional, donde no se aprecia simetría alguna, se notará una increible mejoría en las posibilidades que ofrece para su análisis, estudio y asimilación.
 
 .The six scales
-image::../images/scales.png[]
+image::scales.png[]
 
 == Nombres de las notas
 
@@ -168,7 +168,7 @@ En nuestra notación, para indicar bemoles usamos la misma letra pero en minúsc
 Esta sería la representación de la escala `BLUE` de `LA`, es decir de `A`. Observamos que aparece el `RE bemol (d)` y luego el `RE natural (D)`. 
 
 .La escala BLUE de A
-image::../images/blue-scale-of-a.png[]
+image::blue-scale-of-a.png[]
 
 == Tríadas de PENTA
 
@@ -190,7 +190,7 @@ Será mejor que dejemos de hablar de colores.
 Al representar los tritonos se observa que también ocupan su lugar perfectamente simétrico. Se hará mediante una flecha que los una. Veamos la representación de todas las escalas con sus tritonos.
 
 .Escalas y sus tritonos
-image::../images/scales-and-tritones.png[]
+image::scales-and-tritones.png[]
 
 Como se puede observar, la escala `WHITE` (escala mayor diatónica, la más usada en música clásica) solamente tiene un tritono.  +
 La escala `BLUE` (recordemos, en terminología estandar, _menor melódica_) es, con mucho, la más utilizada en el jazz. Tiene dos tritonos y eso permite una mayor capacidad para el engaño y la sorpresa, variando casi imperceptiblemente entre la sensaciones mayor/menor y menor/mayor. +
@@ -213,7 +213,7 @@ Llamaremos _centro tonal_ a la nota central de la escala. En todas, es la nota q
 Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, que podría ser una tercera mayor o también una tercera menor. Esto amplia mucho las posibilidades de engaño y de sorpresa, y es de gran ayuda para la _modulación_ que consiste en cambiar de tonalidad, es decir, seleccionar otra escala.
 
 .Escalas con terceras ambiguas
-image::../images/scales-and-thirds.png[]
+image::scales-and-thirds.png[]
 
 En este esquema observamos (marcados en tono oscuro) los grados que forman una tercera que puede ser mayor y también menor. 
 
@@ -231,7 +231,7 @@ La sensación de ambigüedad entre el caracter mayor/menor de una tríada produc
 Si todos los grados de la escala tienen una tercera, mayor o menor, consideraremos que, al menos en ese aspecto, está completa. Podemos observar que, en la escala `RED` hay un grado que no tiene ninguna clase de tercera: el séptimo, así como en la escala `PENTA` faltan dos terceras, en el primer y en el tercer grado.
 
 .Escalas con grados sin tercera
-image::../images/scales-without-thirds.png[]
+image::scales-without-thirds.png[]
 
 == Distancias a tritonos
 
@@ -239,13 +239,13 @@ Si en una escala hay tritonos, cada tríada estará a una distancia de ellos. La
 Resulta que en notación estandar, a estas tríadas se les llaman _grado fundamental_ y _relativo menor_. A parte de la estrafalaria nomenclatura, son los grados que se utilizan para empezar y terminar la mayoría de los temas. Simplemente sugieren descanso y estabilidad, aunque uno es mayor y otro menor, así que además tienen su propio caracter. Si se termina en un acorde cercano al tritono, probablemente nadie aplaudirá: hay tensión sin resolver, preguntas sin contestar. 
 
 .Escala WHITE con sus tríadas
-image::../images/white-scale-and-triads.png[]
+image::white-scale-and-triads.png[]
 
 En esta otra figura observamos la escala `BLUE`, con sus dos tritonos y las tríadas correspondientes. Vemos que no hay una tríada que quede suficientemente alejada de un tritono, cuando nos alejamos de uno nos acercamos al otro. Se puede ver que las tríadas más “a salvo” parecen ser `CeG`, que necesitaría agregar `B`, `D` y `F` para contener un tritono, también `DFA` que necesitaría agregar `C` y `e` para lo mismo y `eGB` que necesitaría `D` y `F`. +
 No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la impresión de que todavía necesitamos salir de ahí como sea. En la terminología estandar se habla de _tensión_. Es un término adecuado si lo entendemos como _pregunta sin responder_. En ningún caso debemos pensar en algo desagradable o repelente, solo es música.
 
 .Escala BLUE con sus tríadas
-image::../images/blue-scale-and-triads.png[]
+image::blue-scale-and-triads.png[]
 
 == No hay más escalas?
 
@@ -259,7 +259,7 @@ Buscar más es un interesante ejercicio. Sería fantástico encontrar alguna, pe
 Cualquier combinación que se encuentre será simplemente una ordenación diferente de alguna de las seis presentadas ( lo que sería un modo, recordemos ). Si se hace girar en el esquema se llegará a ella. Vamos a intentar algunas:
 
 .Otras posibles escalas
-image::../images/more-scales.png[]
+image::more-scales.png[]
 
 |===
 |Escala|Terceras ambiguas|Sin tercera|Tritonos|
@@ -278,7 +278,7 @@ En estás dos escalas `BLUE` y `WHITE` se aprecian los tritonos sombreados. La p
 
 === Escala `WHITE`
 .Escala white
-image::../images/white-scale.png[]
+image::white-scale.png[]
 |===
 |TRÍADA|Distancia a un tritono|Contiene
 
@@ -293,7 +293,7 @@ image::../images/white-scale.png[]
 
 === Escala `BLUE`
 .Escala blue
-image::../images/blue-scale.png[]
+image::blue-scale.png[]
 |===
 |TRÍADA|Distancia a un tritono|Contiene
 
@@ -354,12 +354,12 @@ En el ejemplo, con una notación circular, más práctica para el análisis de l
 En resumen: hemos cambiado la nota `E` por `e`, pero el centro tritonal no se ha movido ni un palmo, simplemente ha aparecido uno nuevo entre `A` y `e`. En el mapa imaginario había una elevación en el terreno, que formaba una pendiente a su alrededor. Ahora hay dos. Pero en algunos puntos, la pendiente sigue siendo idéntica, y en la misma dirección. Esa es la _sencilla_ razón de que algunas modulaciones sean más cercanas o agradables al oído que otras. 
 
 .Desde WHITE D a BLUE G
-image::../images/white-d-to-blue-g.png[]
+image::white-d-to-blue-g.png[]
 
 .Desde WHITE D a BLUE D
-image::../images/white-d-to-blue-d.png[]
+image::white-d-to-blue-d.png[]
 .Desde WHITE D a RED E
-image::../images/white-d-to-red-e.png[]
+image::white-d-to-red-e.png[]
 
 En más resumen todavía: resulta que cambiando `E` por `e`, estamos cambiando el caracter de la tríada `CEG`, de mayor a menor. Estamos cambiando sigilosamente entre alegría y tristeza. Estamos _jugando_. +
 Posiblemente estemos mostrando disimuladamente la cruel dualidad de nuestro mundo, la diferencia entre oprimidos y poderosos, entre justicia e injusticia, entre opresión y libertad, entre triunfo y fracaso, entre vida y muerte... Probablemente estemos usando la música para dar una bofetada en la cara al cruel occidente y a sus estiradas reglas. Quizá estemos cantando una vitalizadora mezcla de humilde y resignado lamento y de alegría de vivir. Quizá descendamos de un pueblo oprimido, traido de otro continente y nuestros antepasados fuesen vendidos como esclavos.  +
@@ -369,7 +369,7 @@ Otro ejemplo de modulación muy utilizado, entre `WHITE` de `D` y `RED` de `E`. 
 Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos no se cansan nunca de esos dos acordes, `EaB` y `FAC`. Ahora lo veo claro, son los dos más estables de la escala, y de los pocos que tienen una tercera. Puedes estar pasando de uno a otro constantemente sin ver la posibilidad de salir de ahí, a no ser que vuelvas a la escala `WHITE`, haciéndo desaparecer el amenazante tritono entre `A` y `e`. Basta con saltar a la tríada `ACE`, lo cual hacen la mayor parte de las veces, para luego volver a `GBD`, a `FAC` y de nuevo a `EaB`. Olé!
 
 .De WHITE D a RED E y su rotación
-image::../images/white-de-to-red-e-rotation.png[]
+image::white-de-to-red-e-rotation.png[]
 
 == Nombres para las tríadas
 
@@ -431,10 +431,10 @@ En cada escala, los tipos de tríada dependen lógicamente de la estructura de l
 Intentemos buscar, una vez más, un poco de simetría
 
 .Tríadas simétricas en vertical
-image::../images/vertical-triad-symmetry.png[]
+image::vertical-triad-symmetry.png[]
 
 .Tríadas simétricas en horizontal
-image::../images/horizontal-triad-symmetry.png[]
+image::horizontal-triad-symmetry.png[]
 
 
 No parece muy importante que cada tríada tenga una simétrica. Pero es así. Hay pares de grados simétricos, igual que pares de notas, obviamente. Aunque son simétricas al revés, puesto que una tiene la misma estructura ascendente que su simétrica descendente. Bueno, en realidad eso es exactamente lo que significa “simétrico”. Si no serían iguales. Quizá más adelante encontremos alguna utilidad a esto.
@@ -465,7 +465,7 @@ Como dijimos, el centro tonal de una escala lo marca la nota que queda a la mism
 Veámoslo en una tabla.
 
 .Pilas de notas
-image::../images/piles-of-notes.png[]
+image::piles-of-notes.png[]
 
 Cuando tenemos simplemente una nota, observamos que, en la escala `WHITE`, el centro es la nota `D`. Dijimos que marcaba el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo. +
 Cuando apilamos dos notas alternas, los pares que se forman pueden ser de 3 o de 4 semitonos. Si nos fijamos en el esquema, el centro simétrico ahora pasa a ser la nota `C`. Hemos bajado un tono. +
@@ -477,7 +477,7 @@ Desde luego, no es el centro tonal de la escala. Sea cual sea la cantidad de not
 Recordemos de qué manera medíamos la distancia al tritono de un grupo de notas. Considerábamos la cantidad de notas que hay que agregar al grupo para que contenga un tritono. Suponemos que el oyente hace esto de manera automática. Es como si completase las notas que faltan y notase que está cerca de escuchar un tritono. Nos quedamos en que debería haber alguna fórmula para calcular correctamente la distancia al tritono que se percibe y que probablemente, el hecho de que en el grupo de notas ya estuviese presente una nota perteneciente al tritono, aumentaría esa percepción.
 
 .Partículas básicas
-image::../images/basic-particles.png[]
+image::basic-particles.png[]
 
 Si estuviésemos hablando de una materia formada por partículas, estas serían las combinaciones básicas. En primer lugar tenemos la tercera mayor y luego la tercera menor. Esas serían las partículas atómicas. Apilándolas obtendríamos los “ladrillos” básicos: la tríada mayor, la tríada menor y la tríada disminuida, recordemos, resumiendo mucho: justicia, injusticia y pregunta sin contestar, respectivamente. Con partículas de este tipo, ya podríamos construir el 90 % de la materia universal. Para materia más compleja, usamos pilas de cuatro notas, es decir, una de las pilas anteriores con una nota más encima. Esta combinación comparte la partícula central, así que tenemos por ejemplo una tríada mayor sobre una tríada menor.  +
 Con partículas de cuatro notas tenemos una pila de dos elementos básicos, que no comparten notas. +
@@ -489,7 +489,7 @@ Podríamos concluir que en los niveles iniciales, lo que prima es la estructura 
 Analicémos entonces el significado correspondiente a cada partícula base.
 
 .Significado de las partículas
-image::../images/particle-meaning.png[]
+image::particle-meaning.png[]
 
 Las dos últimas son especialmente interesantes y ambas estan presentes especialmente en la música moderna. La pila `434` recibe en notación estandar el nombre de _acorde mayor con séptima mayor_ y produce una sensación de cierto relax obscuro e indolente, muy apto para baladas románticas, perezosas y sensuales. Si el elemento central de la tríada fuese una persona sería un ser debil que se se apoya sobre uno fuerte pero a su vez siente encima el peso de otro. Un ser debil que siente la contradicción de la _doble moral_, por una parte debería quejarse debido al peso que le oprime, pero por otra disfruta de la solidaridad y el soporte que recibe. Así que permanece en silencio, aceptando su destino y añorando que su situación cambie. En cuanto a la pila `343`, en estandar es un acorde _menor con séptima_. En este caso, el elemento central del esquema sería un ser fuerte, que soporta a un ser debil encima, pero que también está apoyado sobre otro debil. Cómo puede sentirse? Si el de la tríada anterior ocultaba su queja por la doble moral, este debe ocultar su alegría, puesto que no está sufriendo, ya que soporta a un ser más debil que él. Puede que se sienta culpable por oprimir a un debil pero diríamos que está en paz consigo mismo, puesto que ya está pagando su deuda. “Sé que otros sufren por mi culpa, pero ya contribuyo con mis buenas obras, así que olvidemos la injusticia y disfrutemos de la vida”. Esto sugiere civilización, sociedad, avance, optimismo. Un ermitaño que vive en el desierto nunca sentirá esa sensación, su vida diaria no contiene ventajas a costa de que otros sufran, simplemente no hay otros. Si vives en una sociedad moderna, todo funciona gracias a que los servicios que utilizas los pagas con tu trabajo. Otros trabajan para que tú estés cómodo, pero tú también trabajas para que otros lo estén. Así funciona, es la base de la sociedad de consumo. Estos acordes se utilizan profusamente en la música pop, en el jazz, la bossa nova, en el rock, y en general en toda la música moderna. Son poco comunes en música tradicional, incluso en música clásica: parece que suenan demasiado “modernos”. 
 
@@ -497,17 +497,17 @@ Las dos últimas son especialmente interesantes y ambas estan presentes especial
 == Nombres para las partículas
 
 .Nombres para las partículas
-image::../images/basic-particle-names.png[]
+image::basic-particle-names.png[]
 
 Asignaremos nombres básicos a nuestras partículas básicas, para pensar de forma un poco más cómoda. Si llamamos a la tríada disminuida (la del *t*ritono) `T`, a la tríada m*a*yor `A` y a la tríada m*e*nor `E`, entonces, las pilas de cuatro notas se llamarán `TE, AT, AE` y `EA`. Parece útil y resulta fácil deducir el nombre a partir del dibujo o de las notas, solo memorizando tres letras. Veamos entonces las pilas de cinco notas y sus posibles nombres:
 
 .Agregar un guión en el nombre
-image::../images/more-particle-names.png[]
+image::more-particle-names.png[]
 
 Como vemos, llamarle a las pilas de tres notas con las dos letras, aún cuando el elemento central se comparte en ambas, nos ha costado tener que agregar un guión en medio (-) para indicar que un elemento completo está encima del otro. Por ejemplo, la pila `AE` contiene dos pilas de tres notas pero comparten las dos notas centrales, así que en total son cuatro notas, pero en la pila `A-E` hay dos pilas una encima de otra y comparten la nota que queda en medio, así que en lugar de 6 nos quedan 5 notas. Vale la pena. Veamos las de seis y siete notas:
 
 .Pilas WHITE
-image::../images/white-piles.png[]
+image::white-piles.png[]
 
 No parece muy fácil de pronunciar. Pero, al menos, es una nomenclatura uniforme y simple: puede deducirse a partir de las pilas de notas. +
 
@@ -518,13 +518,13 @@ Tenemos pues un sencillo catálogo de pilas de notas, con sus nombres. Los signi
 De momento hemos hecho todo esto con la escala `WHITE`. Vamos a intentar lo mismo con `BLUE`.
 
 .Pilas BLUE
-image::../images/blue-piles-by-notes.png[]
+image::blue-piles-by-notes.png[]
 
 Observamos, por supuesto, la misma simetría y el mismo descenso por grados con cada nueva nota. Sin embargo, aparece una nueva partícula con la que no habíamos contado aún: la tríada `44`. Tendrá que formar parte de nuestro vocabulario. La sensación que produce esta tríada tiene que ver con la orientación. Se trata de dos terceras mayores, no se sabe cuál es la base porque podría ser cualquiera, al estar a distancia de 4 semitonos, apilando 3 de ellas llegamos a la octava, es decir, se termina la escala. Esto es lo mismo que le ocurre a la escala `TONES`, no tiene orientación. El oyente siente la presencia de tritonos por todas partes, no hay ningún lugar seguro, no se puede huir en ninguna dirección. Da lo mismo en qué grado de la escala estemos, la sensación persiste: amenaza constante y ninguna posibilidad de escape. La diferencia con `PENTA`, donde no hay ningún tritono es apreciable, aunque allí sí hay una orientación: se sabe en qué grado de la escala estamos, pero no hay necesidad de huir de ningún punto. La tríada `44` crea una sensación de perplejidad y de amenaza irremisible. +
 Este sería nuestro nuevo diccionario de partículas básicas:
 
 .Nuevo diccionario de partículas básicas
-image::../images/advanced-pile-meaning.png[]
+image::advanced-pile-meaning.png[]
 
 Al agregar todas las combinaciones únicas que aparecen en `BLUE`, nuestro vocabulario se amplía:
 
@@ -532,25 +532,25 @@ Al agregar todas las combinaciones únicas que aparecen en `BLUE`, nuestro vocab
 Hagamos lo mismo con `RED`, usando `E` como centro tonal.
 
 .Pilas RED
-image::../images/red-piles.png[]
+image::red-piles.png[]
 
 Nuevas partículas! Hemos hallado un nuevo intervalo de 2 semitonos, así que aparecen dos nuevas tríadas: `24` y `42`. Las hemos representado con fondo negro. La simetría sigue siendo perfecta. Cuál será el significado de estas tríadas? +
 Vamos a crear la tabla
 
 .Pilas RED con nombres
-image::../images/red-piles-with-names.png[]
+image::red-piles-with-names.png[]
 
 Bien, hemos de considerar la dificultad intrínseca de cada escala como parte del problema. Digamos que el oyente se sentirá mejor en una escala con pocos tritonos y pocos grados equívocos. Si cada escala tiene algun sonido concreto que la caracteriza, el hecho de presentar al oyente ese sonido hará que se crea que estamos en esa escala. Recordemos que la tríada `44` aparecía en `BLUE` y no en `WHITE`, de manera que actúa como una especie de _aroma inconfundible. _Por contra, las pilas `24` y `42` hacen su aparición en `RED`. Tampoco parecen tener un significado especial, más que representar a su escala. +
 Las 6 escalas forman un simple esquema donde se expresan tres conceptos básicos: _claridad, oscuridad y desorientación_. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala `WHITE` la escala central, la más equilibrada y completa. A partir de ella, eliminando tritonos vamos a parar a `PENTA`, agregándolos podemos llegar a `BLUE`, que es un poco desconcertante pero no tanto como `TONES`, o bién a `RED`, que es un poco más oscura, pero no tanto como `BLACK`.
 
 .Sensación de las escalas
-image::../images/scale-sensation-circle.png[]
+image::scale-sensation-circle.png[]
 
 En resumen: las nuevas tríadas de nuestro vocabulario no tienen un significado específico, simplemente sirven como señales que indican en qué escala estamos (sea cierto o no) con lo que se creará una sensación claridad, obscuridad o desorientación. +
 Este es nuestro vocabulario, de momento:
 
 .Nuevo diccionario de partículas con una más
-image::../images/advanced-pile-meaning-with-new-particle.png[]
+image::advanced-pile-meaning-with-new-particle.png[]
 
 Ahora deberíamos preguntarnos lo siguiente: +
 Si un bloque 4 sobre uno 3 significa “injusticia”, ¿por qué no ocurre lo mismo con un bloque 4 sobre uno 2 ? +
@@ -559,7 +559,7 @@ Con un bloque `24`, la sensación de justicia o injusticia desaparece inmediatam
 Continuemos con `BLACK` y `TONES`
 
 .Tritonos en BLACK y en TONES
-image::../images/tritones-in-black-and-tones.png[]
+image::tritones-in-black-and-tones.png[]
 
 Hay un ligero inconveniente: una tiene 8 notas y la otra 6. Si las apilamos en notas alternas solo alcanzaremos la mitad de ellas. Se crean dos subconjuntos diferentes. Además de eso, cada nota forma parte de un tritono. Está claro que no son escalas muy útiles para armonizar, son una especie de pozos sin fondo o callejones sin salida. Volveremos sobre ellas más adelante.
 
@@ -571,16 +571,16 @@ En realidad, mientras para la desorientación solo hace falta la pila `44`, para
 Parece lógico que si son dos, se repartan de alguna manera el efecto. En el caso de la `24` el oyente se guía más por la tercera mayor y llega a pensar que está oyendo una pila que comienza en la segunda nota, así que cree que es un acorde de cuatro notas donde falta una. Cree que hemos olvidado apilar algunas notas, mientras que en la `42` cree que hemos decidido apilar las notas sin alternar. Son dos caminos diferentes para ser optimista y evitar pensar en lo peor: que hemos caido en la terrible escala `BLACK`, la oscuridad total.
 
 .Mapa de pilas
-image::../images/pile-map.png[]
+image::pile-map.png[]
 
 .Equivalencias estandar de las pilas
-image::../images/standard-names-of-piles.png[]
+image::standard-names-of-piles.png[]
 
 .Pilas y nombres estandar
-image::../images/piles-and-standard-names.png[]
+image::piles-and-standard-names.png[]
 
 En esta tabla vemos las pilas de 3 y 4 notas de `WHITE`, `BLUE` y `RED`. Se ha numerado cada posición con números enteros de forma que el centro tonal ocupe la posición 0. Aquí se observa claramente, por ejemplo en las pilas de 3 notas las marcas de “sabor” de cada conjunto de notas, el sabor “básico” de `WHITE`, con su único tritono y su equilibrio perfecto, el sabor “desorientador” de `BLUE`, con la pila `-4` y el sabor “oscuro” de red, representado en las pilas `-1` y `-5`. Observamos también que que la desorientación de `BLUE` está presente también en `RED`, en la pila `-4`. +
 En las pilas de 4 notas ocurre lo mismo pero en diferentes posiciones: la desorientación de `BLUE` aparece en las posiciones `-4` y `-5` y se comparte con `RED` en exactamente las mismas posiciones. La marca oscura de `RED` aparece ahora en tres posiciones: `-5`, `-1` y `4`.
 
 .Nueva partícula en las pilas
-image::../images/new-particle-in-piles.png[]
+image::new-particle-in-piles.png[]
