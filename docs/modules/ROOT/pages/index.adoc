@@ -1,32 +1,10 @@
-# Particle music
+= Particle music
 
+toc::[]
+  [depth=2]
+  [title=Contenido]
 
-Propósito
-Simplificación
-Reglas matemáticas
-Física y sentido común
-Escala
-Tonalidad
-Escucha predictiva
-Tríada
-Estructura mayor/menor y su significado
-Tríadas orientativas
-Tritono
-Repulsión del tritono
-Distancia al tritono
-Orientación erronea
-Escalas
-Nombres de las notas
-Tríadas de PENTA
-Tríadas no orientativas
-Centro tonal
-Terceras ambiguas
-Distancias a tritonos
-Notación circular
-Nombres para las tríadas
-
-
-==== Propósito
+== Propósito
 
 El propósito de este documento es intentar _entender cómo funciona la música_. Es un proyecto personal, guiado simplemente por mi propia curiosidad y por mi afición musical. No pretendo cambiar la forma en que se estudia y enseña música, pero quizá no estaría mal revisar algunas cosas que vienen haciéndose igual durante siglos. +
 Lógicamente, se puede argumentar que, si algo funciona, para qué cambiarlo. El problema es que _no funciona_. Cualquier persona que se plantee el estudio musical desde cualquier perspectiva, clásica en un conservatorio, jazz en una escuela, electrónica en un laboratorio, o simplemente tocando con amigos en un local de ensayo, encontrará las mismas insatisfactorias viejas respuestas a algunas preguntas que parecen ya abandonadas por imposibles. +
@@ -39,16 +17,16 @@ pensar que se trata de un invento del capricho humano nos lleva por el camino eq
 Sería equivalente a ordenar los planetas por lo bonitos que son. +
 La música es armonía matemática (sus reglas no pueden cambiarse), no es un arte decorativo disponible para nuestros caprichos. Sus reglas forman un sistema perfecto, y tienen una estructura interna perfectamente lógica y exacta, no podemos cambiar su orden por uno que nos resulte más agradable, lo que necesitamos es descubrir cuál es ese orden interno.
 
-==== Simplificación
+== Simplificación
 
 En general, el estudio de la música se realiza mediante una serie de conceptos, palabras, símbolos y notaciones que proceden de hace varios siglos. Las reglas se han ido superponiendo según cada compositor iba rompiendo las anteriores. Todo lo que se usa es un poco farragoso y falto de un método científico. Intentaremos simplificarlo un poco, creando una notación más simple, una teoría más clara y sobre todo, que explique de verdad qué es lo que estamos escuchando, sin recurrir nunca a explicaciones caprichosas.
 
-==== Reglas matemáticas
+== Reglas matemáticas
 
 En la música todo tiene una razón. Insisto: no es un invento del ser humano, es un descubrimiento. Tiene reglas matemáticas y no podemos cambiarlas. +
 Es importante no utilizar conceptos como “_suena bien_” o “_suena mal_”. Esos conceptos nos llevarían por el camino equivocado al analizar, por ejemplo, la escala como un conjunto de notas que comienza y termina en una nota por la única curiosa razón de que esa nota nos produce a nosotros una impresión de descanso o estabilidad. 
 
-==== Física y sentido común
+== Física y sentido común
 
 Las reglas que rigen la física del mundo en que vivimos influyen completamente en la forma como interpretamos la música. Si algo nos suena conocido intentamos compararlo, catalogarlo, etiquetarlo, asimilarlo. Por eso, la música sirve para expresar ideas, porque recuerda, simula, revive o reconstruye sensaciones del mundo real. Así que no solamente podemos expresar conceptos como grave/agudo, rápido/lento o fuerte/débil. También podemos _evocar_ escenas del mundo real. Cuando decimos que una música nos gusta, suele deberse a que representa cosas que nos gustan, nos recuerda a escenas interesantes o a realidades agradables.  +
 Si los números pudiesen expresar la belleza que esconden, podríamos hablar de lo bonito que es un número por ser primo, por ser la raiz de otro, o por cualquier otra razón puramente matemática. Pero no parece muy serio pretender que los números son más bonitos si nos recuerdan una fecha feliz, o si nos han tocado en un sorteo de la lotería. Sin embargo calificamos la música de esa forma, porque, además de ser un sistema matemático, es un lenguaje que nos permite expresar ideas.  +
@@ -67,30 +45,30 @@ En el universo que habitamos hay algunas reglas establecidas que solemos dar por
 * etc, etc.
 Todas estas ideas están en nuestro cerebro durante toda nuestra vida, y nos sirven para sobrevivir a la realidad. Así que las utilizamos, casi siempre de forma inconsciente para interpretar lo que vemos, rechazar lo que tememos, jugar al tenis o beber un vaso de agua. Lógicamente, forman parte de nuestro lenguaje musical, y además no se necesita ningún traductor: todos los seres humanos las conocen. Por eso la música es un lenguaje universal, porque utiliza palabras que cualquier habitante del mundo real puede reconocer.
 
-==== Escala
+== Escala
 
 Las ondas de sonido proceden de elementos físicos que vibran. Cuerdas, campanas, tubos, etc. Casi ningún elemento vibra de una forma perfecta, formando una onda senoidal, sino que tienen lo que se dice un timbre determinado, es decir, una forma de onda propia. La forma de una onda depende de la cantidad de armónicos que se superpongan a la vibración principal, es decir, de vibraciones simultaneas a velocidades múltiplos de la velocidad base. Así diferenciamos el sonido de un violín del de un saxo, porque tienen diferentes armónicos. Si una onda vibra a una velocidad múltiplo de otra, se combinan formando un sonido uniforme y reconocible, así que decimos que forman armonía. Hay varias mezclas posibles que resultan armónicas, basándose en la proporción matemática entre ellas. Por ejemplo, si una nota vibra 440 veces por segundo y otra 880 forman una armonía perfecta. Pero no ocurre lo mismo con 440 y 457, por ejemplo. El oido separa las dos y detecta que no forman una proporción matemática reconocible. Podríamos calificar de armónicas las proporciones justas, es decir, el doble, el triple, el cuádruple, etc.  +
 Si tomamos los armónicos que se generan desde una onda base al agregarle más ondas que sean múltiplos de la misma, obtenemos una escala. Está ahí, no se puede cambiar.  +
 Ese conjunto de notas es el que utilizamos para hacer música, notas que mantienen una relación matemática entre ellas. +
 Así pues, una _escala_ es un conjunto de notas basado en los armónicos naturales. Hay 12 notas, puesto que a partir de ahí, comienzan a repetirse. De entre las 12 se selecciona un subconjunto, generalmente de 7 notas, que nos permite formar un “mapa” que tiene una serie de propiedades muy útiles que veremos más adelante.
 
-==== Tonalidad
+== Tonalidad
 
 Se llama _tonalidad_ a la escala seleccionada en cada momento, el oyente la asimila en conjunto, haciéndose una idea de situación. Las proporciones entre las notas forman un esquema perfecto que actúa como un mapa,  y que permite al oyente orientarse al escuchar el mensaje musical. La mayor parte de la música está en una sola tonalidad, pero es muy habitual cambiarla sobre la marcha. Su función como mapa se incrementa si la escala es simetrica, de la misma forma que asimilamos más fácilmente un mapa regular como un callejero que un mapa irregular de una zona montañosa. 
 
-==== Escucha predictiva
+== Escucha predictiva
 
 Escuchamos la música realizando adivinación del futuro. En un cuadro, los datos están ahí. No hay más que dirigir la vista a cada punto y los trazos están ahí, expresando lo que el pintor desea que expresen. En la música es diferente. Antes de empezar no tenemos nada. Solo silencio. En cuanto empieza la obra es como si comenzase un viaje, que va avanzando, sonido a sonido, por un raro espacio desconocido.  +
 Con cada nota recibimos un estímulo nuevo. Antes no estaba y de pronto aparece. Necesitamos asimilarlo, a veces a una velocidad endiablada. +
 Los estímulos inesperados nos producen sorpresa, y nos obligan a su análisis. Debemos dedicar un poco de tiempo de proceso cerebral para saber cómo encaja esa nota con las demás, si es que encaja, o de lo contrario, cambiar todas las suposiciones anteriores para hacerla encajar. Si adivinamos cada nota, nos aburrimos. Si cada nota nos sorprende, nos cansamos y perdemos el hilo. Si hay una proporcion adecuada entre ambas situaciones, la música nos resulta familiar pero estimulante. Posiblemente tenga éxito.
 
-==== Tríada
+== Tríada
 
 Se le llama _tono_ a la distancia que hay entre dos notas alternas y _semitono_ a la distancia entre dos notas contigüas ( si hablásemos de números, entre 18 y 19 habría un semitono, pero entre 15 y 17 habría un tono).  +
 Una _tríada_ es un acorde (notas que suenan simultaneamente) de tres notas alternas de una escala (una vez más, pensando en números, podrían ser 1, 3 y 5, ó 25, 27 y 29). En la notación estandar, se dice que sus notas están a distancia de una tercera, si es de dos tonos se llama tercera _mayor_, si es de tono y medio se llama tercera _menor_. Una tríada tiene pues dos intervalos, el que hay entre la primera y la segunda nota y el que hay entre la segunda y la tercera. Si esos intervalos son, de abajo a arriba, mayor y menor se dice que es un acorde mayor. Si son menor y mayor se llama acorde menor.  +
 Uno se siente casi avergonzado de tener que recurrir a toda esta dieciochesca terminología que debería dejar de usarse cuanto antes pero “así se ha hecho siempre”. Ya hemos dicho que sería mejor encontrar algo un poco más simple y natural.
 
-==== Estructura mayor/menor y su significado
+== Estructura mayor/menor y su significado
 
 .Esquema geométrico de las tríadas 
 image::../images/triads.png[tríadas, estas son tríadas]
@@ -115,11 +93,11 @@ En fin, estas son las ideas que sugieren automáticamente esas tres simples nota
 |Opresión|Solidaridad
 |===
 
-==== Tríadas orientativas
+== Tríadas orientativas
 
 El formato de una tríada, nos permite suponer en qué grado de la escala estamos. En una escala hay algunas tríadas mayores y otras menores. Se obtienen simplemente agregando a cada grado de la escala las dos siguientes notas alternas. Según el caracter de la tríada que oímos, podemos suponer en qué grado de la escala podemos estar ( como cuando al ver un monumento en un mapa de pronto nos orientamos correctamente ). Como hay varias tríadas de cada tipo, todavía hay _lugar para el engaño_.
 
-==== Tritono
+== Tritono
 
 Un tritono está formado por dos notas a 3 tonos de distancia. Entre ambas, caben dos terceras menores. Sería algo así como una estructura _menor / menor_. No sirve para expresar el caracter de una tríada normal, es equívoco, puesto que se puede invertir y queda igual. El oyente intenta suponer que se va a convertir en una tríada normal. Eso, en música se llama _resolver_.  +
 Cuando estamos hablando y deseamos que la persona que nos está escuchando intente encontrar una solución... ¿Qué hacemos? ¿Colocamos el problema entre signos de interrogación y esperamos a que nos dé una respuesta? ¿Eh?. Se llaman preguntas, y las hacemos a diario.  +
@@ -127,31 +105,31 @@ Pues en la música también existen las preguntas. Son acordes sin resolver, aco
 En una escala donde dos notas alternas queden a 3 tonos de distancia, el acorde que se formará en ese grado sonará raro, sin resolver. Qué casualidad: en la escala mayor (la que conoce todo el mundo, la que forman las teclas blancas del piano, _do, re, mi, fa_...) hay un grado en que se forma un tritono: el grado 7, el de la nota _si_. Las notas alternas a partir de _si _son _re _y _fa_. Entre cada par hay tono y medio, así que en total son 3 tonos, es decir, dos terceras menores una sobre la otra. Nadie querrá terminar una canción con ese acorde. +
 Ningúna actuación musical terminará nunca (al menos si queremos que el público empiece a aplaudir ) con un acorde sin resolver. El oyente espera a que le demos una solución. Unas milésimas de segundo antes, imagina cuál vamos a darle. Si acierta se sentirá satisfecho, si no se sorprenderá. Muchas preguntas le resultarán demasiado estimulantes y probablemente se sature. Ninguna pregunta hará que pierda el interés.
 
-==== Repulsión del tritono
+== Repulsión del tritono
 
 Un tritono suena repulsivo, dos terceras menores no representan nada apiladas.  +
 Tienta al oyente a adivinar en qué se resolverá, le hace participar, le hace arriesgarse y posibilita engañarle y sorprenderle resolviéndolo de manera inesperada.  +
 Invade su tranquilidad, requiriendo de él una escucha activa y arriesgada. Le condena a equivocarse sin poder evitarlo. Es como el “_nada por aqui... nada por allá_...” de los magos. +
 En la edad media, a ese sonido se le llamaba "_Diabolus in musicae_". Solo el nombre ya denota el caracter molesto e incluso peligroso que puede llegar a tener, sobre todo si eres un estado medieval y utilizas la música para mantener adormecida a la masa. Prohibir el tritono es como cuando en el cine el poli malo dice “Aquí soy yo el que hace las preguntas!”.
 
-==== Distancia al tritono
+== Distancia al tritono
 
 Es la distancia que un grado de la escala mantiene con respecto a algún tritono. Si en una escala hay un solo tritono, habrá grados que estén a mucha distancia de él, pero si hay dos, al alejarnos de uno nos acercamos al otro, así que siempre estaremos cerca de alguno.  +
 Los grados que quedan muy lejos de algún tritono sugieren estabilidad, relax. Hay escalas que no contienen ningún tritono. La sensación de linealidad y estabilidad (y posiblemente monotonía) es bastante fuerte en ellas. No es casual que las usáramos en nuestros estados primitivos de civilización. Profundizaremos en esto más adelante.
 
-==== Orientación erronea
+== Orientación erronea
 
 En la notación tradicional, al grado más lejano al tritono se le llama _fundamental_, y además se considera que la escala comienza y termina en ese grado. Esto es un error grave; que un grado esté lejos de un tritono no significa que sea el principio. Se hace porque el oyente se siente cómodo cuando una canción termina en el grado fundamental, como suele ocurrir. Como ya hemos dicho, este es uno de los errores graves que queremos solucionar: el ángulo desde el que se ve la música, el excesivo protagonismo del oyente, (evidentemente porque es el que paga y el que decide si el compositor triunfará o no). En todo caso, necesitamos seguir componiendo música para humanos, así que deberemos seguir teniendo en cuenta lo que les hace sentir cómodos o lo que no, pero necesitamos entender por qué.
 
-==== Orientación simétrica
+== Orientación simétrica
 
 Las escalas que usamos son simétricas. La simetría es un patrón que ayuda al oyente a reconocer la armonía. Si una escala es simétrica, nos ayudará mucho en su análisis usar una notación que respete esta simetría, donde el punto central se represente gráficamente en el centro. En la notación que presentamos, esta idea es muy importante.
 
-==== Modos de una escala
+== Modos de una escala
 
 Se llaman _modos_ a las distintas orientaciones de una escala, es decir, tomar las mismas notas pero cambiando la nota inicial. Debe eliminarse por completo este concepto. Es mucho más simple y util reducir la cantidad de escalas a analizar y asimilar. Solamente hay seis escalas.
 
-==== Escalas
+== Escalas
 
 Eliminando el concepto de _modo_ de una escala, estas son las escalas que se usan habitualmente y los nombres que se le han asignado. En notación estandar, la equivalencia sería la siguiente:
 
@@ -172,7 +150,7 @@ Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se pue
 .The six scales
 image::../images/scales.png[]
 
-==== Nombres de las notas
+== Nombres de las notas
 
 Representaremos las notas de la escala mediante la notación americana, es decir, usando las letras desde la A hasta la G, pero con una pequeña modificación: no hay _sostenidos_.
 
@@ -196,15 +174,15 @@ Esta sería la representación de la escala `BLUE` de `LA`, es decir de `A`. Obs
 .La escala BLUE de A
 image::../images/blue-scale-of-a.png[]
 
-==== Tríadas de PENTA
+== Tríadas de PENTA
 
 La escala `PENTA` tiene tríadas como las demás. Si se toman como en la notación estandar, parece que en lugar de terceras, están formadas por cuartas, así que se habla de _acordes por cuartas_, o _armonía cuartal_. Es totalmente absurdo. Lo que ocurre es que en esa escala no hay esas notas. Solo son las terceras de esa escala. No hay por que hacer excepciones. La diferencia con las tríadas de una escala que contenga tritonos es que estas no llevan a ninguna parte, funcionan todas igual de bien. Son todas igual de estables y no hay que alejarse de ningún punto. 
 
-==== Tríadas no orientativas
+== Tríadas no orientativas
 
 Un acorde puede usarse para marcar el grado o no. Así, se puede tocar con acordes por encima del mismo grado sin desorientar al oyente, generalmente sugiriendo, por ejemplo con el ritmo, que no se está variando de grado, solo es una melodía hecha de tríadas. Así, los músicos de jazz, suelen improvisar usando acordes por cuartas (_quartal harmony_) sin acentuarlos  demasiado para no confundir al oyente, marcando los tiempos débiles o realizando dibujos rítmicos irregulares, más propios de una melodía que de una báse armónica. Incluso el bajo puede hacer lo mismo, improvisar sobre una estructura armónica sin cambiar su carácter, simplemente dejando claro que no es lo que desea hacer, bien mediante el esquema rítmico, el sonido usado, o cualquier otro truco. De lo que se trata es de que el oyente diferencie claramente en qué grado está la escala en cada momento, para que que pueda analizar y asimilar todo lo que oiga por encima.
 
-==== Notas de color
+== Notas de color
 
 Cuando se agregan más notas a una tríada, se dice que le estamos agregando _color_. Es una forma de verlo. No es muy util, porque parece que simplemente estamos decorándola para que luzca un poco más bonita. +
 En realidad, cada nota que se añade tiene una función concreta. Una tríada por sí sola solamente aporta información mayor o menor. Todas las notas que agreguemos aportarán información sobre la posición del grado con respecto a la escala y posiblemente alguna idea más como anticipar modulaciones o inducciones al engaño, debilitando ligeramente la sensación inicial. +
@@ -212,7 +190,7 @@ La única idea clara que se enseña oficialmente es que agregar una _séptima be
 Otra vez la misma respuesta: ¿Se le “puede”? Y otra vez esas palabras malsonantes... +
 Será mejor que dejemos de hablar de colores.
 
-==== Representación de tritonos 
+== Representación de tritonos 
 Al representar los tritonos se observa que también ocupan su lugar perfectamente simétrico. Se hará mediante una flecha que los una. Veamos la representación de todas las escalas con sus tritonos.
 
 .Escalas y sus tritonos
@@ -230,11 +208,11 @@ Sin embargo, en `BLACK` nos encontramos con ocho notas en la escala, así que en
 También en `TONES` pasa lo mismo, aunque quedan solamente dos notas en cada sentido, con lo cual, mediante saltos alternos nunca podremos llegar a completar un tritono. Una situación muy extraña. Lo hemos representado mediante flechas sin punta para indicarlo. +
 La sensación para el oyente de que la pila que está sonando está cerca o lejos del tritono se ha de contar siempre ascendentemente, es decir, cuántas notas alternas han de agregarse para que acabe sonando un tritono (si es posible).
 
-==== Centro tonal
+== Centro tonal
 
 Llamaremos _centro tonal_ a la nota central de la escala. En todas, es la nota que guarda la misma distancia con todos los tritonos por ambos caminos, descendiendo y ascendiendo. Se trata del grado más estable de todos. No confundir con el que ofrece una mayor sensación de relajación, ese es el que quede más lejos de algún tritono. La nota central no da sensación de relajación, sino de equilibrio. Podríamos decir que es el grado más _neutral_ de la escala. En la escala `BLACK` no hay ninguna nota que ocupe ese centro tonal, aunque es perfectamente simétrica, como las demás. 
 
-==== Terceras ambiguas
+== Terceras ambiguas
 
 Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, que podría ser una tercera mayor o también una tercera menor. Esto amplia mucho las posibilidades de engaño y de sorpresa, y es de gran ayuda para la _modulación_ que consiste en cambiar de tonalidad, es decir, seleccionar otra escala.
 
@@ -252,14 +230,14 @@ En este esquema observamos (marcados en tono oscuro) los grados que forman una t
 
 La sensación de ambigüedad entre el caracter mayor/menor de una tríada produce inquietud en el oyente, y supone una especie de adivinanza que requiere una escucha atenta y activa. El mapa no está claro, y el camino es laberíntico, además hay muchas sorpresas esperando en cada cruce. Se necesita una actitud concreta para escuchar musica con muchas ambigüedades. El jazz utiliza con profusión la ambigüedad.
 
-==== Ausencia de terceras 
+== Ausencia de terceras 
 
 Si todos los grados de la escala tienen una tercera, mayor o menor, consideraremos que, al menos en ese aspecto, está completa. Podemos observar que, en la escala `RED` hay un grado que no tiene ninguna clase de tercera: el séptimo, así como en la escala `PENTA` faltan dos terceras, en el primer y en el tercer grado.
 
 .Escalas con grados sin tercera
 image::../images/scales-without-thirds.png[]
 
-==== Distancias a tritonos
+== Distancias a tritonos
 
 Si en una escala hay tritonos, cada tríada estará a una distancia de ellos. La distancia representa para el oyente la probabilidad que tiene de que, agregando más notas al acorde llegue a oir un tritono. Es sencillo apreciar en este esquema de la escala `WHITE` que las dos tríadas más distantes al tritono son, por un lado la tríada `CEG` y por el otro `ACE`. +
 Resulta que en notación estandar, a estas tríadas se les llaman _grado fundamental_ y _relativo menor_. A parte de la estrafalaria nomenclatura, son los grados que se utilizan para empezar y terminar la mayoría de los temas. Simplemente sugieren descanso y estabilidad, aunque uno es mayor y otro menor, así que además tienen su propio caracter. Si se termina en un acorde cercano al tritono, probablemente nadie aplaudirá: hay tensión sin resolver, preguntas sin contestar. 
@@ -273,7 +251,7 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
 .Escala BLUE con sus tríadas
 image::../images/blue-scale-and-triads.png[]
 
-==== No hay más escalas?
+== No hay más escalas?
 
 Buscar más es un interesante ejercicio. Sería fantástico encontrar alguna, pero las propiedades que hemos visto hasta ahora restringen las posibilidades.
 
@@ -298,11 +276,11 @@ image::../images/more-scales.png[]
 |X6|||3|
 |===
 
-==== Orden de tríadas por distancias a los tritonos
+== Orden de tríadas por distancias a los tritonos
 
 En estás dos escalas `BLUE` y `WHITE` se aprecian los tritonos sombreados. La primera tiene uno: `B-F`, y la segunda tiene dos: `A-e` y `B-F`. Para modular entre una y otra basta con cambiar la nota `E` por `e` (`Mi` por `Mi bemol`). El centro simétrico era la nota `D` en `WHITE` y ahora pasa a ser `G` en `BLUE`. Veamos todas las tríadas de la escala y la distancia que guardan con el siguiente tritono, es decir, la cantidad de terceras que habría que agregarle para que contuviese un tritono. Anotaremos también si la tríada incluye ya alguna nota perteneciente a algún tritono. La distancia que percibe el oyente debería calcularse mediante alguna fórmula que tenga en cuenta ambos parámetros. De momento no sabemos qué fórmula será esa. 
 
-===== Escala `WHITE`
+=== Escala `WHITE`
 .Escala white
 image::../images/white-scale.png[]
 |===
@@ -317,7 +295,7 @@ image::../images/white-scale.png[]
 |EGB|2|1
 |===
 
-===== Escala `BLUE`
+=== Escala `BLUE`
 .Escala blue
 image::../images/blue-scale.png[]
 |===
@@ -360,7 +338,7 @@ De la misma forma, podemos observar que algunas tríadas siguen conteniendo la m
 |===
 
 
-==== Mapa de la situación
+== Mapa de la situación
 
 Si esto fuese un mapa y cada tríada fuese un punto, podríamos considerar la posición de los tritonos como una elevación en el terreno. La pendiente que se genera alrededor hace que las cosas tiendan a alejarse de esos punto, digamos que nos cuesta acercarnos a ellos.  +
 El oyente percibe el mapa sonoro como un conjunto de puntos que mantienen una posición con respecto a esa elevación del terreno. Para ponernos de acuerdo, llamémosle _centro tritonal_.
@@ -374,7 +352,7 @@ Si cambiamos la posición del centro tritonal, el oyente se sentirá desorientad
 Modulando correctamente, podemos cambiar algunas de las notas, pasando a otra escala, pero manteniendo la posición del centro tritonal, con lo cual, la sensación de desorientación será mucho más debil.  +
 El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal. Pero cómo es posible? Bueno, podemos, sencillamente, dejar el centro tritonal que tenemos donde está pero agregar otro más. Si la _pendiente_ del grado en el que estamos (es decir, su posición con respecto al centro tritonal anterior) sigue siendo la misma, el oyente no perderá la orientación, sin embargo, se habrá cambiado el centro tonal.
 
-==== Notación circular
+== Notación circular
 
 En el ejemplo, con una notación circular, más práctica para el análisis de la orientación, entre `WHITE` en `D` y `BLUE` en `G`, observamos que simplemente se agrega un nuevo centro tritonal, pero el que teníamos sigue manteniéndose en el mismo sitio. Así que no hay mas que “girar el mapa” para volver a orientarse. +
 En resumen: hemos cambiado la nota `E` por `e`, pero el centro tritonal no se ha movido ni un palmo, simplemente ha aparecido uno nuevo entre `A` y `e`. En el mapa imaginario había una elevación en el terreno, que formaba una pendiente a su alrededor. Ahora hay dos. Pero en algunos puntos, la pendiente sigue siendo idéntica, y en la misma dirección. Esa es la _sencilla_ razón de que algunas modulaciones sean más cercanas o agradables al oído que otras. 
@@ -397,7 +375,7 @@ Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos n
 .De WHITE D a RED E y su rotación
 image::../images/white-de-to-red-e-rotation.png[]
 
-==== Nombres para las tríadas
+== Nombres para las tríadas
 
 Por qué las tríadas tienen esos curiosos nombres en la notación estandar? _Mayor, menor, menor quinta bemol, mayor quinta aumentada, disminuida..._ +
 Se trata de nombres del pasado, que simplemente han subsistido hasta ahora por falta de un buen comité de estandarización _ISO_. Si quisiera poner un ejemplo claro de elección de nombres farragosos, inservibles, molestos y fuera de toda razón lógica usaría estos. +
@@ -439,7 +417,7 @@ En esta tabla vemos el tipo de tríadas que tiene cada escala y en qué grado ap
 Ahora tenemos nombres más eficientes y lógicos para conceptos, como “Mayor con la quinta aumentada”, ó, uno especialmente chirriante: “Tríada disminuída”. +
 Es cierto que memorizamos mejor los nombres que los números, y posiblemente, cuando lleguemos a acordes de cinco o más notas, hablar de un acorde `3 3 4 3 4` puede ser también un poco engorroso. Así que probablemente se haga necesario crear alguna nomenclatura. Pero no nos precipitemos.
 
-==== Las tríadas de cada grado de todas las escalas
+== Las tríadas de cada grado de todas las escalas
 
 En cada escala, los tipos de tríada dependen lógicamente de la estructura de la escala. Veamos una tabla. Algunos tipos de tríadas son más comunes que otras. 
 |===
@@ -465,7 +443,7 @@ image::../images/horizontal-triad-symmetry.png[]
 
 No parece muy importante que cada tríada tenga una simétrica. Pero es así. Hay pares de grados simétricos, igual que pares de notas, obviamente. Aunque son simétricas al revés, puesto que una tiene la misma estructura ascendente que su simétrica descendente. Bueno, en realidad eso es exactamente lo que significa “simétrico”. Si no serían iguales. Quizá más adelante encontremos alguna utilidad a esto.
 
-==== Una concha de caracol
+== Una concha de caracol
 
 En general, aunque observamos esa simetría perfecta en todas las escalas, hay que considerar también que las notas siguen un camino ascendente de grave a agudo. Aunque pueda parecer que esto es indiferente, resulta que los sonidos graves tienen mayor preponderancia que los agudos: sus ondas son más largas y se propagan en todas direcciones. Los sonidos más agudos se propagan mejor en linea recta, son ondas más cortas y no rebotan tan fácilmente. Por eso, cuando nos ponemos una mano delante de la oreja, notamos un descenso en el nivel de agudos, aunque seguimos oyendo los sonidos graves practicamente con igual intensidad.  +
 Hablando más “musicalmente”, las notas más agudas admiten mejor las mezclas, sin enturbiarse demasiado. Las notas graves, al mezclarse “emborronan” un poco el sonido, siendo, en general, notas únicas que marcan la base del acorde, sobre las que se agregan otras. +
@@ -473,7 +451,7 @@ El oyente tiende a analizar las notas de abajo a arriba. Quizá, en un instinto 
 Ocurre algo parecido con el ojo humano: tiene mucha menor capacidad para detectar el color azul que los colores rojo y verde. Por qué? Bueno, hay muchas menos cosas azules en la naturaleza a las que prestar atención. Una es el mar, la otra el cielo en verano. Ya no se me ocurren más. Sin embargo hay muchas cosas verdes en nuestro camino, y, atención, muchas cosas rojas, entre ellas, un par bastante urgentes: el fuego y la sangre. Quizá algún antepasado nuestro nació con más células detectoras de color azul que de rojo y verde, pero posiblemente las cosas no le fuesen demasiado bien y la cruel evolución hizo su trabajo inexorablemente.  +
 En fin, la diferencia entre sonidos graves y agudos debería formar parte de nuestro análisis de manera importante. Es cierto que hay simetría en las escalas, y su observación facilita mucho su comprensión, pero se trata de una rara simetría inserta en una especie de espiral ascendente que va decreciendo de tamaño. Una especie de concha de caracol ( un objeto bastante propenso al analisis matemático, por cierto ) sobre la que las notas estan colocadas. 
 
-==== Posición y forma
+== Posición y forma
 
 Así que, según hemos concluido, el oyente considera un acorde  como un conjunto de notas agudas apiladas sobre notas graves, y no al revés. De algún modo, las notas graves marcan la situación del grupo de notas, y las agudas definen la forma del mismo.  +
 Si volvemos al simil del mapa y del terreno, la nota grave nos indica en qué punto del mapa estamos y las notas agudas indican, digamos, qué relación guarda ese objeto con el resto del mapa, es decir, nos ayuda a imaginar el resto del mismo.  +
@@ -485,7 +463,7 @@ De manera que podríamos decir que cada pila de notas nos aporta dos tipos de in
 
 Podemos acuñar dos nuevos términos para esto, información _estructural_ y la información _posicional_. Cuando hablamos de las sensaciones que nos producen las tríadas mayores y menores, de alegría o tristeza, simplemente mostrábamos tríadas separadas, sin saber a qué escala pertenecían, y aún así nos transmitían esa idea. Podemos concluir que la estructura tríada tiene la mayor cantidad de información estructural lo más clara posible. Cuando vamos apilando notas encima, se va perdiendo un poco de información estructural y se gana información posicional, es decir, se presenta más “trozo de mapa” para que el oyente pueda saber cuál es el terreno y dónde está en este momento.
 
-==== Ordenación de los grupos de notas
+== Ordenación de los grupos de notas
 
 Como dijimos, el centro tonal de una escala lo marca la nota que queda a la misma distancia de los tritonos, digamos la nota más neutra. Qué pasa cuando apilamos notas? Se mantendrá la misma simetría? Pasará algo inesperado? Me temo que sí, al menos para mí. +
 Veámoslo en una tabla.
@@ -514,15 +492,26 @@ Podríamos concluir que en los niveles iniciales, lo que prima es la estructura 
 
 Analicémos entonces el significado correspondiente a cada partícula base.
 
+.Significado de las partículas
+image::../images/particle-meaning.png[]
+
 Las dos últimas son especialmente interesantes y ambas estan presentes especialmente en la música moderna. La pila `434` recibe en notación estandar el nombre de _acorde mayor con séptima mayor_ y produce una sensación de cierto relax obscuro e indolente, muy apto para baladas románticas, perezosas y sensuales. Si el elemento central de la tríada fuese una persona sería un ser debil que se se apoya sobre uno fuerte pero a su vez siente encima el peso de otro. Un ser debil que siente la contradicción de la _doble moral_, por una parte debería quejarse debido al peso que le oprime, pero por otra disfruta de la solidaridad y el soporte que recibe. Así que permanece en silencio, aceptando su destino y añorando que su situación cambie. En cuanto a la pila `343`, en estandar es un acorde _menor con séptima_. En este caso, el elemento central del esquema sería un ser fuerte, que soporta a un ser debil encima, pero que también está apoyado sobre otro debil. Cómo puede sentirse? Si el de la tríada anterior ocultaba su queja por la doble moral, este debe ocultar su alegría, puesto que no está sufriendo, ya que soporta a un ser más debil que él. Puede que se sienta culpable por oprimir a un debil pero diríamos que está en paz consigo mismo, puesto que ya está pagando su deuda. “Sé que otros sufren por mi culpa, pero ya contribuyo con mis buenas obras, así que olvidemos la injusticia y disfrutemos de la vida”. Esto sugiere civilización, sociedad, avance, optimismo. Un ermitaño que vive en el desierto nunca sentirá esa sensación, su vida diaria no contiene ventajas a costa de que otros sufran, simplemente no hay otros. Si vives en una sociedad moderna, todo funciona gracias a que los servicios que utilizas los pagas con tu trabajo. Otros trabajan para que tú estés cómodo, pero tú también trabajas para que otros lo estén. Así funciona, es la base de la sociedad de consumo. Estos acordes se utilizan profusamente en la música pop, en el jazz, la bossa nova, en el rock, y en general en toda la música moderna. Son poco comunes en música tradicional, incluso en música clásica: parece que suenan demasiado “modernos”. 
 
 
-==== Nombres para las partículas
+== Nombres para las partículas
+
+.Nombres para las partículas
+image::../images/basic-particle-names.png[]
 
 Asignaremos nombres básicos a nuestras partículas básicas, para pensar de forma un poco más cómoda. Si llamamos a la tríada disminuida (la del *t*ritono) `T`, a la tríada m*a*yor `A` y a la tríada m*e*nor `E`, entonces, las pilas de cuatro notas se llamarán `TE, AT, AE` y `EA`. Parece útil y resulta fácil deducir el nombre a partir del dibujo o de las notas, solo memorizando tres letras. Veamos entonces las pilas de cinco notas y sus posibles nombres:
 
+.Agregar un guión en el nombre
+image::../images/more-particle-names.png[]
+
 Como vemos, llamarle a las pilas de tres notas con las dos letras, aún cuando el elemento central se comparte en ambas, nos ha costado tener que agregar un guión en medio (-) para indicar que un elemento completo está encima del otro. Por ejemplo, la pila `AE` contiene dos pilas de tres notas pero comparten las dos notas centrales, así que en total son cuatro notas, pero en la pila `A-E` hay dos pilas una encima de otra y comparten la nota que queda en medio, así que en lugar de 6 nos quedan 5 notas. Vale la pena. Veamos las de seis y siete notas:
 
+.Pilas WHITE
+image::../images/white-piles.png[]
 
 No parece muy fácil de pronunciar. Pero, al menos, es una nomenclatura uniforme y simple: puede deducirse a partir de las pilas de notas. +
 
@@ -532,35 +521,49 @@ Si no hay guión, significa que el número de notas es par, así que las dos pil
 Tenemos pues un sencillo catálogo de pilas de notas, con sus nombres. Los significados intrínsecos están claros para las pilas de tres notas y para las de cuatro. A partir de ahí, el significado deja de tener importancia y pasa a primar la información posicional, es decir, la relación con el tritono de la escala. +
 De momento hemos hecho todo esto con la escala `WHITE`. Vamos a intentar lo mismo con `BLUE`.
 
+.Pilas BLUE
+image::../images/blue-piles-by-notes.png[]
 
 Observamos, por supuesto, la misma simetría y el mismo descenso por grados con cada nueva nota. Sin embargo, aparece una nueva partícula con la que no habíamos contado aún: la tríada `44`. Tendrá que formar parte de nuestro vocabulario. La sensación que produce esta tríada tiene que ver con la orientación. Se trata de dos terceras mayores, no se sabe cuál es la base porque podría ser cualquiera, al estar a distancia de 4 semitonos, apilando 3 de ellas llegamos a la octava, es decir, se termina la escala. Esto es lo mismo que le ocurre a la escala `TONES`, no tiene orientación. El oyente siente la presencia de tritonos por todas partes, no hay ningún lugar seguro, no se puede huir en ninguna dirección. Da lo mismo en qué grado de la escala estemos, la sensación persiste: amenaza constante y ninguna posibilidad de escape. La diferencia con `PENTA`, donde no hay ningún tritono es apreciable, aunque allí sí hay una orientación: se sabe en qué grado de la escala estamos, pero no hay necesidad de huir de ningún punto. La tríada `44` crea una sensación de perplejidad y de amenaza irremisible. +
 Este sería nuestro nuevo diccionario de partículas básicas:
 
+.Nuevo diccionario de partículas básicas
+image::../images/advanced-pile-meaning.png[]
 
 Al agregar todas las combinaciones únicas que aparecen en `BLUE`, nuestro vocabulario se amplía:
 
 
 Hagamos lo mismo con `RED`, usando `E` como centro tonal.
 
-
-
+.Pilas RED
+image::../images/red-piles.png[]
 
 Nuevas partículas! Hemos hallado un nuevo intervalo de 2 semitonos, así que aparecen dos nuevas tríadas: `24` y `42`. Las hemos representado con fondo negro. La simetría sigue siendo perfecta. Cuál será el significado de estas tríadas? +
 Vamos a crear la tabla
 
+.Pilas RED con nombres
+image::../images/red-piles-with-names.png[]
+
 Bien, hemos de considerar la dificultad intrínseca de cada escala como parte del problema. Digamos que el oyente se sentirá mejor en una escala con pocos tritonos y pocos grados equívocos. Si cada escala tiene algun sonido concreto que la caracteriza, el hecho de presentar al oyente ese sonido hará que se crea que estamos en esa escala. Recordemos que la tríada `44` aparecía en `BLUE` y no en `WHITE`, de manera que actúa como una especie de _aroma inconfundible. _Por contra, las pilas `24` y `42` hacen su aparición en `RED`. Tampoco parecen tener un significado especial, más que representar a su escala. +
 Las 6 escalas forman un simple esquema donde se expresan tres conceptos básicos: _claridad, oscuridad y desorientación_. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala `WHITE` la escala central, la más equilibrada y completa. A partir de ella, eliminando tritonos vamos a parar a `PENTA`, agregándolos podemos llegar a `BLUE`, que es un poco desconcertante pero no tanto como `TONES`, o bién a `RED`, que es un poco más oscura, pero no tanto como `BLACK`.
 
+.Sensación de las escalas
+image::../images/scale-sensation-circle.png[]
 
 En resumen: las nuevas tríadas de nuestro vocabulario no tienen un significado específico, simplemente sirven como señales que indican en qué escala estamos (sea cierto o no) con lo que se creará una sensación claridad, obscuridad o desorientación. +
 Este es nuestro vocabulario, de momento:
 
+.Nuevo diccionario de partículas con una más
+image::../images/advanced-pile-meaning-with-new-particle.png[]
 
 Ahora deberíamos preguntarnos lo siguiente: +
 Si un bloque 4 sobre uno 3 significa “injusticia”, ¿por qué no ocurre lo mismo con un bloque 4 sobre uno 2 ? +
 La respuesta a esta pregunta fundamental es simple. En el bloque `34` no aparecen trazas de ninguna otra escala, estamos en `WHITE` y no se detecta ninguna amenaza, el camino está claro, los puntos en el mapa se distinguen perfectamente y hay una pendiente por la que caen las cosas alejándose de la _montaña-tritono_.  +
 Con un bloque `24`, la sensación de justicia o injusticia desaparece inmediatamente debido a la señal de peligro que representa su estructura. Se trata de una alarma encendida, una puerta a lo desconocido, un imprevisto en el camino que hará que revisemos nuestra situación y nos preparemos para encontrarnos problemas: el camino que anuncia es, o bien, más oscuro y peligroso, o más sorprendente y equívoco. Sea lo que sea, no importa su forma, sino lo que ésta indica: problemas. +
 Continuemos con `BLACK` y `TONES`
+
+.Tritonos en BLACK y en TONES
+image::../images/tritones-in-black-and-tones.png[]
 
 Hay un ligero inconveniente: una tiene 8 notas y la otra 6. Si las apilamos en notas alternas solo alcanzaremos la mitad de ellas. Se crean dos subconjuntos diferentes. Además de eso, cada nota forma parte de un tritono. Está claro que no son escalas muy útiles para armonizar, son una especie de pozos sin fondo o callejones sin salida. Volveremos sobre ellas más adelante.
 
@@ -571,8 +574,17 @@ La sensación de desorientación es definitiva, se produce de manera inequívoca
 En realidad, mientras para la desorientación solo hace falta la pila `44`, para la oscuridad disponemos de _dos puertas al averno_: la pila `24` y la `42`. +
 Parece lógico que si son dos, se repartan de alguna manera el efecto. En el caso de la `24` el oyente se guía más por la tercera mayor y llega a pensar que está oyendo una pila que comienza en la segunda nota, así que cree que es un acorde de cuatro notas donde falta una. Cree que hemos olvidado apilar algunas notas, mientras que en la `42` cree que hemos decidido apilar las notas sin alternar. Son dos caminos diferentes para ser optimista y evitar pensar en lo peor: que hemos caido en la terrible escala `BLACK`, la oscuridad total.
 
+.Mapa de pilas
+image::../images/pile-map.png[]
 
+.Equivalencias estandar de las pilas
+image::../images/standard-names-of-piles.png[]
+
+.Pilas y nombres estandar
+image::../images/piles-and-standard-names.png[]
 
 En esta tabla vemos las pilas de 3 y 4 notas de `WHITE`, `BLUE` y `RED`. Se ha numerado cada posición con números enteros de forma que el centro tonal ocupe la posición 0. Aquí se observa claramente, por ejemplo en las pilas de 3 notas las marcas de “sabor” de cada conjunto de notas, el sabor “básico” de `WHITE`, con su único tritono y su equilibrio perfecto, el sabor “desorientador” de `BLUE`, con la pila `-4` y el sabor “oscuro” de red, representado en las pilas `-1` y `-5`. Observamos también que que la desorientación de `BLUE` está presente también en `RED`, en la pila `-4`. +
 En las pilas de 4 notas ocurre lo mismo pero en diferentes posiciones: la desorientación de `BLUE` aparece en las posiciones `-4` y `-5` y se comparte con `RED` en exactamente las mismas posiciones. La marca oscura de `RED` aparece ahora en tres posiciones: `-5`, `-1` y `4`.
 
+.Nueva partícula en las pilas
+image::../images/new-particle-in-piles.png[]
