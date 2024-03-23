@@ -1,9 +1,5 @@
 = Particle music
 
-toc::[]
-  [depth=2]
-  [title=Contenido]
-
 == Propósito
 
 El propósito de este documento es intentar _entender cómo funciona la música_. Es un proyecto personal, guiado simplemente por mi propia curiosidad y por mi afición musical. No pretendo cambiar la forma en que se estudia y enseña música, pero quizá no estaría mal revisar algunas cosas que vienen haciéndose igual durante siglos. +
