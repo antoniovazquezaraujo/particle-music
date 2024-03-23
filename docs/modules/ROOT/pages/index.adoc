@@ -353,45 +353,46 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
 ==== Notación circular
 
 En el ejemplo, con una notación circular, más práctica para el análisis de la orientación, entre `WHITE` en `D` y `BLUE` en `G`, observamos que simplemente se agrega un nuevo centro tritonal, pero el que teníamos sigue manteniéndose en el mismo sitio. Así que no hay mas que “girar el mapa” para volver a orientarse. +
-En resumen: hemos cambiado la nota `E` por `e`, pero el centro tritonal no se ha movido ni un palmo, simplemente ha aparecido uno nuevo entre `A` y `e`. En el mapa imaginario había una elevación en el terreno, que formaba una pendiente a su alrededor. Ahora hay dos. Pero en algunos puntos, la pendiente sigue siendo idéntica, y en la misma dirección. Esa es la “sencilla” razón de que algunas modulaciones sean más “cercanas” o agradables al oido que otras. 
+En resumen: hemos cambiado la nota `E` por `e`, pero el centro tritonal no se ha movido ni un palmo, simplemente ha aparecido uno nuevo entre `A` y `e`. En el mapa imaginario había una elevación en el terreno, que formaba una pendiente a su alrededor. Ahora hay dos. Pero en algunos puntos, la pendiente sigue siendo idéntica, y en la misma dirección. Esa es la _sencilla_ razón de que algunas modulaciones sean más cercanas o agradables al oído que otras. 
 
 
 En más resumen todavía: resulta que cambiando `E` por `e`, estamos cambiando el caracter de la tríada `CEG`, de mayor a menor. Estamos cambiando sigilosamente entre alegría y tristeza. Estamos _jugando_. +
 Posiblemente estemos mostrando disimuladamente la cruel dualidad de nuestro mundo, la diferencia entre oprimidos y poderosos, entre justicia e injusticia, entre opresión y libertad, entre triunfo y fracaso, entre vida y muerte... Probablemente estemos usando la música para dar una bofetada en la cara al cruel occidente y a sus estiradas reglas. Quizá estemos cantando una vitalizadora mezcla de humilde y resignado lamento y de alegría de vivir. Quizá descendamos de un pueblo oprimido, traido de otro continente y nuestros antepasados fuesen vendidos como esclavos.  +
 _Estamos tocando jazz?_
 
-Otro ejemplo de modulación muy utilizado, entre `WHITE` de `D` y `RED` de `E`. Simplemente agregamos un tritono pero la orientación sigue manteniéndose. Aquí las dos tríada más lejanas a un tritono pasan a ser EaB y FAC, puesto que CEG pasa a ser CEa, (dos terceras mayores apiladas). +
-Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos no se cansan nunca de esos dos acordes, EaB y FAC. Ahora lo veo claro, son los dos más estables de la escala, y de los pocos que tienen una tercera. Puedes estar pasando de uno a otro constantemente sin ver la posibilidad de salir de ahí, a no ser que vuelvas a la escala WHITE, haciéndo desaparecer el amenazante tritono entre A y e. Basta con saltar a la tríada ACE, lo cual hacen la mayor parte de las veces, para luego volver a GBD, a FAC y de nuevo a EaB. Olé!
-
+Otro ejemplo de modulación muy utilizado, entre `WHITE` de `D` y `RED` de `E`. Simplemente agregamos un tritono pero la orientación sigue manteniéndose. Aquí las dos tríada más lejanas a un tritono pasan a ser `EaB` y `FAC`, puesto que `CEG` pasa a ser `CEa`` (dos terceras mayores apiladas). +
+Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos no se cansan nunca de esos dos acordes, `EaB` y `FAC`. Ahora lo veo claro, son los dos más estables de la escala, y de los pocos que tienen una tercera. Puedes estar pasando de uno a otro constantemente sin ver la posibilidad de salir de ahí, a no ser que vuelvas a la escala `WHITE`, haciéndo desaparecer el amenazante tritono entre `A` y `e`. Basta con saltar a la tríada `ACE`, lo cual hacen la mayor parte de las veces, para luego volver a `GBD`, a `FAC` y de nuevo a `EaB`. Olé!
 
 ==== Nombres para las tríadas
 
-Por qué las tríadas tienen esos curiosos nombres en la notación estandar? _Mayor, menor, menor quinta bemol, mayor quinta aumentada, disminuida... _ +
+Por qué las tríadas tienen esos curiosos nombres en la notación estandar? _Mayor, menor, menor quinta bemol, mayor quinta aumentada, disminuida..._ +
 Se trata de nombres del pasado, que simplemente han subsistido hasta ahora por falta de un buen comité de estandarización _ISO_. Si quisiera poner un ejemplo claro de elección de nombres farragosos, inservibles, molestos y fuera de toda razón lógica usaría estos. +
-Para empezar, no me sirve de nada conocer la distancia de la tercera nota a la primera: lo que me interesa es el tamaño de los dos pares de notas. Esta es una tabla con las distancias que aparecen en todas las escalas. En la columna izquierda, las distancias en semitonos como un par de números, que indican el tamaño del intervalo inferior y el del intervalo superior. En *negrita *los esquemas más usados, *43* ( tríada mayor) y *34* ( tríada menor).
+Para empezar, no me sirve de nada conocer la distancia de la tercera nota a la primera: lo que me interesa es el tamaño de los dos pares de notas. Esta es una tabla con las distancias que aparecen en todas las escalas. En la columna izquierda, las distancias en semitonos como un par de números, que indican el tamaño del intervalo inferior y el del intervalo superior partiendo desde `C`. En *negrita* los esquemas más usados, *43* ( tríada mayor) y *34* ( tríada menor).
 
 |===
-|Tríada|||||||||||
+|Tríada|C|d|D|e|E|F|g|G|a|A|b|B
 
-|23|X||X|||X|||||
-|33|X|||X|||X||||
-|*34*|**X**|||**X**||||**X**|||
-|42|X||||X||X||||
-|*43*|**X**||||**X**|||**X**|||
-|44|X||||X||||X||
-|45|X||||X|||||X|
-|54|X|||||X||||X|
-|55|X|||||X|||||X
+|23|X||X|||X||||||
+|33|X|||X|||X|||||
+|*34*|**X**|||**X**||||**X**||||
+|42|X||||X||X|||||
+|*43*|**X**||||**X**|||**X**||||
+|44|X||||X||||X|||
+|45|X||||X|||||X||
+|54|X|||||X||||X||
+|55|X|||||X|||||X|
 |===
 
 Vamos a cambiar la notación utilizando un poco de lógica.  +
 Primera regla de oro para inventar nombres: _no inventar nombres innecesariamente._  +
 Si los números que definen los intervalos de las tríadas las describen perfectamente, son directamente deducibles desde las propias notas, son más fáciles de escribir, ocupan menos espacio, se pronuncian en menos sílabas y son portables a todos los idiomas, entonces deberíamos usar la notación numérica. +
-Así que, desde ahora hablaremos de una tríada menor como una tríada 4 3. +
+Así que, desde ahora hablaremos de una tríada menor como una tríada `4 3`. 
+
+
 En esta tabla vemos el tipo de tríadas que tiene cada escala y en qué grado aparecen, así como el nombre de la combinación en notación estandar, si es que existe alguno.
 
 |===
-|_ESTANDAR_|ab|*WHITE*|*BLUE*|*RED*|*BLACK*|*PENTA*|*TONES*
+|_ESTANDAR_|_NUM_|*WHITE*|*BLUE*|*RED*|*BLACK*|*PENTA*|*TONES*
 
 |menor|34|1,2,5|4,5|2,3,4,5|1,3,5,7|4|-
 |mayor|43|3,4,7|1,7|1,2,3|1,3,5,7|5|-
@@ -402,9 +403,10 @@ En esta tabla vemos el tipo de tríadas que tiene cada escala y en qué grado ap
 |===
 
 Ahora tenemos nombres más eficientes y lógicos para conceptos, como “Mayor con la quinta aumentada”, ó, uno especialmente chirriante: “Tríada disminuída”. +
-Es cierto que memorizamos mejor los nombres que los números, y posiblemente, cuando lleguemos a acordes de cinco o más notas, hablar de un acorde 3 3 4 3 4 puede ser también un poco engorroso. Así que probablemente se haga necesario crear alguna nomenclatura. Pero no nos precipitemos.
+Es cierto que memorizamos mejor los nombres que los números, y posiblemente, cuando lleguemos a acordes de cinco o más notas, hablar de un acorde `3 3 4 3 4` puede ser también un poco engorroso. Así que probablemente se haga necesario crear alguna nomenclatura. Pero no nos precipitemos.
 
-*Las tríadas de cada grado de todas las escalas* +
+==== Las tríadas de cada grado de todas las escalas
+
 En cada escala, los tipos de tríada dependen lógicamente de la estructura de la escala. Veamos una tabla. Algunos tipos de tríadas son más comunes que otras. 
 |===
 |_GRADO_|*WHITE*|*BLUE*|*RED*|*BLACK*|*PENTA*|*TONES*
@@ -428,34 +430,42 @@ Intentemos buscar, una vez más, un poco de simetría
 
 No parece muy importante que cada tríada tenga una simétrica. Pero es así. Hay pares de grados simétricos, igual que pares de notas, obviamente. Aunque son simétricas al revés, puesto que una tiene la misma estructura ascendente que su simétrica descendente. Bueno, en realidad eso es exactamente lo que significa “simétrico”. Si no serían iguales. Quizá más adelante encontremos alguna utilidad a esto.
 
-*Una concha de caracol* +
+==== Una concha de caracol
+
 En general, aunque observamos esa simetría perfecta en todas las escalas, hay que considerar también que las notas siguen un camino ascendente de grave a agudo. Aunque pueda parecer que esto es indiferente, resulta que los sonidos graves tienen mayor preponderancia que los agudos: sus ondas son más largas y se propagan en todas direcciones. Los sonidos más agudos se propagan mejor en linea recta, son ondas más cortas y no rebotan tan fácilmente. Por eso, cuando nos ponemos una mano delante de la oreja, notamos un descenso en el nivel de agudos, aunque seguimos oyendo los sonidos graves practicamente con igual intensidad.  +
-Hablando más “musicalmente”, las notas más agudas admiten mejor las mezclas, sin enturbiarse demasiado. Las notas graves, al mezclarse “emborronan” un poco el sonido, siendo, en general, notas únicas que marcan la base del acorde, sobre las que se agregan otras. El oyente tiende a analizar las notas de abajo a arriba. Quizá, en un instinto atávico de supervivencia, los sonidos graves han de analizarse con máxima prioridad, ya que sugieren cosas grandes, fuertes, pesadas, importantes... en suma, cosas a las que se debe prestar atención, por si representan un peligro. Los sonidos agudos pueden analizarse con más calma, ya que suelen provenir de elementos de pequeño tamaño, ligeros y, en general, menos peligrosos. Claro que hay excepciones, pero, es una regla instintiva general. Si vamos a cruzar la calle y por un oido nos entra un sonido de camión y por el otro el de una bicicleta, probablemente nos lancemos hacia el lado de la bicicleta sin ni siquiera girar la cabeza ver qué pasa. Mediante sencillos trucos como este, hemos llegado vivos hasta nuestros días.  +
+Hablando más “musicalmente”, las notas más agudas admiten mejor las mezclas, sin enturbiarse demasiado. Las notas graves, al mezclarse “emborronan” un poco el sonido, siendo, en general, notas únicas que marcan la base del acorde, sobre las que se agregan otras. +
+El oyente tiende a analizar las notas de abajo a arriba. Quizá, en un instinto atávico de supervivencia, los sonidos graves han de analizarse con máxima prioridad, ya que sugieren cosas grandes, fuertes, pesadas, importantes... en suma, cosas a las que se debe prestar atención, por si representan un peligro. Los sonidos agudos pueden analizarse con más calma, ya que suelen provenir de elementos de pequeño tamaño, ligeros y, en general, menos peligrosos. Claro que hay excepciones, pero, es una regla instintiva general. Si vamos a cruzar la calle y por un oido nos entra un sonido de camión y por el otro el de una bicicleta, probablemente nos lancemos hacia el lado de la bicicleta sin ni siquiera girar la cabeza para ver qué pasa. Mediante sencillos trucos como este, hemos llegado vivos hasta nuestros días.  +
 Ocurre algo parecido con el ojo humano: tiene mucha menor capacidad para detectar el color azul que los colores rojo y verde. Por qué? Bueno, hay muchas menos cosas azules en la naturaleza a las que prestar atención. Una es el mar, la otra el cielo en verano. Ya no se me ocurren más. Sin embargo hay muchas cosas verdes en nuestro camino, y, atención, muchas cosas rojas, entre ellas, un par bastante urgentes: el fuego y la sangre. Quizá algún antepasado nuestro nació con más células detectoras de color azul que de rojo y verde, pero posiblemente las cosas no le fuesen demasiado bien y la cruel evolución hizo su trabajo inexorablemente.  +
 En fin, la diferencia entre sonidos graves y agudos debería formar parte de nuestro análisis de manera importante. Es cierto que hay simetría en las escalas, y su observación facilita mucho su comprensión, pero se trata de una rara simetría inserta en una especie de espiral ascendente que va decreciendo de tamaño. Una especie de concha de caracol ( un objeto bastante propenso al analisis matemático, por cierto ) sobre la que las notas estan colocadas. 
 
-*Posición y forma* +
-Así que, según hemos concluido, el oyente considera un acorde  como un conjunto de notas agudas apiladas sobre notas graves, y no al revés. De algún modo, las notas graves marcan la situación del grupo de notas, y las agudas definen la forma del mismo.  +
-Si volvemos al simil del mapa y del terreno, la nota grave nos indica en qué punto del mapa estamos y las notas agudas indican, digamos, qué relación guarda ese objeto con el resto del mapa, es decir, nos ayuda a imaginar el resto del mapa.  +
-Si en el terreno vemos un punto, sabremos dónde ese punto, pero si además vemos que ese punto es un arbol, nos indicará que probablemente estamos en un bosque. Si resulta que el punto tiene forma de edificio, seguro que estamos en pleno centro de la ciudad. Así es como, con un simple acorde, nos hacemos una idea de cómo es el resto del mapa y en qué punto nos encontramos del mismo. Claro que hay puntos que podrían ser árboles o edificios (tríadas con la misma estructura). Así que todavía hay espacio para la sorpresa. +
-De manera que podríamos decir que cada pila de notas nos aporta dos tipos de información: uno sobre la estructura de la escala de la que forma parte y otra sobre la posición donde se encuentra en la misma. Podemos acuñar dos nuevos términos para esto, información _estructural _y la información _posicional_. Cuando hablamos de las sensaciones que nos producen las tríadas mayores y menores, de alegría o tristeza, simplemente mostrábamos tríadas separadas, sin saber a qué escala pertenecían, y aún así nos transmitían esa idea. Podemos concluir que la estructura tríada tiene la mayor cantidad de información estructural lo más clara posible. Cuando vamos apilando notas encima, se va perdiendo un poco de información estructural y se gana información posicional, es decir, se presenta más “trozo de mapa” para que el oyente pueda saber cuál es el terreno y dónde está en este momento.
+==== Posición y forma
 
-*Ordenación de los grupos de notas* +
+Así que, según hemos concluido, el oyente considera un acorde  como un conjunto de notas agudas apiladas sobre notas graves, y no al revés. De algún modo, las notas graves marcan la situación del grupo de notas, y las agudas definen la forma del mismo.  +
+Si volvemos al simil del mapa y del terreno, la nota grave nos indica en qué punto del mapa estamos y las notas agudas indican, digamos, qué relación guarda ese objeto con el resto del mapa, es decir, nos ayuda a imaginar el resto del mismo.  +
+Si en el terreno vemos un punto, sabremos dónde ese punto, pero si además vemos que ese punto es un arbol, nos indicará que probablemente estamos en un bosque. Si resulta que el punto tiene forma de edificio, seguro que estamos en pleno centro de la ciudad. Así es como, con un simple acorde, nos hacemos una idea de cómo es el resto del mapa y en qué punto nos encontramos del mismo. Claro que hay puntos que podrían ser árboles o edificios (tríadas con la misma estructura). Así que todavía hay espacio para la sorpresa. +
+De manera que podríamos decir que cada pila de notas nos aporta dos tipos de información: 
+
+- La estructura de la escala de la que forma parte 
+- La posición donde se encuentra en la misma. 
+
+Podemos acuñar dos nuevos términos para esto, información _estructural_ y la información _posicional_. Cuando hablamos de las sensaciones que nos producen las tríadas mayores y menores, de alegría o tristeza, simplemente mostrábamos tríadas separadas, sin saber a qué escala pertenecían, y aún así nos transmitían esa idea. Podemos concluir que la estructura tríada tiene la mayor cantidad de información estructural lo más clara posible. Cuando vamos apilando notas encima, se va perdiendo un poco de información estructural y se gana información posicional, es decir, se presenta más “trozo de mapa” para que el oyente pueda saber cuál es el terreno y dónde está en este momento.
+
+==== Ordenación de los grupos de notas
+
 Como dijimos, el centro tonal de una escala lo marca la nota que queda a la misma distancia de los tritonos, digamos la nota más neutra. Qué pasa cuando apilamos notas? Se mantendrá la misma simetría? Pasará algo inesperado? Me temo que sí, al menos para mí. +
 Veámoslo en una tabla.
 
 
 
 
-Cuando tenemos simplemente una nota, observamos que, en la escala WHITE, el centro es la nota D. Dijimos que marcaba el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo. +
-Cuando apilamos dos notas alternas, los pares que se forman pueden ser de 3 o de 4 semitonos. Si nos fijamos en el esquema, el centro simétrico ahora pasa a ser la nota C. Hemos bajado un tono. +
-Al apilar tres, para formar una tríada, obtenemos pilas 43, 34 y 33 de manera que ahora, el centro simétrico pasa a ser la tríada formada a partir de la nota B. Recordemos que las tríadas tenían un fuerte significado debido a su forma: justicia/injusticia, bien/mal, vida/muerte, alegría/tristeza, etc.  +
-Si usamos cuatro notas, el carácter de las tríadas pasa a un plano secundario. Ya no vemos una entidad grande apoyada sobre una más pequeña. Ahora hay tres entidades, formando distintas combinaciones. Si teníamos arriba un grande opresor sobre uno pequeño oprimido, ahora el de arriba también soporta a otro pequeño, así que parece más equilibrado, y al revés, si había uno pequeño apoyado sobre uno grande, lo cual nos parecía justo, ahora el pequeño tiene a su vez otro grande encima. En resumen, se difumina un poco la sensación de desequilibrio grande/pequeño. Sin embargo, al agregar más notas, disminuye también la posibilidad de confusión: ya no hay tantos acordes comunes. Teníamos 3 tipos de tríadas (4 3, 34 y 33) con lo que F, C y G podrían confundirse, E, A y D también y solo era diferente B.  +
-Ahora tenemos cuatro tipos de cuatríadas (334, 344, 433, 334) así que E, A y D siguen siendo iguales, F y C también pero G y B son distintos. Hemos conseguido diferenciar a G y a B. Además hemos vuelto a bajar de grado: ahora el centro simétrico está en la tríada de A. +
+Cuando tenemos simplemente una nota, observamos que, en la escala `WHITE`, el centro es la nota `D`. Dijimos que marcaba el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo. +
+Cuando apilamos dos notas alternas, los pares que se forman pueden ser de 3 o de 4 semitonos. Si nos fijamos en el esquema, el centro simétrico ahora pasa a ser la nota `C`. Hemos bajado un tono. +
+Al apilar tres, para formar una tríada, obtenemos pilas `43`, `34` y `33` de manera que ahora, el centro simétrico pasa a ser la tríada formada a partir de la nota `B`. Recordemos que las tríadas tenían un fuerte significado debido a su forma: justicia/injusticia, bien/mal, vida/muerte, alegría/tristeza, etc.  +
+Si usamos cuatro notas, el carácter de las tríadas pasa a un plano secundario. Ya no vemos una entidad grande apoyada sobre una más pequeña. Ahora hay tres entidades, formando distintas combinaciones. Si teníamos arriba un grande opresor sobre uno pequeño oprimido, ahora el de arriba también soporta a otro pequeño, así que parece más equilibrado, y al revés, si había uno pequeño apoyado sobre uno grande, lo cual nos parecía justo, ahora el pequeño tiene a su vez otro grande encima. En resumen, se difumina un poco la sensación de desequilibrio grande/pequeño. Sin embargo, al agregar más notas, disminuye también la posibilidad de confusión: ya no hay tantos acordes comunes. Teníamos 3 tipos de tríadas (`43`, `34` y `33`) con lo que `F`, `C` y `G` podrían confundirse, `E`, `A` y `D` también y solo era diferente `B`.  +
+Ahora tenemos cuatro tipos de cuatríadas (`334`, `344`, `433`, `334`) así que `E`, `A` y `D` siguen siendo iguales, `F` y `C` también pero `G` y `B` son distintos. Hemos conseguido diferenciar a `G` y a `B`. Además hemos vuelto a bajar de grado: ahora el centro simétrico está en la tríada de `A`. +
 En resumen: observamos que cuantas más notas apilamos, más baja el centro simétrico. Es curioso, pero qué podría significar? Sigamos razonando... +
 Desde luego, no es el centro tonal de la escala. Sea cual sea la cantidad de notas que apilemos, el oyente sigue percibiendo el mismo centro tonal, y sobre todo, los mismos tritonos. Conoce la orientación del mapa correctamente. Eso no cambia. Qué estamos cambiando entonces? +
 Recordemos de qué manera medíamos la distancia al tritono de un grupo de notas. Considerábamos la cantidad de notas que hay que agregar al grupo para que contenga un tritono. Suponemos que el oyente hace esto de manera automática. Es como si completase las notas que faltan y notase que está cerca de escuchar un tritono. Nos quedamos en que debería haber alguna fórmula para calcular correctamente la distancia al tritono que se percibe y que probablemente, el hecho de que en el grupo de notas ya estuviese presente una nota perteneciente al tritono, aumentaría esa percepción.
-
 
 
 Si estuviésemos hablando de una materia formada por partículas, estas serían las combinaciones básicas. En primer lugar tenemos la tercera mayor y luego la tercera menor. Esas serían las partículas atómicas. Apilándolas obtendríamos los “ladrillos” básicos: la tríada mayor, la tríada menor y la tríada disminuida, recordemos, resumiendo mucho: justicia, injusticia y pregunta sin contestar, respectivamente. Con partículas de este tipo, ya podríamos construir el 90 % de la materia universal. Para materia más compleja, usamos pilas de cuatro notas, es decir, una de las pilas anteriores con una nota más encima. Esta combinación comparte la partícula central, así que tenemos por ejemplo una tríada mayor sobre una tríada menor.  +
@@ -467,9 +477,9 @@ Podríamos concluir que en los niveles iniciales, lo que prima es la estructura 
 
 Analicémos entonces el significado correspondiente a cada partícula base.
 
-Las dos últimas son especialmente interesantes y ambas estan presentes especialmente en la música moderna. La pila 434 recibe en notación estandar el nombre de _acorde mayor con séptima mayor_ y produce una sensación de cierto relax obscuro e indolente, muy apto para baladas románticas, perezosas y sensuales. Si el elemento central de la tríada fuese una persona sería un ser debil que se se apoya sobre uno fuerte pero a su vez siente encima el peso de otro. Un ser debil que siente la contradicción de la doble moral, por una parte debería quejarse debido al peso que le oprime, pero por otra disfruta de la solidaridad y el soporte que recibe. Así que permanece en silencio, aceptando su destino y añorando que su situación cambie. En cuanto a la pila 343, en estandar es un acorde _menor con séptima_. En este caso, el elemento central del esquema sería un ser fuerte, que soporta a un ser debil, pero que también está apoyado sobre otro debil. Cómo puede sentirse? Si el de la tríada anterior ocultaba su queja por la doble moral, este debe ocultar su alegría, puesto que no está sufriendo, ya que soporta a un ser más debil que él. Puede que se sienta culpable por oprimir a un debil pero diríamos que está en paz consigo mismo, puesto que ya está pagando su deuda. “Sé que otros sufren por mi culpa, pero ya contribuyo con mis buenas obras, así que olvidemos la injusticia y disfrutemos de la vida”. Esto sugiere civilización, sociedad, avance, optimismo. Un ermitaño que vive en el desierto nunca sentirá esa sensación, su vida diaria no contiene ventajas a costa de que otros sufran, simplemente no hay otros. Si vives en una sociedad moderna, todo funciona gracias a que los servicios que utilizas los pagas con tu trabajo. Otros trabajan para que tú estés cómodo, pero tú también trabajas para que otros lo estén. Así funciona, es la base de la sociedad de consumo. Estos acordes se utilizan profusamente en la música pop, en el jazz, la bossa nova, en el rock, y en general en toda la música moderna. Son poco comunes en música tradicional, incluso en música clásica: parece que suenan demasiado “modernos”. 
+Las dos últimas son especialmente interesantes y ambas estan presentes especialmente en la música moderna. La pila `434` recibe en notación estandar el nombre de _acorde mayor con séptima mayor_ y produce una sensación de cierto relax obscuro e indolente, muy apto para baladas románticas, perezosas y sensuales. Si el elemento central de la tríada fuese una persona sería un ser debil que se se apoya sobre uno fuerte pero a su vez siente encima el peso de otro. Un ser debil que siente la contradicción de la _doble moral_, por una parte debería quejarse debido al peso que le oprime, pero por otra disfruta de la solidaridad y el soporte que recibe. Así que permanece en silencio, aceptando su destino y añorando que su situación cambie. En cuanto a la pila `343`, en estandar es un acorde _menor con séptima_. En este caso, el elemento central del esquema sería un ser fuerte, que soporta a un ser debil encima, pero que también está apoyado sobre otro debil. Cómo puede sentirse? Si el de la tríada anterior ocultaba su queja por la doble moral, este debe ocultar su alegría, puesto que no está sufriendo, ya que soporta a un ser más debil que él. Puede que se sienta culpable por oprimir a un debil pero diríamos que está en paz consigo mismo, puesto que ya está pagando su deuda. “Sé que otros sufren por mi culpa, pero ya contribuyo con mis buenas obras, así que olvidemos la injusticia y disfrutemos de la vida”. Esto sugiere civilización, sociedad, avance, optimismo. Un ermitaño que vive en el desierto nunca sentirá esa sensación, su vida diaria no contiene ventajas a costa de que otros sufran, simplemente no hay otros. Si vives en una sociedad moderna, todo funciona gracias a que los servicios que utilizas los pagas con tu trabajo. Otros trabajan para que tú estés cómodo, pero tú también trabajas para que otros lo estén. Así funciona, es la base de la sociedad de consumo. Estos acordes se utilizan profusamente en la música pop, en el jazz, la bossa nova, en el rock, y en general en toda la música moderna. Son poco comunes en música tradicional, incluso en música clásica: parece que suenan demasiado “modernos”. 
 
-*Nombres para las partículas*
+==== Nombres para las partículas
 
 Asignaremos nombres básicos a nuestras partículas básicas, para pensar de forma un poco más cómoda. Si llamamos a la tríada disminuida (la del (*t)*ritono) __T__, a la tríada m(*a)*yor __A__ y a la tríada m(*e)*nor __E__, entonces, las pilas de cuatro notas se llamarán _TE, AT, AE_ y _EA_. Parece útil y resulta fácil deducir el nombre a partir del dibujo o de las notas, solo memorizando tres letras. Veamos entonces las pilas de cinco notas y sus posibles nombres:
 
