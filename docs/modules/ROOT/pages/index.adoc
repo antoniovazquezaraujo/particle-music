@@ -142,15 +142,43 @@ Eliminando el concepto de _modo_ de una escala, estas son las escalas que se usa
 
 En la notación creada se representan los grados de la escala como números. Se ha de prestar atención a que el primer grado de la escala no es, como en la notación tradicional, el grado más lejano al tritono (en la escala diatónica sería el DO), sino el grado que, como muestran las figuras, ocupa el centro de la estructura (en la escala diatónica sería el RE). Partiendo de la nota inicial y girando en sentido agujas del reloj se sube de tono hasta que se vuelve al tono inicial, es decir, se sube una octava.
 
- 
-.Las doce notas en nuestra notación 
-image::scale-grades.svg[100,100]
+.Tabla de notación de escalas con los doce grados
+[ditaa, background=FF0000, no-shadows=true, no-separation=true]
+----
+        +---+---+---+
+        | 6 | 7 | 8 |
+        +---+---+---+
+        | 5 |   | 9 |
+        +---+   +---+
+        | 4 |   | 10|
+        +---+   +---+
+        | 3 |   | 11|
+        +---+---+---+
+        | 2 | 1 | 12|
+        +---+---+---+
+----
 
 Téngase en cuenta que en la escala BLACK, la simetría no se basa en las notas, sino en el espacio entre ellas, y no hay una nota central, sino un espacio entre notas central. La sensación de simetría que percibe el oyente es idéntica y la notación así lo refleja. +
 Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se puede observar la simetría de todas las escalas. Si se compara con la notación tradicional, donde no se aprecia simetría alguna, se notará una increible mejoría en las posibilidades que ofrece para su análisis, estudio y asimilación.
 
+
 .Las seis escalas
-image::scales.png[]
+[ditaa, background=FF0000, no-shadows=true, no-separation=true]
+----
++---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+
+| 4 |   | 5 | | 4 |   | 5 | | 4 |   | 5 | | 4 |   | 5 | | 3 |   | 4 | |   | 4 |   |
++---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+
+|   |   |   | | 3 |   | 6 | | 3 |   | 6 | | 3 |   | 6 | |   |   |   | | 3 |   | 5 |
++---+   +---+ +---+   +---+ +---+   +---+ +---+   +---+ +---+   +---+ +---+   +---+
+| 3 |   | 6 | |   |   |   | |   |   |   | |   |   |   | |   |   |   | |   |   |   |
++---+   +---+ +---+   +---+ +---+   +---+ +---+   +---+ +---+   +---+ +---+   +---+
+| 2 |   | 7 | | 2 |   | 7 | |   |   |   | | 2 |   | 7 | | 2 |   | 5 | | 2 |   | 6 |
++---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+
+|   | 1 |   | |   | 1 |   | | 2 | 1 | 7 | | 1 |   | 8 | |   | 1 |   | |   | 1 |   |
++---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+ +---+---+---+
+    WHITE         BLUE           RED          BLACK         PENTA         TONES
+----
+
 
 == Nombres de las notas
 
@@ -167,8 +195,22 @@ En nuestra notación, para indicar bemoles usamos la misma letra pero en minúsc
 
 Esta sería la representación de la escala `BLUE` de `LA`, es decir de `A`. Observamos que aparece el `RE bemol (d)` y luego el `RE natural (D)`. 
 
-.La escala BLUE de A
-image::blue-scale-of-a.png[]
+.Las escala BLUE de A
+[ditaa, background=FF0000, no-shadows=true, no-separation=true]
+----
++---+---+---+ 
+| D |   | E | 
++---+---+---+ 
+| d |   | F | 
++---+   +---+ 
+|   |   |   | 
++---+   +---+ 
+| B |   | G | 
++---+---+---+ 
+|   | A |   | 
++---+---+---+ 
+    WHITE     
+----
 
 == Tríadas de PENTA
 
@@ -190,7 +232,27 @@ Será mejor que dejemos de hablar de colores.
 Al representar los tritonos se observa que también ocupan su lugar perfectamente simétrico. Se hará mediante una flecha que los una. Veamos la representación de todas las escalas con sus tritonos.
 
 .Escalas y sus tritonos
-image::scales-and-tritones.png[]
+[ditaa, background=FF0000, no-shadows=true, no-separation=true]
+----
+ +----+----+----+  +----+-----+----+  +----+-----+----+  +----+-------+----+  +----+----+----+  +----+------+----+ 
+ |    |    |    |  |    |     |    |  |cBLU+--+  |cRED|  |cBLU+----+  |cRED|  |    |    |    |  |    |cRED  |    | 
+ |  4 |    |  5 |  |  4 |     |  5 |  |  4 | ++->|  5 |  |  4 | +--+->|  5 |  |  3 |    |  4 |  |    |  4   |    | 
+ +----+----+----+  +----+-----+----+  +----+-++--+----+  +----+-+--+--+----+  +----+----+----+  +----+--+---+----+ 
+ |    |    |    |  |cGRE+--+  |cBLU|  |    | ||  |    |  |cYEL+-+-+|  |cGRE|  |    |    |    |  |cGRE+--++  |cBLU| 
+ |    |    |    |  |  3 | ++->|  6 |  |  3 | ||  |  6 |  |  3 | |+++->|  6 |  |    |    |    |  |  3 | +++->|  5 | 
+ +----+    +----+  +----+ ||  +----+  +----+ ||  +----+  +----+ ||||  +----+  +----+    +----+  +----+ |||  +----+ 
+ |cRED+--->|cRED|  |    | ||  |    |  |    | ||  |    |  |    | ||||  |    |  |    |    |    |  |    | |||  |    | 
+ |  3 |    |  6 |  |    | ||  |    |  |    | ||  |    |  |    | ||||  |    |  |    |    |    |  |    | |||  |    | 
+ +----+    +----+  +----+ ||  +----+  +----+ ||  +----+  +----+ ||||  +----+  +----+    +----+  +----+ |||  +----+ 
+ |    |    |    |  |cBLU+-+|  |cGRE|  |    | ||  |    |  |cGRE+-++||  |cYEL|  |    |    |    |  |cBLU+-+||  |cGRE| 
+ |  2 |    |  7 |  |  2 |  +->|  7 |  |    | ||  |    |  |  2 | | ++->|  7 |  |  2 |    |  5 |  |  2 |  v+->|  6 | 
+ +----+----+----+  +----+-----+----+  +----+-++--+----+  +----+-+--+--+----+  +----+----+----+  +----+------+----+ 
+ |    |    |    |  |    |     |    |  |cRED+-+|  |cBLU|  |cRED+-+  |  |cBLU|  |    |    |    |  |    |cRED  |    | 
+ |    |  1 |    |  |    |  1  |    |  | 2  | 1+->|  7 |  |  1 |    +->|  8 |  |    |  1 |    |  |    |  1   |    | 
+ +----+----+----+  +----+-----+----+  +----+-----+----+  +----+-------+----+  +----+----+----+  +----+------+----+ 
+      WHITE              BLUE                RED                BLACK              PENTA            TONES
+----
+
 
 Como se puede observar, la escala `WHITE` (escala mayor diatónica, la más usada en música clásica) solamente tiene un tritono.  +
 La escala `BLUE` (recordemos, en terminología estandar, _menor melódica_) es, con mucho, la más utilizada en el jazz. Tiene dos tritonos y eso permite una mayor capacidad para el engaño y la sorpresa, variando casi imperceptiblemente entre la sensaciones mayor/menor y menor/mayor. +
@@ -213,8 +275,26 @@ Llamaremos _centro tonal_ a la nota central de la escala. En todas, es la nota q
 Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, que podría ser una tercera mayor o también una tercera menor. Esto amplia mucho las posibilidades de engaño y de sorpresa, y es de gran ayuda para la _modulación_ que consiste en cambiar de tonalidad, es decir, seleccionar otra escala.
 
 .Escalas con terceras ambiguas
-image::scales-and-thirds.png[]
-
+[ditaa, background=FF0000, no-shadows=true, no-separation=true]
+----
+ +----+----+----+  +----+-----+----+  +----+-----+----+  +----+-----+----+   +----+----+----+  +----+-----+----+ 
+ |    |    |    |  |    |     |    |  |    |     |    |  |    |     |cRED|   |    |    |    |  |    |     |    | 
+ |  4 |    |  5 |  |  4 |     |  5 |  |  4 |     |  5 |  |  4 |     |  5 |   |  3 |    |  4 |  |    |  4  |    | 
+ +----+----+----+  +----+-----+----+  +----+-----+----+  +----+-----+----+   +----+----+----+  +----+-----+----+ 
+ |    |    |    |  |cRED|     |    |  |cRED|     |cRED|  |cRED|     |    |   |    |    |    |  |    |     |    | 
+ |    |    |    |  |  3 |     |  6 |  |  3 |     |  6 |  |  3 |     |  6 |   |    |    |    |  |  3 |     |  5 | 
+ +----+    +----+  +----+     +----+  +----+     +----+  +----+     +----+   +----+    +----+  +----+     +----+ 
+ |    |    |    |  |    |     |    |  |    |     |    |  |    |     |    |   |    |    |    |  |    |     |    | 
+ |  3 |    |  6 |  |    |     |    |  |    |     |    |  |    |     |    |   |    |    |    |  |    |     |    | 
+ +----+    +----+  +----+     +----+  +----+     +----+  +----+     +----+   +----+    +----+  +----+     +----+ 
+ |    |    |    |  |    |     |    |  |    |     |    |  |    |     |cRED|   |    |    |    |  |    |     |    | 
+ |  2 |    |  7 |  |  2 |     |  7 |  |    |     |    |  |  2 |     |  7 |   |  2 |    |  5 |  |  2 |     |  6 | 
+ +----+----+----+  +----+-----+----+  +----+-----+----+  +----+-----+----+   +----+----+----+  +----+-----+----+ 
+ |    |    |    |  |    |     |    |  |cRED|     |    |  |cRED|     |    |   |    |    |    |  |    |     |    | 
+ |    |  1 |    |  |    |  1  |    |  | 2  |  1  |  7 |  |  1 |  1  |  8 |   |    |  1 |    |  |    |  1  |    | 
+ +----+----+----+  +----+-----+----+  +----+-----+----+  +----+-----+----+   +----+----+----+  +----+-----+----+ 
+      WHITE              BLUE                RED                BLACK               PENTA            TONES
+----
 En este esquema observamos (marcados en tono oscuro) los grados que forman una tercera que puede ser mayor y también menor. 
 
 * `WHITE` es perfectamente inequívoca, pues todas sus terceras son mayores o menores. 
@@ -231,7 +311,26 @@ La sensación de ambigüedad entre el caracter mayor/menor de una tríada produc
 Si todos los grados de la escala tienen una tercera, mayor o menor, consideraremos que, al menos en ese aspecto, está completa. Podemos observar que, en la escala `RED` hay un grado que no tiene ninguna clase de tercera: el séptimo, así como en la escala `PENTA` faltan dos terceras, en el primer y en el tercer grado.
 
 .Escalas con grados sin tercera
-image::scales-without-thirds.png[]
+[ditaa, background=FF0000, no-shadows=true, no-separation=true]
+----
+  +----+-----+----+   +----+----+----+ 
+  |    |     |    |   |cRED|    |    | 
+  |  4 |     |  5 |   |  3 |    |  4 | 
+  +----+-----+----+   +----+----+----+ 
+  |    |     |    |   |    |    |    | 
+  |  3 |     |  6 |   |    |    |    | 
+  +----+     +----+   +----+    +----+ 
+  |    |     |    |   |    |    |    | 
+  |    |     |    |   |    |    |    | 
+  +----+     +----+   +----+    +----+ 
+  |    |     |    |   |    |    |    | 
+  |    |     |    |   |  2 |    |  5 | 
+  +----+-----+----+   +----+----+----+ 
+  |    |     |cRED|   |    |cRED|    | 
+  | 2  |  1  |  7 |   |    |  1 |    | 
+  +----+-----+----+   +----+----+----+ 
+         RED                 PENTA     
+----
 
 == Distancias a tritonos
 
