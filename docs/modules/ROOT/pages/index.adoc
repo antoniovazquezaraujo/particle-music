@@ -67,7 +67,18 @@ Uno se siente casi avergonzado de tener que recurrir a toda esta dieciochesca te
 == Estructura mayor/menor y su significado
 
 .Esquema geométrico de las tríadas 
-image::triads.png[tríadas, estas son tríadas]
+[ditaa, background=FF0000, no-shadows=true, no-separation=true]
+----
+        +---------+           +---+      
+        |         |           |   |       
+        |         |        +--+---+--+             
+        |         |        |         |             
+        |         |        |         |             
+        +--+---+--+        |         |
+           |   |           |         |
+           +---+           +---------+
+         mayor/menor        menor/mayor
+----
 
 El caso es que las tríadas, son la estructura musical más utilizada en la música. No ofrecen ninguna duda, son como los átomos con los que se forma el resto de la materia: son indivisibles ( no hay nada con una estructura más básica ) e incluso cuando no están, el cerebro acaba encontrándo su huella. Forman la base sobre la que se asienta la música. +
 Las tríadas mayores forman una estructura menor/mayor (menor sobre mayor) y   
