@@ -57,67 +57,39 @@
 
 \begin{document}
 
+
 \begin{figure}
-  \center
-  \beginpgfgraphicnamed{graphic-of-flat-world}
+ \center
   \begin{tikzpicture}
-    \fill (0,0) circle (1cm);
+    [st/.style={
+      rectangle,
+      minimum size=.5cm,
+      node distance=.5cm,
+      inner sep = 0cm,      
+      draw=black,thick,fill=#1!50,
+      font=\sffamily
+      },
+    st/.default=gray]
+
+    \node (15)[st                    ] {G}; \node (25) [st=white, right of= 15] { }; \node (35) [st, right of=25       ] {A};
+    \node (14)[st=white, below of= 15] { };                                          \node (34) [st=white, below of =35] { };
+    \node (13)[st=red, below of = 14 ] {F};                                          \node (33) [st=red  , below of =34] {B};
+    \node (12)[st, below of = 13     ] {E};                                          \node (32) [st, below of= 33      ] {C};
+    \node (11)[st=white, below of= 12] { }; \node (21) [right of=11, st      ] {D};  \node (31) [right of= 21, st=white] { };
+    
+    \draw[->, ultra thick, color=red] (13.east) -- (33.west);
+
   \end{tikzpicture}
-  \endpgfgraphicnamed
-  \caption{The flat world.}
-  \label{fig1}
+
+  \vspace{12pt}
+
+\caption{Escala diatónica. Leer en el sentido horario}
+\label{fig1}
 \end{figure}
 
-As we see in Figure~\ref{fig1}, the world is flat.
 
-\begin{tikzpicture}
-	[
-		node distance=0mm,
-		box/.style={
-				rectangle,
-				minimum size=6mm,
-				ultra thin,
-				draw=black!40,
-				fill=black!10,
-			},
-		emptyBox/.style={
-				rectangle,
-				minimum height=18mm,
-				minimum width=6mm,
-				ultra thin,
-				draw=black!40,
-				fill=white,
-			},
-	]
-	%\useasboundingbox (-5,-5) rectangle (5,5);
-	%\begin{scope}[transform canvas={scale=10}]
-	\matrix[row sep=0mm,column sep=0mm, every node/.style=box] {
-		\node (n6) {}; & \node (n7) {}; & \node (n8)  {}; \\
-		\node (n5) {}; &                & \node (n9)  {}; \\
-		\node (n4) {}; &                & \node (n10) {}; \\
-		\node (n3) {}; &                & \node (n11) {}; \\
-		\node (n2) {}; & \node (n1) {}; & \node (n12) {}; \\
-	};
-	\node [emptyBox, below= of n7 ] {};
+Como se ve en la  Figura~\ref{fig1}, la escala diatónica es perfectamente simétrica.
 
-	\begin{scope}[font=\sffamily]
-		\node at (n1)  [] {D};
-		\node at (n2)  [] {};
-		\node at (n3)  [] {E};
-		\node at (n4)  [] {F};
-		\node at (n5)  [] {};
-		\node at (n6)  [] {G};
-		\node at (n7)  [] {};
-		\node at (n8)  [] {A};
-		\node at (n9)  [] {};
-		\node at (n10) [] {B};
-		\node at (n11) [] {C};
-		\node at (n12) [] {};
-		%\draw [->, green, ultra thick] (n12) to [bend left] (n8);
-		%\draw [->, red, ultra thick, bend right] (n4) -- (n11);
-	\end{scope}
-	%\end{scope}  
-\end{tikzpicture}
 
 \tableofcontents
 
@@ -161,19 +133,19 @@ Dicho de otro modo, la música nos permite emular conceptos que son externos a s
 
 En el universo que habitamos hay algunas reglas establecidas que solemos dar por supuestas, aunque podrían no estar ahí. Recordemos unas cuantas reglas de sentido común:
 
-\begin{itemize}   \tightlist   
-\item         Las cosas tienen una masa y un volumen.   
-\item         Las cosas grandes pesan más que las pequeñas   
-\item         Las cosas pequeñas se mueven más fácilmente que las grandes   
-\item         Las cosas grandes suelen estar abajo, las pequeñas arriba   
-\item         Las cosas pequeñas suelen ser frágiles, las grandes fuertes   
-\item         Los seres vivos son frágiles   
-\item         La luz suele estar arriba, la oscuridad abajo   
-\item         Los cuerpos muertos suelen estar abajo   
-\item         etc, etc. 
+\begin{itemize}   \tightlist
+  \item         Las cosas tienen una masa y un volumen.
+  \item         Las cosas grandes pesan más que las pequeñas
+  \item         Las cosas pequeñas se mueven más fácilmente que las grandes
+  \item         Las cosas grandes suelen estar abajo, las pequeñas arriba
+  \item         Las cosas pequeñas suelen ser frágiles, las grandes fuertes
+  \item         Los seres vivos son frágiles
+  \item         La luz suele estar arriba, la oscuridad abajo
+  \item         Los cuerpos muertos suelen estar abajo
+  \item         etc, etc.
 \end{itemize}
 
-Todas estas ideas están en nuestro cerebro durante toda nuestra vida, y nos sirven para sobrevivir a la realidad. Así que las         utilizamos, casi siempre de forma inconsciente para interpretar lo que         vemos, rechazar lo que tememos, jugar al tenis o beber un vaso de         agua. Lógicamente, forman parte de nuestro lenguaje musical, y además         no se necesita ningún traductor: todos los seres humanos las conocen.         Por eso la música es un lenguaje universal, porque utiliza palabras         que cualquier habitante del mundo real puede reconocer. 
+Todas estas ideas están en nuestro cerebro durante toda nuestra vida, y nos sirven para sobrevivir a la realidad. Así que las         utilizamos, casi siempre de forma inconsciente para interpretar lo que         vemos, rechazar lo que tememos, jugar al tenis o beber un vaso de         agua. Lógicamente, forman parte de nuestro lenguaje musical, y además         no se necesita ningún traductor: todos los seres humanos las conocen.         Por eso la música es un lenguaje universal, porque utiliza palabras         que cualquier habitante del mundo real puede reconocer.
 
 \subsection{Escala}
 
@@ -209,7 +181,7 @@ Uno se siente casi avergonzado de tener que recurrir a toda esta dieciochesca te
 
 El caso es que las tríadas, son la estructura musical más utilizada en la música. No ofrecen ninguna duda, son como los átomos con los que se forma el resto de la materia: son indivisibles ( no hay nada con una estructura más básica ) e incluso cuando no están, el cerebro acaba encontrándo su huella. Forman la base sobre la que se asienta la música.
 
- Las tríadas mayores forman una estructura menor/mayor (menor sobre mayor) y las menores una estructura mayor/menor (mayor sobre menor). El subconsciente toma estas estructuras como formas reales e intenta intrepretarlas.
+Las tríadas mayores forman una estructura menor/mayor (menor sobre mayor) y las menores una estructura mayor/menor (mayor sobre menor). El subconsciente toma estas estructuras como formas reales e intenta intrepretarlas.
 
 Es muy fácil observar esto con cualquier instrumento. Escuchar un acorde mayor y el mismo menor y preguntarse por qué el acorde mayor sugiere alegría y el menor tristeza es la primera pregunta que debemos hacernos, y no aceptar respuestas ``mágicas''. Durante años, he escuchado muchas respuestas a esta cuestión, la más torpe la que dice que los temas fúnebres siempre se han hecho con acordes menores y los temas festivos con acordes mayores. A esta clase de ``respuestas'' me refiero.
 
@@ -295,7 +267,7 @@ Representaremos las notas de la escala mediante la notación americana, es decir
 
 $\sharp$  /B$\flat$  $\sharp$  /D$\flat$  $\sharp$  /E$\flat$  $\sharp$  /G$\flat$  $\sharp$  /A$\flat$  $\sharp$  $\flat$
 
- =
+=
 
 En la notación estandar, cuando se quiere subir una nota un semitono se le pone el signo de sostenido ($\sharp$  ) y cuando se desea bajarla un semitono, se le agrega un bemol ($\flat$  ), así que DO$\sharp$   es en realidad la misma nota que RE$\flat$  .
 
@@ -361,13 +333,13 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
 
 .Escalas con terceras ambiguas En este esquema observamos (marcados en tono oscuro) los grados que forman una tercera que puede ser mayor y también menor.
 
-\begin{itemize}   \tightlist   
-  \item  \texttt{WHITE} es perfectamente inequívoca, pues todas sus terceras         son mayores o menores.   
-  \item  \texttt{BLUE} tiene una ambigüedad, en su tercer grado   
-  \item  \texttt{RED} tiene tres: segundo, tercero y sexto.   
-  \item  \texttt{BLACK} tiene cuatro en notas alternas, primero, tercero,         quinto y séptimo.   
-  \item  \texttt{PENTA} no tiene ninguna ambigüedad: es directa, clara y         simple.   
-  \item  \texttt{TONES} no tiene ninguna ambigüedad, puesto que todas sus         terceras son mayores, pero esto genera una débil capacidad para la         orientación: el oyente no sabrá detectar con facilidad en qué grado de         la escala estamos. 
+\begin{itemize}   \tightlist
+  \item  \texttt{WHITE} es perfectamente inequívoca, pues todas sus terceras         son mayores o menores.
+  \item  \texttt{BLUE} tiene una ambigüedad, en su tercer grado
+  \item  \texttt{RED} tiene tres: segundo, tercero y sexto.
+  \item  \texttt{BLACK} tiene cuatro en notas alternas, primero, tercero,         quinto y séptimo.
+  \item  \texttt{PENTA} no tiene ninguna ambigüedad: es directa, clara y         simple.
+  \item  \texttt{TONES} no tiene ninguna ambigüedad, puesto que todas sus         terceras son mayores, pero esto genera una débil capacidad para la         orientación: el oyente no sabrá detectar con facilidad en qué grado de         la escala estamos.
 \end{itemize}
 
 La sensación de ambigüedad entre el caracter mayor/menor de una tríada produce inquietud en el oyente, y supone una especie de adivinanza que requiere una escucha atenta y activa. El mapa no está claro, y el camino es laberíntico, además hay muchas sorpresas esperando en cada cruce. Se necesita una actitud concreta para escuchar musica con muchas ambigüedades. El jazz utiliza con profusión la ambigüedad.
@@ -396,11 +368,11 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
 
 Buscar más es un interesante ejercicio. Sería fantástico encontrar alguna, pero las propiedades que hemos visto hasta ahora restringen las posibilidades.
 
-\begin{itemize}   \tightlist   
-  \item Que haya o no tritonos   
-  \item Que todos los grados tengan o no tercera   
-  \item Que todas las terceras sean mayores o menores   
-  \item Que formen una combinación simétrica 
+\begin{itemize}   \tightlist
+  \item Que haya o no tritonos
+  \item Que todos los grados tengan o no tercera
+  \item Que todas las terceras sean mayores o menores
+  \item Que formen una combinación simétrica
 \end{itemize}
 
 Cualquier combinación que se encuentre será simplemente una ordenación diferente de alguna de las seis presentadas ( lo que sería un modo, recordemos ). Si se hace girar en el esquema se llegará a ella. Vamos a intentar algunas:
@@ -415,15 +387,15 @@ En estás dos escalas \texttt{WHITE} y \texttt{BLUE} se aprecian los tritonos so
 
 Escala white image::white-scale.png
 
- \subsection{Escala \texttt{BLUE} }
+\subsection{Escala \texttt{BLUE} }
 
 Escala blue image::blue-scale.png
 
 Comparación de distancias entre las dos tríadas. Observemos que la distancia a un tritono se mantiene en las tríadas \texttt{EGB} (que pasa a ser \texttt{eGB}), \texttt{GBD}, \texttt{BDF} y \texttt{CEG} (que pasa a ser \texttt{CeG}).
 
- GB\textbf{2}\textbf{2}GB BD\textbf{1}\textbf{1}BD DF\textbf{0}\textbf{0}DF FAFA ACAC CECe EG\textbf{3}\textbf{3}eG
+GB\textbf{2}\textbf{2}GB BD\textbf{1}\textbf{1}BD DF\textbf{0}\textbf{0}DF FAFA ACAC CECe EG\textbf{3}\textbf{3}eG
 
- De la misma forma, podemos observar que algunas tríadas siguen conteniendo la misma cantidad de notas de algún tritono al cambiar de escala.
+De la misma forma, podemos observar que algunas tríadas siguen conteniendo la misma cantidad de notas de algún tritono al cambiar de escala.
 
 \subsection{Mapa de la situación}
 
@@ -447,7 +419,7 @@ En el ejemplo, con una notación circular, más práctica para el análisis de l
 
 En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tritonal no se ha movido ni un palmo, simplemente ha aparecido uno nuevo entre \texttt{A} y \texttt{e}. En el mapa imaginario había una elevación en el terreno, que formaba una pendiente a su alrededor. Ahora hay dos. Pero en algunos puntos, la pendiente sigue siendo idéntica, y en la misma dirección. Esa es la \emph{sencilla} razón de que algunas modulaciones sean más cercanas o agradables al oído que otras.
 
- Desde WHITE D a BLUE G image::white-d-to-blue-g.png
+Desde WHITE D a BLUE G image::white-d-to-blue-g.png
 
 Desde WHITE D a BLUE D image::white-d-to-blue-d.png
 
@@ -475,7 +447,7 @@ Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos n
 
 .De WHITE D a RED E y su rotación image::white-de-to-red-e-rotation.png
 
- \subsection{Nombres para las tríadas}
+\subsection{Nombres para las tríadas}
 
 Por qué las tríadas tienen esos curiosos nombres en la notación estandar? \emph{Mayor, menor, menor quinta bemol, mayor quinta   aumentada, disminuida\ldots{}}
 
@@ -483,7 +455,7 @@ Se trata de nombres del pasado, que simplemente han subsistido hasta ahora por f
 
 Para empezar, no me sirve de nada conocer la distancia de la tercera nota a la primera: lo que me interesa es el tamaño de los dos pares de notas. Esta es una tabla con las distancias que aparecen en todas las escalas. En la columna izquierda, las distancias en semitonos como un par de números, que indican el tamaño del intervalo inferior y el del intervalo superior partiendo desde \texttt{C}. En \emph{negrita} los esquemas más usados, \emph{43} ( tríada mayor) y \emph{34} ( tríada menor).
 
- \emph{34}\textbf{X}\textbf{X}\textbf{X}
+\emph{34}\textbf{X}\textbf{X}\textbf{X}
 
 \emph{43}\textbf{X}\textbf{X}\textbf{X}
 
@@ -497,9 +469,9 @@ Así que, desde ahora hablaremos de una tríada menor como una tríada \texttt{4
 
 En esta tabla vemos el tipo de tríadas que tiene cada escala y en qué grado aparecen, así como el nombre de la combinación en notación estandar, si es que existe alguno.
 
- \emph{ESTANDAR}\emph{NUM}\emph{WHITE}\emph{BLUE}\emph{RED}\emph{BLACK}\emph{PENTA}\emph{TONES}
+\emph{ESTANDAR}\emph{NUM}\emph{WHITE}\emph{BLUE}\emph{RED}\emph{BLACK}\emph{PENTA}\emph{TONES}
 
- Ahora tenemos nombres más eficientes y lógicos para conceptos, como ``Mayor con la quinta aumentada'', ó, uno especialmente chirriante: ``Tríada disminuída''.
+Ahora tenemos nombres más eficientes y lógicos para conceptos, como ``Mayor con la quinta aumentada'', ó, uno especialmente chirriante: ``Tríada disminuída''.
 
 Es cierto que memorizamos mejor los nombres que los números, y posiblemente, cuando lleguemos a acordes de cinco o más notas, hablar de un acorde \texttt{3\ 3\ 4\ 3\ 4} puede ser también un poco engorroso. Así que probablemente se haga necesario crear alguna nomenclatura. Pero no nos precipitemos.
 
@@ -509,7 +481,7 @@ En cada escala, los tipos de tríada dependen lógicamente de la estructura de l
 
 \emph{GRADO}\emph{WHITE}\emph{BLUE}\emph{RED}\emph{BLACK}\emph{PENTA}\emph{TONES}
 
- Intentemos buscar, una vez más, un poco de simetría
+Intentemos buscar, una vez más, un poco de simetría
 
 .Tríadas simétricas en vertical image::vertical-triad-symmetry.png{[}{]}
 
@@ -535,9 +507,9 @@ Si en el terreno vemos un punto, sabremos dónde ese punto, pero si además vemo
 
 De manera que podríamos decir que cada pila de notas nos aporta dos tipos de información:
 
-\begin{itemize}   \tightlist   
-  \item La estructura de la escala de la que forma parte   
-  \item La posición donde se encuentra en la misma. 
+\begin{itemize}   \tightlist
+  \item La estructura de la escala de la que forma parte
+  \item La posición donde se encuentra en la misma.
 \end{itemize}
 
 Podemos acuñar dos nuevos términos para esto, información \emph{estructural} y la información \emph{posicional}. Cuando hablamos de las sensaciones que nos producen las tríadas mayores y menores, de alegría o tristeza, simplemente mostrábamos tríadas separadas, sin saber a qué escala pertenecían, y aún así nos transmitían esa idea. Podemos concluir que la estructura tríada tiene la mayor cantidad de información estructural lo más clara posible. Cuando vamos apilando notas encima, se va perdiendo un poco de información estructural y se gana información posicional, es decir, se presenta más ``trozo de mapa'' para que el oyente pueda saber cuál es el terreno y dónde está en este momento.
@@ -548,7 +520,7 @@ Como dijimos, el centro tonal de una escala lo marca la nota que queda a la mism
 
 Veámoslo en una tabla.
 
- Pilas de notas image::piles-of-notes.png
+Pilas de notas image::piles-of-notes.png
 
 Cuando tenemos simplemente una nota, observamos que, en la escala \texttt{WHITE}, el centro es la nota \texttt{D}. Dijimos que marcaba el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo.
 
@@ -572,7 +544,7 @@ Si estuviésemos hablando de una materia formada por partículas, estas serían 
 
 Con partículas de cuatro notas tenemos una pila de dos elementos básicos, que no comparten notas.
 
- Con cinco notas, es complejo entender cómo observa el oyente las pilas. Si quizá el elemento central actúa como separador de los dos elementos inferior y superior, o si se entiende como un todo.
+Con cinco notas, es complejo entender cómo observa el oyente las pilas. Si quizá el elemento central actúa como separador de los dos elementos inferior y superior, o si se entiende como un todo.
 
 Con seis notas resulta muy dificil obtener un significado.
 
