@@ -6,6 +6,8 @@
 \usepackage{amsmath,amssymb}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\usepackage{booktabs}
+\usepackage{subcaption}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -86,9 +88,6 @@
 \caption{Escala diatónica. Leer en el sentido horario}
 \label{fig1}
 \end{figure}
-
-
-Como se ve en la  Figura~\ref{fig1}, la escala diatónica es perfectamente simétrica.
 
 
 \tableofcontents
@@ -177,8 +176,33 @@ Uno se siente casi avergonzado de tener que recurrir a toda esta dieciochesca te
 
 \subsection{Estructura mayor/menor y su significado}
 
-.Esquema geométrico de las tríadas mayor/menor menor/mayor
+\begin{figure}
+  \center
+   \begin{tikzpicture}
+     [st/.style={
+       rectangle,
+       minimum size=1cm,
+       node distance=1cm,
+       inner sep = 0cm,      
+       draw=black,thick,fill=#1!50,
+       font=\sffamily
+       },
+     st/.default=gray]
+ 
+     \node (maj1)[rectangle,draw=black,                     minimum size=.5cm] { };
+     \node (min1)[rectangle,draw=black, below= 0cm of maj1, minimum size= 1cm] { };
+     \node (maj2)[rectangle,draw=black, right=of maj1,      minimum size= 1cm] { };
+     \node (min2)[rectangle,draw=black, below=0cm of maj2,  minimum size=.5cm] { }; 
+ 
+   \end{tikzpicture}
+ 
+   \vspace{12pt}
+ 
+ \caption{Esquema geométrico de las tríadas mayor/menor menor/mayor}
+ \label{fig:maj-minor-scheme}
+ \end{figure}
 
+ 
 El caso es que las tríadas, son la estructura musical más utilizada en la música. No ofrecen ninguna duda, son como los átomos con los que se forma el resto de la materia: son indivisibles ( no hay nada con una estructura más básica ) e incluso cuando no están, el cerebro acaba encontrándo su huella. Forman la base sobre la que se asienta la música.
 
 Las tríadas mayores forman una estructura menor/mayor (menor sobre mayor) y las menores una estructura mayor/menor (mayor sobre menor). El subconsciente toma estas estructuras como formas reales e intenta intrepretarlas.
@@ -193,9 +217,22 @@ Esos acordes están presentes en el 99\% de la música, e incluso, cuando no est
 
 En fin, estas son las ideas que sugieren automáticamente esas tres simples notas:
 
-\emph{\emph{Tríada menor}}\emph{\emph{Tríada mayor}}
-
-njusticiausticia ristezalegría racasoriunfo uerteida presiónolidaridad =
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Tríada menor} & \textbf{Tríada mayor} \\
+    \midrule
+    Injusticia  & Justicia \\
+    Tristeza    & Alegría \\
+    Fracaso & Triunfo \\
+    Muerte  & Vida \\
+    Opresión    & Solidaridad \\
+    \bottomrule
+  \end{tabular}
+  \caption{Impresión que producen las tríadas}
+  \label{tab:triad-impressions}
+\end{table}
 
 \subsection{Tríadas orientativas}
 
@@ -245,37 +282,226 @@ Se llaman \emph{modos} a las distintas orientaciones de una escala, es decir, to
 
 Eliminando el concepto de \emph{modo} de una escala, estas son las escalas que se usan habitualmente y los nombres que se le han asignado. En notación estandar, la equivalencia sería la siguiente:
 
-subsection{\emph{ESCALA}\emph{NOMBRE ESTANDAR}}
-
-HITE scala \emph{diatónica} LUE scala menor \emph{melódica} ED scala menor \emph{armónica} LACK scala \emph{disminuida} ENTA scala \emph{pentatónica} ONES scala por \emph{tonos} =
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{\textsf{Escala}} & \textbf{Nombre} & \textbf{Estandar} \\
+    \midrule
+    \textsf{WHITE}   & Escala diatónica & \\
+    \textsf{BLUE}    & Escala menor melódica & \\
+    \textsf{RED} & Escala menor armónica & \\
+    \textsf{BLACK}   & Escala disminuida & \\
+    \textsf{PENTA}   & Escala pentatónica & \\
+    \textsf{TONES}   & Escala por tonos & \\
+    \bottomrule
+  \end{tabular}
+  \caption{Tabla de escalas musicales}
+  \label{tab:scale-name-equivalences}
+\end{table}
 
 En la notación creada se representan los grados de la escala como números. Se ha de prestar atención a que el primer grado de la escala no es, como en la notación tradicional, el grado más lejano al tritono (en la escala diatónica sería el DO), sino el grado que, como muestran las figuras, ocupa el centro de la estructura (en la escala diatónica sería el RE). Partiendo de la nota inicial y girando en sentido agujas del reloj se sube de tono hasta que se vuelve al tono inicial, es decir, se sube una octava.
 
-.Tabla de notación de escalas con los doce grados
+\begin{figure}
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [st/.style={
+          rectangle,
+          minimum size=.5cm,
+          node distance=.5cm,
+          inner sep = 0cm,      
+          draw=black,thick,fill=#1!50,
+          font=\sffamily
+          },
+        st/.default=gray]
+    
+        \node (15)[st                   ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {5};
+        \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+        \node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+        \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+        \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+    
+      \end{tikzpicture}
+    \caption{\sffamily{WHITE}}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [st/.style={
+          rectangle,
+          minimum size=.5cm,
+          node distance=.5cm,
+          inner sep = 0cm,      
+          draw=black,thick,fill=#1!50,
+          font=\sffamily
+          },
+        st/.default=gray]
+    
+        \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {5};
+        \node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of= 35] {6};
+        \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+        \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+        \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+    
+      \end{tikzpicture}
+    \caption{\sffamily{BLUE}}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of =25] {5};
+      \node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of =35] {6};
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of =34] { };
+      \node (12)[st=white,below of= 13] { };                                         \node (32) [st=white, below of =33] { };
+      \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of =21] {7};
+
+    \end{tikzpicture}    \caption{\sffamily{RED}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of =25] {5};
+      \node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of =35] {6};
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of =34] { };
+      \node (12)[st      ,below of= 13] {2};                                         \node (32) [st,       below of =33] {7};
+      \node (11)[st,      below of= 12] {1}; \node (21) [st=white, right of=11] { }; \node (31) [st,       right of =21] {8};
+  
+    \end{tikzpicture}    \caption{\sffamily{BLACK}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st                   ] {3}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {4};
+      \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+      \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {5};
+      \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+    
+    \end{tikzpicture}    \caption{\sffamily{PENTA}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st=white             ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st=white, right of= 25] { };
+      \node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of= 35] {5};
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+      \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {6};
+      \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+    
+    \end{tikzpicture}    \caption{\sffamily{TONES}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \caption{Las seis escalas}
+  \label{fig:the-six-scales}
+\end{figure}
+
 
 Téngase en cuenta que en la escala BLACK, la simetría no se basa en las notas, sino en el espacio entre ellas, y no hay una nota central, sino un espacio entre notas central. La sensación de simetría que percibe el oyente es idéntica y la notación así lo refleja.
 
 Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se puede observar la simetría de todas las escalas. Si se compara con la notación tradicional, donde no se aprecia simetría alguna, se notará una increible mejoría en las posibilidades que ofrece para su análisis, estudio y asimilación.
 
-.Las seis escalas WHITE BLUE RED BLACK PENTA TONES ----
 
 \subsection{Nombres de las notas}
 
 Representaremos las notas de la escala mediante la notación americana, es decir, usando las letras desde la A hasta la G, pero con una pequeña modificación: no hay \emph{sostenidos}.
 
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{*{12}{c}}
+    \toprule
+    A & A$\sharp$ & B & C & C$\sharp$ & D & D$\sharp$ & E & F & F$\sharp$ & G & G$\sharp$ \\
+    \midrule    
+    A & b & B & C & d & D & e & E & F & g & G & a  \\    
+    \bottomrule
+  \end{tabular}
+  \caption{Equvalencias de las notas}
+  \label{tab:note-equivalences}
+\end{table}
 
+En la notación estandar, cuando se quiere subir una nota un semitono se le pone el signo de sostenido ($\sharp$) y cuando se desea bajarla un semitono, se le agrega un bemol ($\flat$), así que DO$\sharp$ es en realidad la misma nota que RE$\flat$.
 
-$\sharp$  /B$\flat$  $\sharp$  /D$\flat$  $\sharp$  /E$\flat$  $\sharp$  /G$\flat$  $\sharp$  /A$\flat$  $\sharp$  $\flat$
-
-=
-
-En la notación estandar, cuando se quiere subir una nota un semitono se le pone el signo de sostenido ($\sharp$  ) y cuando se desea bajarla un semitono, se le agrega un bemol ($\flat$  ), así que DO$\sharp$   es en realidad la misma nota que RE$\flat$  .
-
-En nuestra notación, para indicar bemoles usamos la misma letra pero en minúscula. Así que en una misma escala se puede encontrar una nota natural y también la misma nota bemol. Por ejemplo, la nota \texttt{b} equivale tanto a \texttt{LA$\sharp$  } como a \texttt{SI$\flat$  }: +
+En nuestra notación, para indicar bemoles usamos la misma letra pero en minúscula. Así que en una misma escala se puede encontrar una nota natural y también la misma nota bemol. Por ejemplo, la nota \texttt{b} equivale tanto a \texttt{LA$\sharp$} como a \texttt{SI$\flat$}: 
 
 Esta sería la representación de la escala \texttt{BLUE} de \texttt{LA}, es decir de \texttt{A}. Observamos que aparece el \texttt{RE\ bemol\ (d)} y luego el \texttt{RE\ natural\ (D)}.
+\begin{figure}
+ \center
+  \begin{tikzpicture}
+    [st/.style={
+      rectangle,
+      minimum size=.5cm,
+      node distance=.5cm,
+      inner sep = 0cm,      
+      draw=black,thick,fill=#1!50,
+      font=\sffamily
+      },
+    st/.default=gray]
 
-.Las escala BLUE de A
+    \node (15)[st                     ] {D}; \node (25) [st=white, right of= 15] { }; \node (35) [st, right of=25       ] {E};
+    \node (14)[st,       below of= 15 ] {d};                                          \node (34) [st,       below of =35] {F};
+    \node (13)[st=white, below of = 14] { };                                          \node (33) [st=white, below of =34] { };
+    \node (12)[st,       below of = 13] {B};                                          \node (32) [st, below of= 33      ] {G};
+    \node (11)[st=white, below of= 12 ] { }; \node (21) [right of=11, st      ] {A};  \node (31) [right of= 21, st=white] { };
+    
+  \end{tikzpicture}
+
+  \vspace{12pt}
+
+\caption{La escala BLUE de A}
+\label{fig:blue-scale-of-a}
+\end{figure}
+
 
 \subsection{Tríadas de PENTA}
 
@@ -301,7 +527,167 @@ Será mejor que dejemos de hablar de colores.
 
 Al representar los tritonos se observa que también ocupan su lugar perfectamente simétrico. Se hará mediante una flecha que los una. Veamos la representación de todas las escalas con sus tritonos.
 
-.Escalas y sus tritonos
+\begin{figure}
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [st/.style={
+          rectangle,
+          minimum size=.5cm,
+          node distance=.5cm,
+          inner sep = 0cm,      
+          draw=black,thick,fill=#1!50,
+          font=\sffamily
+          },
+        st/.default=gray]
+    
+        \node (15)[st                   ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {5};
+        \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+        \node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+        \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+        \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+        \draw[->, ultra thick, color=red] (13.east) -- (33.west);
+    
+      \end{tikzpicture}
+    \caption{\sffamily{WHITE}}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [st/.style={
+          rectangle,
+          minimum size=.5cm,
+          node distance=.5cm,
+          inner sep = 0cm,      
+          draw=black,thick,fill=#1!50,
+          font=\sffamily
+          },
+        st/.default=gray]
+    
+        \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {5};
+        \node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of= 35] {6};
+        \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+        \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+        \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+        
+        \draw[->, ultra thick, color=red] (14.east) -- (32.west);
+        \draw[->, ultra thick, color=red] (12.east) -- (34.west);
+
+      \end{tikzpicture}
+    \caption{\sffamily{BLUE}}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of =25] {5};
+      \node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of =35] {6};
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of =34] { };
+      \node (12)[st=white,below of= 13] { };                                         \node (32) [st=white, below of =33] { };
+      \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of =21] {7};
+
+      \draw[->, ultra thick, color=red] (15.east) -- (31.west);
+      \draw[->, ultra thick, color=red] (11.east) -- (35.west);
+
+    \end{tikzpicture}    \caption{\sffamily{RED}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of =25] {5};
+      \node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of =35] {6};
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of =34] { };
+      \node (12)[st      ,below of= 13] {2};                                         \node (32) [st,       below of =33] {7};
+      \node (11)[st,      below of= 12] {1}; \node (21) [st=white, right of=11] { }; \node (31) [st,       right of =21] {8};
+      
+      \draw[->, ultra thick, color=red] (15.east) -- (31.west);
+      \draw[->, ultra thick, color=red] (11.east) -- (35.west);
+      \draw[->, ultra thick, color=red] (14.east) -- (32.west);
+      \draw[->, ultra thick, color=red] (12.east) -- (34.west);      
+
+    \end{tikzpicture}    \caption{\sffamily{BLACK}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st                   ] {3}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {4};
+      \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+      \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {5};
+      \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+    
+    \end{tikzpicture}    \caption{\sffamily{PENTA}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st=white             ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st=white, right of= 25] { };
+      \node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of= 35] {5};
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+      \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {6};
+      \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+
+      \draw[->, ultra thick, color=red] (21.north)-- (25.south);
+      \draw[->, ultra thick, color=red] (12.east) -- (34.west);
+      \draw[->, ultra thick, color=red] (14.east) -- (32.west);
+  
+    \end{tikzpicture}    \caption{\sffamily{TONES}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \caption{Las seis escalas y sus tritonos}
+  \label{fig:the-six-scales-and-tritones}
+\end{figure}
+
 
 Como se puede observar, la escala \texttt{WHITE} (escala mayor diatónica, la más usada en música clásica) solamente tiene un tritono. + La escala \texttt{BLUE} (recordemos, en terminología estandar, \emph{menor melódica}) es, con mucho, la más utilizada en el jazz. Tiene dos tritonos y eso permite una mayor capacidad para el engaño y la sorpresa, variando casi imperceptiblemente entre la sensaciones mayor/menor y menor/mayor.
 
@@ -331,7 +717,154 @@ Llamaremos \emph{centro tonal} a la nota central de la escala. En todas, es la n
 
 Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, que podría ser una tercera mayor o también una tercera menor. Esto amplia mucho las posibilidades de engaño y de sorpresa, y es de gran ayuda para la \emph{modulación} que consiste en cambiar de tonalidad, es decir, seleccionar otra escala.
 
-.Escalas con terceras ambiguas En este esquema observamos (marcados en tono oscuro) los grados que forman una tercera que puede ser mayor y también menor.
+\begin{figure}
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [st/.style={
+          rectangle,
+          minimum size=.5cm,
+          node distance=.5cm,
+          inner sep = 0cm,      
+          draw=black,thick,fill=#1!50,
+          font=\sffamily
+          },
+        st/.default=gray]
+    
+        \node (15)[st                   ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {5};
+        \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+        \node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+        \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+        \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+    
+      \end{tikzpicture}
+    \caption{\sffamily{WHITE}}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [st/.style={
+          rectangle,
+          minimum size=.5cm,
+          node distance=.5cm,
+          inner sep = 0cm,      
+          draw=black,thick,fill=#1!50,
+          font=\sffamily
+          },
+        st/.default=gray]
+    
+        \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {5};
+        \node (14)[st=red,  below of= 15] {3};                                         \node (34) [st,       below of= 35] {6};
+        \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+        \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+        \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+        
+      \end{tikzpicture}
+    \caption{\sffamily{BLUE}}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of =25] {5};
+      \node (14)[st=red,  below of= 15] {3};                                         \node (34) [st=red,   below of =35] {6};
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of =34] { };
+      \node (12)[st=white,below of= 13] { };                                         \node (32) [st=white, below of =33] { };
+      \node (11)[st=red,  below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of =21] {7};
+
+    \end{tikzpicture}    \caption{\sffamily{RED}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st=red,   right of =25] {5};
+      \node (14)[st=red,  below of= 15] {3};                                         \node (34) [st,       below of =35] {6};
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of =34] { };
+      \node (12)[st      ,below of= 13] {2};                                         \node (32) [st=red,   below of =33] {7};
+      \node (11)[st=red,  below of= 12] {1}; \node (21) [st=white, right of=11] { }; \node (31) [st,       right of =21] {8};
+
+    \end{tikzpicture}    \caption{\sffamily{BLACK}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st                   ] {3}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {4};
+      \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+      \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {5};
+      \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+    
+    \end{tikzpicture}    \caption{\sffamily{PENTA}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st=white             ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st=white, right of= 25] { };
+      \node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of= 35] {5};
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+      \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {6};
+      \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+
+    \end{tikzpicture}    \caption{\sffamily{TONES}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \caption{Las seis escalas y terceras ambiguas}
+  \label{fig:the-six-scales-and-ambiguous-thirds}
+\end{figure}
+
+
+
+En este esquema observamos (marcados en tono oscuro) los grados que forman una tercera que puede ser mayor y también menor.
 
 \begin{itemize}   \tightlist
   \item  \texttt{WHITE} es perfectamente inequívoca, pues todas sus terceras         son mayores o menores.
