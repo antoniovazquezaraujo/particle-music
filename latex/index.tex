@@ -4,8 +4,7 @@
 %
 \documentclass[]{article}
 \usepackage{amsmath,amssymb}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+
 \usepackage{booktabs}
 \usepackage{subcaption}
 \usepackage{iftex}
@@ -49,6 +48,20 @@
 \fi
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+
+\usepackage{tikz}
+\usepackage{pgf}
+\usetikzlibrary{
+  arrows.meta,
+  decorations.pathmorphing,
+  backgrounds,positioning,
+  fit,
+  petri,
+  graphs,
+  graphdrawing
+} 
+\usegdlibrary{circular}
+
 \urlstyle{same}
 \hypersetup{
   hidelinks,
@@ -58,6 +71,36 @@
 \date{}
 
 \begin{document}
+
+
+\begin{tikzpicture}[radius=1.25cm]
+  \graph [
+    simple necklace layout,
+    node sep=0pt, 
+    grow'=up,
+    node distance=0pt,    
+    nodes={draw,circle, as =  , minimum size=20pt}
+  ]
+  { 
+       1  [draw=none] 
+    -- 2  [as= 2] 
+    -- 3  [] 
+    -- 4  [] 
+    -- 5  [] 
+    -- 6  [] 
+    -- 7  [draw=none] 
+    -- 8  [] 
+    -- 9  [draw=none] 
+    -- 10 [draw=none] 
+    -- 11 [] 
+    -- 12 [draw=none] 
+  };
+  \draw [] (0,40pt) circle [radius=30pt];
+  \draw[ultra thick, color=red] (6) -- (12);
+\end{tikzpicture}
+
+
+
 
 
 \begin{figure}
@@ -881,7 +924,56 @@ La sensación de ambigüedad entre el caracter mayor/menor de una tríada produc
 
 Si todos los grados de la escala tienen una tercera, mayor o menor, consideraremos que, al menos en ese aspecto, está completa. Podemos observar que, en la escala \texttt{RED} hay un grado que no tiene ninguna clase de tercera: el séptimo, así como en la escala \texttt{PENTA} faltan dos terceras, en el primer y en el tercer grado.
 
-.Escalas con grados sin tercera
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of =25] {5};
+      \node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of =35] {6};
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of =34] { };
+      \node (12)[st=white,below of= 13] { };                                         \node (32) [st=white, below of =33] { };
+      \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st=red,   right of =21] {7};
+
+    \end{tikzpicture}    \caption{\sffamily{RED}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st=red               ] {3}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {4};
+      \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+      \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {5};
+      \node (11)[st=white,below of= 12] { }; \node (21) [st=red,   right of=11] {1}; \node (31) [st=white, right of= 21] { };
+    
+    \end{tikzpicture}    \caption{\sffamily{PENTA}}
+    \label{fig:tikz2}
+  \end{subfigure}
+  \hfill
+  \caption{Escalas con grados sin tercera}
+  \label{fig:scales-with-no-thirds}
+\end{figure}
 
 \subsection{Distancias a tritonos}
 
@@ -895,7 +987,196 @@ En esta otra figura observamos la escala \texttt{BLUE}, con sus dos tritonos y l
 
 No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la impresión de que todavía necesitamos salir de ahí como sea. En la terminología estandar se habla de \emph{tensión}. Es un término adecuado si lo entendemos como \emph{pregunta sin responder}. En ningún caso debemos pensar en algo desagradable o repelente, solo es música.
 
-.Escala BLUE con sus tríadas image::blue-scale-and-triads.png{[}{]}
+\begin{figure}
+  \centering
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=0cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=white]
+
+      \node (1)  [st]              {C};
+      \node (2)  [st, right=of 1]  { };
+      \node (3)  [st, right=of 2]  { };
+      \node (4)  [st, right=of 3]  { };
+      \node (5)  [st, right=of 4]  {E};
+      \node (6)  [st, right=of 5]  { };
+      \node (7)  [st, right=of 6]  { };
+      \node (8)  [st, right=of 7]  {G};
+      \node (9)  [st, right=of 8]  { };
+      \node (10) [st, right=of 9]  { };
+      \node (11) [st, right=of 10] { };
+      \node (12) [st=gray, right=of 11] {B};
+      \node (13) [st, right=of 12] { };
+      \node (14) [st, right=of 13] { };
+      \node (15) [st, right=of 14] {D};
+      \node (16) [st, right=of 15] { };
+      \node (17) [st, right=of 16] { };
+      \node (18) [st=gray, right=of 17] {F};
+      \node (19) [st, right=of 18] { };
+      \node (20) [st, right=of 19] { };
+      \node (21) [st, right=of 20] { };
+      \node (22) [st, right=of 21] {A};
+      \node (23) [st, right=of 22] { };
+      \node (24) [st, right=of 23] { };
+      \node (25) [st, right=of 24] {C};
+      \node (26) [st, right=of 25] { };
+      \node (27) [st, right=of 26] { };
+      \node (28) [st, right=of 27] { };
+      \node (29) [st, right=of 28] {E};
+
+      \draw [->, ultra thick, color=red] (12.north) to [out=45,in=135] (18.north);
+
+      \node (t1-C) [st, draw=none, below=3pt of 1]  { };
+      \node (t1-E) [st, draw=none, below=3pt of 5]  {E};
+      \node (t1-G) [st, draw=none, below=3pt of 8]  {G};
+      \node (t1-B) [st, draw=none, below=3pt of 12] {B};
+
+      \node (t2-D) [st, draw=none, below=3pt of 15] { };
+      \node (t2-F) [st, draw=none, below=3pt of 18] {F};
+      \node (t2-A) [st, draw=none, below=3pt of 22] {A};
+      \node (t2-C) [st, draw=none, below=3pt of 25] {C};
+      \node (t2-E) [st, draw=none, below=3pt of 29] { };
+      
+      \draw [->, rounded corners=3mm] (t1-E.north west) rectangle (t1-B.south east);
+      \draw [->, rounded corners=3mm] (t2-F.north west) rectangle (t2-C.south east);
+
+      \node (t3-C) [st, draw=none, below=3pt of t1-C] { };
+      \node (t3-E) [st, draw=none, below=3pt of t1-E] { };
+      \node (t3-G) [st, draw=none, below=3pt of t1-G] {G};
+      \node (t3-B) [st, draw=none, below=3pt of t1-B] {B};
+      \node (t4-D) [st, draw=none, below=3pt of t2-D] {D};
+      \node (t4-F) [st, draw=none, below=3pt of t2-F] {F};
+      \node (t4-A) [st, draw=none, below=3pt of t2-A] {A};
+      \node (t4-C) [st, draw=none, below=3pt of t2-C] { };
+      \node (t4-E) [st, draw=none, below=3pt of t2-E] { };
+      
+      \draw [->, rounded corners=3mm] (t3-G.north west) rectangle (t4-D.south east);
+      \draw [->, rounded corners=3mm] (t4-D.north west) rectangle (t4-A.south east);
+
+      \node (t5-C) [st, draw=none, below=3pt of t3-C] {C};
+      \node (t5-E) [st, draw=none, below=3pt of t3-E] {E};
+      \node (t5-G) [st, draw=none, below=3pt of t3-G] {G};
+      \node (t6-B) [st, draw=none, below=3pt of t3-B] {B};
+      \node (t6-D) [st, draw=none, below=3pt of t4-D] {D};
+      \node (t6-F) [st, draw=none, below=3pt of t4-F] {F};
+      \node (t7-A) [st, draw=none, below=3pt of t4-A] {A};
+      \node (t7-C) [st, draw=none, below=3pt of t4-C] {C};
+      \node (t7-E) [st, draw=none, below=3pt of t4-E] {E};
+
+      \draw [->, rounded corners=3mm] (t5-C.north west) rectangle (t5-G.south east);
+      \draw [->, rounded corners=3mm] (t6-B.north west) rectangle (t6-F.south east);
+      \draw [->, rounded corners=3mm] (t7-A.north west) rectangle (t7-E.south east);
+    \end{tikzpicture}    
+    \label{fig:tikz2}
+  \end{subfigure}
+  \caption{Escala \sffamily{WHITE} con sus tríadas}
+  \label{fig:white-scale-with-its-triads}
+\end{figure}
+
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=0cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=white]
+
+      \node (1)  [st]              {F};
+      \node (2)  [st, right=of 1]  { };
+      \node (3)  [st, right=of 2]  { };
+      \node (4)  [st, right=of 3]  { };
+      \node (5)  [st=gray, right=of 4]  {A};
+      \node (6)  [st, right=of 5]  { };
+      \node (7)  [st, right=of 6]  { };
+      \node (8)  [st, right=of 7]  {C};
+      \node (9)  [st, right=of 8]  { };
+      \node (10) [st, right=of 9]  { };
+      \node (11) [st=gray, right=of 10] {e};
+      \node (12) [st, right=of 11] { };
+      \node (13) [st, right=of 12] { };
+      \node (14) [st, right=of 13] { };
+      \node (15) [st, right=of 14] {G};
+      \node (16) [st, right=of 15] { };
+      \node (17) [st, right=of 16] { };
+      \node (18) [st, right=of 17] { };
+      \node (19) [st=gray, right=of 18] {B};
+      \node (20) [st, right=of 19] { };
+      \node (21) [st, right=of 20] { };
+      \node (22) [st, right=of 21] {D};
+      \node (23) [st, right=of 22] { };
+      \node (24) [st, right=of 23] { };
+      \node (25) [st=gray, right=of 24] {F};
+      \node (26) [st, right=of 25] { };
+      \node (27) [st, right=of 26] { };
+      \node (28) [st, right=of 27] { };
+      \node (29) [st, right=of 28] {A};
+
+      \draw [->, ultra thick, color=red] (5.north) to [out=45,in=135] (11.north);
+      \draw [->, ultra thick, color=red] (19.north) to [out=45,in=135] (25.north);
+
+      \node (t1-F) [st, draw=none, below=3pt of 1]  { };
+      \node (t1-A) [st, draw=none, below=3pt of 5]  {A};
+      \node (t1-C) [st, draw=none, below=3pt of 8]  {C};
+      \node (t1-e) [st, draw=none, below=3pt of 11] {e};
+
+      \node (t2-G) [st, draw=none, below=3pt of 15] { };
+      \node (t2-B) [st, draw=none, below=3pt of 19] {B};
+      \node (t2-D) [st, draw=none, below=3pt of 22] {D};
+      \node (t2-F) [st, draw=none, below=3pt of 25] {F};
+      \node (t2-A) [st, draw=none, below=3pt of 29] { };
+      
+      \draw [->, rounded corners=3mm] (t1-A.north west) rectangle (t1-e.south east);
+      \draw [->, rounded corners=3mm] (t2-B.north west) rectangle (t2-F.south east);
+
+      \node (t3-F) [st, draw=none, below=3pt of t1-F] { };
+      \node (t3-A) [st, draw=none, below=3pt of t1-A] { };
+      \node (t3-C) [st, draw=none, below=3pt of t1-C] {C};
+      \node (t3-e) [st, draw=none, below=3pt of t1-e] {e};
+      \node (t4-G) [st, draw=none, below=3pt of t2-G] {G};
+      \node (t4-B) [st, draw=none, below=3pt of t2-B] {B};
+      \node (t4-D) [st, draw=none, below=3pt of t2-D] {D};
+      \node (t4-F) [st, draw=none, below=3pt of t2-F] { };
+      \node (t4-A) [st, draw=none, below=3pt of t2-A] { };
+      
+      \draw [->, rounded corners=3mm] (t3-C.north west) rectangle (t4-G.south east);
+      \draw [->, rounded corners=3mm] (t4-G.north west) rectangle (t4-D.south east);
+
+      \node (t5-F) [st, draw=none, below=3pt of t3-F] {F};
+      \node (t5-A) [st, draw=none, below=3pt of t3-A] {A};
+      \node (t5-C) [st, draw=none, below=3pt of t3-C] {C};
+      \node (t6-e) [st, draw=none, below=3pt of t3-e] {e};
+      \node (t6-G) [st, draw=none, below=3pt of t4-G] {G};
+      \node (t6-B) [st, draw=none, below=3pt of t4-B] {B};
+      \node (t7-D) [st, draw=none, below=3pt of t4-D] {D};
+      \node (t7-F) [st, draw=none, below=3pt of t4-F] {F};
+      \node (t7-A) [st, draw=none, below=3pt of t4-A] {A};
+
+      \draw [->, rounded corners=3mm] (t5-F.north west) rectangle (t5-C.south east);
+      \draw [->, rounded corners=3mm] (t6-e.north west) rectangle (t6-B.south east);
+      \draw [->, rounded corners=3mm] (t7-D.north west) rectangle (t7-A.south east);
+    \end{tikzpicture}    
+    \label{fig:tikz2}
+  \end{subfigure}
+  \caption{Escala \sffamily{BLUE} con sus tríadas}
+  \label{fig:blue-scale-with-its-triads}
+\end{figure}
+
 
 \subsection{No hay más escalas?}
 
@@ -948,10 +1229,133 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
 
 \subsection{Notación circular}
 
+ 
 En el ejemplo, con una notación circular, más práctica para el análisis de la orientación, entre \texttt{WHITE} en \texttt{D} y \texttt{BLUE} en \texttt{G}, observamos que simplemente se agrega un nuevo centro tritonal, pero el que teníamos sigue manteniéndose en el mismo sitio. Así que no hay mas que ``girar el mapa'' para volver a orientarse.
 
 En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tritonal no se ha movido ni un palmo, simplemente ha aparecido uno nuevo entre \texttt{A} y \texttt{e}. En el mapa imaginario había una elevación en el terreno, que formaba una pendiente a su alrededor. Ahora hay dos. Pero en algunos puntos, la pendiente sigue siendo idéntica, y en la misma dirección. Esa es la \emph{sencilla} razón de que algunas modulaciones sean más cercanas o agradables al oído que otras.
 
+\begin{figure}
+\begin{subfigure}{.30\textwidth}
+  \centering
+    \begin{tikzpicture}
+      every label/.style={green},
+      radius=1.25cm,
+      ]
+      \graph [    
+        simple necklace layout,
+        node sep=0pt, 
+        grow'=up,
+        node distance=0pt,    
+        nodes={
+          draw,
+          circle, 
+          as =  , 
+          minimum size=20pt, 
+          font=\sffamily 
+        }
+      ]
+      { 
+           1  [as = D] 
+        -- 2  [draw=none]
+        -- 3  [as = E]
+        -- 4  [as = F]
+        -- 5  [draw=none]
+        -- 6  [as = G]
+        -- 7  [draw=none]
+        -- 8  [as = A]
+        -- 9  [draw=none]
+        -- 10 [as = B]
+        -- 11 [as = C]
+        -- 12 [draw=none]
+      };
+      \draw [] (0,39.50pt) circle [radius=28pt];
+      \draw[ultra thick, color=red] (4) -- (10);
+    \end{tikzpicture}
+  \caption{\sffamily{WHITE} con su centro tritonal en rojo}
+  \label{fig:tikz1}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.30\textwidth}
+  \centering
+    \begin{tikzpicture}
+      every label/.style={green},
+      radius=1.25cm,
+      ]
+      \graph [    
+        simple necklace layout,
+        node sep=0pt, 
+        grow'=up,
+        node distance=0pt,    
+        nodes={
+          draw,
+          circle, 
+          as =  , 
+          minimum size=20pt, 
+          font=\sffamily 
+        }
+      ]
+      { 
+           1  [as = D] 
+        -- 2  [draw=none]
+        -- 3  [as = E]
+        -- 4  [as = F]
+        -- 5  [draw=none]
+        -- 6  [as = G]
+        -- 7  [draw=none]
+        -- 8  [as = A]
+        -- 9  [draw=none]
+        -- 10 [as = B]
+        -- 11 [as = C]
+        -- 12 [draw=none]
+      };
+      \draw [] (0,39.50pt) circle [radius=28pt];
+      \draw[ultra thick, color=red] (4) -- (10);
+    \end{tikzpicture}
+  \caption{Agregamos un tritono manteniendo el anterior. Ahora estamos en \sffamily{BLUE}}
+  \label{fig:tikz1}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.30\textwidth}
+  \centering
+    \begin{tikzpicture}
+      every label/.style={green},
+      radius=1.25cm,
+      ]
+      \graph [    
+        simple necklace layout,
+        node sep=0pt, 
+        grow'=up,
+        node distance=0pt,    
+        nodes={
+          draw,
+          circle, 
+          as =  , 
+          minimum size=20pt, 
+          font=\sffamily 
+        }
+      ]
+      { 
+           1  [as = D] 
+        -- 2  [draw=none]
+        -- 3  [as = E]
+        -- 4  [as = F]
+        -- 5  [draw=none]
+        -- 6  [as = G]
+        -- 7  [draw=none]
+        -- 8  [as = A]
+        -- 9  [draw=none]
+        -- 10 [as = B]
+        -- 11 [as = C]
+        -- 12 [draw=none]
+      };
+      \draw [] (0,39.50pt) circle [radius=28pt];
+      \draw[ultra thick, color=red] (4) -- (10);
+    \end{tikzpicture}
+  \caption{\sffamily{BLUE} con su segundo centro tritonal, reorientada por el oyente para sentir el nuevo centro tonal: \sffamily{G}}
+  \label{fig:tikz1}
+\end{subfigure}
+\hfill
+\end{figure}
 Desde WHITE D a BLUE G image::white-d-to-blue-g.png
 
 Desde WHITE D a BLUE D image::white-d-to-blue-d.png
