@@ -1296,8 +1296,8 @@ En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tri
       ]
       { 
            1  [as = D] 
-        -- 2  [draw=none]
-        -- 3  [as = E]
+        -- 2  [as = e]
+        -- 3  [draw=none]
         -- 4  [as = F]
         -- 5  [draw=none]
         -- 6  [as = G]
@@ -1310,6 +1310,7 @@ En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tri
       };
       \draw [] (0,39.50pt) circle [radius=28pt];
       \draw[ultra thick, color=red] (4) -- (10);
+      \draw[ultra thick, color=red] (2) -- (8);
     \end{tikzpicture}
   \caption{Agregamos un tritono manteniendo el anterior. Ahora estamos en \sffamily{BLUE}}
   \label{fig:tikz1}
@@ -1335,31 +1336,203 @@ En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tri
         }
       ]
       { 
-           1  [as = D] 
+           1  [as = G] 
         -- 2  [draw=none]
-        -- 3  [as = E]
-        -- 4  [as = F]
-        -- 5  [draw=none]
-        -- 6  [as = G]
+        -- 3  [as = A]
+        -- 4  [draw=none]
+        -- 5  [as = B]
+        -- 6  [as = C]
         -- 7  [draw=none]
-        -- 8  [as = A]
-        -- 9  [draw=none]
-        -- 10 [as = B]
-        -- 11 [as = C]
+        -- 8  [as = D]
+        -- 9  [as = e]
+        -- 10 [draw=none]
+        -- 11 [as = F]
         -- 12 [draw=none]
       };
       \draw [] (0,39.50pt) circle [radius=28pt];
-      \draw[ultra thick, color=red] (4) -- (10);
+      \draw[ultra thick, color=red] (3) -- (9);
+      \draw[ultra thick, color=red] (5) -- (11);
     \end{tikzpicture}
   \caption{\sffamily{BLUE} con su segundo centro tritonal, reorientada por el oyente para sentir el nuevo centro tonal: \sffamily{G}}
   \label{fig:tikz1}
 \end{subfigure}
 \hfill
+\label{fig:modulation-changing-tonal-center}
+\caption{Modulación cambiando solo en centro tonal}
 \end{figure}
 Desde WHITE D a BLUE G image::white-d-to-blue-g.png
-
+\begin{figure}
+  \begin{subfigure}{.30\textwidth}
+    \centering
+      \begin{tikzpicture}
+        every label/.style={green},
+        radius=1.25cm,
+        ]
+        \graph [    
+          simple necklace layout,
+          node sep=0pt, 
+          grow'=up,
+          node distance=0pt,    
+          nodes={
+            draw,
+            circle, 
+            as =  , 
+            minimum size=20pt, 
+            font=\sffamily 
+          }
+        ]
+        { 
+             1  [as = D] 
+          -- 2  [draw=none]
+          -- 3  [as = E]
+          -- 4  [as = F]
+          -- 5  [draw=none]
+          -- 6  [as = G]
+          -- 7  [draw=none]
+          -- 8  [as = A]
+          -- 9  [draw=none]
+          -- 10 [as = B]
+          -- 11 [as = C]
+          -- 12 [draw=none]
+        };
+        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw[ultra thick, color=red] (4) -- (10);
+      \end{tikzpicture}
+    \caption{\sffamily{WHITE} con su centro tritonal en rojo}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.30\textwidth}
+    \centering
+      \begin{tikzpicture}
+        every label/.style={green},
+        radius=1.25cm,
+        ]
+        \graph [    
+          simple necklace layout,
+          node sep=0pt, 
+          grow'=up,
+          node distance=0pt,    
+          nodes={
+            draw,
+            circle, 
+            as =  , 
+            minimum size=20pt, 
+            font=\sffamily 
+          }
+        ]
+        { 
+             1  [as = D] 
+          -- 2  [draw=none]
+          -- 3  [as = E]
+          -- 4  [draw=none]
+          -- 5  [as = g]
+          -- 6  [as = G]
+          -- 7  [draw=none]
+          -- 8  [as = A]
+          -- 9  [as = b]
+          -- 10 [draw=none]
+          -- 11 [as = C]
+          -- 12 [draw=none]
+        };
+        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw[ultra thick, color=red] (3) -- (9);
+        \draw[ultra thick, color=red] (5) -- (11);
+      \end{tikzpicture}
+    \caption{\sffamily{BLUE} con dos nuevos centros tritonales que sustituyen al anterior. Se mantiene el mismo centro tonal}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \label{fig:modulation-changing-tritonal-center}
+  \caption{Modulación cambiando solo en centro tritonal}
+  \end{figure}
+  
 Desde WHITE D a BLUE D image::white-d-to-blue-d.png
-
+\begin{figure}
+  \begin{subfigure}{.30\textwidth}
+    \centering
+      \begin{tikzpicture}
+        every label/.style={green},
+        radius=1.25cm,
+        ]
+        \graph [    
+          simple necklace layout,
+          node sep=0pt, 
+          grow'=up,
+          node distance=0pt,    
+          nodes={
+            draw,
+            circle, 
+            as =  , 
+            minimum size=20pt, 
+            font=\sffamily 
+          }
+        ]
+        { 
+             1  [as = D] 
+          -- 2  [draw=none]
+          -- 3  [as = E]
+          -- 4  [as = F]
+          -- 5  [draw=none]
+          -- 6  [as = G]
+          -- 7  [draw=none]
+          -- 8  [as = A]
+          -- 9  [draw=none]
+          -- 10 [as = B]
+          -- 11 [as = C]
+          -- 12 [draw=none]
+        };
+        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw[ultra thick, color=red] (4) -- (10);
+      \end{tikzpicture}
+    \caption{\sffamily{WHITE} con su centro tritonal en rojo}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.30\textwidth}
+    \centering
+      \begin{tikzpicture}
+        every label/.style={green},
+        radius=1.25cm,
+        ]
+        \graph [    
+          simple necklace layout,
+          node sep=0pt, 
+          grow'=up,
+          node distance=0pt,    
+          nodes={
+            draw,
+            circle, 
+            as =  , 
+            minimum size=20pt, 
+            font=\sffamily 
+          }
+        ]
+        { 
+             1  [as = E] 
+          -- 2  [as = F]
+          -- 3  [draw=none]
+          -- 4  [draw=none]
+          -- 5  [as = a]
+          -- 6  [as = A]
+          -- 7  [draw=none]
+          -- 8  [as = B]
+          -- 9  [as = C]
+          -- 10 [draw=none]
+          -- 11 [draw=none]
+          -- 12 [as = e]
+        };
+        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw[ultra thick, color=red] (2) -- (8);
+        \draw[ultra thick, color=red] (6) -- (12);
+      \end{tikzpicture}
+    \caption{\sffamily{RED} con dos nuevos centros tritonales que sustituyen al anterior. Se despeja un centro tritonal y se sustituye por un centro tonal. Base del flamenco}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \label{fig:modulation-changing-tritonal-center}
+  \caption{Modulación base del flamenco}
+  \end{figure}
 Desde WHITE D a RED E image::white-d-to-red-e.png
 
 En más resumen todavía: resulta que cambiando \texttt{E} por \texttt{e}, estamos cambiando el caracter de la tríada \texttt{CEG}, de mayor a menor. Estamos cambiando sigilosamente entre alegría y tristeza. Estamos \emph{jugando}. +
@@ -1383,7 +1556,135 @@ La música de jazz no solamente requiere una escucha activa (y cierta cantidad d
 Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos no se cansan nunca de esos dos acordes, \texttt{EaB} y \texttt{FAC}. Ahora lo veo claro, son los dos más estables de la escala, y de los pocos que tienen una tercera. Puedes estar pasando de uno a otro constantemente sin ver la posibilidad de salir de ahí, a no ser que vuelvas a la escala \texttt{WHITE}, haciéndo desaparecer el amenazante tritono entre \texttt{A} y \texttt{e}. Basta con saltar a la tríada \texttt{ACE}, lo cual hacen la mayor parte de las veces, para luego volver a \texttt{GBD}, a \texttt{FAC} y de nuevo a \texttt{EaB}. Olé!
 
 .De WHITE D a RED E y su rotación image::white-de-to-red-e-rotation.png
-
+\begin{figure}
+  \begin{subfigure}{.30\textwidth}
+    \centering
+      \begin{tikzpicture}
+        every label/.style={green},
+        radius=1.25cm,
+        ]
+        \graph [    
+          simple necklace layout,
+          node sep=0pt, 
+          grow'=up,
+          node distance=0pt,    
+          nodes={
+            draw,
+            circle, 
+            as =  , 
+            minimum size=20pt, 
+            font=\sffamily 
+          }
+        ]
+        { 
+             1  [as = D] 
+          -- 2  [draw=none]
+          -- 3  [as = E]
+          -- 4  [as = F]
+          -- 5  [draw=none]
+          -- 6  [as = G]
+          -- 7  [draw=none]
+          -- 8  [as = A]
+          -- 9  [draw=none]
+          -- 10 [as = B]
+          -- 11 [as = C]
+          -- 12 [draw=none]
+        };
+        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw[ultra thick, color=red] (4) -- (10);
+      \end{tikzpicture}
+    \caption{\sffamily{WHITE} con su centro tritonal en rojo}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.30\textwidth}
+    \centering
+      \begin{tikzpicture}
+        every label/.style={green},
+        radius=1.25cm,
+        ]
+        \graph [    
+          simple necklace layout,
+          node sep=0pt, 
+          grow'=up,
+          node distance=0pt,    
+          nodes={
+            draw,
+            circle, 
+            as =  , 
+            minimum size=20pt, 
+            font=\sffamily 
+          }
+        ]
+        { 
+             1  [draw=none]
+          -- 2  [as = e]
+          -- 3  [as = E] 
+          -- 4  [as = F]
+          -- 5  [draw=none]
+          -- 6  [draw=none]
+          -- 7  [as = a]
+          -- 8  [as = A]
+          -- 9  [draw=none]
+          -- 10 [as = B]
+          -- 11 [as = C]
+          -- 12 [draw=none]
+          -- 12 [draw=none]
+        };
+        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw[ultra thick, color=red] (4) -- (10);
+        \draw[ultra thick, color=red] (2) -- (8);
+        % \draw [-> ] (11.east) to [out=45,in=135] (8.east);
+        \draw [->] (2cm,0mm) arc [start angle=-40, end angle=60, radius=2cm];
+      \end{tikzpicture}
+    \caption{Agregamos un tritono. Ahora estamos en \sffamily{RED}}
+    \label{fig:tikz1}
+  \end{subfigure}
+  \hfill
+  \hfill
+  \begin{subfigure}{0.30\textwidth}
+    \centering
+      \begin{tikzpicture}
+        every label/.style={green},
+        radius=1.25cm,
+        ]
+        \graph [    
+          simple necklace layout,
+          node sep=0pt, 
+          grow'=up,
+          node distance=0pt,    
+          nodes={
+            draw,
+            circle, 
+            as =  , 
+            minimum size=20pt, 
+            font=\sffamily 
+          }
+        ]
+        { 
+             1  [as = E] 
+          -- 2  [as = F]
+          -- 3  [draw=none]
+          -- 4  [draw=none]
+          -- 5  [as = a]
+          -- 6  [as = A]
+          -- 7  [draw=none]
+          -- 8  [as = B]
+          -- 9  [as = C]
+          -- 10 [draw=none]
+          -- 11 [draw=none]
+          -- 12 [as = e]
+        };
+        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw[ultra thick, color=red] (2) -- (8);
+        \draw[ultra thick, color=red] (6) -- (12);
+      \end{tikzpicture}
+    \caption{\sffamily{RED} reorientada por el oyente para asimilar el nuevo centro tonal en \sffamily{E}}
+    \label{fig:tikz1}
+  \end{subfigure}  
+  \label{fig:modulation-changing-tritonal-center}
+  \caption{Modulación base del flamenco}
+  \end{figure}
 \subsection{Nombres para las tríadas}
 
 Por qué las tríadas tienen esos curiosos nombres en la notación estandar? \emph{Mayor, menor, menor quinta bemol, mayor quinta   aumentada, disminuida\ldots{}}
@@ -1584,4 +1885,5 @@ En las pilas de 4 notas ocurre lo mismo pero en diferentes posiciones: la desori
 .Nueva partícula en las pilas image::new-particle-in-piles.png{[}{]}
 
 \end{document}
+
 
