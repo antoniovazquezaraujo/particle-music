@@ -7,6 +7,9 @@
 
 \usepackage{booktabs}
 \usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{float}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -73,6 +76,180 @@
 \begin{document}
 \tableofcontents
 
+\section*{Acordes de WHITE}
+
+\subsection*{3 notas}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{CW-3} & Am      & Menor & A C E \\
+\textsf{CW-2} & Bm5     & Menor con quinta bemol & B D F \\
+\textsf{CW-1} & Cmaj    & Mayor & C E G \\
+\textsf{CW 0} & Dm      & Menor & D F A \\
+\textsf{CW+1} & Em      & Menor & E G B \\
+\textsf{CW+2} & Fmaj    & Mayor & F A C \\
+\textsf{CW+3} & Gmaj    & Mayor & G B D \\ 
+\bottomrule
+\end{tabularx}
+\end{table}
+\subsection*{4 notas}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{CW-3} 1 & Am7     & Menor séptima & A C E G \\
+\textsf{CW-2} 1 & Bm7b5   & Menor séptima quinta bemol & B D F A \\
+\textsf{CW-1} 1 & Cmaj7   & Mayor séptima & C E G B \\
+\textsf{CW 0} 1 & Dm7     & Menor séptima & D F A C \\
+\textsf{CW+1} 1 & Em7     & Menor séptima & E G B D \\
+\textsf{CW+2} 1 & Fmaj7   & Mayor séptima & F A C E \\
+\textsf{CW+3} 1 & G7      & Dominante (séptima) & G B D F \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{5 notas}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{CW-3} 2 & Am9     & Menor novena & A C E G B \\
+\textsf{CW-2} 2 & Bm9b5   & Menor novena con quinta bemol & B D F A C \\
+\textsf{CW-1} 2 & Cmaj9   & Mayor novena & C E G B D \\
+\textsf{CW 0} 2 & Dm9     & Menor novena & D F A C E \\
+\textsf{CW+1} 2 & Em9b9   & Menor novena bemol & E G B D F \\
+\textsf{CW+2} 2 & Fmaj9   & Mayor novena & F A C E G \\
+\textsf{CW+3} 2 & G9      & Dominante novena & G B D F A \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Acordes de BLUE}
+
+\subsection*{3 notas}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{DB-3} & Bm5     & Menor con quinta bemol & B D F \\
+\textsf{DB-2} & Cm      & Menor & C e G \\
+\textsf{DB-1} & Dm      & Menor & D F A \\
+\textsf{DB 0} & e+      & Mayor con quinta aumentada & e G B \\
+\textsf{DB+1} & Fmaj    & Mayor & F A C \\
+\textsf{DB+2} & Gmaj    & Mayor & G B D \\
+\textsf{DB+3} & Am5     & Menor con quinta bemol & A C e \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{4 notas}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{DB-3} 1 & Bm7b5   & Menor séptima con quinta bemol & B D F A \\
+\textsf{DB-2} 1 & Cm Maj7 & Menor séptima mayor & C e G B \\
+\textsf{DB-1} 1 & Dm7     & Menor séptima & D F A C \\
+\textsf{DB 0} 1 & e+Maj7  & Mayor con quinta aumentada y séptima mayor & e G B D \\
+\textsf{DB+1} 1 & F7      & Dominante (séptima) & F A C e \\
+\textsf{DB+2} 1 & G7      & Dominante (séptima) & G B D F \\
+\textsf{DB+3} 1 & Am7b5   & Menor séptima con quinta bemol & A C e G \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{5 notas}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{DB-3} 2 & Bm9b5   & Menor novena con quinta bemol & B D F A C \\
+\textsf{DB-2} 2 & Cm Maj9 & Menor novena mayor & C e G B D \\
+\textsf{DB-1} 2 & Dm9     & Menor novena & D F A C e \\
+\textsf{DB 0} 2 & e+Maj9  & Mayor con quinta aumentada y novena mayor & e G B D F \\
+\textsf{DB+1} 2 & F9      & Dominante novena & F A C e G \\
+\textsf{DB+2} 2 & G9      & Dominante novena & G B D F A \\
+\textsf{DB+3} 2 & Am9b5   & Menor novena con quinta bemol & A C e G B \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{Escala RED}
+
+\subsection*{3 notas}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{AW-3} & Eb5     & Mayor con quinta bemol & E a b \\
+\textsf{AW-2} & F5+     & Mayor con quinta aumentada & F A d \\
+\textsf{AW-1} & adis3b5 & Menor con tercera disminuida y quinta bemol & a b D \\
+\textsf{AW 0} & AM      & Mayor & A d E \\
+\textsf{AW+1} & bM      & Mayor & b D F \\
+\textsf{AW+2} & dm      & Menor & d E a \\
+\textsf{AW+3} & Dm      & Menor & D F A \\ 
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{4 notas}
+\begin{table}[htbp]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{AW-3} & Eb57     & Mayor con quinta bemol y séptima & E a b D\\
+\textsf{AW-2} & F5+Maj7  & Mayor con quinta aumentada y séptima mayor & F A d E\\
+\textsf{AW-1} & adis3b56 & Menor con tercera disminuida quinta bemol y sexta & a b D F\\
+\textsf{AW 0} & Amaj7    & Mayor con séptima mayor & A d E a \\
+\textsf{AW+1} & bmaj7    & Mayor con séptima mayor & b D F A \\
+\textsf{AW+2} & dm6      & Menor sexta & d E a b \\
+\textsf{AW+3} & DmMaj7   & Menor con séptima mayor & D F A d \\ 
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{5 notas}
+\begin{table}[htbp]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{AW-3} & Eb57b9    & Mayor con quinta bemol, séptima y novena bemol & E a b D F\\
+\textsf{AW-2} & F5+Maj79+ & Mayor con quinta aumentada, séptima mayor y novena aumentada & F A d E a\\
+\textsf{AW-1} & adis3b569 & Menor con tercera disminuida quinta bemol sexta y novena & a b D F b\\
+\textsf{AW 0} & Amaj7b9   & Mayor con séptima mayor y novena bemol & A d E a b\\
+\textsf{AW+1} & bmaj7+9   & Mayor con séptima mayor y novena aumentada & b D F A d\\
+\textsf{AW+2} & dm6+9     & Menor sexta con novena aumentada & d E a b d\\
+\textsf{AW+3} & DmMaj79   & Menor con séptima mayor y novena & D F A d E\\ 
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \section{Propósito}
 El propósito de este documento es intentar \emph{entender cómo funciona la música}. Es un proyecto personal, guiado simplemente por mi propia curiosidad y por mi afición musical. No pretendo cambiar la forma en que se estudia y enseña música, pero quizá no estaría mal revisar algunas cosas que vienen haciéndose igual durante siglos.
 
@@ -112,7 +289,8 @@ Dicho de otro modo, la música nos permite emular conceptos que son externos a s
 
 En el universo que habitamos hay algunas reglas establecidas que solemos dar por supuestas, aunque podrían no estar ahí. Recordemos unas cuantas reglas de sentido común:
 
-\begin{itemize}   \tightlist
+\begin{itemize}
+\tightlist
   \item         Las cosas tienen una masa y un volumen.
   \item         Las cosas grandes pesan más que las pequeñas
   \item         Las cosas pequeñas se mueven más fácilmente que las grandes
@@ -150,7 +328,7 @@ Los estímulos inesperados nos producen sorpresa, y nos obligan a su análisis. 
 
 \subsection{Tríada}
 
-Se le llama \emph{tono} a la distancia que hay entre dos notas alternas y \emph{semitono} a la distancia entre dos notas contigüas ( si hablásemos de números, entre 18 y 19 habría un semitono, pero entre 15 y 17 habría un tono).
+Se le llama \emph{tono} a la distancia que hay entre dos notas alternas y \emph{semitono} a la distancia entre dos notas contigüas (si hablásemos de números, entre 18 y 19 habría un semitono, pero entre 15 y 17 habría un tono).
 
 Una \emph{tríada} es un acorde (notas que suenan simultaneamente) de tres notas alternas de una escala (una vez más, pensando en números, podrían ser 1, 3 y 5, ó 25, 27 y 29). En la notación estandar, se dice que sus notas están a distancia de una tercera, si es de dos tonos se llama tercera \emph{mayor}, si es de tono y medio se llama tercera \emph{menor}. Una tríada tiene pues dos intervalos, el que hay entre la primera y la segunda nota y el que hay entre la segunda y la tercera. Si esos intervalos son, de abajo a arriba, mayor y menor se dice que es una tríada mayor. Si son menor y mayor se llama tríada menor.
 
@@ -158,7 +336,7 @@ Uno se siente casi avergonzado de tener que recurrir a toda esta dieciochesca te
 
 \subsection{Estructura mayor/menor y su significado}
 
-\begin{figure}
+\begin{figure}[htbp]
   \center
    \begin{tikzpicture}
      [st/.style={
@@ -175,17 +353,12 @@ Uno se siente casi avergonzado de tener que recurrir a toda esta dieciochesca te
      \node (min1)[rectangle,draw=black, below= 0cm of maj1, minimum size= 1cm] { };
      \node (maj2)[rectangle,draw=black, right=of maj1,      minimum size= 1cm] { };
      \node (min2)[rectangle,draw=black, below=0cm of maj2,  minimum size=.5cm] { }; 
- 
-   \end{tikzpicture}
- 
-   \vspace{12pt}
- 
- \caption{Esquema geométrico de las tríadas mayor/menor menor/mayor}
- \label{fig:maj-minor-scheme}
+    \end{tikzpicture}
+    \vspace{12pt}
+  \caption{Esquema geométrico de las tríadas mayor/menor menor/mayor}\label{fig:maj-minor-scheme}
  \end{figure}
-
  
-El caso es que las tríadas, son la estructura musical más utilizada en la música. No ofrecen ninguna duda, son como los átomos con los que se forma el resto de la materia: son indivisibles ( no hay nada con una estructura más básica ) e incluso cuando no están, el cerebro acaba encontrándo su huella. Forman la base sobre la que se asienta la música.
+El caso es que las tríadas, son la estructura musical más utilizada en la música. No ofrecen ninguna duda, son como los átomos con los que se forma el resto de la materia: son indivisibles (no hay nada con una estructura más básica) e incluso cuando no están, el cerebro acaba encontrándo su huella. Forman la base sobre la que se asienta la música.
 
 Las tríadas mayores forman una estructura menor/mayor (menor sobre mayor) y las menores una estructura mayor/menor (mayor sobre menor). El subconsciente toma estas estructuras como formas reales e intenta intrepretarlas.
 
@@ -212,13 +385,12 @@ En fin, estas son las ideas que sugieren automáticamente esas tres simples nota
     Opresión    & Solidaridad \\
     \bottomrule
   \end{tabular}
-  \caption{Impresión que producen las tríadas}
-  \label{tab:triad-impressions}
+  \caption{Impresión que producen las tríadas}label{tab:triad-impressions}
 \end{table}
 
 \subsection{Tríadas orientativas}
 
-El formato de una tríada, nos permite suponer en qué grado de la escala estamos. En una escala hay algunas tríadas mayores y otras menores. Se obtienen simplemente agregando a cada grado de la escala las dos siguientes notas alternas. Según el caracter de la tríada que oímos, podemos suponer en qué grado de la escala podemos estar ( como cuando al ver un monumento en un mapa de pronto nos orientamos correctamente ). Como hay varias tríadas de cada tipo, todavía hay \emph{lugar para el   engaño}.
+El formato de una tríada, nos permite suponer en qué grado de la escala estamos. En una escala hay algunas tríadas mayores y otras menores. Se obtienen simplemente agregando a cada grado de la escala las dos siguientes notas alternas. Según el caracter de la tríada que oímos, podemos suponer en qué grado de la escala podemos estar (como cuando al ver un monumento en un mapa de pronto nos orientamos correctamente). Como hay varias tríadas de cada tipo, todavía hay \emph{lugar para el engaño}.
 
 \subsection{Tritono}
 
@@ -230,7 +402,7 @@ Pues en la música también existen las preguntas. Son acordes sin resolver, aco
 
 En una escala donde dos notas alternas queden a 3 tonos de distancia, el acorde que se formará en ese grado sonará como una pregunta que necesita contestación. No es casualidad que en la escala mayor (la que conoce todo el mundo, la que forman las teclas blancas del piano, \emph{do, re,   mi, fa}\ldots) hay un grado en que se forma un tritono: el grado 7, el de la nota \emph{si}. Las notas alternas a partir de \emph{si} son \emph{re} y \emph{fa}. Entre cada par hay tono y medio, así que en total son 3 tonos, es decir, dos terceras menores una sobre la otra. Nadie querrá terminar una canción con ese acorde.
 
-Ningúna actuación musical terminará nunca (al menos si queremos que el público empiece a aplaudir ) con un acorde sin resolver. El oyente espera a que le demos una solución. Unas milésimas de segundo antes, imagina cuál vamos a darle. Si acierta se sentirá satisfecho, si no se sorprenderá. Muchas preguntas le resultarán demasiado estimulantes y probablemente se sature. Ninguna pregunta hará que pierda el interés.
+Ningúna actuación musical terminará nunca (al menos si queremos que el público empiece a aplaudir) con un acorde sin resolver. El oyente espera a que le demos una solución. Unas milésimas de segundo antes, imagina cuál vamos a darle. Si acierta se sentirá satisfecho, si no se sorprenderá. Muchas preguntas le resultarán demasiado estimulantes y probablemente se sature. Ninguna pregunta hará que pierda el interés.
 
 \subsection{Repulsión del tritono}
 
@@ -240,7 +412,7 @@ Tienta al oyente a adivinar en qué se resolverá, le hace participar, le hace a
 
 Invade su tranquilidad, requiriendo de él una escucha activa y arriesgada. Le condena a equivocarse sin poder evitarlo. Es como el ``\emph{nada por aqui\ldots{}   nada por allá}\ldots{}'' de los magos.
 
-En la edad media, a ese sonido se le llamaba ``\emph{Diabolus in musicae}'' y parece que representaba algún tipo de desafío para el poder. Solo el nombre ya denota el caracter molesto e incluso peligroso que puede llegar a tener, sobre todo si eres un estado medieval y utilizas la música para mantener adormecida a la masa. Prohibir el tritono es como cuando en el cine el poli malo dice ``Aquí soy yo el que hace las preguntas!''.
+En la edad media, a ese sonido se le llamaba ``\emph{Diabolus in musicae}'' y parece que representaba algún tipo de desafío para el poder. Solo el nombre ya denota el caracter molesto e incluso peligroso que puede llegar a tener, sobre todo si eres un estado medieval y utilizas la música para mantener adormecida a la masa. Prohibir el tritono es como cuando en el cine el poli malo dice ``Aquí soy yo el que hace las preguntas!''
 
 \subsection{Distancia al tritono}
 
@@ -255,10 +427,6 @@ En la notación tradicional, al grado más lejano al tritono se le llama \emph{f
 \subsection{Orientación simétrica}
 
 Las escalas que usamos son simétricas. La simetría es un patrón que ayuda al oyente a reconocer la armonía. Si una escala es simétrica, nos ayudará mucho en su análisis usar una notación que respete esta simetría, donde el punto central se represente gráficamente en el centro. En la notación que presentamos, esta idea es muy importante.
-
-\subsection{Modos de una escala}
-
-Se llaman \emph{modos} a las distintas orientaciones de una escala, es decir, tomar las mismas notas pero cambiando la nota inicial. Debe eliminarse por completo este concepto. Es mucho más simple y util reducir la cantidad de escalas a analizar y asimilar. Solamente hay seis escalas.
 
 \subsection{Escalas}
 
@@ -278,13 +446,12 @@ Estas son las escalas que se usan habitualmente y los nombres que se le han asig
     \textsf{TONES}   & Escala por tonos & \\
     \bottomrule
   \end{tabular}
-  \caption{Tabla de escalas musicales}
-  \label{tab:scale-name-equivalences}
+  \caption{Tabla de escalas musicales}label{tab:scale-name-equivalences}
 \end{table}
 
 En la notación creada se representan los grados de la escala como números. Se ha de prestar atención a que el primer grado de la escala no es, como en la notación tradicional, el grado más lejano al tritono (en la escala diatónica sería el DO), sino el grado que, como muestran las figuras, ocupa el centro de la estructura (en la escala diatónica sería el RE). Partiendo de la nota inicial y girando en sentido agujas del reloj se sube de tono hasta que se vuelve al tono inicial, es decir, se sube una octava.
 
-\begin{figure}
+\begin{figure}[H]
   \begin{subfigure}{0.15\textwidth}
     \centering
       \begin{tikzpicture}
@@ -305,8 +472,8 @@ En la notación creada se representan los grados de la escala como números. Se 
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
       \end{tikzpicture}
-    \caption{\sffamily{WHITE}}
-    \label{fig:tikz1}
+    \caption{\textsf{WHITE}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -329,8 +496,8 @@ En la notación creada se representan los grados de la escala como números. Se 
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
       \end{tikzpicture}
-    \caption{\sffamily{BLUE}}
-    \label{fig:tikz1}
+    \caption{\textsf{BLUE}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -353,8 +520,8 @@ En la notación creada se representan los grados de la escala como números. Se 
       \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of =21] {7};
 
     \end{tikzpicture}    
-    \caption{\sffamily{RED}}
-    \label{fig:tikz2}
+    \caption{\textsf{RED}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -377,8 +544,8 @@ En la notación creada se representan los grados de la escala como números. Se 
       \node (11)[st,      below of= 12] {1}; \node (21) [st=white, right of=11] { }; \node (31) [st,       right of =21] {8};
   
     \end{tikzpicture}   
-    \caption{\sffamily{BLACK}}
-    \label{fig:tikz2}
+    \caption{\textsf{BLACK}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -401,8 +568,8 @@ En la notación creada se representan los grados de la escala como números. Se 
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
     \end{tikzpicture}    
-    \caption{\sffamily{PENTA}}
-    \label{fig:tikz2}
+    \caption{\textsf{PENTA}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -425,19 +592,22 @@ En la notación creada se representan los grados de la escala como números. Se 
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
     \end{tikzpicture}   
-    \caption{\sffamily{TONES}}
-    \label{fig:tikz2}
+    \caption{\textsf{TONES}}
+    
   \end{subfigure}
   \hfill
-  \caption{Las seis escalas}
-  \label{fig:the-six-scales}
+  \caption{Las seis escalas}\label{fig:the-six-scales}
 \end{figure}
 
 
-Téngase en cuenta que en la escala BLACK, la simetría no se basa en las notas, sino en el espacio entre ellas, y no hay una nota central, sino un espacio entre notas central. La sensación de simetría que percibe el oyente es idéntica y la notación así lo refleja.
+Téngase en cuenta que en la escala \textsf{BLACK}, la simetría no se basa en las notas, sino en el espacio entre ellas, y no hay una nota central, sino un espacio entre notas central. La sensación de simetría que percibe el oyente es idéntica y la notación así lo refleja.
 
 Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se puede observar la simetría de todas las escalas. Si se compara con la notación tradicional, donde no se aprecia simetría alguna, se notará una increible mejoría en las posibilidades que ofrece para su análisis, estudio y asimilación.
 
+\subsection{Nombres de las escalas}
+Siguiendo con el mismo razonamiento, dejaremos de referirnos a una escala con el nombre de la nota que está más lejos del tritono, y usaremos su nota central. Por ejemplo, la escala que no tiene ningún sostenido dejará de llamarse ``escala de DO'', y pasará a llamarse ``escala de RE''. La nota que da nombre a una escala es su nota central, no la nota que nos parece que sugiere descanso, plenitud o resolución.
+
+Un caso particular sería el de la escala \textsf{BLACK}. Como hemos visto, la nota central no es tal cosa, sino un espacio entre dos notas. De modo que al referirnos a la escala \textsf{BLACK} de FA estamos indicando la escala cuya primera nota después del espacio es un FA
 
 \subsection{Nombres de las notas}
 
@@ -445,15 +615,17 @@ Representaremos las notas de la escala mediante la notación americana, es decir
 
 \begin{table}[htbp]
   \centering
+  \begingroup
+  \sffamily
   \begin{tabular}{*{12}{c}}
-    \toprule
-    A & A$\sharp$ & B & C & C$\sharp$ & D & D$\sharp$ & E & F & F$\sharp$ & G & G$\sharp$ \\
+    \toprule    
+    A & A$\sharp$ B$\flat$ & B & C & C$\sharp$ D$\flat$ & D & D$\sharp$ E$\flat$ & E & F & F$\sharp$ G$\flat$ & G & G$\sharp$ A$\flat$ \\
     \midrule    
-    A & b & B & C & d & D & e & E & F & g & G & a  \\    
+    A & b & B & C & d & D & e & E & F & g & G & a \\    
     \bottomrule
   \end{tabular}
-  \caption{Equvalencias de las notas}
-  \label{tab:note-equivalences}
+  \endgroup
+  \caption{Equivalencias de las notas}label{tab:note-equivalences}
 \end{table}
 
 En la notación estandar, cuando se quiere subir una nota un semitono se le pone el signo de sostenido ($\sharp$) y cuando se desea bajarla un semitono, se le agrega un bemol ($\flat$), así que DO$\sharp$ es en realidad la misma nota que RE$\flat$.
@@ -461,8 +633,8 @@ En la notación estandar, cuando se quiere subir una nota un semitono se le pone
 En nuestra notación, para indicar bemoles usamos la misma letra pero en minúscula. Así que en una misma escala se puede encontrar una nota natural y también la misma nota bemol. Por ejemplo, la nota \texttt{b} equivale tanto a \texttt{LA$\sharp$} como a \texttt{SI$\flat$}: 
 
 Esta sería la representación de la escala \texttt{BLUE} de \texttt{LA}, es decir de \texttt{A}. Observamos que aparece el \texttt{RE\ bemol\ (d)} y luego el \texttt{RE\ natural\ (D)}.
-\begin{figure}
- \center
+\begin{figure}[h]
+ \centering
   \begin{tikzpicture}
     [st/.style={
       rectangle,
@@ -478,21 +650,19 @@ Esta sería la representación de la escala \texttt{BLUE} de \texttt{LA}, es dec
     \node (14)[st,       below of= 15 ] {d};                                          \node (34) [st,       below of =35] {F};
     \node (13)[st=white, below of = 14] { };                                          \node (33) [st=white, below of =34] { };
     \node (12)[st,       below of = 13] {B};                                          \node (32) [st, below of= 33      ] {G};
-    \node (11)[st=white, below of= 12 ] { }; \node (21) [right of=11, st      ] {A};  \node (31) [right of= 21, st=white] { };
-    
+    \node (11)[st=white, below of= 12 ] { }; \node (21) [right of=11, st      ] {A};  \node (31) [right of= 21, st=white] { };  
   \end{tikzpicture}
-
   \vspace{12pt}
-
-\caption{La escala BLUE de A}
-\label{fig:blue-scale-of-a}
+  \caption{La escala BLUE de A}label{fig:blue-scale-of-a}
 \end{figure}
 
 \subsection{Modos}
 Los modos son las distintas ``vistas'' de las escalas existentes, es decir, la misma escala tomada comenzando desde diferentes notas.
-A partir de las escalas presentadas, se generan estos modos. De momento, hemos asignado a cada uno un número (no inventemos nombres, si es posible!), tomando el cero como el modo central y luego números positivos o negativos si bajamos o subimos por la escala. Los nombres históricos de los modos están directamente traídos de la cultura griega, son \textsf{dórico}, \textsf{jónico}, \textsf{mixolidio}\ldots etc. Como si fueran unos raros edificios antiguos. Y no hablemos de los modos de la escala menor melódica (nuestra escala \textsf{BLUE}), \textsf{Frigio aumentado}, \textsf{Lidio$\sharp$4}, \textsf{Locrio$\sharp$2}, \textsf{Superlocrio $\flat$$\flat$7}. Sin duda hay que hacer algo para dejen de usarse estos estrafalarios artefactos ``proto-fonéticos'' de la antiguedad.
+A partir de las escalas presentadas, se generan estos modos. De momento, hemos asignado a cada uno un número (no inventemos nombres, si es posible!), tomando el cero como el modo central y luego números positivos o negativos si bajamos o subimos por la escala. 
 
-\begin{figure}
+Los nombres históricos de los modos están directamente traídos de la cultura griega, son \textsf{dórico}, \textsf{jónico}, \textsf{mixolidio}\ldots etc. Como si fueran edificios antiguos. Y no hablemos de los modos de la escala menor melódica (nuestra escala \textsf{BLUE}), \textsf{Frigio aumentado}, \textsf{Lidio$\sharp$4}, \textsf{Locrio$\sharp$2}, \textsf{Superlocrio $\flat$$\flat$7}. Sin duda hay que hacer algo para dejen de usarse estos estrafalarios artefactos ``proto-fonéticos'' de la antiguedad.
+
+\begin{figure}[H]
   \begin{subfigure}{0.10\textwidth}
     \centering
     \begin{tikzpicture}
@@ -513,8 +683,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
     \end{tikzpicture}    
-    \caption{\sffamily{-3}}
-    \label{fig:tikz2}
+    \caption{\textsf{-3}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -537,8 +707,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
       \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
     \end{tikzpicture}    
-    \caption{\sffamily{-2}}
-    \label{fig:tikz2}
+    \caption{\textsf{-2}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -561,8 +731,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {7};
 
     \end{tikzpicture}    
-    \caption{\sffamily{-1}}
-    \label{fig:tikz2}
+    \caption{\textsf{-1}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -585,8 +755,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
       \end{tikzpicture}
-    \caption{\sffamily{0}}
-    \label{fig:tikz1}
+    \caption{\textsf{0}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -609,8 +779,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st      ,below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
       \end{tikzpicture}
-    \caption{\sffamily{+1}}
-    \label{fig:tikz1}
+    \caption{\textsf{+1}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -633,8 +803,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of =21] {7};
 
     \end{tikzpicture}    
-    \caption{\sffamily{+2}}
-    \label{fig:tikz2}
+    \caption{\textsf{+2}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -657,15 +827,14 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of =21] { };
   
     \end{tikzpicture}    
-    \caption{\sffamily{+3}}
-    \label{fig:tikz2}
+    \caption{\textsf{+3}}
+    
   \end{subfigure}
   \hfill
-  \caption{Los siete modos de \sffamily{WHITE}}
-  \label{fig:the-six-scales}
+  \caption{Los siete modos de \textsf{WHITE}}label{fig:the-white-modes}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
   \begin{subfigure}{0.10\textwidth}
     \centering
     \begin{tikzpicture}
@@ -686,8 +855,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
       \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
     \end{tikzpicture}    
-    \caption{\sffamily{-3}}
-    \label{fig:tikz2}
+    \caption{\textsf{-3}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -710,8 +879,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {7};
     
     \end{tikzpicture}    
-    \caption{\sffamily{-2}}
-    \label{fig:tikz2}
+    \caption{\textsf{-2}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -734,8 +903,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
     \end{tikzpicture}    
-    \caption{\sffamily{-1}}
-    \label{fig:tikz2}
+    \caption{\textsf{-1}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -758,8 +927,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
       \end{tikzpicture}
-    \caption{\sffamily{0}}
-    \label{fig:tikz1}
+    \caption{\textsf{0}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -782,8 +951,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
       \end{tikzpicture}
-    \caption{\sffamily{+1}}
-    \label{fig:tikz1}
+    \caption{\textsf{+1}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -806,8 +975,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
       \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of =21] { };
 
     \end{tikzpicture}    
-    \caption{\sffamily{+2}}
-    \label{fig:tikz2}
+    \caption{\textsf{+2}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.10\textwidth}
@@ -830,16 +999,15 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of =21] {7};
   
     \end{tikzpicture}    
-    \caption{\sffamily{+3}}
-    \label{fig:tikz2}
+    \caption{\textsf{+3}}
+    
   \end{subfigure}
   \hfill
-  \caption{Los siete modos de \sffamily{BLUE}}
-  \label{fig:the-six-scales}
+  \caption{Los siete modos de \textsf{BLUE}}label{fig:the-blue-modes}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[H]
     \begin{subfigure}{0.10\textwidth}
       \centering
       \begin{tikzpicture}
@@ -860,8 +1028,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
       
       \end{tikzpicture}    
-      \caption{\sffamily{-3}}
-      \label{fig:tikz2}
+      \caption{\textsf{-3}}
+      
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.10\textwidth}
@@ -884,8 +1052,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {7};
       
       \end{tikzpicture}    
-      \caption{\sffamily{-2}}
-      \label{fig:tikz2}
+      \caption{\textsf{-2}}
+      
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.10\textwidth}
@@ -908,8 +1076,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
   
       \end{tikzpicture}    
-      \caption{\sffamily{-1}}
-      \label{fig:tikz2}
+      \caption{\textsf{-1}}
+      
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.10\textwidth}
@@ -932,8 +1100,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
           \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {7};
       
         \end{tikzpicture}
-      \caption{\sffamily{0}}
-      \label{fig:tikz1}
+      \caption{\textsf{0}}
+      
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.10\textwidth}
@@ -956,8 +1124,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
           \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {7};
       
         \end{tikzpicture}
-      \caption{\sffamily{+1}}
-      \label{fig:tikz1}
+      \caption{\textsf{+1}}
+      
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.10\textwidth}
@@ -980,8 +1148,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of =21] { };
   
       \end{tikzpicture}    
-      \caption{\sffamily{+2}}
-      \label{fig:tikz2}
+      \caption{\textsf{+2}}
+      
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.10\textwidth}
@@ -1004,16 +1172,15 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of =21] {7};
     
       \end{tikzpicture}    
-      \caption{\sffamily{+3}}
-      \label{fig:tikz2}
+      \caption{\textsf{+3}}
+      
     \end{subfigure}
     \hfill
-    \caption{Los siete modos de \sffamily{RED}}
-    \label{fig:the-six-scales}
+    \caption{Los siete modos de \textsf{RED}}label{fig:the-red-modes}
   \end{figure}
 
   
-\begin{figure}
+\begin{figure}[H]
     \begin{subfigure}{0.10\textwidth}
       \centering
       \begin{tikzpicture}
@@ -1034,8 +1201,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {8};
   
       \end{tikzpicture}    
-      \caption{\sffamily{-1}}
-      \label{fig:tikz2}
+      \caption{\textsf{-1}}
+      
     \end{subfigure}  
     \hfill    
     \begin{subfigure}{0.10\textwidth}
@@ -1058,8 +1225,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
           \node (11)[st,      below of= 12] {1}; \node (21) [st=white, right of=11] { }; \node (31) [st,       right of= 21] {8};
       
         \end{tikzpicture}
-      \caption{\sffamily{0}}
-      \label{fig:tikz1}
+      \caption{\textsf{0}}
+      
     \end{subfigure}    
     \hfill    
     \begin{subfigure}{0.10\textwidth}
@@ -1082,15 +1249,14 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
           \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
       
         \end{tikzpicture}
-      \caption{\sffamily{+1}}
-      \label{fig:tikz1}
+      \caption{\textsf{+1}}
+      
     \end{subfigure}
     \hfill
-    \caption{Los tres modos de \sffamily{BLACK}}
-    \label{fig:the-six-scales}
+    \caption{Los tres modos de \textsf{BLACK}}label{fig:the-black-modes}
   \end{figure}
  
-  \begin{figure}
+  \begin{figure}[H]
     \begin{subfigure}{0.10\textwidth}
         \centering
         \begin{tikzpicture}
@@ -1111,8 +1277,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
           \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
         \end{tikzpicture}    
-        \caption{\sffamily{-2}}
-        \label{fig:tikz2}
+        \caption{\textsf{-2}}
+        
       \end{subfigure}
       \hfill  
     \begin{subfigure}{0.10\textwidth}
@@ -1135,8 +1301,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
   
       \end{tikzpicture}    
-      \caption{\sffamily{-1}}
-      \label{fig:tikz2}
+      \caption{\textsf{-1}}
+      
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.10\textwidth}
@@ -1159,8 +1325,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
           \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
       
         \end{tikzpicture}
-      \caption{\sffamily{0}}
-      \label{fig:tikz1}
+      \caption{\textsf{0}}
+      
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.10\textwidth}
@@ -1183,8 +1349,8 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
           \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
       
         \end{tikzpicture}
-      \caption{\sffamily{+1}}
-      \label{fig:tikz1}
+      \caption{\textsf{+1}}
+      
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.10\textwidth}
@@ -1207,14 +1373,13 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
           \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
       
         \end{tikzpicture}
-      \caption{\sffamily{+2}}
-      \label{fig:tikz1}
+      \caption{\textsf{+2}}
+      
     \end{subfigure}
-    \caption{Los cinco modos de \sffamily{PENTA}}
-    \label{fig:the-six-scales}
+    \caption{Los cinco modos de \textsf{PENTA}}label{fig:the-penta-modes}
   \end{figure}
-  \begin{figure}
-    \begin{subfigure}{0.10\textwidth}
+  \begin{figure}[H]
+    \begin{subfigure}{1\textwidth}
         \centering
         \begin{tikzpicture}
           [st/.style={
@@ -1234,16 +1399,16 @@ A partir de las escalas presentadas, se generan estos modos. De momento, hemos a
           \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
         \end{tikzpicture}    
-        \caption{\sffamily{0}}
-        \label{fig:tikz2}
+        \caption{\textsf{0}}
+        
       \end{subfigure}
-      \hfill  
-    \caption{El único modo de \sffamily{TONES}}
-    \label{fig:the-six-scales}
+    \caption{El único modo de \textsf{TONES}}label{fig:the-tones-modes}
   \end{figure}
 \subsection{Tríadas de \textsf{PENTA}}
 
-La escala \textsf{PENTA} tiene tríadas como las demás. Si se toman como en la notación estandar, parece que en lugar de terceras, están formadas por cuartas, así que se habla de \emph{acordes por cuartas}, o \emph{armonía cuartal}. Es innecesario. Lo que ocurre es que en esa escala no hay esas notas. Solo son las terceras de esa escala. No hay por que hacer excepciones. La diferencia con las tríadas de una escala que contenga tritonos es que estas no llevan a ninguna parte, funcionan todas igual de bien. Son todas igual de estables y no hay que alejarse de ningún punto.
+La escala \textsf{PENTA} tiene tríadas como las demás. Si se toman como en la notación estandar, parece que en lugar de terceras, están formadas por cuartas, así que se habla de \emph{acordes por cuartas}, o \emph{armonía cuartal}. Esto es totalmente innecesario. Lo único que ocurre es que en esa escala no existen esas notas. Solo son las terceras de esa escala. No hay por que hacer excepciones. La diferencia con las tríadas de una escala que contenga tritonos es que estas no llevan a ninguna parte, funcionan todas igual de bien. Son todas igual de estables y no hay que alejarse de ningún punto. 
+
+Quizá este concepto debería hacernos revisar también el nombre de los intervalos: las palabras ``tercera'' o ``cuarta'' tampoco deberían seguir usándose, simplemente son los intervalos que quedan entre las notas alternas de una escala. No importa si son 3 o 4, lo que importa es que son los intervalos alternos de esa escala concreta.
 
 \subsection{Tríadas no orientativas}
 
@@ -1253,9 +1418,9 @@ Un acorde puede usarse para marcar el grado o no. Así, se puede tocar con acord
 
 Cuando se agregan más notas a una tríada, se dice que le estamos agregando \emph{color}. Es una forma de verlo. No es muy util, porque parece que simplemente estamos decorándola para que luzca un poco más bonita.
 
-En realidad, cada nota que se añade tiene una función concreta. Una tríada por sí sola solamente aporta información mayor o menor. Todas las notas que agreguemos aportarán información sobre la posición del grado con respecto a la escala y posiblemente alguna idea más como anticipar modulaciones o inducciones al engaño, debilitando ligeramente la sensación inicial.
+En realidad, cada nota que se añade tiene una función concreta. Una tríada aporta información precisa sobre el caracter mayor o menor de ese grupo de notas y además una cierta información sobre la posición del mismo en la escala. Esta última no es precisa porque en una escala suele haber varias tríadas mayores y varias menores, así que la posición no está del todo clara. Todas las notas que agreguemos aportarán más información sobre la posición del grado con respecto a la escala y posiblemente alguna idea más como anticipar modulaciones o inducciones al engaño, debilitando ligeramente la sensación inicial.
 
-La única idea clara que se enseña oficialmente es que agregar una \emph{séptima bemol} convierte a una tríada en \emph{dominante} (gran término) y provoca que resuelva en un grado que está una cuarta por encima. Y a partir de ahí empieza a aparecer el concepto ``\emph{puedes agregar}'' que dice que a un acorde dominante, para darle \emph{color}, se le pueden agregar una novena bemol, una novena aumentada, una quinta bemol, una quinta aumentada\ldots.
+La única idea que se enseña oficialmente de forma recurrente es que agregar una \emph{séptima bemol} convierte a una tríada en \emph{dominante} (gran término) y provoca que resuelva en un grado que está una cuarta por encima. Y a partir de ahí empieza a aparecer el mantra ``\emph{puedes agregar}'' que dice que a un acorde dominante, para darle \emph{color}, se le pueden agregar una novena bemol, una novena aumentada, una quinta bemol, una quinta aumentada, una treceava\ldots.
 
 Otra vez la misma respuesta: ¿Se le ``puede''? Y otra vez esas palabras malsonantes\ldots{}
 
@@ -1263,9 +1428,9 @@ Será mejor que dejemos de hablar de colores.
 
 \subsection{Representación de tritonos}
 
-Al representar los tritonos se observa que también ocupan su lugar perfectamente simétrico. Se hará mediante una flecha que los una. Veamos la representación de todas las escalas con sus tritonos.
+Al representar los tritonos se observa que también ocupan su lugar perfectamente simétrico. Se hará mediante una linea que los una. Veamos la representación de todas las escalas con sus tritonos.
 
-\begin{figure}
+\begin{figure}[h]
   \begin{subfigure}{0.15\textwidth}
     \centering
       \begin{tikzpicture}
@@ -1287,8 +1452,8 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
         \draw[very thick, color=red] (13.east) -- (33.west);
     
       \end{tikzpicture}
-    \caption{\sffamily{WHITE}}
-    \label{fig:tikz1}
+    \caption{\textsf{WHITE}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -1314,8 +1479,8 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
         \draw[very thick, color=red] (12.east) -- (34.west);
 
       \end{tikzpicture}
-    \caption{\sffamily{BLUE}}
-    \label{fig:tikz1}
+    \caption{\textsf{BLUE}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -1341,8 +1506,8 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
       \draw[very thick, color=red] (11.east) -- (35.west);
 
     \end{tikzpicture}   
-    \caption{\sffamily{RED}}
-    \label{fig:tikz2}
+    \caption{\textsf{RED}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -1370,8 +1535,8 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
       \draw[very thick, color=red] (12.east) -- (34.west);      
 
     \end{tikzpicture}    
-    \caption{\sffamily{BLACK}}
-    \label{fig:tikz2}
+    \caption{\textsf{BLACK}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -1394,8 +1559,8 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
     \end{tikzpicture}    
-    \caption{\sffamily{PENTA}}
-    \label{fig:tikz2}
+    \caption{\textsf{PENTA}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -1422,12 +1587,11 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
       \draw[very thick, color=red] (14.east) -- (32.west);
   
     \end{tikzpicture}    
-    \caption{\sffamily{TONES}}
-    \label{fig:tikz2}
+    \caption{\textsf{TONES}}
+    
   \end{subfigure}
   \hfill
-  \caption{Las seis escalas y sus tritonos}
-  \label{fig:the-six-scales-and-tritones}
+  \caption{Las seis escalas y sus tritonos}label{fig:the-six-scales-and-tritones}
 \end{figure}
 
 
@@ -1439,19 +1603,20 @@ La escala \texttt{RED} se utiliza ampliamente en el flamenco, también con dos t
 
 La escala \texttt{BLACK} tiene 4 tritonos, se utiliza mucho en la música clásica cuando se desea remarcar la sensación tritonal, sin paliativos ni trucos, no ofrece ningún espacio para el relax y suele usarse durante periodos cortos.
 
-La escala \texttt{PENTA} no tiene ningún tritono. No hay amenazas, se utiliza en la música simple, básicamente en todas las civilizaciones primitivas. No hay posibilidad de engaño ni de sorpresa. Es más bien decorativa, adecuada para el adorno de fiestas y expresiones primarias. Sus tríadas dan lugar a un tipo de armonía llamada \emph{armonía por cuartas }
+La escala \texttt{PENTA} no tiene ningún tritono. No hay amenazas, se utiliza en la música simple, canciones infantiles o básicamente en todas las civilizaciones primitivas. No hay posibilidad de engaño ni de sorpresa y no hace preguntas al oyente. Es más bien decorativa, adecuada para el adorno de fiestas y expresiones primarias. Sus tríadas dan lugar a un tipo de armonía llamada \emph{armonía por cuartas }
 
 La escala \texttt{TONES} tiene tres tritonos, pero solamente seis notas y además, no tiene orientación posible. Hablaremos de esto más adelante.
-
-Es importante observar que la situación de los tritonos tiene un sentido, es decir, puede no ser lo mismo ir de una nota a la otra ascendiendo que descendiendo, eso depende de si hay las mismas notas entre ambas por los dos caminos. Vemos que en \texttt{WHITE}, ascendiendo tenemos en medio 2 notas, sin embargo, descendiendo quedan 3. Así que si vamos apilando notas alternas, que es como se crean los acordes, girando en sentido reloj, es decir, ascendiendo, entre 6 y 3, ambas notas caen en el acorde, pero girando en sentido glorieta, apilaríamos 3,5,7,2,4,6. Es decir, el grado 3 está mucho más lejos de llegar a tener un tritono que el 6, concretamente, cuatro niveles de apilamiento más lejos.
 
 Esto mismo ocurrre con \texttt{BLUE} y con \texttt{RED}, aunque hay dos tritonos.
 
 Sin embargo, en \texttt{BLACK} nos encontramos con ocho notas en la escala, así que entre cada nota del tritono siempre quedan tres, da igual en qué sentido nos movamos.
 
-También en \texttt{TONES} pasa lo mismo, aunque quedan solamente dos notas en cada sentido, con lo cual, mediante saltos alternos nunca podremos llegar a completar un tritono. Una situación muy extraña. Lo hemos representado mediante flechas sin punta para indicarlo.
+También en \texttt{TONES} pasa lo mismo, aunque quedan solamente dos notas en cada sentido, con lo cual, mediante saltos alternos nunca podremos llegar a completar un tritono.
 
-La sensación para el oyente de que la pila que está sonando está cerca o lejos del tritono se ha de contar siempre ascendentemente, es decir, cuántas notas alternas han de agregarse para que acabe sonando un tritono (si es posible).
+La sensación para el oyente de que la pila que está sonando está cerca o lejos del tritono se ha de contar siempre ascendentemente, es decir, cuántas notas alternas han de agregarse para que acabe sonando un tritono (si llega a ocurrir).
+
+\subsection{Sentido tritonal}
+Es importante observar que la situación de los tritonos tiene un sentido, es decir, puede no ser lo mismo ir de una nota a otra cambiando la nota de partida, eso depende de si hay las mismas notas entre ambas por los dos caminos. Vemos que en \texttt{WHITE}, yendo desde el grado 6 hasta el 3, apilando notas alternas, formaríamos el acorde 6 1 3. Sin embargo, para ir desde 3 a 6 apilaríamos 3,5,7,2,4,6. Es decir, el grado 3 está mucho más lejos de llegar a tener un tritono que el 6, concretamente, cuatro niveles de apilamiento más lejos.
 
 \subsection{Centro tonal}
 
@@ -1482,8 +1647,8 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
       \end{tikzpicture}
-    \caption{\sffamily{WHITE}}
-    \label{fig:tikz1}
+    \caption{\textsf{WHITE}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -1506,8 +1671,8 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
         \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
         
       \end{tikzpicture}
-    \caption{\sffamily{BLUE}}
-    \label{fig:tikz1}
+    \caption{\textsf{BLUE}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -1530,8 +1695,8 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
       \node (11)[st=red,  below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of =21] {7};
 
     \end{tikzpicture}   
-    \caption{\sffamily{RED}}
-    \label{fig:tikz2}
+    \caption{\textsf{RED}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -1554,8 +1719,8 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
       \node (11)[st=red,  below of= 12] {1}; \node (21) [st=white, right of=11] { }; \node (31) [st,       right of =21] {8};
 
     \end{tikzpicture}    
-    \caption{\sffamily{BLACK}}
-    \label{fig:tikz2}
+    \caption{\textsf{BLACK}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -1578,8 +1743,8 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
     \end{tikzpicture}    
-    \caption{\sffamily{PENTA}}
-    \label{fig:tikz2}
+    \caption{\textsf{PENTA}}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.15\textwidth}
@@ -1602,12 +1767,11 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
       \node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
     \end{tikzpicture}    
-    \caption{\sffamily{TONES}}
-    \label{fig:tikz2}
+    \caption{\textsf{TONES}}
+    
   \end{subfigure}
   \hfill
-  \caption{Las seis escalas y terceras ambiguas}
-  \label{fig:the-six-scales-and-ambiguous-thirds}
+  \caption{Las seis escalas y terceras ambiguas}label{fig:the-six-scales-and-ambiguous-thirds}
 \end{figure}
 
 
@@ -1629,7 +1793,7 @@ La sensación de ambigüedad entre el caracter mayor/menor de una tríada produc
 
 Si todos los grados de la escala tienen una tercera, mayor o menor, consideraremos que, al menos en ese aspecto, está completa. Podemos observar que, en la escala \texttt{RED} hay un grado que no tiene ninguna clase de tercera: el séptimo, así como en la escala \texttt{PENTA} faltan dos terceras, en el primer y en el tercer grado.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \begin{subfigure}{0.15\textwidth}
     \centering
@@ -1651,8 +1815,8 @@ Si todos los grados de la escala tienen una tercera, mayor o menor, considerarem
       \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st=red,   right of =21] {7};
 
     \end{tikzpicture}    
-    \caption{\sffamily{RED}}
-    \label{fig:tikz2}
+    \caption{\textsf{RED}}
+    
   \end{subfigure}
   \begin{subfigure}{0.15\textwidth}
     \centering
@@ -1674,12 +1838,11 @@ Si todos los grados de la escala tienen una tercera, mayor o menor, considerarem
       \node (11)[st=white,below of= 12] { }; \node (21) [st=red,   right of=11] {1}; \node (31) [st=white, right of= 21] { };
     
     \end{tikzpicture}    
-    \caption{\sffamily{PENTA}}
-    \label{fig:tikz2}
+    \caption{\textsf{PENTA}}
+    
   \end{subfigure}
   \hfill
-  \caption{Escalas con grados sin tercera}
-  \label{fig:scales-with-no-thirds}
+  \caption{Escalas con grados sin tercera}label{fig:scales-with-no-thirds}
 \end{figure}
 
 \subsection{Distancias a tritonos}
@@ -1688,13 +1851,7 @@ Si en una escala hay tritonos, cada tríada estará a una distancia de ellos. La
 
 Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fundamental} y \emph{relativo menor}. A parte de la estrafalaria nomenclatura, son los grados que se utilizan para empezar y terminar la mayoría de los temas. Simplemente sugieren descanso y estabilidad, aunque uno es mayor y otro menor, así que además tienen su propio caracter. Si se termina en un acorde cercano al tritono, probablemente nadie aplaudirá: hay tensión sin resolver, preguntas sin contestar.
 
-.Escala WHITE con sus tríadas image::white-scale-and-triads.png{[}{]}
-
-En esta otra figura observamos la escala \texttt{BLUE}, con sus dos tritonos y las tríadas correspondientes. Vemos que no hay una tríada que quede suficientemente alejada de un tritono, cuando nos alejamos de uno nos acercamos al otro. Se puede ver que las tríadas más ``a salvo'' parecen ser \texttt{CeG}, que necesitaría agregar \texttt{B}, \texttt{D} y \texttt{F} para contener un tritono, también \texttt{DFA} que necesitaría agregar \texttt{C} y \texttt{e} para lo mismo y \texttt{eGB} que necesitaría \texttt{D} y \texttt{F}.
-
-No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la impresión de que todavía necesitamos salir de ahí como sea. En la terminología estandar se habla de \emph{tensión}. Es un término adecuado si lo entendemos como \emph{pregunta sin responder}. En ningún caso debemos pensar en algo desagradable o repelente, solo es música.
-
-\begin{figure}
+\begin{figure}[H]
   \centering
   \begin{subfigure}{1\textwidth}
     \centering
@@ -1782,14 +1939,18 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \draw [->, rounded corners=3mm] (t6-B.north west) rectangle (t6-F.south east);
       \draw [->, rounded corners=3mm] (t7-A.north west) rectangle (t7-E.south east);
     \end{tikzpicture}    
-    \label{fig:tikz2}
+    
   \end{subfigure}
-  \caption{Escala \sffamily{WHITE} con sus tríadas}
-  \label{fig:white-scale-with-its-triads}
+  \caption{Escala \textsf{WHITE} con sus tríadas}label{fig:white-scale-with-its-triads}
 \end{figure}
 
 
-\begin{figure}
+En esta otra figura observamos la escala \texttt{BLUE}, con sus dos tritonos y las tríadas correspondientes. Vemos que no hay una tríada que quede suficientemente alejada de un tritono, cuando nos alejamos de uno nos acercamos al otro. Se puede ver que las tríadas más ``a salvo'' parecen ser \texttt{CeG}, que necesitaría agregar \texttt{B}, \texttt{D} y \texttt{F} para contener un tritono, también \texttt{DFA} que necesitaría agregar \texttt{C} y \texttt{e} para lo mismo y \texttt{eGB} que necesitaría \texttt{D} y \texttt{F}.
+
+No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la impresión de que todavía necesitamos salir de ahí como sea. En la terminología estandar se habla de \emph{tensión}. Es un término adecuado si lo entendemos como \emph{pregunta sin responder}. En ningún caso debemos pensar en algo desagradable o repelente, solo es música.
+
+
+\begin{figure}[H]
   \centering
   \begin{subfigure}{1\textwidth}
     \centering
@@ -1878,10 +2039,9 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \draw [->, rounded corners=3mm] (t6-e.north west) rectangle (t6-B.south east);
       \draw [->, rounded corners=3mm] (t7-D.north west) rectangle (t7-A.south east);
     \end{tikzpicture}    
-    \label{fig:tikz2}
+    
   \end{subfigure}
-  \caption{Escala \sffamily{BLUE} con sus tríadas}
-  \label{fig:blue-scale-with-its-triads}
+  \caption{Escala \textsf{BLUE} con sus tríadas}label{fig:blue-scale-with-its-triads}
 \end{figure}
 
 
@@ -1894,41 +2054,310 @@ Buscar más es un interesante ejercicio. Sería fantástico encontrar alguna, pe
   \item Que todos los grados tengan o no tercera
   \item Que todas las terceras sean mayores o menores
   \item Que formen una combinación simétrica
+  \item Que la orientación sea única
+  \item Que las notas esten distribuidas sin agruparse en bloques
 \end{itemize}
 
 Cualquier combinación que se encuentre será simplemente una ordenación diferente de alguna de las seis presentadas ( lo que sería un modo, recordemos ). Si se hace girar en el esquema se llegará a ella. Vamos a intentar algunas:
 
-.Otras posibles escalas image::more-scales.png
+\begin{figure}[H]
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [st/.style={
+          rectangle,
+          minimum size=.5cm,
+          node distance=.5cm,
+          inner sep = 0cm,      
+          draw=black,thick,fill=#1!50,
+          font=\sffamily
+          },
+        st/.default=gray]
+    
+        \node (15)[st                   ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {5};
+        \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+        \node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+        \node (12)[st=white,below of= 13] { };                                         \node (32) [st=white, below of= 33] { };
+        \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {7};
+    
+      \end{tikzpicture}
+    \caption{\textsf{X1}}
+    
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [st/.style={
+          rectangle,
+          minimum size=.5cm,
+          node distance=.5cm,
+          inner sep = 0cm,      
+          draw=black,thick,fill=#1!50,
+          font=\sffamily
+          },
+        st/.default=gray]
+    
+        \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {5};
+        \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+        \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+        \node (12)[st,      below of= 13] {3};                                         \node (32) [st,       below of= 33] {6};
+        \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {7};
+    
+      \end{tikzpicture}
+    \caption{\textsf{X2}}
+    
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st,                  ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of =25] {5};
+      \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of =35] { };
+      \node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of =34] {6};
+      \node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of =33] {7};
+      \node (11)[st,      below of= 12] {1}; \node (21) [st=white, right of=11] { }; \node (31) [st,       right of =21] {8};
+
+    \end{tikzpicture}    
+    \caption{\textsf{X3}}
+    
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st=white,            ] { }; \node (25) [st, right of=15] {4}; \node (35)       [st=white, right of =25] { };
+      \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of =35] { };
+      \node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of =34] {5};
+      \node (12)[st      ,below of= 13] {2};                                         \node (32) [st,       below of =33] {6};
+      \node (11)[st=white,below of= 12] { }; \node (21) [st, right of=11] {1}; \node (31)       [st=white, right of =21] { };
+  
+    \end{tikzpicture}   
+    \caption{\textsf{X4}}
+    
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.15\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=.5cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=gray]
+  
+      \node (15)[st                   ] {3}; \node (25) [st,       right of=15] {4}; \node (35) [st,       right of= 25] {5};
+      \node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+      \node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
+      \node (12)[st=white,below of= 13] { };                                         \node (32) [st=white, below of= 33] { };
+      \node (11)[st,      below of= 12] {2}; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {6};
+    
+    \end{tikzpicture}    
+    \caption{\textsf{X5}}
+    
+  \end{subfigure}
+  \hfill
+  \caption{Otras posibles escalas}label{fig:more-posible-scales}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lccc}
+    \toprule
+    Escala & Terceras ambiguas & Sin tercera & Tritonos \\
+    \midrule
+    X1 & 1 & 0 & 3 \\
+    X2 & 2 & 2 & 2 \\
+    X3 & 3 & 1 & 3 \\
+    X4 & 1 & 0 & 2 \\
+    X5 & 0 & 6 & 3 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Características de diferentes escalas musicales}label{tab:escalas}
+\end{table}
 
 \subsection{Orden de tríadas por distancias a los tritonos}
 
-En estás dos escalas \texttt{WHITE} y \texttt{BLUE} se aprecian los tritonos sombreados. La primera tiene uno: \texttt{B-F}, y la segunda tiene dos: \texttt{A-e} y \texttt{B-F}. Para modular entre una y otra basta con cambiar la nota \texttt{E} por \texttt{e} (\texttt{Mi} por \texttt{Mi\ bemol}). El centro simétrico era la nota \texttt{D} en \texttt{WHITE} y ahora pasa a ser \texttt{G} en \texttt{BLUE}. Veamos todas las tríadas de la escala y la distancia que guardan con el siguiente tritono, es decir, la cantidad de terceras que habría que agregarle para que contuviese un tritono. Anotaremos también si la tríada incluye ya alguna nota perteneciente a algún tritono. La distancia que percibe el oyente debería calcularse mediante alguna fórmula que tenga en cuenta ambos parámetros. De momento no sabemos qué fórmula será esa.
+En estas dos escalas \texttt{WHITE} y \texttt{BLUE} se aprecian los tritonos sombreados. La primera tiene uno: \texttt{B-F}, y la segunda tiene dos: \texttt{A-e} y \texttt{B-F}. Para modular entre una y otra basta con cambiar la nota \texttt{E} por \texttt{e} (\texttt{Mi} por \texttt{Mi\ bemol}). El centro simétrico era la nota \texttt{D} en \texttt{WHITE} y ahora pasa a ser \texttt{G} en \texttt{BLUE}. 
 
-\subsection{Escala \texttt{WHITE} }
+Veamos todas las tríadas de la escala y la distancia que guardan con el siguiente tritono, es decir, la cantidad de terceras que habría que agregarle para que contuviese un tritono. Anotaremos también si la tríada incluye ya alguna nota perteneciente a algún tritono. La distancia que percibe el oyente es la que decide si la tríada se puede considerar el objetivo seguro de una resolución. 
 
-Escala white image::white-scale.png
+Por el momento, no disponemos de una fórmula matemática que nos permita calcular esta fuerza, pero parece claro que las tríadas consideradas como ``descanso'' en las que la melodía ha de ``resolver'' son las que están más lejos de contener un tritono. En el caso de \textsf{WHITE} las tríadas \textsf{ACE} y \textsf{CEG}, también llamadas ``tónicas'', una menor y la otra mayor. Solo \textsf{DFA} está a su misma distancia, pero ya contiene una nota del tritono ( \textsf{F} ) lo que la hace menos ``segura''.
 
-\subsection{Escala \texttt{BLUE} }
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=0cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=white]
 
-Escala blue image::blue-scale.png
+      \node (1)  [st=gray]         {F};
+      \node (2)  [st, right=of 1]  { };
+      \node (3)  [st, right=of 2]  { };
+      \node (4)  [st, right=of 3]  { };
+      \node (5)  [st, right=of 4]  {A};
+      \node (6)  [st, right=of 5]  { };
+      \node (7)  [st, right=of 6]  { };
+      \node (8)  [st, right=of 7]  {C};
+      \node (9)  [st, right=of 8]  { };
+      \node (10) [st, right=of 9]  { };
+      \node (11) [st, right=of 10] { };
+      \node (12) [st, right=of 11] {E};
+      \node (13) [st, right=of 12] { };
+      \node (14) [st, right=of 13] { };
+      \node (15) [st, right=of 14] {G};
+      \node (16) [st, right=of 15] { };
+      \node (17) [st, right=of 16] { };
+      \node (18) [st, right=of 17] { };
+      \node (19) [st=gray, right=of 18] {B};
+      \node (20) [st=gray, right=of 19] { };
+      \node (21) [st=gray, right=of 20] { };
+      \node (22) [st=gray, right=of 21] {D};
+      \node (23) [st=gray, right=of 22] { };
+      \node (24) [st=gray, right=of 23] { };
+      \node (25) [st=gray, right=of 24] {F};
+      \node (26) [st, right=of 25] { };
+      \node (27) [st, right=of 26] { };
+      \node (28) [st, right=of 27] { };
+      \node (29) [st, right=of 28] {A};
 
-Comparación de distancias entre las dos tríadas. Observemos que la distancia a un tritono se mantiene en las tríadas \texttt{EGB} (que pasa a ser \texttt{eGB}), \texttt{GBD}, \texttt{BDF} y \texttt{CEG} (que pasa a ser \texttt{CeG}).
+    \end{tikzpicture}    
+    
+  \end{subfigure}
+  \caption{Escala \textsf{WHITE} }label{fig:white-scale-distances}
+\end{figure}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lcc}
+    \toprule
+    TRÍADA & Distancia a un tritono & Contiene \\
+    \midrule
+    GBD & 1 & 1 \\
+    BDF & 0 & 2 \\
+    DFA & 4 & 1 \\
+    FAC & 3 & 1 \\
+    ACE & 4 & 0 \\
+    CEG & 3 & 0 \\
+    EGB & 2 & 1 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Tabla de tríadas y sus características}label{tab:white-triads}
+\end{table}
 
-GB\textbf{2}\textbf{2}GB BD\textbf{1}\textbf{1}BD DF\textbf{0}\textbf{0}DF FAFA ACAC CECe EG\textbf{3}\textbf{3}eG
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \begin{tikzpicture}
+      [st/.style={
+        rectangle,
+        minimum size=.5cm,
+        node distance=0cm,
+        inner sep = 0cm,      
+        draw=black,thick,fill=#1!50,
+        font=\sffamily
+        },
+      st/.default=white]
 
-De la misma forma, podemos observar que algunas tríadas siguen conteniendo la misma cantidad de notas de algún tritono al cambiar de escala.
+      \node (1)  [st=gray]         {F};
+      \node (2)  [st, right=of 1]  { };
+      \node (3)  [st, right=of 2]  { };
+      \node (4)  [st, right=of 3]  { };
+      \node (5)  [st=gray, right=of 4]  {A};
+      \node (6)  [st=gray, right=of 5]  { };
+      \node (7)  [st=gray, right=of 6]  { };
+      \node (8)  [st=gray, right=of 7]  {C};
+      \node (9)  [st=gray, right=of 8]  { };
+      \node (10) [st=gray, right=of 9]  { };
+      \node (11) [st=gray, right=of 10] {e};
+      \node (12) [st, right=of 11] { };
+      \node (13) [st, right=of 12] { };
+      \node (14) [st, right=of 13] { };
+      \node (15) [st, right=of 14] {G};
+      \node (16) [st, right=of 15] { };
+      \node (17) [st, right=of 16] { };
+      \node (18) [st, right=of 17] { };
+      \node (19) [st=gray, right=of 18] {B};
+      \node (20) [st=gray, right=of 19] { };
+      \node (21) [st=gray, right=of 20] { };
+      \node (22) [st=gray, right=of 21] {D};
+      \node (23) [st=gray, right=of 22] { };
+      \node (24) [st=gray, right=of 23] { };
+      \node (25) [st=gray, right=of 24] {F};
+      \node (26) [st, right=of 25] { };
+      \node (27) [st, right=of 26] { };
+      \node (28) [st, right=of 27] { };
+      \node (29) [st=gray, right=of 28] {A};
+
+    \end{tikzpicture}    
+    
+  \end{subfigure}
+  \caption{Escala \textsf{BLUE} }label{fig:blue-scale-distances}
+\end{figure}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lcc}
+    \toprule
+    TRÍADA & Distancia a un tritono & Contiene \\
+    \midrule
+    ACe & 0 & 2 \\
+    CeG & 3 & 1 \\
+    eGB & 2 & 2 \\
+    GBD & 1 & 1 \\
+    BDF & 0 & 2 \\
+    DFA & 2 & 2 \\
+    FAC & 2 & 1 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Tabla de tríadas y sus características}label{tab:triadas}
+\end{table}
 
 \subsection{Mapa de la situación}
 
-Si esto fuese un mapa y cada tríada fuese un punto, podríamos considerar la posición de los tritonos como una elevación en el terreno. La pendiente que se genera alrededor hace que las cosas tiendan a alejarse de esos punto, digamos que nos cuesta acercarnos a ellos.
+Si una canción fuera un mapa y cada tríada fuese un punto, podríamos considerar la posición de los tritonos como una elevación en el terreno. La pendiente que se genera alrededor hace que las cosas tiendan a alejarse de esos punto, digamos que nos cuesta acercarnos a ellos.
 
 El oyente percibe el mapa sonoro como un conjunto de puntos que mantienen una posición con respecto a esa elevación del terreno. Para ponernos de acuerdo, llamémosle \emph{centro tritonal}.
 
 Ahora tenemos dos conceptos distintos:
+\begin{itemize}   \tightlist
+  \item \emph{Centro tonal}, recordemos, la nota más neutra de la escala, a igual distancia de todos los tritonos y en el centro simétrico de la escala
+  \item \emph{Centros tritonales}, especie de elevaciones del terreno cuya pendiente circundante ejerce una fuerza que nos aleja de ellos
+\end{itemize}
+ 
 
-. \emph{Centro tonal}, recordemos, la nota más neutra de la escala, a igual distancia de todos los tritonos y en el centro simétrico de la escala . \emph{Centros tritonales}, especie de elevaciones del terreno cuya pendiente circundante ejerce una fuerza que nos aleja de ellos
-
-Si cambiamos la posición del centro tritonal, el oyente se sentirá desorientado: tendrá que calcular de nuevo hacia dónde tiene que ``escapar'', buscando algún punto de referencia lo más rápido posible o perderá el hilo del tema.
+Si cambiamos la posición del centro tritonal, el oyente se sentirá desorientado: tendrá que calcular de nuevo hacia dónde tiene que ``huir'', buscando algún punto de referencia lo más rápido posible o perderá el hilo del tema.
 
 Modulando correctamente, podemos cambiar algunas de las notas, pasando a otra escala, pero manteniendo la posición del centro tritonal, con lo cual, la sensación de desorientación será mucho más debil.
 
@@ -1936,144 +2365,13 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
 
 \subsection{Notación circular}
 
- 
-En el ejemplo, con una notación circular, más práctica para el análisis de la orientación, entre \texttt{WHITE} en \texttt{D} y \texttt{BLUE} en \texttt{G}, observamos que simplemente se agrega un nuevo centro tritonal, pero el que teníamos sigue manteniéndose en el mismo sitio. Así que no hay mas que ``girar el mapa'' para volver a orientarse.
-
-En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tritonal no se ha movido ni un palmo, simplemente ha aparecido uno nuevo entre \texttt{A} y \texttt{e}. En el mapa imaginario había una elevación en el terreno, que formaba una pendiente a su alrededor. Ahora hay dos. Pero en algunos puntos, la pendiente sigue siendo idéntica, y en la misma dirección. Esa es la \emph{sencilla} razón de que algunas modulaciones sean más cercanas o agradables al oído que otras.
-
-\begin{figure}
-\begin{subfigure}{.30\textwidth}
-  \centering
-    \begin{tikzpicture}
-      every label/.style={green},
-      radius=1.25cm,
-      ]
-      \graph [    
-        simple necklace layout,
-        node sep=0pt, 
-        grow'=up,
-        node distance=0pt,    
-        nodes={
-          draw,
-          circle, 
-          as =  , 
-          minimum size=20pt, 
-          font=\sffamily 
-        }
-      ]
-      { 
-           1  [as = D] 
-        -- 2  [draw=none]
-        -- 3  [as = E]
-        -- 4  [as = F]
-        -- 5  [draw=none]
-        -- 6  [as = G]
-        -- 7  [draw=none]
-        -- 8  [as = A]
-        -- 9  [draw=none]
-        -- 10 [as = B]
-        -- 11 [as = C]
-        -- 12 [draw=none]
-      };
-      \draw [] (0,39.50pt) circle [radius=28pt];
-      \draw[ultra thick, color=red] (4) -- (10);
-    \end{tikzpicture}
-  \caption{\sffamily{WHITE} con su centro tritonal en rojo}
-  \label{fig:tikz1}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.30\textwidth}
-  \centering
-    \begin{tikzpicture}
-      every label/.style={green},
-      radius=1.25cm,
-      ]
-      \graph [    
-        simple necklace layout,
-        node sep=0pt, 
-        grow'=up,
-        node distance=0pt,    
-        nodes={
-          draw,
-          circle, 
-          as =  , 
-          minimum size=20pt, 
-          font=\sffamily 
-        }
-      ]
-      { 
-           1  [as = D] 
-        -- 2  [as = e]
-        -- 3  [draw=none]
-        -- 4  [as = F]
-        -- 5  [draw=none]
-        -- 6  [as = G]
-        -- 7  [draw=none]
-        -- 8  [as = A]
-        -- 9  [draw=none]
-        -- 10 [as = B]
-        -- 11 [as = C]
-        -- 12 [draw=none]
-      };
-      \draw [] (0,39.50pt) circle [radius=28pt];
-      \draw[ultra thick, color=red] (4) -- (10);
-      \draw[ultra thick, color=red] (2) -- (8);
-    \end{tikzpicture}
-  \caption{Agregamos un tritono manteniendo el anterior. Ahora estamos en \sffamily{BLUE}}
-  \label{fig:tikz1}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.30\textwidth}
-  \centering
-    \begin{tikzpicture}
-      every label/.style={green},
-      radius=1.25cm,
-      ]
-      \graph [    
-        simple necklace layout,
-        node sep=0pt, 
-        grow'=up,
-        node distance=0pt,    
-        nodes={
-          draw,
-          circle, 
-          as =  , 
-          minimum size=20pt, 
-          font=\sffamily 
-        }
-      ]
-      { 
-           1  [as = G] 
-        -- 2  [draw=none]
-        -- 3  [as = A]
-        -- 4  [draw=none]
-        -- 5  [as = B]
-        -- 6  [as = C]
-        -- 7  [draw=none]
-        -- 8  [as = D]
-        -- 9  [as = e]
-        -- 10 [draw=none]
-        -- 11 [as = F]
-        -- 12 [draw=none]
-      };
-      \draw [] (0,39.50pt) circle [radius=28pt];
-      \draw[ultra thick, color=red] (3) -- (9);
-      \draw[ultra thick, color=red] (5) -- (11);
-    \end{tikzpicture}
-  \caption{\sffamily{BLUE} con su segundo centro tritonal, reorientada por el oyente para sentir el nuevo centro tonal: \sffamily{G}}
-  \label{fig:tikz1}
-\end{subfigure}
-\hfill
-\caption{Modulación cambiando solo en centro tonal}
-\label{fig:modulation-changing-tonal-center}
-\end{figure}
-Desde WHITE D a BLUE G image::white-d-to-blue-g.png
-\begin{figure}
+\begin{figure}[H]
   \begin{subfigure}{.30\textwidth}
     \centering
       \begin{tikzpicture}
+        [
         every label/.style={green},
-        radius=1.25cm,
+        radius=1.25cm
         ]
         \graph [    
           simple necklace layout,
@@ -2105,15 +2403,149 @@ Desde WHITE D a BLUE G image::white-d-to-blue-g.png
         \draw [] (0,39.50pt) circle [radius=28pt];
         \draw[ultra thick, color=red] (4) -- (10);
       \end{tikzpicture}
-    \caption{\sffamily{WHITE} con su centro tritonal en rojo}
-    \label{fig:tikz1}
+    \caption{\textsf{WHITE} con su centro tritonal en rojo}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.30\textwidth}
     \centering
       \begin{tikzpicture}
+        [
         every label/.style={green},
-        radius=1.25cm,
+        radius=1.25cm
+        ]
+        \graph [    
+          simple necklace layout,
+          node sep=0pt, 
+          grow'=up,
+          node distance=0pt,    
+          nodes={
+            draw,
+            circle, 
+            as =  , 
+            minimum size=20pt, 
+            font=\sffamily 
+          }
+        ]
+        { 
+             1  [as = D] 
+          -- 2  [as = e]
+          -- 3  [draw=none]
+          -- 4  [as = F]
+          -- 5  [draw=none]
+          -- 6  [as = G]
+          -- 7  [draw=none]
+          -- 8  [as = A]
+          -- 9  [draw=none]
+          -- 10 [as = B]
+          -- 11 [as = C]
+          -- 12 [draw=none]
+        };
+        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw[ultra thick, color=red] (4) -- (10);
+        \draw[ultra thick, color=red] (2) -- (8);
+      \end{tikzpicture}
+    \caption{Agregamos un tritono manteniendo el anterior. Ahora estamos en \textsf{BLUE}}
+    
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.30\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [
+        every label/.style={green},
+        radius=1.25cm
+        ]
+        \graph [    
+          simple necklace layout,
+          node sep=0pt, 
+          grow'=up,
+          node distance=0pt,    
+          nodes={
+            draw,
+            circle, 
+            as =  , 
+            minimum size=20pt, 
+            font=\sffamily 
+          }
+        ]
+        { 
+             1  [as = G] 
+          -- 2  [draw=none]
+          -- 3  [as = A]
+          -- 4  [draw=none]
+          -- 5  [as = B]
+          -- 6  [as = C]
+          -- 7  [draw=none]
+          -- 8  [as = D]
+          -- 9  [as = e]
+          -- 10 [draw=none]
+          -- 11 [as = F]
+          -- 12 [draw=none]
+        };
+        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw[ultra thick, color=red] (3) -- (9);
+        \draw[ultra thick, color=red] (5) -- (11);
+      \end{tikzpicture}
+    \caption{\textsf{BLUE} con su segundo centro tritonal, reorientada por el oyente para sentir el nuevo centro tonal: \textsf{G}}
+    
+  \end{subfigure}
+  \hfill
+  \caption{Modulación cambiando solo en centro tonal}label{fig:modulation-changing-tonal-center}
+  \end{figure}
+
+En este ejemplo, con una notación circular, más práctica para el análisis de la orientación, entre \texttt{WHITE} en \texttt{D} y \texttt{BLUE} en \texttt{G}, observamos que simplemente se agrega un nuevo centro tritonal, pero el que teníamos sigue manteniéndose en el mismo sitio. Así que no hay mas que ``girar el mapa'' para volver a orientarse.
+
+En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tritonal no se ha movido, simplemente ha aparecido uno nuevo entre \texttt{A} y \texttt{e}. En el mapa imaginario había una elevación en el terreno, que formaba una pendiente a su alrededor. Ahora hay dos. Pero en algunos puntos, la pendiente sigue siendo idéntica, y en la misma dirección. Esa es la \emph{sencilla} razón de que algunas modulaciones sean más cercanas o agradables al oído que otras.
+
+\begin{figure}[H]
+  \begin{subfigure}{.30\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [
+        every label/.style={green},
+        radius=1.25cm
+        ]
+        \graph [    
+          simple necklace layout,
+          node sep=0pt, 
+          grow'=up,
+          node distance=0pt,    
+          nodes={
+            draw,
+            circle, 
+            as =  , 
+            minimum size=20pt, 
+            font=\sffamily 
+          }
+        ]
+        { 
+             1  [as = D] 
+          -- 2  [draw=none]
+          -- 3  [as = E]
+          -- 4  [as = F]
+          -- 5  [draw=none]
+          -- 6  [as = G]
+          -- 7  [draw=none]
+          -- 8  [as = A]
+          -- 9  [draw=none]
+          -- 10 [as = B]
+          -- 11 [as = C]
+          -- 12 [draw=none]
+        };
+        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw[ultra thick, color=red] (4) -- (10);
+      \end{tikzpicture}
+    \caption{\textsf{WHITE} con su centro tritonal en rojo}
+    
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.30\textwidth}
+    \centering
+      \begin{tikzpicture}
+        [
+        every label/.style={green},
+        radius=1.25cm
         ]
         \graph [    
           simple necklace layout,
@@ -2146,21 +2578,23 @@ Desde WHITE D a BLUE G image::white-d-to-blue-g.png
         \draw[ultra thick, color=red] (3) -- (9);
         \draw[ultra thick, color=red] (5) -- (11);
       \end{tikzpicture}
-    \caption{\sffamily{BLUE} con dos nuevos centros tritonales que sustituyen al anterior. Se mantiene el mismo centro tonal}
-    \label{fig:tikz1}
+    \caption{\textsf{BLUE} con dos nuevos centros tritonales que sustituyen al anterior. Se mantiene el mismo centro tonal}
+    
   \end{subfigure}
   \hfill
-  \caption{Modulación cambiando solo en centro tritonal}
-  \label{fig:modulation-changing-tritonal-center}
+  \caption{Modulación cambiando solo en centro tritonal}label{fig:modulation-changing-tritonal-center2}
   \end{figure}
+
+
   
-Desde WHITE D a BLUE D image::white-d-to-blue-d.png
-\begin{figure}
+
+\begin{figure}[H]
   \begin{subfigure}{.30\textwidth}
     \centering
       \begin{tikzpicture}
+        [
         every label/.style={green},
-        radius=1.25cm,
+        radius=1.25cm
         ]
         \graph [    
           simple necklace layout,
@@ -2192,15 +2626,16 @@ Desde WHITE D a BLUE D image::white-d-to-blue-d.png
         \draw [] (0,39.50pt) circle [radius=28pt];
         \draw[ultra thick, color=red] (4) -- (10);
       \end{tikzpicture}
-    \caption{\sffamily{WHITE} con su centro tritonal en rojo}
-    \label{fig:tikz1}
+    \caption{\textsf{WHITE} con su centro tritonal en rojo}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.30\textwidth}
     \centering
       \begin{tikzpicture}
+        [
         every label/.style={green},
-        radius=1.25cm,
+        radius=1.25cm
         ]
         \graph [    
           simple necklace layout,
@@ -2228,19 +2663,17 @@ Desde WHITE D a BLUE D image::white-d-to-blue-d.png
           -- 10 [draw=none]
           -- 11 [draw=none]
           -- 12 [as = e]
-        };
+                };
         \draw [] (0,39.50pt) circle [radius=28pt];
         \draw[ultra thick, color=red] (2) -- (8);
         \draw[ultra thick, color=red] (6) -- (12);
       \end{tikzpicture}
-    \caption{\sffamily{RED} con dos nuevos centros tritonales que sustituyen al anterior. Se despeja un centro tritonal y se sustituye por un centro tonal. Base del flamenco}
-    \label{fig:tikz1}
+    \caption{\textsf{RED} con dos nuevos centros tritonales que sustituyen al anterior. Se despeja un centro tritonal y se sustituye por un centro tonal. Base del flamenco}
+    
   \end{subfigure}
   \hfill
-  \caption{Modulación base del flamenco}
-  \label{fig:modulation-changing-tritonal-center}
+  \caption{Modulación base del flamenco}label{fig:modulation-changing-tritonal-center}
   \end{figure}
-Desde WHITE D a RED E image::white-d-to-red-e.png
 
 En más resumen todavía: resulta que cambiando \texttt{E} por \texttt{e}, estamos cambiando el caracter de la tríada \texttt{CEG}, de mayor a menor. Estamos cambiando sigilosamente entre alegría y tristeza. Estamos \emph{jugando}.
 
@@ -2269,8 +2702,9 @@ Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos n
   \begin{subfigure}{.30\textwidth}
     \centering
       \begin{tikzpicture}
+        [
         every label/.style={green},
-        radius=1.25cm,
+        radius=1.25cm
         ]
         \graph [    
           simple necklace layout,
@@ -2302,15 +2736,16 @@ Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos n
         \draw [] (0,39.50pt) circle [radius=28pt];
         \draw[ultra thick, color=red] (4) -- (10);
       \end{tikzpicture}
-    \caption{\sffamily{WHITE} con su centro tritonal en rojo}
-    \label{fig:tikz1}
+    \caption{\textsf{WHITE} con su centro tritonal en rojo}
+    
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.30\textwidth}
     \centering
       \begin{tikzpicture}
+        [
         every label/.style={green},
-        radius=1.25cm,
+        radius=1.25cm
         ]
         \graph [    
           simple necklace layout,
@@ -2346,16 +2781,17 @@ Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos n
         % \draw [-> ] (11.east) to [out=45,in=135] (8.east);
         \draw [->] (2cm,0mm) arc [start angle=-40, end angle=60, radius=2cm];
       \end{tikzpicture}
-    \caption{Agregamos un tritono. Ahora estamos en \sffamily{RED}}
-    \label{fig:tikz1}
+    \caption{Agregamos un tritono. Ahora estamos en \textsf{RED}}
+    
   \end{subfigure}
   \hfill
   \hfill
   \begin{subfigure}{0.30\textwidth}
     \centering
       \begin{tikzpicture}
-        every label/.style={green},
-        radius=1.25cm,
+        [ 
+          every label/.style={green},
+          radius=1.25cm
         ]
         \graph [    
           simple necklace layout,
@@ -2388,21 +2824,21 @@ Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos n
         \draw[ultra thick, color=red] (2) -- (8);
         \draw[ultra thick, color=red] (6) -- (12);
       \end{tikzpicture}
-    \caption{\sffamily{RED} reorientada por el oyente para asimilar el nuevo centro tonal en \sffamily{E}}
-    \label{fig:tikz1}
+    \caption{\textsf{RED} reorientada por el oyente para asimilar el nuevo centro tonal en \textsf{E}}
+    
   \end{subfigure}  
-  \caption{Modulación base del flamenco}
-  \label{fig:modulation-changing-tritonal-center}
+  \caption{Modulación base del flamenco}label{fig:flamento-modulation}
   \end{figure}
 \subsection{Substitución tritonal}
 
-Uno de los conceptos más utilizados en el jazz es el de la substitución tritonal, que consiste en sustituir directamente la escala que se usa para improvisar sobre un acorde dominante por la de un acorde que está a un tritono de distancia. En ningún momento se da ninguna explicación aceptable, que no sea la relativa a \textit{darle color al acorde para que resulte más interesante}. No es suficiente. En la figura \ref{fig:tritonal-substitution} 
+Uno de los conceptos más utilizados en el jazz es el de la substitución tritonal, que consiste en sustituir directamente la escala que se usa para improvisar sobre un acorde dominante por la de un acorde que está a un tritono de distancia. En ningún momento se da ninguna explicación aceptable, que no sea la relativa a \textit{darle color al acorde para que resulte más interesante}. No es suficiente.
 \begin{figure}
 	\begin{subfigure}{.30\textwidth}
 	  \centering
 		\begin{tikzpicture}
-		  every label/.style={green},
-		  radius=1.25cm,
+      [
+      every label/.style={green},
+		  radius=1.25cm
 		  ]
 		  \graph [    
 			simple necklace layout,
@@ -2434,15 +2870,16 @@ Uno de los conceptos más utilizados en el jazz es el de la substitución triton
 		  \draw [] (0,39.50pt) circle [radius=28pt];
 		  \draw[ultra thick, color=red] (4) -- (10);
 		\end{tikzpicture}
-	  \caption{\sffamily{WHITE} con su centro tritonal en rojo}
-	  \label{fig:tikz1}
+	  \caption{\textsf{WHITE} con su centro tritonal en rojo}
+	  
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.30\textwidth}
 	  \centering
 		\begin{tikzpicture}
-		  every label/.style={green},
-		  radius=1.25cm,
+      [
+every label/.style={green},
+		  radius=1.25cm
 		  ]
 		  \graph [    
 			simple necklace layout,
@@ -2475,15 +2912,16 @@ Uno de los conceptos más utilizados en el jazz es el de la substitución triton
 		  \draw[ultra thick, color=red] (4) -- (10);
 		  \draw[ultra thick, color=red] (6) -- (12);
 		\end{tikzpicture}
-	  \caption{Agregamos un tritono manteniendo el anterior. Ahora estamos en \sffamily{BLUE}}
-	  \label{fig:tikz1}
+	  \caption{Agregamos un tritono manteniendo el anterior. Ahora estamos en \textsf{BLUE}}
+	  
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.30\textwidth}
 	  \centering
 		\begin{tikzpicture}
-		  every label/.style={green},
-		  radius=1.25cm,
+      [
+      every label/.style={green},
+		  radius=1.25cm
 		  ]
 		  \graph [    
 			simple necklace layout,
@@ -2516,15 +2954,16 @@ Uno de los conceptos más utilizados en el jazz es el de la substitución triton
 		  \draw[ultra thick, color=red] (3) -- (9);
 		  \draw[ultra thick, color=red] (5) -- (11);
 		\end{tikzpicture}
-	  \caption{\sffamily{BLUE} con su segundo centro tritonal, reorientada por el oyente para sentir el nuevo centro tonal: \sffamily{A}}
-	  \label{fig:tikz1}
+	  \caption{\textsf{BLUE} con su segundo centro tritonal, reorientada por el oyente para sentir el nuevo centro tonal: \textsf{A}}
+	  
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.30\textwidth}
 		\centering
 		  \begin{tikzpicture}
-			every label/.style={green},
-			radius=1.25cm,
+        [
+        every label/.style={green},
+			  radius=1.25cm
 			]
 			\graph [    
 			  simple necklace layout,
@@ -2557,15 +2996,16 @@ Uno de los conceptos más utilizados en el jazz es el de la substitución triton
 			\draw[ultra thick, color=red] (3) -- (9);
 			\draw[ultra thick, color=red] (5) -- (11);
 		  \end{tikzpicture}
-		\caption{\sffamily{BLUE} cambiamos notas para invertir la estructura cambiando a un nuevo centro tonal: \sffamily{e}}
-		\label{fig:tikz1}
+		\caption{\textsf{BLUE} cambiamos notas para invertir la estructura cambiando a un nuevo centro tonal: \textsf{e}}
+		
 	  \end{subfigure}
 	  \hfill	
 	  \begin{subfigure}{0.30\textwidth}
 		\centering
 		  \begin{tikzpicture}
-			every label/.style={green},
-			radius=1.25cm,
+        [
+        every label/.style={green},
+			  radius=1.25cm
 			]
 			\graph [    
 			  simple necklace layout,
@@ -2598,16 +3038,14 @@ Uno de los conceptos más utilizados en el jazz es el de la substitución triton
 			\draw[ultra thick, color=red] (3) -- (9);
 			\draw[ultra thick, color=red] (5) -- (11);
 		  \end{tikzpicture}
-		\caption{\sffamily{BLUE} Invertimos de nuevo para volver a la estructura estandar}
-		\label{fig:tikz1}
+		\caption{\textsf{BLUE} Invertimos de nuevo para volver a la estructura estandar}
+		
 	  \end{subfigure}
 	  \hfill	
-    \caption{La base de la substitución tritonal}
-	  \label{fig:tritonal-substitution}
+    \caption{La base de la substitución tritonal}label{fig:tritonal-substitution}
 	\end{figure}
 
-  En la figura \ref{fig:tritonal-substitution} 
-
+  
 \subsection{Nombres para las tríadas}
 
 Por qué las tríadas tienen esos curiosos nombres en la notación estandar? \emph{Mayor, menor, menor quinta bemol, mayor quinta   aumentada, disminuida\ldots{}}
@@ -2644,9 +3082,6 @@ En cada escala, los tipos de tríada dependen lógicamente de la estructura de l
 
 Intentemos buscar, una vez más, un poco de simetría
 
-.Tríadas simétricas en vertical image::vertical-triad-symmetry.png{[}{]}
-
-.Tríadas simétricas en horizontal image::horizontal-triad-symmetry.png{[}{]}
 
 No parece muy importante que cada tríada tenga una simétrica. Pero es así. Hay pares de grados simétricos, igual que pares de notas, obviamente. Aunque son simétricas al revés, puesto que una tiene la misma estructura ascendente que su simétrica descendente. Bueno, en realidad eso es exactamente lo que significa ``simétrico''. Si no serían iguales. Quizá más adelante encontremos alguna utilidad a esto.
 
@@ -2727,11 +3162,11 @@ Las dos últimas son especialmente interesantes y ambas estan presentes especial
 
 Asignaremos nombres básicos a nuestras partículas básicas, para pensar de forma un poco más cómoda. Si llamamos a la tríada disminuida (la del \emph{t}ritono) \texttt{T}, a la tríada m\emph{a}yor \texttt{A} y a la tríada m\emph{e}nor \texttt{E}, entonces, las pilas de cuatro notas se llamarán \texttt{TE,\ AT,\ AE} y \texttt{EA}. Parece útil y resulta fácil deducir el nombre a partir del dibujo o de las notas, solo memorizando tres letras. Veamos entonces las pilas de cinco notas y sus posibles nombres:
 
-.Agregar un guión en el nombre image::more-particle-names.png{[}{]}
+.Agregar un guión en el nombre image::more-particle-names.png
 
 Como vemos, llamarle a las pilas de tres notas con las dos letras, aún cuando el elemento central se comparte en ambas, nos ha costado tener que agregar un guión en medio (-) para indicar que un elemento completo está encima del otro. Por ejemplo, la pila \texttt{AE} contiene dos pilas de tres notas pero comparten las dos notas centrales, así que en total son cuatro notas, pero en la pila \texttt{A-E} hay dos pilas una encima de otra y comparten la nota que queda en medio, así que en lugar de 6 nos quedan 5 notas. Vale la pena. Veamos las de seis y siete notas:
 
-.Pilas WHITE image::white-piles.png{[}{]}
+.Pilas WHITE image::white-piles.png
 
 No parece muy fácil de pronunciar. Pero, al menos, es una nomenclatura uniforme y simple: puede deducirse a partir de las pilas de notas. +
 
@@ -2743,37 +3178,37 @@ Tenemos pues un sencillo catálogo de pilas de notas, con sus nombres. Los signi
 
 De momento hemos hecho todo esto con la escala \texttt{WHITE}. Vamos a intentar lo mismo con \texttt{BLUE}.
 
-.Pilas BLUE image::blue-piles-by-notes.png{[}{]}
+.Pilas BLUE image::blue-piles-by-notes.png
 
 Observamos, por supuesto, la misma simetría y el mismo descenso por grados con cada nueva nota. Sin embargo, aparece una nueva partícula con la que no habíamos contado aún: la tríada \texttt{44}. Tendrá que formar parte de nuestro vocabulario. La sensación que produce esta tríada tiene que ver con la orientación. Se trata de dos terceras mayores, no se sabe cuál es la base porque podría ser cualquiera, al estar a distancia de 4 semitonos, apilando 3 de ellas llegamos a la octava, es decir, se termina la escala. Esto es lo mismo que le ocurre a la escala \texttt{TONES}, no tiene orientación. El oyente siente la presencia de tritonos por todas partes, no hay ningún lugar seguro, no se puede huir en ninguna dirección. Da lo mismo en qué grado de la escala estemos, la sensación persiste: amenaza constante y ninguna posibilidad de escape. La diferencia con \texttt{PENTA}, donde no hay ningún tritono es apreciable, aunque allí sí hay una orientación: se sabe en qué grado de la escala estamos, pero no hay necesidad de huir de ningún punto. La tríada \texttt{44} crea una sensación de perplejidad y de amenaza irremisible.
 
 Este sería nuestro nuevo diccionario de partículas básicas:
 
-.Nuevo diccionario de partículas básicas image::advanced-pile-meaning.png{[}{]}
+.Nuevo diccionario de partículas básicas image::advanced-pile-meaning.png
 
 Al agregar todas las combinaciones únicas que aparecen en \texttt{BLUE}, nuestro vocabulario se amplía:
 
 Hagamos lo mismo con \texttt{RED}, usando \texttt{E} como centro tonal.
 
-.Pilas RED image::red-piles.png{[}{]}
+.Pilas RED image::red-piles.png
 
 Nuevas partículas! Hemos hallado un nuevo intervalo de 2 semitonos, así que aparecen dos nuevas tríadas: \texttt{24} y \texttt{42}. Las hemos representado con fondo negro. La simetría sigue siendo perfecta. Cuál será el significado de estas tríadas?
 
 Vamos a crear la tabla
 
-.Pilas RED con nombres image::red-piles-with-names.png{[}{]}
+.Pilas RED con nombres image::red-piles-with-names.png
 
 Bien, hemos de considerar la dificultad intrínseca de cada escala como parte del problema. Digamos que el oyente se sentirá mejor en una escala con pocos tritonos y pocos grados equívocos. Si cada escala tiene algun sonido concreto que la caracteriza, el hecho de presentar al oyente ese sonido hará que se crea que estamos en esa escala. Recordemos que la tríada \texttt{44} aparecía en \texttt{BLUE} y no en \texttt{WHITE}, de manera que actúa como una especie de \_aroma inconfundible. \_Por contra, las pilas \texttt{24} y \texttt{42} hacen su aparición en \texttt{RED}. Tampoco parecen tener un significado especial, más que representar a su escala.
 
 Las 6 escalas forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y   desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, eliminando tritonos vamos a parar a \texttt{PENTA}, agregándolos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}.
 
-.Sensación de las escalas image::scale-sensation-circle.png{[}{]}
+.Sensación de las escalas image::scale-sensation-circle.png
 
 En resumen: las nuevas tríadas de nuestro vocabulario no tienen un significado específico, simplemente sirven como señales que indican en qué escala estamos (sea cierto o no) con lo que se creará una sensación claridad, obscuridad o desorientación.
 
 Este es nuestro vocabulario, de momento:
 
-.Nuevo diccionario de partículas con una más image::advanced-pile-meaning-with-new-particle.png{[}{]}
+.Nuevo diccionario de partículas con una más image::advanced-pile-meaning-with-new-particle.png
 
 Ahora deberíamos preguntarnos lo siguiente:
 
@@ -2785,7 +3220,7 @@ Con un bloque \texttt{24}, la sensación de justicia o injusticia desaparece inm
 
 Continuemos con \texttt{BLACK} y \texttt{TONES}
 
-.Tritonos en BLACK y en TONES image::tritones-in-black-and-tones.png{[}{]}
+.Tritonos en BLACK y en TONES image::tritones-in-black-and-tones.png
 
 Hay un ligero inconveniente: una tiene 8 notas y la otra 6. Si las apilamos en notas alternas solo alcanzaremos la mitad de ellas. Se crean dos subconjuntos diferentes. Además de eso, cada nota forma parte de un tritono. Está claro que no son escalas muy útiles para armonizar, son una especie de pozos sin fondo o callejones sin salida. Volveremos sobre ellas más adelante.
 
@@ -2801,18 +3236,17 @@ En realidad, mientras para la desorientación solo hace falta la pila \texttt{44
 
 Parece lógico que si son dos, se repartan de alguna manera el efecto. En el caso de la \texttt{24} el oyente se guía más por la tercera mayor y llega a pensar que está oyendo una pila que comienza en la segunda nota, así que cree que es un acorde de cuatro notas donde falta una. Cree que hemos olvidado apilar algunas notas, mientras que en la \texttt{42} cree que hemos decidido apilar las notas sin alternar. Son dos caminos diferentes para ser optimista y evitar pensar en lo peor: que hemos caido en la terrible escala \texttt{BLACK}, la oscuridad total.
 
-.Mapa de pilas image::pile-map.png{[}{]}
+.Mapa de pilas image::pile-map.png
 
-.Equivalencias estandar de las pilas image::standard-names-of-piles.png{[}{]}
+.Equivalencias estandar de las pilas image::standard-names-of-piles.png
 
-.Pilas y nombres estandar image::piles-and-standard-names.png{[}{]}
+.Pilas y nombres estandar image::piles-and-standard-names.png
 
 En esta tabla vemos las pilas de 3 y 4 notas de \texttt{WHITE}, \texttt{BLUE} y \texttt{RED}. Se ha numerado cada posición con números enteros de forma que el centro tonal ocupe la posición 0. Aquí se observa claramente, por ejemplo en las pilas de 3 notas las marcas de ``sabor'' de cada conjunto de notas, el sabor ``básico'' de \texttt{WHITE}, con su único tritono y su equilibrio perfecto, el sabor ``desorientador'' de \texttt{BLUE}, con la pila \texttt{-4} y el sabor ``oscuro'' de red, representado en las pilas \texttt{-1} y \texttt{-5}. Observamos también que que la desorientación de \texttt{BLUE} está presente también en \texttt{RED}, en la pila \texttt{-4}.
 
 En las pilas de 4 notas ocurre lo mismo pero en diferentes posiciones: la desorientación de \texttt{BLUE} aparece en las posiciones \texttt{-4} y \texttt{-5} y se comparte con \texttt{RED} en exactamente las mismas posiciones. La marca oscura de \texttt{RED} aparece ahora en tres posiciones: \texttt{-5}, \texttt{-1} y \texttt{4}.
 
-.Nueva partícula en las pilas image::new-particle-in-piles.png{[}{]}
+.Nueva partícula en las pilas image::new-particle-in-piles.png
 
 \end{document}
-
 
