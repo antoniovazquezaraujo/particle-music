@@ -11,11 +11,11 @@
 \usepackage{tabularx}
 \usepackage{float}
 \usepackage{iftex}
-\ifPDFTeX
-  \usepackage[T1]{fontenc}
+\ifPDFTeX%
+\usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
+\else% if luatex or xetex
   \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
@@ -46,12 +46,12 @@
   \setlength{
 \itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-\ifLuaTeX
+\ifLuaTeX%
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-
+\usepackage{pgffor}
 \usepackage{tikz}
 \usepackage{pgf}
 \usetikzlibrary{
@@ -68,7 +68,84 @@
 \urlstyle{same}
 \hypersetup{
   hidelinks,
-  pdfcreator={LaTeX via pandoc}}
+  pdfcreator={LaTeX via pandoc}
+}
+\NewDocumentCommand{\iparticle}{m}{%
+    \begin{tikzpicture}[baseline=(current bounding box.base)]
+        \tikzset{
+              nullBox/.style={
+                rectangle,
+                minimum width=.5cm,
+                minimum height=.01cm,
+                node distance=.5cm,
+                inner sep=0cm,
+                draw=black,
+                thick,
+                font=\sffamily,
+                anchor=south
+            },
+            smallBox/.style={
+                rectangle,
+                minimum size=.5cm,
+                node distance=.5cm,
+                inner sep=0cm,
+                draw=black,
+                thick,
+                font=\sffamily,
+                anchor=south
+            },
+            bigBox/.style={
+                rectangle,
+                minimum size=0.8cm,
+                node distance=0.8cm,
+                inner sep=0cm,
+                draw=black,
+                thick,
+                font=\sffamily,
+                anchor=south
+            },
+            blackBox/.style={
+                fill=gray,
+                rectangle,
+                minimum size=.5cm,
+                node distance=.5cm,
+                inner sep=0cm,
+                draw=black,
+                thick,
+                font=\sffamily,
+                anchor=south
+            }
+        }
+
+        \coordinate (lastNode) at (0,0); % Guardar la posición inicial
+        \foreach [count=\i] \numero in {#1} {
+          \ifnum \numero = 0
+            \node[nullBox] (block\i) at (lastNode.north) {};
+          \else
+              \ifnum \numero = 1
+                  \node[smallBox] (block\i) at (lastNode.north) {};
+              \else
+                  \ifnum \numero = 2
+                      \node[bigBox] (block\i) at (lastNode.north) {};
+                  \else
+                      \ifnum \numero = 3
+                          \node[blackBox] (block\i) at (lastNode.north) {};
+                      \fi
+                  \fi
+              \fi
+          \fi
+          \coordinate (lastNode) at (block\i.north); 
+        }
+    \end{tikzpicture}%
+}
+
+\NewDocumentCommand{\particle}{m m m}{%
+    \begin{figure}[ht]
+        \centering
+        \iparticle{#1}
+        \caption{#2}\label{#3}
+    \end{figure}
+}
 
 \author{}
 \date{}
@@ -76,179 +153,6 @@
 \begin{document}
 \tableofcontents
 
-\section*{Acordes de WHITE}
-
-\subsection*{3 notas}
-
-\begin{table}[htbp]
-  \centering
-  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
-\toprule
-Notación & Nombre Tradicional & Tipo & Notas \\
-\midrule
-\textsf{CW-3} & Am      & Menor & A C E \\
-\textsf{CW-2} & Bm5     & Menor con quinta bemol & B D F \\
-\textsf{CW-1} & Cmaj    & Mayor & C E G \\
-\textsf{CW 0} & Dm      & Menor & D F A \\
-\textsf{CW+1} & Em      & Menor & E G B \\
-\textsf{CW+2} & Fmaj    & Mayor & F A C \\
-\textsf{CW+3} & Gmaj    & Mayor & G B D \\ 
-\bottomrule
-\end{tabularx}
-\end{table}
-\subsection*{4 notas}
-
-\begin{table}[htbp]
-  \centering
-  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
-\toprule
-Notación & Nombre Tradicional & Tipo & Notas \\
-\midrule
-\textsf{CW-3} 1 & Am7     & Menor séptima & A C E G \\
-\textsf{CW-2} 1 & Bm7b5   & Menor séptima quinta bemol & B D F A \\
-\textsf{CW-1} 1 & Cmaj7   & Mayor séptima & C E G B \\
-\textsf{CW 0} 1 & Dm7     & Menor séptima & D F A C \\
-\textsf{CW+1} 1 & Em7     & Menor séptima & E G B D \\
-\textsf{CW+2} 1 & Fmaj7   & Mayor séptima & F A C E \\
-\textsf{CW+3} 1 & G7      & Dominante (séptima) & G B D F \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\subsection*{5 notas}
-
-\begin{table}[htbp]
-  \centering
-  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
-\toprule
-Notación & Nombre Tradicional & Tipo & Notas \\
-\midrule
-\textsf{CW-3} 2 & Am9     & Menor novena & A C E G B \\
-\textsf{CW-2} 2 & Bm9b5   & Menor novena con quinta bemol & B D F A C \\
-\textsf{CW-1} 2 & Cmaj9   & Mayor novena & C E G B D \\
-\textsf{CW 0} 2 & Dm9     & Menor novena & D F A C E \\
-\textsf{CW+1} 2 & Em9b9   & Menor novena bemol & E G B D F \\
-\textsf{CW+2} 2 & Fmaj9   & Mayor novena & F A C E G \\
-\textsf{CW+3} 2 & G9      & Dominante novena & G B D F A \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section*{Acordes de BLUE}
-
-\subsection*{3 notas}
-
-\begin{table}[htbp]
-  \centering
-  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
-\toprule
-Notación & Nombre Tradicional & Tipo & Notas \\
-\midrule
-\textsf{DB-3} & Bm5     & Menor con quinta bemol & B D F \\
-\textsf{DB-2} & Cm      & Menor & C e G \\
-\textsf{DB-1} & Dm      & Menor & D F A \\
-\textsf{DB 0} & e+      & Mayor con quinta aumentada & e G B \\
-\textsf{DB+1} & Fmaj    & Mayor & F A C \\
-\textsf{DB+2} & Gmaj    & Mayor & G B D \\
-\textsf{DB+3} & Am5     & Menor con quinta bemol & A C e \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\subsection*{4 notas}
-
-\begin{table}[htbp]
-  \centering
-  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
-\toprule
-Notación & Nombre Tradicional & Tipo & Notas \\
-\midrule
-\textsf{DB-3} 1 & Bm7b5   & Menor séptima con quinta bemol & B D F A \\
-\textsf{DB-2} 1 & Cm Maj7 & Menor séptima mayor & C e G B \\
-\textsf{DB-1} 1 & Dm7     & Menor séptima & D F A C \\
-\textsf{DB 0} 1 & e+Maj7  & Mayor con quinta aumentada y séptima mayor & e G B D \\
-\textsf{DB+1} 1 & F7      & Dominante (séptima) & F A C e \\
-\textsf{DB+2} 1 & G7      & Dominante (séptima) & G B D F \\
-\textsf{DB+3} 1 & Am7b5   & Menor séptima con quinta bemol & A C e G \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\subsection*{5 notas}
-
-\begin{table}[htbp]
-  \centering
-  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
-\toprule
-Notación & Nombre Tradicional & Tipo & Notas \\
-\midrule
-\textsf{DB-3} 2 & Bm9b5   & Menor novena con quinta bemol & B D F A C \\
-\textsf{DB-2} 2 & Cm Maj9 & Menor novena mayor & C e G B D \\
-\textsf{DB-1} 2 & Dm9     & Menor novena & D F A C e \\
-\textsf{DB 0} 2 & e+Maj9  & Mayor con quinta aumentada y novena mayor & e G B D F \\
-\textsf{DB+1} 2 & F9      & Dominante novena & F A C e G \\
-\textsf{DB+2} 2 & G9      & Dominante novena & G B D F A \\
-\textsf{DB+3} 2 & Am9b5   & Menor novena con quinta bemol & A C e G B \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section*{Escala RED}
-
-\subsection*{3 notas}
-
-\begin{table}[htbp]
-  \centering
-  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
-\toprule
-Notación & Nombre Tradicional & Tipo & Notas \\
-\midrule
-\textsf{AW-3} & Eb5     & Mayor con quinta bemol & E a b \\
-\textsf{AW-2} & F5+     & Mayor con quinta aumentada & F A d \\
-\textsf{AW-1} & adis3b5 & Menor con tercera disminuida y quinta bemol & a b D \\
-\textsf{AW 0} & AM      & Mayor & A d E \\
-\textsf{AW+1} & bM      & Mayor & b D F \\
-\textsf{AW+2} & dm      & Menor & d E a \\
-\textsf{AW+3} & Dm      & Menor & D F A \\ 
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\subsection*{4 notas}
-\begin{table}[htbp]
-  \centering
-  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
-\toprule
-Notación & Nombre Tradicional & Tipo & Notas \\
-\midrule
-\textsf{AW-3} & Eb57     & Mayor con quinta bemol y séptima & E a b D\\
-\textsf{AW-2} & F5+Maj7  & Mayor con quinta aumentada y séptima mayor & F A d E\\
-\textsf{AW-1} & adis3b56 & Menor con tercera disminuida quinta bemol y sexta & a b D F\\
-\textsf{AW 0} & Amaj7    & Mayor con séptima mayor & A d E a \\
-\textsf{AW+1} & bmaj7    & Mayor con séptima mayor & b D F A \\
-\textsf{AW+2} & dm6      & Menor sexta & d E a b \\
-\textsf{AW+3} & DmMaj7   & Menor con séptima mayor & D F A d \\ 
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\subsection*{5 notas}
-\begin{table}[htbp]
-  \centering
-  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
-\toprule
-Notación & Nombre Tradicional & Tipo & Notas \\
-\midrule
-\textsf{AW-3} & Eb57b9    & Mayor con quinta bemol, séptima y novena bemol & E a b D F\\
-\textsf{AW-2} & F5+Maj79+ & Mayor con quinta aumentada, séptima mayor y novena aumentada & F A d E a\\
-\textsf{AW-1} & adis3b569 & Menor con tercera disminuida quinta bemol sexta y novena & a b D F b\\
-\textsf{AW 0} & Amaj7b9   & Mayor con séptima mayor y novena bemol & A d E a b\\
-\textsf{AW+1} & bmaj7+9   & Mayor con séptima mayor y novena aumentada & b D F A d\\
-\textsf{AW+2} & dm6+9     & Menor sexta con novena aumentada & d E a b d\\
-\textsf{AW+3} & DmMaj79   & Menor con séptima mayor y novena & D F A d E\\ 
-\bottomrule
-\end{tabularx}
-\end{table}
 
 \section{Propósito}
 El propósito de este documento es intentar \emph{entender cómo funciona la música}. Es un proyecto personal, guiado simplemente por mi propia curiosidad y por mi afición musical. No pretendo cambiar la forma en que se estudia y enseña música, pero quizá no estaría mal revisar algunas cosas que vienen haciéndose igual durante siglos.
@@ -290,7 +194,7 @@ Dicho de otro modo, la música nos permite emular conceptos que son externos a s
 En el universo que habitamos hay algunas reglas establecidas que solemos dar por supuestas, aunque podrían no estar ahí. Recordemos unas cuantas reglas de sentido común:
 
 \begin{itemize}
-\tightlist
+\tightlist%
   \item         Las cosas tienen una masa y un volumen.
   \item         Las cosas grandes pesan más que las pequeñas
   \item         Las cosas pequeñas se mueven más fácilmente que las grandes
@@ -337,7 +241,7 @@ Uno se siente casi avergonzado de tener que recurrir a toda esta dieciochesca te
 \subsection{Estructura mayor/menor y su significado}
 
 \begin{figure}[htbp]
-  \center
+  \center%
    \begin{tikzpicture}
      [st/.style={
        rectangle,
@@ -385,7 +289,7 @@ En fin, estas son las ideas que sugieren automáticamente esas tres simples nota
     Opresión    & Solidaridad \\
     \bottomrule
   \end{tabular}
-  \caption{Impresión que producen las tríadas}label{tab:triad-impressions}
+  \caption{Impresión que producen las tríadas}\label{tab:triad-impressions}
 \end{table}
 
 \subsection{Tríadas orientativas}
@@ -412,7 +316,7 @@ Tienta al oyente a adivinar en qué se resolverá, le hace participar, le hace a
 
 Invade su tranquilidad, requiriendo de él una escucha activa y arriesgada. Le condena a equivocarse sin poder evitarlo. Es como el ``\emph{nada por aqui\ldots{}   nada por allá}\ldots{}'' de los magos.
 
-En la edad media, a ese sonido se le llamaba ``\emph{Diabolus in musicae}'' y parece que representaba algún tipo de desafío para el poder. Solo el nombre ya denota el caracter molesto e incluso peligroso que puede llegar a tener, sobre todo si eres un estado medieval y utilizas la música para mantener adormecida a la masa. Prohibir el tritono es como cuando en el cine el poli malo dice ``Aquí soy yo el que hace las preguntas!''
+En la edad media, a ese sonido se le llamaba ``\emph{Diabolus in musicae}'' y parece que representaba algún tipo de desafío para el poder. Solo el nombre ya denota el caracter molesto e incluso peligroso que puede llegar a tener, sobre todo si eres un estado medieval y utilizas la música para mantener adormecida a la masa. Prohibir el tritono es como cuando en el cine el poli malo dice ``Aquí soy yo el que hace las preguntas! ''
 
 \subsection{Distancia al tritono}
 
@@ -446,7 +350,7 @@ Estas son las escalas que se usan habitualmente y los nombres que se le han asig
     \textsf{TONES}   & Escala por tonos & \\
     \bottomrule
   \end{tabular}
-  \caption{Tabla de escalas musicales}label{tab:scale-name-equivalences}
+  \caption{Tabla de escalas musicales}\label{tab:scale-name-equivalences}
 \end{table}
 
 En la notación creada se representan los grados de la escala como números. Se ha de prestar atención a que el primer grado de la escala no es, como en la notación tradicional, el grado más lejano al tritono (en la escala diatónica sería el DO), sino el grado que, como muestran las figuras, ocupa el centro de la estructura (en la escala diatónica sería el RE). Partiendo de la nota inicial y girando en sentido agujas del reloj se sube de tono hasta que se vuelve al tono inicial, es decir, se sube una octava.
@@ -625,7 +529,7 @@ Representaremos las notas de la escala mediante la notación americana, es decir
     \bottomrule
   \end{tabular}
   \endgroup
-  \caption{Equivalencias de las notas}label{tab:note-equivalences}
+  \caption{Equivalencias de las notas}\label{tab:note-equivalences}
 \end{table}
 
 En la notación estandar, cuando se quiere subir una nota un semitono se le pone el signo de sostenido ($\sharp$) y cuando se desea bajarla un semitono, se le agrega un bemol ($\flat$), así que DO$\sharp$ es en realidad la misma nota que RE$\flat$.
@@ -653,7 +557,7 @@ Esta sería la representación de la escala \texttt{BLUE} de \texttt{LA}, es dec
     \node (11)[st=white, below of= 12 ] { }; \node (21) [right of=11, st      ] {A};  \node (31) [right of= 21, st=white] { };  
   \end{tikzpicture}
   \vspace{12pt}
-  \caption{La escala BLUE de A}label{fig:blue-scale-of-a}
+  \caption{La escala BLUE de A}\label{fig:blue-scale-of-a}
 \end{figure}
 
 \subsection{Modos}
@@ -831,7 +735,7 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
     
   \end{subfigure}
   \hfill
-  \caption{Los siete modos de \textsf{WHITE}}label{fig:the-white-modes}
+  \caption{Los siete modos de \textsf{WHITE}}\label{fig:the-white-modes}
 \end{figure}
 
 \begin{figure}[H]
@@ -1003,7 +907,7 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
     
   \end{subfigure}
   \hfill
-  \caption{Los siete modos de \textsf{BLUE}}label{fig:the-blue-modes}
+  \caption{Los siete modos de \textsf{BLUE}}\label{fig:the-blue-modes}
 \end{figure}
 
 
@@ -1176,7 +1080,7 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
       
     \end{subfigure}
     \hfill
-    \caption{Los siete modos de \textsf{RED}}label{fig:the-red-modes}
+    \caption{Los siete modos de \textsf{RED}}\label{fig:the-red-modes}
   \end{figure}
 
   
@@ -1253,7 +1157,7 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
       
     \end{subfigure}
     \hfill
-    \caption{Los tres modos de \textsf{BLACK}}label{fig:the-black-modes}
+    \caption{Los tres modos de \textsf{BLACK}}\label{fig:the-black-modes}
   \end{figure}
  
   \begin{figure}[H]
@@ -1376,7 +1280,7 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
       \caption{\textsf{+2}}
       
     \end{subfigure}
-    \caption{Los cinco modos de \textsf{PENTA}}label{fig:the-penta-modes}
+    \caption{Los cinco modos de \textsf{PENTA}}\label{fig:the-penta-modes}
   \end{figure}
   \begin{figure}[H]
     \begin{subfigure}{1\textwidth}
@@ -1402,7 +1306,7 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
         \caption{\textsf{0}}
         
       \end{subfigure}
-    \caption{El único modo de \textsf{TONES}}label{fig:the-tones-modes}
+    \caption{El único modo de \textsf{TONES}}\label{fig:the-tones-modes}
   \end{figure}
 \subsection{Tríadas de \textsf{PENTA}}
 
@@ -1591,7 +1495,7 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
     
   \end{subfigure}
   \hfill
-  \caption{Las seis escalas y sus tritonos}label{fig:the-six-scales-and-tritones}
+  \caption{Las seis escalas y sus tritonos}\label{fig:the-six-scales-and-tritones}
 \end{figure}
 
 
@@ -1771,7 +1675,7 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
     
   \end{subfigure}
   \hfill
-  \caption{Las seis escalas y terceras ambiguas}label{fig:the-six-scales-and-ambiguous-thirds}
+  \caption{Las seis escalas y terceras ambiguas}\label{fig:the-six-scales-and-ambiguous-thirds}
 \end{figure}
 
 
@@ -1842,7 +1746,7 @@ Si todos los grados de la escala tienen una tercera, mayor o menor, considerarem
     
   \end{subfigure}
   \hfill
-  \caption{Escalas con grados sin tercera}label{fig:scales-with-no-thirds}
+  \caption{Escalas con grados sin tercera}\label{fig:scales-with-no-thirds}
 \end{figure}
 
 \subsection{Distancias a tritonos}
@@ -1941,7 +1845,7 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
     \end{tikzpicture}    
     
   \end{subfigure}
-  \caption{Escala \textsf{WHITE} con sus tríadas}label{fig:white-scale-with-its-triads}
+  \caption{Escala \textsf{WHITE} con sus tríadas}\label{fig:white-scale-with-its-triads}
 \end{figure}
 
 
@@ -2041,7 +1945,7 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
     \end{tikzpicture}    
     
   \end{subfigure}
-  \caption{Escala \textsf{BLUE} con sus tríadas}label{fig:blue-scale-with-its-triads}
+  \caption{Escala \textsf{BLUE} con sus tríadas}\label{fig:blue-scale-with-its-triads}
 \end{figure}
 
 
@@ -2181,7 +2085,7 @@ Cualquier combinación que se encuentre será simplemente una ordenación difere
     
   \end{subfigure}
   \hfill
-  \caption{Otras posibles escalas}label{fig:more-posible-scales}
+  \caption{Otras posibles escalas}\label{fig:more-posible-scales}
 \end{figure}
 
 \begin{table}[H]
@@ -2197,7 +2101,7 @@ Cualquier combinación que se encuentre será simplemente una ordenación difere
     X5 & 0 & 6 & 3 \\
     \bottomrule
   \end{tabular}
-  \caption{Características de diferentes escalas musicales}label{tab:escalas}
+  \caption{Características de diferentes escalas musicales}\label{tab:escalas}
 \end{table}
 
 \subsection{Orden de tríadas por distancias a los tritonos}
@@ -2256,7 +2160,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
     \end{tikzpicture}    
     
   \end{subfigure}
-  \caption{Escala \textsf{WHITE} }label{fig:white-scale-distances}
+  \caption{Escala \textsf{WHITE} }\label{fig:white-scale-distances}
 \end{figure}
 \begin{table}[H]
   \centering
@@ -2273,7 +2177,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
     EGB & 2 & 1 \\
     \bottomrule
   \end{tabular}
-  \caption{Tabla de tríadas y sus características}label{tab:white-triads}
+  \caption{Tabla de tríadas y sus características}\label{tab:white-triads}
 \end{table}
 
 \begin{figure}[H]
@@ -2324,7 +2228,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
     \end{tikzpicture}    
     
   \end{subfigure}
-  \caption{Escala \textsf{BLUE} }label{fig:blue-scale-distances}
+  \caption{Escala \textsf{BLUE} }\label{fig:blue-scale-distances}
 \end{figure}
 \begin{table}[H]
   \centering
@@ -2341,8 +2245,220 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
     FAC & 2 & 1 \\
     \bottomrule
   \end{tabular}
-  \caption{Tabla de tríadas y sus características}label{tab:triadas}
+  \caption{Tabla de tríadas y sus características}\label{tab:triadas}
 \end{table}
+
+\section{Acordes de cada escala}
+
+Los acordes que se forman a partir de cada una de las seis escalas son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos. 
+
+Una posible notación para nombrar los acordes podría consistir en especificar solamente tres elementos:
+\begin{itemize}
+  \item La escala
+  \item El modo
+  \item La densidad
+\end{itemize}
+Con este simple mecanismo podríamos designar cualquier tipo de acorde con solo 4 caracteres.
+
+Para designar la escala bastaría con la inicial de su nombre (salvo \textsf{BLACK} al que se podría asignar la \textsf{K}):
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    ESCALA & Clave \\
+    \midrule
+    \textsf{WHITE} & W \\
+    \textsf{BLUE}  & B \\
+    \textsf{RED}   & R \\
+    \textsf{BLACK} & K \\
+    \textsf{PENTA} & P \\
+    \textsf{TONES} & T \\
+    \bottomrule
+  \end{tabular}
+  \caption{Tabla de escalas y sus claves abreviadas}\label{tab:scales-and-keys}
+\end{table}
+
+Para el modo bastaría especificar un número, siendo el 0 el modo correspondiente al centro tritonal y números negativos o positivos indicando los modos que quedan por encima o por debajo del central. 
+
+La densidad indicaría la cantidad de notas del acorde. Podría ser que 0 indicase una tríada básica y 1 un acorde de cuatro notas, 2 uno de cinco, etc.
+
+Mostraremos las listas de todos los acordes con las distintas densidades para cada escala, así como su nombre equivalente en la notación clásica.
+\subsection*{Acordes de WHITE}
+\subsubsection*{3 notas}
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{CW-3} & Am      & Menor & A C E \\
+\textsf{CW-2} & Bm5     & Menor con quinta bemol & B D F \\
+\textsf{CW-1} & Cmaj    & Mayor & C E G \\
+\textsf{CW 0} & Dm      & Menor & D F A \\
+\textsf{CW+1} & Em      & Menor & E G B \\
+\textsf{CW+2} & Fmaj    & Mayor & F A C \\
+\textsf{CW+3} & Gmaj    & Mayor & G B D \\ 
+\bottomrule
+\end{tabularx}
+\end{table}
+\subsubsection*{4 notas}
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{CW-3} 1 & Am7     & Menor séptima & A C E G \\
+\textsf{CW-2} 1 & Bm7b5   & Menor séptima quinta bemol & B D F A \\
+\textsf{CW-1} 1 & Cmaj7   & Mayor séptima & C E G B \\
+\textsf{CW 0} 1 & Dm7     & Menor séptima & D F A C \\
+\textsf{CW+1} 1 & Em7     & Menor séptima & E G B D \\
+\textsf{CW+2} 1 & Fmaj7   & Mayor séptima & F A C E \\
+\textsf{CW+3} 1 & G7      & Dominante (séptima) & G B D F \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection*{5 notas}
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{CW-3} 2 & Am9     & Menor novena & A C E G B \\
+\textsf{CW-2} 2 & Bm9b5   & Menor novena con quinta bemol & B D F A C \\
+\textsf{CW-1} 2 & Cmaj9   & Mayor novena & C E G B D \\
+\textsf{CW 0} 2 & Dm9     & Menor novena & D F A C E \\
+\textsf{CW+1} 2 & Em9b9   & Menor novena bemol & E G B D F \\
+\textsf{CW+2} 2 & Fmaj9   & Mayor novena & F A C E G \\
+\textsf{CW+3} 2 & G9      & Dominante novena & G B D F A \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{Acordes de BLUE}
+
+\subsubsection*{3 notas}
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{DB-3} & Bm5     & Menor con quinta bemol & B D F \\
+\textsf{DB-2} & Cm      & Menor & C e G \\
+\textsf{DB-1} & Dm      & Menor & D F A \\
+\textsf{DB 0} & e+      & Mayor con quinta aumentada & e G B \\
+\textsf{DB+1} & Fmaj    & Mayor & F A C \\
+\textsf{DB+2} & Gmaj    & Mayor & G B D \\
+\textsf{DB+3} & Am5     & Menor con quinta bemol & A C e \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection*{4 notas}
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{DB-3} 1 & Bm7b5   & Menor séptima con quinta bemol & B D F A \\
+\textsf{DB-2} 1 & Cm Maj7 & Menor séptima mayor & C e G B \\
+\textsf{DB-1} 1 & Dm7     & Menor séptima & D F A C \\
+\textsf{DB 0} 1 & e+Maj7  & Mayor con quinta aumentada y séptima mayor & e G B D \\
+\textsf{DB+1} 1 & F7      & Dominante (séptima) & F A C e \\
+\textsf{DB+2} 1 & G7      & Dominante (séptima) & G B D F \\
+\textsf{DB+3} 1 & Am7b5   & Menor séptima con quinta bemol & A C e G \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection*{5 notas}
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{DB-3} 2 & Bm9b5   & Menor novena con quinta bemol & B D F A C \\
+\textsf{DB-2} 2 & Cm Maj9 & Menor novena mayor & C e G B D \\
+\textsf{DB-1} 2 & Dm9     & Menor novena & D F A C e \\
+\textsf{DB 0} 2 & e+Maj9  & Mayor con quinta aumentada y novena mayor & e G B D F \\
+\textsf{DB+1} 2 & F9      & Dominante novena & F A C e G \\
+\textsf{DB+2} 2 & G9      & Dominante novena & G B D F A \\
+\textsf{DB+3} 2 & Am9b5   & Menor novena con quinta bemol & A C e G B \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{Escala RED}
+
+\subsubsection*{3 notas}
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{AW-3} & Eb5     & Mayor con quinta bemol & E a b \\
+\textsf{AW-2} & F5+     & Mayor con quinta aumentada & F A d \\
+\textsf{AW-1} & adis3b5 & Menor con tercera disminuida y quinta bemol & a b D \\
+\textsf{AW 0} & AM      & Mayor & A d E \\
+\textsf{AW+1} & bM      & Mayor & b D F \\
+\textsf{AW+2} & dm      & Menor & d E a \\
+\textsf{AW+3} & Dm      & Menor & D F A \\ 
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection*{4 notas}
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{AW-3} & Eb57     & Mayor con quinta bemol y séptima & E a b D\\
+\textsf{AW-2} & F5+Maj7  & Mayor con quinta aumentada y séptima mayor & F A d E\\
+\textsf{AW-1} & adis3b56 & Menor con tercera disminuida quinta bemol y sexta & a b D F\\
+\textsf{AW 0} & Amaj7    & Mayor con séptima mayor & A d E a \\
+\textsf{AW+1} & bmaj7    & Mayor con séptima mayor & b D F A \\
+\textsf{AW+2} & dm6      & Menor sexta & d E a b \\
+\textsf{AW+3} & DmMaj7   & Menor con séptima mayor & D F A d \\ 
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection*{5 notas}
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}Xl}
+\toprule
+Notación & Nombre Tradicional & Tipo & Notas \\
+\midrule
+\textsf{AW-3} & Eb57b9    & Mayor con quinta bemol, séptima y novena bemol & E a b D F\\
+\textsf{AW-2} & F5+Maj79+ & Mayor con quinta aumentada, séptima mayor y novena aumentada & F A d E a\\
+\textsf{AW-1} & adis3b569 & Menor con tercera disminuida quinta bemol sexta y novena & a b D F b\\
+\textsf{AW 0} & Amaj7b9   & Mayor con séptima mayor y novena bemol & A d E a b\\
+\textsf{AW+1} & bmaj7+9   & Mayor con séptima mayor y novena aumentada & b D F A d\\
+\textsf{AW+2} & dm6+9     & Menor sexta con novena aumentada & d E a b d\\
+\textsf{AW+3} & DmMaj79   & Menor con séptima mayor y novena & D F A d E\\ 
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Dejamos, de momento, pendiente el tema de la notación para más adelante.  Necesitamos crear una notación eficiente que permita crear partituras completas, con melodías, ritmos, acordes, letra, silencios, repeticiones, indicaciones etc.
+
+Debería ser una notación portable y fácilmente interpretable algorítmicamente, sin duplicidades, confusiones ni reglas especiales. 
 
 \subsection{Mapa de la situación}
 
@@ -2491,7 +2607,7 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
     
   \end{subfigure}
   \hfill
-  \caption{Modulación cambiando solo en centro tonal}label{fig:modulation-changing-tonal-center}
+  \caption{Modulación cambiando solo en centro tonal}\label{fig:modulation-changing-tonal-center}
   \end{figure}
 
 En este ejemplo, con una notación circular, más práctica para el análisis de la orientación, entre \texttt{WHITE} en \texttt{D} y \texttt{BLUE} en \texttt{G}, observamos que simplemente se agrega un nuevo centro tritonal, pero el que teníamos sigue manteniéndose en el mismo sitio. Así que no hay mas que ``girar el mapa'' para volver a orientarse.
@@ -2582,123 +2698,18 @@ En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tri
     
   \end{subfigure}
   \hfill
-  \caption{Modulación cambiando solo en centro tritonal}label{fig:modulation-changing-tritonal-center2}
+  \caption{Modulación cambiando solo en centro tritonal}\label{fig:modulation-changing-tritonal-center2}
   \end{figure}
 
-
-  
-
-\begin{figure}[H]
-  \begin{subfigure}{.30\textwidth}
-    \centering
-      \begin{tikzpicture}
-        [
-        every label/.style={green},
-        radius=1.25cm
-        ]
-        \graph [    
-          simple necklace layout,
-          node sep=0pt, 
-          grow'=up,
-          node distance=0pt,    
-          nodes={
-            draw,
-            circle, 
-            as =  , 
-            minimum size=20pt, 
-            font=\sffamily 
-          }
-        ]
-        { 
-             1  [as = D] 
-          -- 2  [draw=none]
-          -- 3  [as = E]
-          -- 4  [as = F]
-          -- 5  [draw=none]
-          -- 6  [as = G]
-          -- 7  [draw=none]
-          -- 8  [as = A]
-          -- 9  [draw=none]
-          -- 10 [as = B]
-          -- 11 [as = C]
-          -- 12 [draw=none]
-        };
-        \draw [] (0,39.50pt) circle [radius=28pt];
-        \draw[ultra thick, color=red] (4) -- (10);
-      \end{tikzpicture}
-    \caption{\textsf{WHITE} con su centro tritonal en rojo}
-    
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.30\textwidth}
-    \centering
-      \begin{tikzpicture}
-        [
-        every label/.style={green},
-        radius=1.25cm
-        ]
-        \graph [    
-          simple necklace layout,
-          node sep=0pt, 
-          grow'=up,
-          node distance=0pt,    
-          nodes={
-            draw,
-            circle, 
-            as =  , 
-            minimum size=20pt, 
-            font=\sffamily 
-          }
-        ]
-        { 
-             1  [as = E] 
-          -- 2  [as = F]
-          -- 3  [draw=none]
-          -- 4  [draw=none]
-          -- 5  [as = a]
-          -- 6  [as = A]
-          -- 7  [draw=none]
-          -- 8  [as = B]
-          -- 9  [as = C]
-          -- 10 [draw=none]
-          -- 11 [draw=none]
-          -- 12 [as = e]
-                };
-        \draw [] (0,39.50pt) circle [radius=28pt];
-        \draw[ultra thick, color=red] (2) -- (8);
-        \draw[ultra thick, color=red] (6) -- (12);
-      \end{tikzpicture}
-    \caption{\textsf{RED} con dos nuevos centros tritonales que sustituyen al anterior. Se despeja un centro tritonal y se sustituye por un centro tonal. Base del flamenco}
-    
-  \end{subfigure}
-  \hfill
-  \caption{Modulación base del flamenco}label{fig:modulation-changing-tritonal-center}
-  \end{figure}
 
 En más resumen todavía: resulta que cambiando \texttt{E} por \texttt{e}, estamos cambiando el caracter de la tríada \texttt{CEG}, de mayor a menor. Estamos cambiando sigilosamente entre alegría y tristeza. Estamos \emph{jugando}.
 
-\subsection{El espiritu del jazz}
-
-Posiblemente, mezclando tristeza y alegría de forma tan directa estemos poniendo en evidencia la cruel dualidad de nuestro mundo, la diferencia entre oprimidos y poderosos, entre justicia e injusticia, entre opresión y libertad, entre triunfo y fracaso, entre vida y muerte\ldots{}
-
-Probablemente estemos usando la música para dar una bofetada en la cara al cruel occidente y a sus estiradas reglas. Quizá estemos cantando una vitalizadora mezcla de humilde y resignado lamento y de alegría de vivir. Quizá descendamos de un pueblo oprimido, traido de otro continente y nuestros antepasados fuesen vendidos como esclavos.
-
-\emph{Probablemente estamos tocando jazz}.
-
-Esa actitud (tan propia del jazz) de juguetear de forma descarada y hasta desafiante, cambiando constantemente entre algo que representa la tristeza y la alegría, la justicia y la injusticia, el sufrimiento y el goce es el sello propio de toda la música de jazz (y de su madre, la de blues).
-
-En el jazz no se expresa la tristeza con un lamento pesimista y abatido, con una intensa y pomposa armonización y con coros quejumbrosos que subrayan la tragedia. No se hace lo que harían Mahler o Chopin, nada de eso. Se mira la vida desde otro punto de vista: se pasea por la barandilla con total tranquilidad, se sienta uno con los pies colgando al vacío y se silba la melodía, se juega con el caracter de los acordes, se engaña al oyente, se le torea, se le incita, se le excita, se cambia la sombra mortal de la imposición oficial, de las reglas formales y del sometimiento al poder por valientes, inesperadas y revolucionarias \emph{preguntas}, reforzando la idea de que no hay respuestas, de que no hay soluciones, de que da igual lo que hagas, que nunca cambiará nuestro destino.
-
-La música de jazz no solamente requiere una escucha activa (y cierta cantidad de horas de práctica) para entender el lenguaje: también requiere entender \emph{esa} actitud y apreciarla. Requiere aprender a darle valor a esa informalidad natural, a esa humanidad real y cercana que no necesita ningún tipo de adornos, orquestaciones ni obligaciones. Porque se basa precísamente en eso: \emph{el juego}, en apostar a cada nota, en jugarse la vida en cada \emph{beat}, en expresar lo que tu alma construye en el momento, sin que tú conciencia intervenga. Por eso, la parte fundamental en la música de jazz es la \emph{improvisación}.
-
-\subsection{El misterio flamenco}
-
+\subsection{El sistema flamenco}
 Otro ejemplo de modulación muy utilizado, entre \texttt{WHITE} de \texttt{D} y \texttt{RED} de \texttt{E}. Simplemente agregamos un tritono pero la orientación sigue manteniéndose. Aquí las dos tríada más lejanas a un tritono pasan a ser \texttt{EaB} y \texttt{FAC}, puesto que \texttt{CEG} pasa a ser \texttt{CEa} (dos terceras mayores apiladas).
 
-Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos no se cansan nunca de esos dos acordes, \texttt{EaB} y \texttt{FAC}. Ahora lo veo claro, son los dos más estables de la escala, y de los pocos que tienen una tercera. Puedes estar pasando de uno a otro constantemente sin ver la posibilidad de salir de ahí, a no ser que vuelvas a la escala \texttt{WHITE}, haciéndo desaparecer el amenazante tritono entre \texttt{A} y \texttt{e}. Basta con saltar a la tríada \texttt{ACE}, lo cual hacen la mayor parte de las veces, para luego volver a \texttt{GBD}, a \texttt{FAC} y de nuevo a \texttt{EaB}. Olé!
+Deberíamos poner atención al hecho de que una enorme cantidad de música flamenca está basada en solo dos acordes, \texttt{EaB} y \texttt{FAC}. La razón es que esos son los dos más estables de la escala, y de los pocos que tienen una tercera. Se puedes pasar de uno a otro constantemente sin ver la posibilidad de salir de ahí, a no ser que se vuelva a la escala \texttt{WHITE}, haciéndo desaparecer el amenazante tritono entre \texttt{A} y \texttt{e}. Basta con saltar a la tríada \texttt{ACE}, lo cual hacen la mayor parte de las veces, para luego volver a \texttt{GBD}, a \texttt{FAC} y de nuevo a \texttt{EaB}.
 
-.De WHITE D a RED E y su rotación image::white-de-to-red-e-rotation.png
-\begin{figure}
+\begin{figure}{H}
   \begin{subfigure}{.30\textwidth}
     \centering
       \begin{tikzpicture}
@@ -2827,12 +2838,12 @@ Lo cierto es que llevaba años preguntándome cómo es que cantaores flamencos n
     \caption{\textsf{RED} reorientada por el oyente para asimilar el nuevo centro tonal en \textsf{E}}
     
   \end{subfigure}  
-  \caption{Modulación base del flamenco}label{fig:flamento-modulation}
+  \caption{Modulación base del flamenco}\label{fig:flamento-modulation}
   \end{figure}
 \subsection{Substitución tritonal}
 
-Uno de los conceptos más utilizados en el jazz es el de la substitución tritonal, que consiste en sustituir directamente la escala que se usa para improvisar sobre un acorde dominante por la de un acorde que está a un tritono de distancia. En ningún momento se da ninguna explicación aceptable, que no sea la relativa a \textit{darle color al acorde para que resulte más interesante}. No es suficiente.
-\begin{figure}
+Uno de los conceptos más utilizados en el jazz es el de la substitución tritonal, que consiste en sustituir directamente la escala que se usa para improvisar sobre un acorde dominante por la de un acorde que está a un tritono de distancia. Este sería el mecanismo que hay detrás.
+\begin{figure}[H]
 	\begin{subfigure}{.30\textwidth}
 	  \centering
 		\begin{tikzpicture}
@@ -3031,7 +3042,7 @@ every label/.style={green},
 			  -- 8  [as = b]
 			  -- 9  [as = B]
 			  -- 10 [draw=none]
-			  -- 11 [as = e]
+			  -- 11 [as = d]
 			  -- 12 [draw=none]
 			};
 			\draw [] (0,39.50pt) circle [radius=28pt];
@@ -3042,7 +3053,7 @@ every label/.style={green},
 		
 	  \end{subfigure}
 	  \hfill	
-    \caption{La base de la substitución tritonal}label{fig:tritonal-substitution}
+    \caption{La base de la substitución tritonal}\label{fig:tritonal-substitution}
 	\end{figure}
 
   
@@ -3054,11 +3065,32 @@ Se trata de nombres del pasado, que simplemente han subsistido hasta ahora por f
 
 Para empezar, no me sirve de nada conocer la distancia de la tercera nota a la primera: lo que me interesa es el tamaño de los dos pares de notas. Esta es una tabla con las distancias que aparecen en todas las escalas. En la columna izquierda, las distancias en semitonos como un par de números, que indican el tamaño del intervalo inferior y el del intervalo superior partiendo desde \texttt{C}. En \emph{negrita} los esquemas más usados, \emph{43} ( tríada mayor) y \emph{34} ( tríada menor).
 
-\emph{34}\textbf{X}\textbf{X}\textbf{X}
-
-\emph{43}\textbf{X}\textbf{X}\textbf{X}
-
 Vamos a cambiar la notación utilizando un poco de lógica.
+
+Tríada											
+\begin{table}[ht]
+  \centering
+  \begin{tabularx}{\textwidth}{|c|X|X|X|X|X|X|X|X|X|}
+    \hline
+    Tríada &  0  & 1&    2    &    3    &    4    &    5    &    6    &    7    &    8    \\
+    \hline
+    23  & \bullet&  & \bullet &         &         & \bullet &         &         &         \\
+    \hline
+    33  & \bullet&  &         & \bullet &         &         & \bullet &         &         \\
+    \hline
+    34  & \bullet&  &         & \bullet &         &         &         & \bullet &         \\
+    \hline
+    42  & \bullet&  &         &         & \bullet &         & \bullet &         &         \\
+    \hline
+    43  & \bullet&  &         &         & \bullet &         &         & \bullet &         \\
+    \hline
+    44  & \bullet&  &         &         & \bullet &         &         &         & \bullet \\
+    \hline
+  \end{tabularx}
+\caption{Tabla de partículas}\label{tab:particulas}
+\end{table}
+
+
 
 Primera regla de oro para inventar nombres: \emph{no inventar nombres   innecesariamente.}
 
@@ -3067,37 +3099,35 @@ Si los números que definen los intervalos de las tríadas las describen perfect
 Así que, desde ahora hablaremos de una tríada menor como una tríada \texttt{43}.
 
 En esta tabla vemos el tipo de tríadas que tiene cada escala y en qué grado aparecen, así como el nombre de la combinación en notación estandar, si es que existe alguno.
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|l|l|l|l|l|l|l|}
+    \hline
+    ESTANDAR & ab & WHITE & BLUE & RED & BLACK & PENTA & TONES \\
+    \hline
+    menor& 34 & 1,2,5 & 4,5 & 2,3,4,5 & 1,3,5,7 & 4 & - \\
+    \hline
+    mayor & 43 & 3,4,7 & 1,7 & 1,2,3 & 1,3,5,7 & 5 & - \\
+    \hline
+    menor 5b & 33 & 6 & 2,3 & 2,4,5 & TODOS & - & - \\
+    \hline
+    mayor 5+ & 44 & - & 1,3,6 & 1,3,6 & - & - & TODOS \\
+    \hline
+    ?? & 42 & 3 & 3,6,7 & 5 & 1,3,5,7 & - & TODOS \\
+    \hline
+    ?? & 23 & 1,4,5,7 & 1,2,4 & 7 & 2,4,6,8 & 1,3 & - \\
+    \hline
+  \end{tabular} 
+\end{table}
 
-\emph{ESTANDAR}\emph{NUM}\emph{WHITE}\emph{BLUE}\emph{RED}\emph{BLACK}\emph{PENTA}\emph{TONES}
 
 Ahora tenemos nombres más eficientes y lógicos para conceptos, como ``Mayor con la quinta aumentada'', ó, uno especialmente chirriante: ``Tríada disminuída''.
 
 Es cierto que memorizamos mejor los nombres que los números, y posiblemente, cuando lleguemos a acordes de cinco o más notas, hablar de un acorde \texttt{3\ 3\ 4\ 3\ 4} puede ser también un poco engorroso. Así que probablemente se haga necesario crear alguna nomenclatura. Pero no nos precipitemos.
 
-\subsection{Las tríadas de cada grado de todas las escalas}
-
-En cada escala, los tipos de tríada dependen lógicamente de la estructura de la escala. Veamos una tabla. Algunos tipos de tríadas son más comunes que otras.
-
-\emph{GRADO}\emph{WHITE}\emph{BLUE}\emph{RED}\emph{BLACK}\emph{PENTA}\emph{TONES}
-
-Intentemos buscar, una vez más, un poco de simetría
-
-
-No parece muy importante que cada tríada tenga una simétrica. Pero es así. Hay pares de grados simétricos, igual que pares de notas, obviamente. Aunque son simétricas al revés, puesto que una tiene la misma estructura ascendente que su simétrica descendente. Bueno, en realidad eso es exactamente lo que significa ``simétrico''. Si no serían iguales. Quizá más adelante encontremos alguna utilidad a esto.
-
-\subsection{Una concha de caracol}
-
-En general, aunque observamos esa simetría perfecta en todas las escalas, hay que considerar también que las notas siguen un camino ascendente de grave a agudo. Aunque pueda parecer que esto es indiferente, resulta que los sonidos graves tienen mayor preponderancia que los agudos: sus ondas son más largas y se propagan en todas direcciones. Los sonidos más agudos se propagan mejor en linea recta, son ondas más cortas y no rebotan tan fácilmente. Por eso, cuando nos ponemos una mano delante de la oreja, notamos un descenso en el nivel de agudos, aunque seguimos oyendo los sonidos graves practicamente con igual intensidad.
-
-Hablando más ``musicalmente'', las notas más agudas admiten mejor las mezclas, sin enturbiarse demasiado. Las notas graves, al mezclarse ``emborronan'' un poco el sonido, siendo, en general, notas únicas que marcan la base del acorde, sobre las que se agregan otras.
-
-El oyente tiende a analizar las notas de abajo a arriba. Quizá, en un instinto atávico de supervivencia, hemos aprendido a analizar los sonidos graves con máxima prioridad, ya que sugieren cosas grandes, fuertes, pesadas, importantes\ldots{} en suma, cosas a las que se debe prestar atención, por si representan un peligro. Los sonidos agudos pueden analizarse con más calma, ya que suelen provenir de elementos de pequeño tamaño, ligeros y, en general, menos peligrosos. Claro que hay excepciones, pero, es una regla instintiva general. Si vamos a cruzar la calle y, con el oído izquierdo reconocemos el sonido de camión y con el oído derecho el de una bicicleta, probablemente nos lancemos hacia el lado de la bicicleta sin ni siquiera girar la cabeza para ver qué pasa. Mediante sencillos trucos como este, hemos llegado vivos hasta nuestros días.
-
-En fin, la diferencia entre sonidos graves y agudos debería formar parte de nuestro análisis de manera importante. Es cierto que hay simetría en las escalas, y su observación facilita mucho su comprensión, pero se trata de una rara simetría inserta en una especie de espiral ascendente que va decreciendo de tamaño. Una especie de concha de caracol ( un objeto bastante propenso al analisis matemático, por cierto ) sobre la que las notas estan colocadas.
-
 \subsection{Posición y forma}
 
-Así que, según hemos concluido, el oyente considera un acorde como un conjunto de notas agudas apiladas sobre notas graves, y no al revés. De algún modo, las notas graves marcan la situación del grupo de notas, y las agudas definen la forma del mismo.
+El oyente considera un acorde como un conjunto de notas agudas apiladas sobre notas graves, y no al revés. De algún modo, las notas graves marcan la situación del grupo de notas, y las agudas definen la forma del mismo.
 
 Si volvemos al simil del mapa y del terreno, la nota grave nos indica en qué punto del mapa estamos y las notas agudas indican, digamos, qué relación guarda ese objeto con el resto del mapa, es decir, nos ayuda a imaginar el resto del mismo.
 
@@ -3118,7 +3148,126 @@ Como dijimos, el centro tonal de una escala lo marca la nota que queda a la mism
 
 Veámoslo en una tabla.
 
-Pilas de notas image::piles-of-notes.png
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} \\
+      E & G & B & D & F & A & C \\
+      \hline
+  \end{tabular}
+  \caption{Partículas \sffamily{WHITE} de 1 nota}\label{tab:particles-one-note}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      &&&&&&\\
+      \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{1} \\
+      D & F & A & C & E & G & B \\
+      \hline
+  \end{tabular}
+  \caption{Partículas \sffamily{WHITE} de 2 notas}\label{tab:particles-two-notes}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      &&&&&&\\
+      \iparticle{2,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,2} \\
+      C & E & G & B & D & F & A \\
+      \hline
+  \end{tabular}
+  \caption{Partículas \sffamily{WHITE} de 3 notas}\label{tab:particles-three-notes}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      &&&&&&\\
+      \iparticle{1,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,1} \\
+      B & D & F & A & C & E & G \\
+      \hline
+  \end{tabular}
+  \caption{Partículas \sffamily{WHITE} de 4 notas}\label{tab:particles-four-notes}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      &&&&&&\\
+      \iparticle{1,2,1,2} & \iparticle{2,1,2,1} & \iparticle{1,2,1,1} & \iparticle{2,1,2,1} & \iparticle{1,1,2,1} & \iparticle{1,2,1,2} & \iparticle{2,1,2,1} \\
+      A & C & E & G & B & D & F \\
+      \hline
+  \end{tabular}
+  \caption{Partículas \sffamily{WHITE} de 5 notas}\label{tab:particles-five-notes}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      &&&&&&\\
+      \iparticle{2,1,1,2,1} & \iparticle{1,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,1} & \iparticle{1,2,1,1,2} \\
+      G & B & D & F & A & C & E\\
+      \hline
+  \end{tabular}
+  \caption{Partículas \sffamily{WHITE} de 6 notas}\label{tab:particles-six-notes}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      &&&&&&\\
+      \iparticle{2,1,2,1,2,1} & \iparticle{1,2,1,2,1,1} & \iparticle{2,1,2,1,1,2} & \iparticle{1,2,1,1,2,1} & \iparticle{2,1,1,2,1,2} & \iparticle{1,1,2,1,2,1} & \iparticle{1,2,1,2,1,2} \\
+      F & A & C & E & G & B & D \\
+      \hline
+  \end{tabular}
+  \caption{Partículas \sffamily{WHITE} de 7 notas}\label{tab:particles-seven-notes}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{subtable}{0.3\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} \\
+        E & G & B & D & F & A & C \\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 1 nota}\label{tab:particles-one-note}
+  \end{subtable}
+  
+  \begin{subtable}{0.3\linewidth}
+      \centering
+      \begin{tabular}{|c|c|}
+          \hline
+          E & F \\
+          \hline
+          G & H \\
+          \hline
+      \end{tabular}
+      \caption{Subtabla 2}
+  \end{subtable}
+  \begin{subtable}{0.3\linewidth}
+      \centering
+      \begin{tabular}{|c|c|}
+          \hline
+          I & J \\
+          \hline
+          K & L \\
+          \hline
+      \end{tabular}
+      \caption{Subtabla 3}
+  \end{subtable}
+  \caption{Conjunto de subtablas} % Agrega un título general a todas las subtablas
+\end{table}
 
 Cuando tenemos simplemente una nota, observamos que, en la escala \texttt{WHITE}, el centro es la nota \texttt{D}. Dijimos que marcaba el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo.
 
