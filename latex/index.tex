@@ -75,9 +75,9 @@
         \tikzset{
               nullBox/.style={
                 rectangle,
-                minimum width=.5cm,
+                minimum width=.2cm,
                 minimum height=.01cm,
-                node distance=.5cm,
+                node distance=.2cm,
                 inner sep=0cm,
                 draw=black,
                 thick,
@@ -86,8 +86,8 @@
             },
             smallBox/.style={
                 rectangle,
-                minimum size=.5cm,
-                node distance=.5cm,
+                minimum size=.2cm,
+                node distance=.2cm,
                 inner sep=0cm,
                 draw=black,
                 thick,
@@ -96,8 +96,8 @@
             },
             bigBox/.style={
                 rectangle,
-                minimum size=0.8cm,
-                node distance=0.8cm,
+                minimum size=0.4cm,
+                node distance=0.4cm,
                 inner sep=0cm,
                 draw=black,
                 thick,
@@ -107,8 +107,8 @@
             blackBox/.style={
                 fill=gray,
                 rectangle,
-                minimum size=.5cm,
-                node distance=.5cm,
+                minimum size=.2cm,
+                node distance=.2cm,
                 inner sep=0cm,
                 draw=black,
                 thick,
@@ -146,7 +146,6 @@
         \caption{#2}\label{#3}
     \end{figure}
 }
-
 \author{}
 \date{}
 
@@ -3061,9 +3060,9 @@ every label/.style={green},
 
 Por qué las tríadas tienen esos curiosos nombres en la notación estandar? \emph{Mayor, menor, menor quinta bemol, mayor quinta   aumentada, disminuida\ldots{}}
 
-Se trata de nombres del pasado, que simplemente han subsistido hasta ahora por falta de un buen comité de estandarización \emph{ISO}. Si quisiera poner un ejemplo claro de elección de nombres farragosos, inservibles, molestos y fuera de toda razón lógica usaría estos.
+Se trata de nombres del pasado, que simplemente han subsistido hasta ahora por falta de un buen comité de estandarización \emph{ISO}. Suponen un gran obstáculo para el manejo teórico y para la asimilación de los conceptos.
 
-Para empezar, no me sirve de nada conocer la distancia de la tercera nota a la primera: lo que me interesa es el tamaño de los dos pares de notas. Esta es una tabla con las distancias que aparecen en todas las escalas. En la columna izquierda, las distancias en semitonos como un par de números, que indican el tamaño del intervalo inferior y el del intervalo superior partiendo desde \texttt{C}. En \emph{negrita} los esquemas más usados, \emph{43} ( tríada mayor) y \emph{34} ( tríada menor).
+Para empezar, no es útil conocer la distancia de la tercera nota a la primera: lo que interesa es el tamaño de los dos pares de notas. Esta es una tabla con las distancias que aparecen en todas las escalas. En la columna izquierda, las distancias en semitonos como un par de números, que indican el tamaño del intervalo inferior y el del intervalo superior partiendo desde \texttt{C}. En \emph{negrita} los esquemas más usados, \emph{43} ( tríada mayor) y \emph{34} ( tríada menor).
 
 Vamos a cambiar la notación utilizando un poco de lógica.
 
@@ -3148,92 +3147,10 @@ Como dijimos, el centro tonal de una escala lo marca la nota que queda a la mism
 
 Veámoslo en una tabla.
 
-\begin{table}[ht]
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|}
-      \hline
-      \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} \\
-      E & G & B & D & F & A & C \\
-      \hline
-  \end{tabular}
-  \caption{Partículas \sffamily{WHITE} de 1 nota}\label{tab:particles-one-note}
-\end{table}
 
-\begin{table}[ht]
+\begin{table}[H]
   \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|}
-      \hline
-      &&&&&&\\
-      \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{1} \\
-      D & F & A & C & E & G & B \\
-      \hline
-  \end{tabular}
-  \caption{Partículas \sffamily{WHITE} de 2 notas}\label{tab:particles-two-notes}
-\end{table}
-
-\begin{table}[ht]
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|}
-      \hline
-      &&&&&&\\
-      \iparticle{2,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,2} \\
-      C & E & G & B & D & F & A \\
-      \hline
-  \end{tabular}
-  \caption{Partículas \sffamily{WHITE} de 3 notas}\label{tab:particles-three-notes}
-\end{table}
-
-\begin{table}[ht]
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|}
-      \hline
-      &&&&&&\\
-      \iparticle{1,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,1} \\
-      B & D & F & A & C & E & G \\
-      \hline
-  \end{tabular}
-  \caption{Partículas \sffamily{WHITE} de 4 notas}\label{tab:particles-four-notes}
-\end{table}
-
-\begin{table}[ht]
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|}
-      \hline
-      &&&&&&\\
-      \iparticle{1,2,1,2} & \iparticle{2,1,2,1} & \iparticle{1,2,1,1} & \iparticle{2,1,2,1} & \iparticle{1,1,2,1} & \iparticle{1,2,1,2} & \iparticle{2,1,2,1} \\
-      A & C & E & G & B & D & F \\
-      \hline
-  \end{tabular}
-  \caption{Partículas \sffamily{WHITE} de 5 notas}\label{tab:particles-five-notes}
-\end{table}
-
-\begin{table}[ht]
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|}
-      \hline
-      &&&&&&\\
-      \iparticle{2,1,1,2,1} & \iparticle{1,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,1} & \iparticle{1,2,1,1,2} \\
-      G & B & D & F & A & C & E\\
-      \hline
-  \end{tabular}
-  \caption{Partículas \sffamily{WHITE} de 6 notas}\label{tab:particles-six-notes}
-\end{table}
-
-\begin{table}[ht]
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|}
-      \hline
-      &&&&&&\\
-      \iparticle{2,1,2,1,2,1} & \iparticle{1,2,1,2,1,1} & \iparticle{2,1,2,1,1,2} & \iparticle{1,2,1,1,2,1} & \iparticle{2,1,1,2,1,2} & \iparticle{1,1,2,1,2,1} & \iparticle{1,2,1,2,1,2} \\
-      F & A & C & E & G & B & D \\
-      \hline
-  \end{tabular}
-  \caption{Partículas \sffamily{WHITE} de 7 notas}\label{tab:particles-seven-notes}
-\end{table}
-
-\begin{table}[ht]
-  \centering
-  \begin{subtable}{0.3\linewidth}
+  \begin{subtable}{1\linewidth}
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
@@ -3243,49 +3160,187 @@ Veámoslo en una tabla.
     \end{tabular}
     \caption{Partículas \sffamily{WHITE} de 1 nota}\label{tab:particles-one-note}
   \end{subtable}
+  \vspace{1em} % Espacio vertical entre las filas
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{1} \\
+        D & F & A & C & E & G & B \\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 2 notas}\label{tab:particles-two-notes}
+  \end{subtable}
+ 
+  \vspace{1em} % Espacio vertical entre las filas
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{2,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,2} \\
+        C & E & G & B & D & F & A \\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 3 notas}\label{tab:particles-three-notes}
+  \end{subtable}
+  \vspace{1em} % Espacio vertical entre las filas
   
-  \begin{subtable}{0.3\linewidth}
-      \centering
-      \begin{tabular}{|c|c|}
-          \hline
-          E & F \\
-          \hline
-          G & H \\
-          \hline
-      \end{tabular}
-      \caption{Subtabla 2}
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{1,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,1} \\
+        B & D & F & A & C & E & G \\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 4 notas}\label{tab:particles-four-notes}
   \end{subtable}
-  \begin{subtable}{0.3\linewidth}
-      \centering
-      \begin{tabular}{|c|c|}
-          \hline
-          I & J \\
-          \hline
-          K & L \\
-          \hline
-      \end{tabular}
-      \caption{Subtabla 3}
+  \vspace{1em} % Espacio vertical entre las filas
+  
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{1,2,1,2} & \iparticle{2,1,2,1} & \iparticle{1,2,1,1} & \iparticle{2,1,2,1} & \iparticle{1,1,2,1} & \iparticle{1,2,1,2} & \iparticle{2,1,2,1} \\
+        A & C & E & G & B & D & F \\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 5 notas}\label{tab:particles-five-notes}
   \end{subtable}
-  \caption{Conjunto de subtablas} % Agrega un título general a todas las subtablas
+  \vspace{1em} % Espacio vertical entre las filas
+ 
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{2,1,1,2,1} & \iparticle{1,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,1} & \iparticle{1,2,1,1,2} \\
+        G & B & D & F & A & C & E\\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 6 notas}\label{tab:particles-six-notes}
+  \end{subtable}
+  \vspace{1em} % Espacio vertical entre las filas
+  
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{2,1,2,1,2,1} & \iparticle{1,2,1,2,1,1} & \iparticle{2,1,2,1,1,2} & \iparticle{1,2,1,1,2,1} & \iparticle{2,1,1,2,1,2} & \iparticle{1,1,2,1,2,1} & \iparticle{1,2,1,2,1,2} \\
+        F & A & C & E & G & B & D \\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 7 notas}\label{tab:particles-seven-notes}
+  \end{subtable}
+  
+  \caption{Partículas de \sffamily{WHITE}} % Agrega un título general a todas las subtablas
 \end{table}
-
-Cuando tenemos simplemente una nota, observamos que, en la escala \texttt{WHITE}, el centro es la nota \texttt{D}. Dijimos que marcaba el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo.
+Cuando tenemos simplemente una nota, observamos que, en la escala \texttt{WHITE}, el centro es la nota \texttt{D}. Recordemos que marca el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo.
 
 Cuando apilamos dos notas alternas, los pares que se forman pueden ser de 3 o de 4 semitonos. Si nos fijamos en el esquema, el centro simétrico ahora pasa a ser la nota \texttt{C}. Hemos bajado un tono.
 
 Al apilar tres, para formar una tríada, obtenemos pilas \texttt{43}, \texttt{34} y \texttt{33} de manera que ahora, el centro simétrico pasa a ser la tríada formada a partir de la nota \texttt{B}. Recordemos que las tríadas tenían un fuerte significado debido a su forma: justicia/injusticia, bien/mal, vida/muerte, alegría/tristeza, etc.
 
-Si usamos cuatro notas, el carácter de las tríadas pasa a un plano secundario. Ya no vemos una entidad grande apoyada sobre una más pequeña. Ahora hay tres entidades, formando distintas combinaciones. Si teníamos arriba un grande opresor sobre uno pequeño oprimido, ahora el de arriba también soporta a otro pequeño, así que parece más equilibrado, y al revés, si había uno pequeño apoyado sobre uno grande, lo cual nos parecía justo, ahora el pequeño tiene a su vez otro grande encima. En resumen, se difumina un poco la sensación de desequilibrio grande/pequeño. Sin embargo, al agregar más notas, disminuye también la posibilidad de confusión: ya no hay tantos acordes comunes. Teníamos 3 tipos de tríadas (\texttt{43}, \texttt{34} y \texttt{33}) con lo que \texttt{F}, \texttt{C} y \texttt{G} podrían confundirse, \texttt{E}, \texttt{A} y \texttt{D} también y solo era diferente \texttt{B}.
+Si usamos cuatro notas, el carácter de las tríadas pasa a un plano secundario. Ya no vemos una entidad grande apoyada sobre una más pequeña. Ahora hay tres entidades, formando distintas combinaciones. Si teníamos arriba un grande opresor sobre uno pequeño oprimido, ahora el de arriba también soporta a otro pequeño, así que parece más equilibrado, y al revés, si había uno pequeño apoyado sobre uno grande, lo cual nos parecía justo, ahora el pequeño tiene a su vez otro grande encima. En resumen, se difumina un poco la sensación de desequilibrio grande/pequeño. Sin embargo, al agregar más notas, disminuye también la posibilidad de confusión: ya no hay tantos acordes comunes. 
 
-Ahora tenemos cuatro tipos de cuatríadas (\texttt{334}, \texttt{344}, \texttt{433}, \texttt{334}) así que \texttt{E}, \texttt{A} y \texttt{D} siguen siendo iguales, \texttt{F} y \texttt{C} también pero \texttt{G} y \texttt{B} son distintos. Hemos conseguido diferenciar a \texttt{G} y a \texttt{B}. Además hemos vuelto a bajar de grado: ahora el centro simétrico está en la tríada de \texttt{A}.
+Teníamos 3 tipos de tríadas (\texttt{43}, \texttt{34} y \texttt{33}) con lo que \texttt{F}, \texttt{C} y \texttt{G} podrían confundirse, \texttt{E}, \texttt{A} y \texttt{D} también y solo era diferente \texttt{B}. Ahora tenemos cuatro tipos de cuatríadas (\texttt{334}, \texttt{344}, \texttt{433}, \texttt{334}) así que \texttt{E}, \texttt{A} y \texttt{D} siguen siendo iguales, \texttt{F} y \texttt{C} también pero \texttt{G} y \texttt{B} son distintos. Hemos conseguido diferenciar a \texttt{G} y a \texttt{B}. Además hemos vuelto a bajar de grado: ahora el centro simétrico está en la tríada de \texttt{A}.
 
-En resumen: observamos que cuantas más notas apilamos, más baja el centro simétrico. Es curioso, pero qué podría significar? Sigamos razonando\ldots{}
-
-Desde luego, no es el centro tonal de la escala. Sea cual sea la cantidad de notas que apilemos, el oyente sigue percibiendo el mismo centro tonal, y sobre todo, los mismos tritonos. Conoce la orientación del mapa correctamente. Eso no cambia. Qué estamos cambiando entonces?
+En resumen: observamos que cuantas más notas apilamos, más baja el centro simétrico. No es el centro tonal de la escala: sea cual sea la cantidad de notas que apilemos, el oyente sigue percibiendo el mismo centro tonal, y sobre todo, los mismos tritonos. Conoce la orientación del mapa correctamente. Eso no cambia. Qué estamos cambiando entonces?
 
 Recordemos de qué manera medíamos la distancia al tritono de un grupo de notas. Considerábamos la cantidad de notas que hay que agregar al grupo para que contenga un tritono. Suponemos que el oyente hace esto de manera automática. Es como si completase las notas que faltan y notase que está cerca de escuchar un tritono. Nos quedamos en que debería haber alguna fórmula para calcular correctamente la distancia al tritono que se percibe y que probablemente, el hecho de que en el grupo de notas ya estuviese presente una nota perteneciente al tritono, aumentaría esa percepción.
 
-Partículas básicas image::basic-particles.png
+\begin{table}[H]
+  \centering
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{2,1,2,1,1,2} & \iparticle{2,1,1,2,1,2} & \iparticle{1,2,1,2,1,1} & \iparticle{1,2,1,1,2,1} & \iparticle{1,1,2,1,2,1} & \iparticle{2,1,2,1,2,1} & \iparticle{1,2,1,2,1,2} \\
+        \hline
+    \end{tabular}
+    \vspace{1em} % Espacio vertical entre las filas
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        &&&&&\\
+        \iparticle{2,1,2,1,2} & \iparticle{2,1,1,2,1} & \iparticle{1,1,2,1,2} & \iparticle{2,1,2,1,1} & \iparticle{1,2,1,1,2} & \iparticle{1,2,1,2,1}\\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 2 notas}\label{tab:particles-two-notes}
+  \end{subtable}
+ 
+  \vspace{1em} % Espacio vertical entre las filas
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{2,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,2} \\
+        C & E & G & B & D & F & A \\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 3 notas}\label{tab:particles-three-notes}
+  \end{subtable}
+  \vspace{1em} % Espacio vertical entre las filas
+  
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{1,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,1} \\
+        B & D & F & A & C & E & G \\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 4 notas}\label{tab:particles-four-notes}
+  \end{subtable}
+  \vspace{1em} % Espacio vertical entre las filas
+  
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{1,2,1,2} & \iparticle{2,1,2,1} & \iparticle{1,2,1,1} & \iparticle{2,1,2,1} & \iparticle{1,1,2,1} & \iparticle{1,2,1,2} & \iparticle{2,1,2,1} \\
+        A & C & E & G & B & D & F \\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 5 notas}\label{tab:particles-five-notes}
+  \end{subtable}
+  \vspace{1em} % Espacio vertical entre las filas
+ 
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{2,1,1,2,1} & \iparticle{1,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,1} & \iparticle{1,2,1,1,2} \\
+        G & B & D & F & A & C & E\\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 6 notas}\label{tab:particles-six-notes}
+  \end{subtable}
+  \vspace{1em} % Espacio vertical entre las filas
+  
+  \begin{subtable}{1\linewidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        &&&&&&\\
+        \iparticle{2,1,2,1,2,1} & \iparticle{1,2,1,2,1,1} & \iparticle{2,1,2,1,1,2} & \iparticle{1,2,1,1,2,1} & \iparticle{2,1,1,2,1,2} & \iparticle{1,1,2,1,2,1} & \iparticle{1,2,1,2,1,2} \\
+        F & A & C & E & G & B & D \\
+        \hline
+    \end{tabular}
+    \caption{Partículas \sffamily{WHITE} de 7 notas}\label{tab:particles-seven-notes}
+  \end{subtable}
+  
+  \caption{Partículas de \sffamily{WHITE}} % Agrega un título general a todas las subtablas
+\end{table}
 
 Si estuviésemos hablando de una materia formada por partículas, estas serían las combinaciones básicas. En primer lugar tenemos la tercera mayor y luego la tercera menor. Esas serían las partículas atómicas. Apilándolas obtendríamos los ``ladrillos'' básicos: la tríada mayor, la tríada menor y la tríada disminuida, recordemos, resumiendo mucho: justicia, injusticia y pregunta sin contestar, respectivamente. Con partículas de este tipo, ya podríamos construir el 90 \% de la materia universal. Para materia más compleja, usamos pilas de cuatro notas, es decir, una de las pilas anteriores con una nota más encima. Esta combinación comparte la partícula central, así que tenemos por ejemplo una tríada mayor sobre una tríada menor.
 
