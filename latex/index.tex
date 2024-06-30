@@ -4,12 +4,12 @@
 %
 \documentclass[]{article}
 \usepackage{amsmath,amssymb}
-
+\usepackage{standalone}
 \usepackage{booktabs}
 \usepackage{subcaption}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\usepackage{float}
+\usepackage{graphicx} 
+\usepackage{tabularx} 
+\usepackage{floatrow}
 \usepackage{iftex}
 \ifPDFTeX%
 \usepackage[T1]{fontenc}
@@ -75,7 +75,7 @@
         \tikzset{
               nullBox/.style={
                 rectangle,
-                minimum width=.2cm,
+                minimum width=.4cm,
                 minimum height=.01cm,
                 node distance=.2cm,
                 inner sep=0cm,
@@ -86,8 +86,9 @@
             },
             smallBox/.style={
                 rectangle,
-                minimum size=.2cm,
-                node distance=.2cm,
+                minimum width=0.2cm,
+                minimum height=0.2cm,
+                node distance=0.4cm,
                 inner sep=0cm,
                 draw=black,
                 thick,
@@ -131,7 +132,7 @@
                       \ifnum \numero = 3
                           \node[blackBox] (block\i) at (lastNode.north) {};
                       \fi
-                  \fi
+                  \fi 
               \fi
           \fi
           \coordinate (lastNode) at (block\i.north); 
@@ -150,9 +151,8 @@
 \date{}
 
 \begin{document}
+\floatsetup[table]{capposition=bottom,capbesideposition={bottom,center}}
 \tableofcontents
-
-
 \section{Propósito}
 El propósito de este documento es intentar \emph{entender cómo funciona la música}. Es un proyecto personal, guiado simplemente por mi propia curiosidad y por mi afición musical. No pretendo cambiar la forma en que se estudia y enseña música, pero quizá no estaría mal revisar algunas cosas que vienen haciéndose igual durante siglos.
 
@@ -343,7 +343,7 @@ Estas son las escalas que se usan habitualmente y los nombres que se le han asig
     \midrule
     \textsf{WHITE}   & Escala diatónica & \\
     \textsf{BLUE}    & Escala menor melódica & \\
-    \textsf{RED} & Escala menor armónica & \\
+    \textsf{RED}     & Escala menor armónica & \\
     \textsf{BLACK}   & Escala disminuida & \\
     \textsf{PENTA}   & Escala pentatónica & \\
     \textsf{TONES}   & Escala por tonos & \\
@@ -353,6 +353,8 @@ Estas son las escalas que se usan habitualmente y los nombres que se le han asig
 \end{table}
 
 En la notación creada se representan los grados de la escala como números. Se ha de prestar atención a que el primer grado de la escala no es, como en la notación tradicional, el grado más lejano al tritono (en la escala diatónica sería el DO), sino el grado que, como muestran las figuras, ocupa el centro de la estructura (en la escala diatónica sería el RE). Partiendo de la nota inicial y girando en sentido agujas del reloj se sube de tono hasta que se vuelve al tono inicial, es decir, se sube una octava.
+
+
 
 \begin{figure}[H]
   \begin{subfigure}{0.15\textwidth}
@@ -736,7 +738,7 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
   \hfill
   \caption{Los siete modos de \textsf{WHITE}}\label{fig:the-white-modes}
 \end{figure}
-
+ 
 \begin{figure}[H]
   \begin{subfigure}{0.10\textwidth}
     \centering
@@ -1334,6 +1336,7 @@ Será mejor que dejemos de hablar de colores.
 Al representar los tritonos se observa que también ocupan su lugar perfectamente simétrico. Se hará mediante una linea que los una. Veamos la representación de todas las escalas con sus tritonos.
 
 \begin{figure}[h]
+
   \begin{subfigure}{0.15\textwidth}
     \centering
       \begin{tikzpicture}
@@ -1358,7 +1361,7 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
     \caption{\textsf{WHITE}}
     
   \end{subfigure}
-  \hfill
+  \hfill  
   \begin{subfigure}{0.15\textwidth}
     \centering
       \begin{tikzpicture}
@@ -1761,7 +1764,7 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
     \begin{tikzpicture}
       [st/.style={
         rectangle,
-        minimum size=.5cm,
+        minimum size=.4cm,
         node distance=0cm,
         inner sep = 0cm,      
         draw=black,thick,fill=#1!50,
@@ -1812,8 +1815,8 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (t2-C) [st, draw=none, below=3pt of 25] {C};
       \node (t2-E) [st, draw=none, below=3pt of 29] { };
       
-      \draw [->, rounded corners=3mm] (t1-E.north west) rectangle (t1-B.south east);
-      \draw [->, rounded corners=3mm] (t2-F.north west) rectangle (t2-C.south east);
+      \draw [->, rounded corners=2mm] (t1-E.north west) rectangle (t1-B.south east);
+      \draw [->, rounded corners=2mm] (t2-F.north west) rectangle (t2-C.south east);
 
       \node (t3-C) [st, draw=none, below=3pt of t1-C] { };
       \node (t3-E) [st, draw=none, below=3pt of t1-E] { };
@@ -1825,8 +1828,8 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (t4-C) [st, draw=none, below=3pt of t2-C] { };
       \node (t4-E) [st, draw=none, below=3pt of t2-E] { };
       
-      \draw [->, rounded corners=3mm] (t3-G.north west) rectangle (t4-D.south east);
-      \draw [->, rounded corners=3mm] (t4-D.north west) rectangle (t4-A.south east);
+      \draw [->, rounded corners=2mm] (t3-G.north west) rectangle (t4-D.south east);
+      \draw [->, rounded corners=2mm] (t4-D.north west) rectangle (t4-A.south east);
 
       \node (t5-C) [st, draw=none, below=3pt of t3-C] {C};
       \node (t5-E) [st, draw=none, below=3pt of t3-E] {E};
@@ -1838,9 +1841,9 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (t7-C) [st, draw=none, below=3pt of t4-C] {C};
       \node (t7-E) [st, draw=none, below=3pt of t4-E] {E};
 
-      \draw [->, rounded corners=3mm] (t5-C.north west) rectangle (t5-G.south east);
-      \draw [->, rounded corners=3mm] (t6-B.north west) rectangle (t6-F.south east);
-      \draw [->, rounded corners=3mm] (t7-A.north west) rectangle (t7-E.south east);
+      \draw [->, rounded corners=2mm] (t5-C.north west) rectangle (t5-G.south east);
+      \draw [->, rounded corners=2mm] (t6-B.north west) rectangle (t6-F.south east);
+      \draw [->, rounded corners=2mm] (t7-A.north west) rectangle (t7-E.south east);
     \end{tikzpicture}    
     
   \end{subfigure}
@@ -1860,7 +1863,7 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
     \begin{tikzpicture}
       [st/.style={
         rectangle,
-        minimum size=.5cm,
+        minimum size=.4cm,
         node distance=0cm,
         inner sep = 0cm,      
         draw=black,thick,fill=#1!50,
@@ -1912,8 +1915,8 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (t2-F) [st, draw=none, below=3pt of 25] {F};
       \node (t2-A) [st, draw=none, below=3pt of 29] { };
       
-      \draw [->, rounded corners=3mm] (t1-A.north west) rectangle (t1-e.south east);
-      \draw [->, rounded corners=3mm] (t2-B.north west) rectangle (t2-F.south east);
+      \draw [->, rounded corners=2mm] (t1-A.north west) rectangle (t1-e.south east);
+      \draw [->, rounded corners=2mm] (t2-B.north west) rectangle (t2-F.south east);
 
       \node (t3-F) [st, draw=none, below=3pt of t1-F] { };
       \node (t3-A) [st, draw=none, below=3pt of t1-A] { };
@@ -1925,8 +1928,8 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (t4-F) [st, draw=none, below=3pt of t2-F] { };
       \node (t4-A) [st, draw=none, below=3pt of t2-A] { };
       
-      \draw [->, rounded corners=3mm] (t3-C.north west) rectangle (t4-G.south east);
-      \draw [->, rounded corners=3mm] (t4-G.north west) rectangle (t4-D.south east);
+      \draw [->, rounded corners=2mm] (t3-C.north west) rectangle (t4-G.south east);
+      \draw [->, rounded corners=2mm] (t4-G.north west) rectangle (t4-D.south east);
 
       \node (t5-F) [st, draw=none, below=3pt of t3-F] {F};
       \node (t5-A) [st, draw=none, below=3pt of t3-A] {A};
@@ -1938,9 +1941,9 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (t7-F) [st, draw=none, below=3pt of t4-F] {F};
       \node (t7-A) [st, draw=none, below=3pt of t4-A] {A};
 
-      \draw [->, rounded corners=3mm] (t5-F.north west) rectangle (t5-C.south east);
-      \draw [->, rounded corners=3mm] (t6-e.north west) rectangle (t6-B.south east);
-      \draw [->, rounded corners=3mm] (t7-D.north west) rectangle (t7-A.south east);
+      \draw [->, rounded corners=2mm] (t5-F.north west) rectangle (t5-C.south east);
+      \draw [->, rounded corners=2mm] (t6-e.north west) rectangle (t6-B.south east);
+      \draw [->, rounded corners=2mm] (t7-D.north west) rectangle (t7-A.south east);
     \end{tikzpicture}    
     
   \end{subfigure}
@@ -2118,7 +2121,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
     \begin{tikzpicture}
       [st/.style={
         rectangle,
-        minimum size=.5cm,
+        minimum size=.4cm,
         node distance=0cm,
         inner sep = 0cm,      
         draw=black,thick,fill=#1!50,
@@ -2186,7 +2189,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
     \begin{tikzpicture}
       [st/.style={
         rectangle,
-        minimum size=.5cm,
+        minimum size=.4cm,
         node distance=0cm,
         inner sep = 0cm,      
         draw=black,thick,fill=#1!50,
@@ -2398,7 +2401,7 @@ Notación & Nombre Tradicional & Tipo & Notas \\
 \end{tabularx}
 \end{table}
 
-\subsection*{Escala RED}
+\subsection*{Acordes de RED}
 
 \subsubsection*{3 notas}
 
@@ -3056,401 +3059,598 @@ every label/.style={green},
 	\end{figure}
 
   
-\subsection{Nombres para las tríadas}
 
-Por qué las tríadas tienen esos curiosos nombres en la notación estandar? \emph{Mayor, menor, menor quinta bemol, mayor quinta   aumentada, disminuida\ldots{}}
+  \subsection{Nombres para las tríadas}
 
-Se trata de nombres del pasado, que simplemente han subsistido hasta ahora por falta de un buen comité de estandarización \emph{ISO}. Suponen un gran obstáculo para el manejo teórico y para la asimilación de los conceptos.
-
-Para empezar, no es útil conocer la distancia de la tercera nota a la primera: lo que interesa es el tamaño de los dos pares de notas. Esta es una tabla con las distancias que aparecen en todas las escalas. En la columna izquierda, las distancias en semitonos como un par de números, que indican el tamaño del intervalo inferior y el del intervalo superior partiendo desde \texttt{C}. En \emph{negrita} los esquemas más usados, \emph{43} ( tríada mayor) y \emph{34} ( tríada menor).
-
-Vamos a cambiar la notación utilizando un poco de lógica.
-
-Tríada											
-\begin{table}[ht]
-  \centering
-  \begin{tabularx}{\textwidth}{|c|X|X|X|X|X|X|X|X|X|}
-    \hline
-    Tríada &  0  & 1&    2    &    3    &    4    &    5    &    6    &    7    &    8    \\
-    \hline
-    23  & \bullet&  & \bullet &         &         & \bullet &         &         &         \\
-    \hline
-    33  & \bullet&  &         & \bullet &         &         & \bullet &         &         \\
-    \hline
-    34  & \bullet&  &         & \bullet &         &         &         & \bullet &         \\
-    \hline
-    42  & \bullet&  &         &         & \bullet &         & \bullet &         &         \\
-    \hline
-    43  & \bullet&  &         &         & \bullet &         &         & \bullet &         \\
-    \hline
-    44  & \bullet&  &         &         & \bullet &         &         &         & \bullet \\
-    \hline
-  \end{tabularx}
-\caption{Tabla de partículas}\label{tab:particulas}
-\end{table}
-
-
-
-Primera regla de oro para inventar nombres: \emph{no inventar nombres   innecesariamente.}
-
-Si los números que definen los intervalos de las tríadas las describen perfectamente, son directamente deducibles desde las propias notas, son más fáciles de escribir, ocupan menos espacio, se pronuncian en menos sílabas y son portables a todos los idiomas, entonces deberíamos usar la notación numérica.
-
-Así que, desde ahora hablaremos de una tríada menor como una tríada \texttt{43}.
-
-En esta tabla vemos el tipo de tríadas que tiene cada escala y en qué grado aparecen, así como el nombre de la combinación en notación estandar, si es que existe alguno.
-\begin{table}[ht]
-  \centering
-  \begin{tabular}{|l|l|l|l|l|l|l|l|}
-    \hline
-    ESTANDAR & ab & WHITE & BLUE & RED & BLACK & PENTA & TONES \\
-    \hline
-    menor& 34 & 1,2,5 & 4,5 & 2,3,4,5 & 1,3,5,7 & 4 & - \\
-    \hline
-    mayor & 43 & 3,4,7 & 1,7 & 1,2,3 & 1,3,5,7 & 5 & - \\
-    \hline
-    menor 5b & 33 & 6 & 2,3 & 2,4,5 & TODOS & - & - \\
-    \hline
-    mayor 5+ & 44 & - & 1,3,6 & 1,3,6 & - & - & TODOS \\
-    \hline
-    ?? & 42 & 3 & 3,6,7 & 5 & 1,3,5,7 & - & TODOS \\
-    \hline
-    ?? & 23 & 1,4,5,7 & 1,2,4 & 7 & 2,4,6,8 & 1,3 & - \\
-    \hline
-  \end{tabular} 
-\end{table}
-
-
-Ahora tenemos nombres más eficientes y lógicos para conceptos, como ``Mayor con la quinta aumentada'', ó, uno especialmente chirriante: ``Tríada disminuída''.
-
-Es cierto que memorizamos mejor los nombres que los números, y posiblemente, cuando lleguemos a acordes de cinco o más notas, hablar de un acorde \texttt{3\ 3\ 4\ 3\ 4} puede ser también un poco engorroso. Así que probablemente se haga necesario crear alguna nomenclatura. Pero no nos precipitemos.
-
-\subsection{Posición y forma}
-
-El oyente considera un acorde como un conjunto de notas agudas apiladas sobre notas graves, y no al revés. De algún modo, las notas graves marcan la situación del grupo de notas, y las agudas definen la forma del mismo.
-
-Si volvemos al simil del mapa y del terreno, la nota grave nos indica en qué punto del mapa estamos y las notas agudas indican, digamos, qué relación guarda ese objeto con el resto del mapa, es decir, nos ayuda a imaginar el resto del mismo.
-
-Si en el terreno vemos un punto, sabremos dónde ese punto, pero si además vemos que ese punto es un arbol, nos indicará que probablemente estamos en un bosque. Si resulta que el punto tiene forma de edificio, seguro que estamos en pleno centro de la ciudad. Así es como, con un simple acorde, nos hacemos una idea de cómo es el resto del mapa y en qué punto nos encontramos del mismo. Claro que hay puntos que podrían ser árboles o edificios (tríadas con la misma estructura). Así que todavía hay espacio para la sorpresa.
-
-De manera que podríamos decir que cada pila de notas nos aporta dos tipos de información:
-
-\begin{itemize}   \tightlist
-  \item La estructura de la escala de la que forma parte
-  \item La posición donde se encuentra en la misma.
-\end{itemize}
-
-Podemos acuñar dos nuevos términos para esto, información \emph{estructural} y la información \emph{posicional}. Cuando hablamos de las sensaciones que nos producen las tríadas mayores y menores, de alegría o tristeza, simplemente mostrábamos tríadas separadas, sin saber a qué escala pertenecían, y aún así nos transmitían esa idea. Podemos concluir que la estructura tríada tiene la mayor cantidad de información estructural lo más clara posible. Cuando vamos apilando notas encima, se va perdiendo un poco de información estructural y se gana información posicional, es decir, se presenta más ``trozo de mapa'' para que el oyente pueda saber cuál es el terreno y dónde está en este momento.
-
-\subsection{Ordenación de los grupos de notas}
-
-Como dijimos, el centro tonal de una escala lo marca la nota que queda a la misma distancia de los tritonos, digamos la nota más neutra. Qué pasa cuando apilamos notas? Se mantendrá la misma simetría? Pasará algo inesperado? Me temo que sí, al menos para mí.
-
-Veámoslo en una tabla.
-
-
-\begin{table}[H]
-  \centering
-  \begin{subtable}{1\linewidth}
+  Por qué las tríadas tienen esos curiosos nombres en la notación estandar? \emph{Mayor, menor, menor quinta bemol, mayor quinta   aumentada, disminuida\ldots{}}
+  
+  Se trata de nombres del pasado, que simplemente han subsistido hasta ahora por falta de un buen comité de estandarización \emph{ISO}. Suponen un gran obstáculo para el manejo teórico y para la asimilación de los conceptos.
+  
+  Para empezar, no es útil conocer la distancia de la tercera nota a la primera: lo que interesa es el tamaño de los dos pares de notas. Esta es una tabla con las distancias que aparecen en todas las escalas. En la columna izquierda, las distancias en semitonos como un par de números, que indican el tamaño del intervalo inferior y el del intervalo superior partiendo desde \texttt{C}. En \emph{negrita} los esquemas más usados, \emph{43} ( tríada mayor) y \emph{34} ( tríada menor).
+  
+  Vamos a cambiar la notación utilizando un poco de lógica.
+  									
+  \begin{table}[ht]
     \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} \\
-        E & G & B & D & F & A & C \\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 1 nota}\label{tab:particles-one-note}
-  \end{subtable}
-  \vspace{1em} % Espacio vertical entre las filas
-  \begin{subtable}{1\linewidth}
+    \begin{tabularx}{\textwidth}{|c|X|X|X|X|X|X|X|X|X|}
+      \hline
+      Tríada &  0  & 1&    2    &    3    &    4    &    5    &    6    &    7    &    8    \\
+      \hline
+      23  & \bullet&  & \bullet &         &         & \bullet &         &         &         \\
+      \hline
+      33  & \bullet&  &         & \bullet &         &         & \bullet &         &         \\
+      \hline
+      34  & \bullet&  &         & \bullet &         &         &         & \bullet &         \\
+      \hline
+      42  & \bullet&  &         &         & \bullet &         & \bullet &         &         \\
+      \hline
+      43  & \bullet&  &         &         & \bullet &         &         & \bullet &         \\
+      \hline
+      44  & \bullet&  &         &         & \bullet &         &         &         & \bullet \\
+      \hline
+    \end{tabularx}
+  \caption{Tabla de partículas}\label{tab:particulas}
+  \end{table}
+  
+  
+  
+  Primera regla de oro para inventar nombres: \emph{no inventar nombres   innecesariamente.}
+  
+  Si los números que definen los intervalos de las tríadas las describen perfectamente, son directamente deducibles desde las propias notas, son más fáciles de escribir, ocupan menos espacio, se pronuncian en menos sílabas y son portables a todos los idiomas, entonces deberíamos usar la notación numérica.
+  
+  Así que, desde ahora hablaremos de una tríada menor como una tríada \texttt{43}.
+  
+  En esta tabla vemos el tipo de tríadas que tiene cada escala y en qué grado aparecen, así como el nombre de la combinación en notación estandar, si es que existe alguno.
+  
+  \begin{table}[H]
     \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \begin{tabular}{|l|l|l|l|l|l|l|l|}
+      \hline
+      ESTANDAR & ab & WHITE & BLUE & RED & BLACK & PENTA & TONES \\
+      \hline
+      menor& 34 & 1,2,5 & 4,5 & 2,3,4,5 & 1,3,5,7 & 4 & --- \\
+      \hline
+      mayor & 43 & 3,4,7 & 1,7 & 1,2,3 & 1,3,5,7 & 5 & --- \\
+      \hline
+      menor 5b & 33 & 6 & 2,3 & 2,4,5 & TODOS & --- & --- \\
+      \hline
+      mayor 5+ & 44 & --- & 1,3,6 & 1,3,6 & --- & --- & TODOS \\
+      \hline
+      ? & 42 & 3 & 3,6,7 & 5 & 1,3,5,7 & --- & TODOS \\
+      \hline
+      ? & 23 & 1,4,5,7 & 1,2,4 & 7 & 2,4,6,8 & 1,3 & --- \\
+      \hline
+    \end{tabular} 
+  \end{table}
+  
+  
+  Ahora tenemos nombres más eficientes y lógicos para conceptos, como ``Mayor con la quinta aumentada'', ó, uno especialmente chirriante: ``Tríada disminuída''.
+  
+  Es cierto que memorizamos mejor los nombres que los números, y posiblemente, cuando lleguemos a acordes de cinco o más notas, hablar de un acorde \texttt{3\ 3\ 4\ 3\ 4} puede ser también un poco engorroso. Así que probablemente se haga necesario crear alguna nomenclatura. Pero no nos precipitemos.
+  
+  \subsection{Posición y forma}
+  
+  El oyente considera un acorde como un conjunto de notas agudas apiladas sobre notas graves, y no al revés. De algún modo, las notas graves marcan la situación del grupo de notas, y las agudas definen la forma del mismo.
+  
+  Si volvemos al simil del mapa y del terreno, la nota grave nos indica en qué punto del mapa estamos y las notas agudas indican, digamos, qué relación guarda ese objeto con el resto del mapa, es decir, nos ayuda a imaginar el resto del mismo.
+  
+  Si en el terreno vemos un punto, sabremos dónde ese punto, pero si además vemos que ese punto es un arbol, nos indicará que probablemente estamos en un bosque. Si resulta que el punto tiene forma de edificio, seguro que estamos en pleno centro de la ciudad. Así es como, con un simple acorde, nos hacemos una idea de cómo es el resto del mapa y en qué punto nos encontramos del mismo. Claro que hay puntos que podrían ser árboles o edificios (tríadas con la misma estructura). Así que todavía hay espacio para la sorpresa.
+  
+  De manera que podríamos decir que cada pila de notas nos aporta dos tipos de información:
+  
+  \begin{itemize}   
+    \tightlist
+    \item La estructura de la escala de la que forma parte
+    \item La posición donde se encuentra en la misma.
+  \end{itemize}
+  
+  Podemos acuñar dos nuevos términos para esto, información \emph{estructural} y la información \emph{posicional}. Cuando hablamos de las sensaciones que nos producen las tríadas mayores y menores, de alegría o tristeza, simplemente mostrábamos tríadas separadas, sin saber a qué escala pertenecían, y aún así nos transmitían esa idea. Podemos concluir que la estructura tríada tiene la mayor cantidad de información estructural lo más clara posible. Cuando vamos apilando notas encima, se va perdiendo un poco de información estructural y se gana información posicional, es decir, se presenta más ``trozo de mapa'' para que el oyente pueda saber cuál es el terreno y dónde está en este momento.
+  
+  \subsection{Ordenación de los grupos de notas}
+  
+  Como dijimos, el centro tonal de una escala lo marca la nota que queda a la misma distancia de los tritonos, digamos la nota más neutra. Qué pasa cuando apilamos notas? Se mantendrá la misma simetría? Pasará algo inesperado? Me temo que sí, al menos para mí.
+  
+  Veámoslo en una tabla.
+  
+  \floatsetup[table]{capposition=beside,capbesideposition={right,center}}
+  
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} \\
+          E & G & B & D & F & A & C \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{WHITE} de 1 nota}\label{tab:particles-one-note}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{1} \\
+          D & F & A & C & E & G & B \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{WHITE} de 2 notas}\label{tab:particles-two-notes}
+    \end{table}
+   
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{2,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,2} \\
+          C & E & G & B & D & F & A \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{WHITE} de 3 notas}\label{tab:particles-three-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{1,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,1} \\
+          B & D & F & A & C & E & G \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{WHITE} de 4 notas}\label{tab:particles-four-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{1,2,1,2} & \iparticle{2,1,2,1} & \iparticle{1,2,1,1} & \iparticle{2,1,2,1} & \iparticle{1,1,2,1} & \iparticle{1,2,1,2} & \iparticle{2,1,2,1} \\
+          A & C & E & G & B & D & F \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{WHITE} de 5 notas}\label{tab:particles-five-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+   
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{2,1,1,2,1} & \iparticle{1,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,1} & \iparticle{1,2,1,1,2} \\
+          G & B & D & F & A & C & E\\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{WHITE} de 6 notas}\label{tab:particles-six-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{2,1,2,1,2,1} & \iparticle{1,2,1,2,1,1} & \iparticle{2,1,2,1,1,2} & \iparticle{1,2,1,1,2,1} & \iparticle{2,1,1,2,1,2} & \iparticle{1,1,2,1,2,1} & \iparticle{1,2,1,2,1,2} \\
+          F & A & C & E & G & B & D \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{WHITE} de 7 notas}\label{tab:particles-seven-notes}
+    \end{table}
+    
+  Cuando tenemos simplemente una nota, observamos que, en la escala \texttt{WHITE}, el centro es la nota \texttt{D}. Recordemos que marca el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo.
+  
+  Cuando apilamos dos notas alternas, los pares que se forman pueden ser de 3 o de 4 semitonos. Si nos fijamos en el esquema, el centro simétrico ahora pasa a ser la nota \texttt{C}. Hemos bajado un tono.
+  
+  Al apilar tres, para formar una tríada, obtenemos pilas \texttt{43}, \texttt{34} y \texttt{33} de manera que ahora, el centro simétrico pasa a ser la tríada formada a partir de la nota \texttt{B}. Recordemos que las tríadas tenían un fuerte significado debido a su forma: justicia/injusticia, bien/mal, vida/muerte, alegría/tristeza, etc.
+  
+  Si usamos cuatro notas, el carácter de las tríadas pasa a un plano secundario. Ya no vemos una entidad grande apoyada sobre una más pequeña. Ahora hay tres entidades, formando distintas combinaciones. Si teníamos arriba un grande opresor sobre uno pequeño oprimido, ahora el de arriba también soporta a otro pequeño, así que parece más equilibrado, y al revés, si había uno pequeño apoyado sobre uno grande, lo cual nos parecía justo, ahora el pequeño tiene a su vez otro grande encima. En resumen, se difumina un poco la sensación de desequilibrio grande/pequeño. Sin embargo, al agregar más notas, disminuye también la posibilidad de confusión: ya no hay tantos acordes comunes. 
+  
+  Teníamos 3 tipos de tríadas (\texttt{43}, \texttt{34} y \texttt{33}) con lo que \texttt{F}, \texttt{C} y \texttt{G} podrían confundirse, \texttt{E}, \texttt{A} y \texttt{D} también y solo era diferente \texttt{B}. Ahora tenemos cuatro tipos de cuatríadas (\texttt{334}, \texttt{344}, \texttt{433}, \texttt{334}) así que \texttt{E}, \texttt{A} y \texttt{D} siguen siendo iguales, \texttt{F} y \texttt{C} también pero \texttt{G} y \texttt{B} son distintos. Hemos conseguido diferenciar a \texttt{G} y a \texttt{B}. Además hemos vuelto a bajar de grado: ahora el centro simétrico está en la tríada de \texttt{A}.
+  
+  En resumen: observamos que cuantas más notas apilamos, más baja el centro simétrico. No es el centro tonal de la escala: sea cual sea la cantidad de notas que apilemos, el oyente sigue percibiendo el mismo centro tonal, y sobre todo, los mismos tritonos. Conoce la orientación del mapa correctamente. Eso no cambia. Qué estamos cambiando entonces?
+  
+  Recordemos de qué manera medíamos la distancia al tritono de un grupo de notas. Considerábamos la cantidad de notas que hay que agregar al grupo para que contenga un tritono. Suponemos que el oyente hace esto de manera automática. Es como si completase las notas que faltan y notase que está cerca de escuchar un tritono. Nos quedamos en que debería haber alguna fórmula para calcular correctamente la distancia al tritono que se percibe y que probablemente, el hecho de que en el grupo de notas ya estuviese presente una nota perteneciente al tritono, aumentaría esa percepción.
+   
+  Si estuviésemos hablando de una materia formada por partículas, estas serían las combinaciones básicas. En primer lugar tenemos la tercera mayor y luego la tercera menor. Esas serían las partículas atómicas. Apilándolas obtendríamos los ``ladrillos'' básicos: la tríada mayor, la tríada menor y la tríada disminuida, recordemos, resumiendo mucho: justicia, injusticia y pregunta sin contestar, respectivamente. Con partículas de este tipo, ya podríamos construir el 90 \% de la materia universal. Para materia más compleja, usamos pilas de cuatro notas, es decir, una de las pilas anteriores con una nota más encima. Esta combinación comparte la partícula central, así que tenemos por ejemplo una tríada mayor sobre una tríada menor.
+  
+  Con partículas de cuatro notas tenemos una pila de dos elementos básicos, que no comparten notas.
+  
+  Con cinco notas, es complejo entender cómo observa el oyente las pilas. Si quizá el elemento central actúa como separador de los dos elementos inferior y superior, o si se entiende como un todo.
+  
+  Con seis notas resulta muy dificil obtener un significado.
+  
+  Pero una cosa está clara: en cada nivel hemos ido agregando más pistas sobre la cercanía del tritono. De manera que en el último nivel, todas las pilas menos dos contienen un tritono. E incluso esas dos, lo contienen invertido.
+  
+  Podríamos concluir que en los niveles iniciales, lo que prima es la estructura de la pila y su significado para el oyente. Según vamos agregando notas, el significado se va diluyendo y lo que importa es la situación del tritono, la indicación al oyente de en qué punto de la escala estamos de manera inequívoca, sea para orientarle o precisamente para engañarle en la siguiente curva del camino.
+  
+  Analicémos entonces el significado correspondiente a cada partícula base.
+  
+  \floatsetup[table]{capposition=below,capbesideposition={right,center}}
+  
+  \begin{table}[H]
+    \centering
+      \begin{tabular}{|m{1em}|m{10cm}|}
         \hline
-        &&&&&&\\
-        \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{1} \\
-        D & F & A & C & E & G & B \\
+        &\\
+        \iparticle{1,1} & Pregunta sin contestar. Conflicto, indecisión, desenlace latente, tensión\\
         \hline
+        &\\
+        \iparticle{2,1} & Justicia, naturalidad, triunfo, orden\\
+        \hline
+        &\\
+        \iparticle{1,2} & Injusticia, muerte, drama, fracaso, tristeza\\
+        \hline
+        &\\
+        \iparticle{1,1,2} & Injusticia y pregunta. La sensación es de injusticia, tristeza, dolor, muerte y desolación. Además se presenta un tritono para generar un conflicto a resolver\\
+        \hline
+        &\\
+        \iparticle{2,2,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
+        \hline
+        &\\
+        \iparticle{2,1,2} & Injusticia sobre justicia. La entidad debil es oprimida pero, simultaneamente, es soportada. Doble moral, vicio, sensualidad, indolencia, desgana...
+        \\
+        \hline
+        &\\
+        \iparticle{1,2,1} & Justicia sobre injusticia. Ente opresor que actúa simultaneamente como soporte. Modernidad, avance, dinamismo, consumo, adaptación, el poder soporta a sus vástagos débiles apoyándose en otros como ellos, crecimiento, industria, progreso...\\
+        \hline
+        
     \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 2 notas}\label{tab:particles-two-notes}
-  \end{subtable}
+    \caption{Catálogo de partículas provisional}\label{tab:provisional-particle-catalog}
+  \end{table}
+  
+  Las dos últimas son especialmente interesantes y ambas estan presentes especialmente en la música moderna. La pila \texttt{434} recibe en notación estandar el nombre de \emph{acorde mayor con séptima mayor} y produce una sensación de cierto relax obscuro e indolente, muy apto para baladas románticas, perezosas y sensuales. Si el elemento central de la tríada fuese una persona sería un ser debil que se se apoya sobre uno fuerte pero a su vez siente encima el peso de otro. Un ser debil que siente la contradicción de la \emph{doble moral}, por una parte debería quejarse debido al peso que le oprime, pero por otra disfruta de la solidaridad y el soporte que recibe. Así que permanece en silencio, aceptando su destino y añorando que su situación cambie. 
+  
+  En cuanto a la pila \texttt{343}, en estandar es un acorde \emph{menor con séptima}. En este caso, el elemento central del esquema sería un ser fuerte, que soporta a un ser debil encima, pero que también está apoyado sobre otro debil. Cómo puede sentirse? Si el de la tríada anterior ocultaba su queja por la doble moral, este debe ocultar su alegría, puesto que no está sufriendo, ya que soporta a un ser más debil que él. Puede que se sienta culpable por oprimir a un debil pero diríamos que está en paz consigo mismo, puesto que ya está pagando su deuda. ``Sé que otros sufren por mi culpa, pero ya contribuyo con mis buenas obras, así que olvidemos la injusticia y disfrutemos de la vida''. Esto sugiere civilización, sociedad, avance, optimismo. Un ermitaño que vive en el desierto nunca sentirá esa sensación, su vida diaria no contiene ventajas a costa de que otros sufran, simplemente no hay otros. Si vives en una sociedad moderna, todo funciona gracias a que los servicios que utilizas los pagas con tu trabajo. Otros trabajan para que tú estés cómodo, pero tú también trabajas para que otros lo estén. Así funciona, es la base de la sociedad de consumo. Estos acordes se utilizan profusamente en la música pop, en el jazz, la bossa nova, en el rock, y en general en toda la música moderna. Son poco comunes en música tradicional, incluso en música clásica: parece que suenan demasiado ``modernos''.
+  
+  \subsection{Nombres para las partículas}
+  
+  .Nombres para las partículas image::basic-particle-names.png
+  
+  Asignaremos nombres básicos a nuestras partículas básicas, para pensar de forma un poco más cómoda. Si llamamos a la tríada disminuida (la del \emph{t}ritono) \texttt{T}, a la tríada m\emph{a}yor \texttt{A} y a la tríada m\emph{e}nor \texttt{E}, entonces, las pilas de cuatro notas se llamarán \texttt{TE,\ AT,\ AE} y \texttt{EA}. Parece útil y resulta fácil deducir el nombre a partir del dibujo o de las notas, solo memorizando tres letras. Veamos entonces las pilas de cinco notas y sus posibles nombres:
+  
+  .Agregar un guión en el nombre image::more-particle-names.png
+  
+  Como vemos, llamarle a las pilas de tres notas con las dos letras, aún cuando el elemento central se comparte en ambas, nos ha costado tener que agregar un guión en medio (-) para indicar que un elemento completo está encima del otro. Por ejemplo, la pila \texttt{AE} contiene dos pilas de tres notas pero comparten las dos notas centrales, así que en total son cuatro notas, pero en la pila \texttt{A-E} hay dos pilas una encima de otra y comparten la nota que queda en medio, así que en lugar de 6 nos quedan 5 notas. Vale la pena. Veamos las de seis y siete notas:
+  
+  .Pilas WHITE image::white-piles.png
+  
+  No parece muy fácil de pronunciar. Pero, al menos, es una nomenclatura uniforme y simple: puede deducirse a partir de las pilas de notas. +
+  
+  WARNING:: Recordemos la regla: cuando es un número impar de notas, usamos una guión en medio de las letras para indicar que las dos pilas comparten la nota central.
+  
+  Si no hay guión, significa que el número de notas es par, así que las dos pilas comparten las dos notas que quedan en el centro. Así que, \texttt{AETA} significa una pila \texttt{AE} que comparte la partícula central con una pila \texttt{TA}, en cambio \texttt{AE-ET} significa que las dos pilas comparten las dos notas centrales. (Podría usarse como regla nemotécnica la idea de que los cuadrados son intervalos, de modo que sus aristas horizontales son las notas que los forman. Por ejemplo, la pilas de tres notas se representan con dos bloques, que tienen tres aristas horizontales, así que cada arista es una nota de la pila)
+  
+  Tenemos pues un sencillo catálogo de pilas de notas, con sus nombres. Los significados intrínsecos están claros para las pilas de tres notas y para las de cuatro. A partir de ahí, el significado deja de tener importancia y pasa a primar la información posicional, es decir, la relación con el tritono de la escala.
+  
+  De momento hemos hecho todo esto con la escala \texttt{WHITE}. Vamos a intentar lo mismo con \texttt{BLUE}.
+  
+  
+  \floatsetup[table]{capposition=beside,capbesideposition={right,center}}
+  
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} \\
+          A & C & e & G & B & D & F \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{BLUE} de 1 nota}\label{tab:particles-one-note}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{2} & \iparticle{1} & \iparticle{1} & \iparticle{2} & \iparticle{1} & \iparticle{1} & \iparticle{2} \\
+          G & B & D & F & A & C & e \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{BLUE} de 2 notas}\label{tab:particles-two-notes}
+    \end{table}
+   
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{2,1} & \iparticle{1,1} & \iparticle{1,2} & \iparticle{2,2} & \iparticle{2,1} & \iparticle{1,1} & \iparticle{1,2} \\
+          F & A & C & e & G & B & D \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{BLUE} de 3 notas}\label{tab:particles-three-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{2,2,1} & \iparticle{2,1,1} & \iparticle{1,1,2} & \iparticle{1,2,1} & \iparticle{2,1,1} & \iparticle{1,1,2} & \iparticle{1,2,2} \\
+          e & G & B & D & F & A & C \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{BLUE} de 4 notas}\label{tab:particles-four-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{1,2,1,1} & \iparticle{2,1,1,2} & \iparticle{1,1,2,2} & \iparticle{1,2,2,1} & \iparticle{2,2,1,1} & \iparticle{2,1,1,2} & \iparticle{1,1,2,1} \\
+          D & F & A &C & e & G & B \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{BLUE} de 5 notas}\label{tab:particles-five-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+   
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{1,2,2,1,1} & \iparticle{2,2,1,1,2} & \iparticle{2,1,1,2,1} & \iparticle{1,1,2,1,1} & \iparticle{1,2,1,1,2} & \iparticle{2,1,1,2,2} & \iparticle{1,1,2,2,1} \\
+          C & e & G & B & D & F & A \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{BLUE} de 6 notas}\label{tab:particles-six-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{1,1,2,1,1,2} & \iparticle{1,2,1,1,2,2} & \iparticle{2,1,1,2,2,1} & \iparticle{1,1,2,2,1,1} & \iparticle{1,2,2,1,1,2} & \iparticle{2,2,1,1,2,1} & \iparticle{2,1,1,2,1,1} \\
+          B & D & F & A & C & e & G \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{BLUE} de 7 notas}\label{tab:particles-seven-notes}
+    \end{table}
  
-  \vspace{1em} % Espacio vertical entre las filas
-  \begin{subtable}{1\linewidth}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        &&&&&&\\
-        \iparticle{2,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,2} \\
-        C & E & G & B & D & F & A \\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 3 notas}\label{tab:particles-three-notes}
-  \end{subtable}
-  \vspace{1em} % Espacio vertical entre las filas
   
-  \begin{subtable}{1\linewidth}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        &&&&&&\\
-        \iparticle{1,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,1} \\
-        B & D & F & A & C & E & G \\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 4 notas}\label{tab:particles-four-notes}
-  \end{subtable}
-  \vspace{1em} % Espacio vertical entre las filas
+  Observamos, por supuesto, la misma simetría y el mismo descenso por grados con cada nueva nota. Sin embargo, aparece una nueva partícula con la que no habíamos contado aún: la tríada \texttt{44}. Tendrá que formar parte de nuestro vocabulario. La sensación que produce esta tríada tiene que ver con la orientación. Se trata de dos terceras mayores, no se sabe cuál es la base porque podría ser cualquiera, al estar a distancia de 4 semitonos, apilando 3 de ellas llegamos a la octava, es decir, se termina la escala. Esto es lo mismo que le ocurre a la escala \texttt{TONES}, no tiene orientación. El oyente siente la presencia de tritonos por todas partes, no hay ningún lugar seguro, no se puede huir en ninguna dirección. Da lo mismo en qué grado de la escala estemos, la sensación persiste: amenaza constante y ninguna posibilidad de escape. La diferencia con \texttt{PENTA}, donde no hay ningún tritono es apreciable, aunque allí sí hay una orientación: se sabe en qué grado de la escala estamos, pero no hay necesidad de huir de ningún punto. La tríada \texttt{44} crea una sensación de perplejidad y de amenaza irremisible.
   
-  \begin{subtable}{1\linewidth}
+  Este sería nuestro nuevo catálogo de partículas básicas:
+  
+  \floatsetup[table]{capposition=below,capbesideposition={right,center}}
+  
+  \begin{table}[H]
     \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
+      \begin{tabular}{|m{1em}|m{10cm}|}
         \hline
-        &&&&&&\\
-        \iparticle{1,2,1,2} & \iparticle{2,1,2,1} & \iparticle{1,2,1,1} & \iparticle{2,1,2,1} & \iparticle{1,1,2,1} & \iparticle{1,2,1,2} & \iparticle{2,1,2,1} \\
-        A & C & E & G & B & D & F \\
+        &\\
+        \iparticle{1,1} & Pregunta sin contestar. Conflicto, indecisión, desenlace latente, tensión\\
         \hline
+        &\\
+        \iparticle{2,1} & Justicia, naturalidad, triunfo, orden\\
+        \hline
+        &\\
+        \iparticle{1,2} & Injusticia, muerte, drama, fracaso, tristeza\\
+        \hline
+        &\\
+        \iparticle{2,2} & Desorientación, ingravidez, perplejidad, amenaza irremisible\\
+        \hline
+        &\\
+        \iparticle{1,1,2} & Injusticia y pregunta. La sensación es de injusticia, tristeza, dolor, muerte y desolación. Además se presenta un tritono para generar un conflicto a resolver\\
+        \hline
+        &\\
+        \iparticle{2,2,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
+        \hline
+        &\\
+        \iparticle{2,1,2} & Injusticia sobre justicia. La entidad debil es oprimida pero, simultaneamente, es soportada. Doble moral, vicio, sensualidad, indolencia, desgana...
+        \\
+        \hline
+        &\\
+        \iparticle{1,2,1} & Justicia sobre injusticia. Ente opresor que actúa simultaneamente como soporte. Modernidad, avance, dinamismo, consumo, adaptación, el poder soporta a sus vástagos débiles apoyándose en otros como ellos, crecimiento, industria, progreso...\\
+        \hline
+        
     \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 5 notas}\label{tab:particles-five-notes}
-  \end{subtable}
-  \vspace{1em} % Espacio vertical entre las filas
+    \caption{Catálogo de partículas un poco más completo}\label{tab:provisional-particle-catalog-2}
+  \end{table}
+  
+  Al agregar todas las combinaciones únicas que aparecen en \texttt{BLUE}, nuestro vocabulario se amplía:
+  
+  Hagamos lo mismo con \texttt{RED}, usando \texttt{E} como centro tonal.
+  
+  .Pilas RED image::red-piles.png
+  
+  Nuevas partículas! Hemos hallado un nuevo intervalo de 2 semitonos, así que aparecen dos nuevas tríadas: \texttt{24} y \texttt{42}. Las hemos representado con fondo negro. La simetría sigue siendo perfecta. Cuál será el significado de estas tríadas?
+  
+  Vamos a crear la tabla
+  
+  
+  \floatsetup[table]{capposition=beside,capbesideposition={right,center}}
+  
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} & \iparticle{0} \\
+          F & A & C & E & a & B & e \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{RED} de 1 nota}\label{tab:particles-one-note}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{2} & \iparticle{1} & \iparticle{2} & \iparticle{3} & \iparticle{2} & \iparticle{1} & \iparticle{2} \\
+          E & a & B & e & F & A & C \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{RED} de 2 notas}\label{tab:particles-two-notes}
+    \end{table}
+   
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{3,2} & \iparticle{2,1} & \iparticle{1,2} & \iparticle{2,2} & \iparticle{2,1} & \iparticle{1,2} & \iparticle{2,3} \\
+          e & F & A & C & E & a & B \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{RED} de 3 notas}\label{tab:particles-three-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{2,2,1} & \iparticle{2,1,2} & \iparticle{1,2,3} & \iparticle{2,3,2} & \iparticle{3,2,1} & \iparticle{2,1,2} & \iparticle{1,2,2} \\
+          C & E & a & B & e & F & A \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{RED} de 4 notas}\label{tab:particles-four-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{2,3,2,1} & \iparticle{3,2,1,2} & \iparticle{2,1,2,2} & \iparticle{1,2,2,1} & \iparticle{2,2,1,2} & \iparticle{2,1,2,3} & \iparticle{1,2,3,2} \\
+          B & e & F & A & C & E & a \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{RED} de 5 notas}\label{tab:particles-five-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+   
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{1,2,2,1,2} & \iparticle{2,2,1,2,3} & \iparticle{2,1,2,3,2} & \iparticle{1,2,3,2,1} & \iparticle{2,3,2,1,2} & \iparticle{3,2,1,2,2} & \iparticle{2,1,2,2,1} \\
+          A & C & E & a & B & e & F \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{RED} de 6 notas}\label{tab:particles-six-notes}
+    \end{table}
+    \vspace{-2em} % Ajusta el valor según sea necesario
+    
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
+          \hline
+          &&&&&&\\
+          \iparticle{1,2,3,2,1,2} & \iparticle{2,3,2,1,2,2} & \iparticle{3,2,1,2,2,1} & \iparticle{2,1,2,2,1,2} & \iparticle{1,2,2,1,2,3} & \iparticle{2,2,1,2,3,2} & \iparticle{2,1,2,3,2,1} \\
+          a & B & e & F & A & C & E \\
+          \hline
+      \end{tabular}
+      \caption{Partículas \sffamily{RED} de 7 notas}\label{tab:particles-seven-notes}
+    \end{table}
  
-  \begin{subtable}{1\linewidth}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        &&&&&&\\
-        \iparticle{2,1,1,2,1} & \iparticle{1,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,1} & \iparticle{1,2,1,1,2} \\
-        G & B & D & F & A & C & E\\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 6 notas}\label{tab:particles-six-notes}
-  \end{subtable}
-  \vspace{1em} % Espacio vertical entre las filas
   
-  \begin{subtable}{1\linewidth}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        &&&&&&\\
-        \iparticle{2,1,2,1,2,1} & \iparticle{1,2,1,2,1,1} & \iparticle{2,1,2,1,1,2} & \iparticle{1,2,1,1,2,1} & \iparticle{2,1,1,2,1,2} & \iparticle{1,1,2,1,2,1} & \iparticle{1,2,1,2,1,2} \\
-        F & A & C & E & G & B & D \\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 7 notas}\label{tab:particles-seven-notes}
-  \end{subtable}
+  Bien, hemos de considerar la dificultad intrínseca de cada escala como parte del problema. Digamos que el oyente se sentirá mejor en una escala con pocos tritonos y pocos grados equívocos. Si cada escala tiene algun sonido concreto que la caracteriza, el hecho de presentar al oyente ese sonido hará que se crea que estamos en esa escala. Recordemos que la tríada \texttt{44} aparecía en \texttt{BLUE} y no en \texttt{WHITE}, de manera que actúa como una especie de \_aroma inconfundible. \_Por contra, las pilas \texttt{24} y \texttt{42} hacen su aparición en \texttt{RED}. Tampoco parecen tener un significado especial, más que representar a su escala.
   
-  \caption{Partículas de \sffamily{WHITE}} % Agrega un título general a todas las subtablas
-\end{table}
-Cuando tenemos simplemente una nota, observamos que, en la escala \texttt{WHITE}, el centro es la nota \texttt{D}. Recordemos que marca el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo.
-
-Cuando apilamos dos notas alternas, los pares que se forman pueden ser de 3 o de 4 semitonos. Si nos fijamos en el esquema, el centro simétrico ahora pasa a ser la nota \texttt{C}. Hemos bajado un tono.
-
-Al apilar tres, para formar una tríada, obtenemos pilas \texttt{43}, \texttt{34} y \texttt{33} de manera que ahora, el centro simétrico pasa a ser la tríada formada a partir de la nota \texttt{B}. Recordemos que las tríadas tenían un fuerte significado debido a su forma: justicia/injusticia, bien/mal, vida/muerte, alegría/tristeza, etc.
-
-Si usamos cuatro notas, el carácter de las tríadas pasa a un plano secundario. Ya no vemos una entidad grande apoyada sobre una más pequeña. Ahora hay tres entidades, formando distintas combinaciones. Si teníamos arriba un grande opresor sobre uno pequeño oprimido, ahora el de arriba también soporta a otro pequeño, así que parece más equilibrado, y al revés, si había uno pequeño apoyado sobre uno grande, lo cual nos parecía justo, ahora el pequeño tiene a su vez otro grande encima. En resumen, se difumina un poco la sensación de desequilibrio grande/pequeño. Sin embargo, al agregar más notas, disminuye también la posibilidad de confusión: ya no hay tantos acordes comunes. 
-
-Teníamos 3 tipos de tríadas (\texttt{43}, \texttt{34} y \texttt{33}) con lo que \texttt{F}, \texttt{C} y \texttt{G} podrían confundirse, \texttt{E}, \texttt{A} y \texttt{D} también y solo era diferente \texttt{B}. Ahora tenemos cuatro tipos de cuatríadas (\texttt{334}, \texttt{344}, \texttt{433}, \texttt{334}) así que \texttt{E}, \texttt{A} y \texttt{D} siguen siendo iguales, \texttt{F} y \texttt{C} también pero \texttt{G} y \texttt{B} son distintos. Hemos conseguido diferenciar a \texttt{G} y a \texttt{B}. Además hemos vuelto a bajar de grado: ahora el centro simétrico está en la tríada de \texttt{A}.
-
-En resumen: observamos que cuantas más notas apilamos, más baja el centro simétrico. No es el centro tonal de la escala: sea cual sea la cantidad de notas que apilemos, el oyente sigue percibiendo el mismo centro tonal, y sobre todo, los mismos tritonos. Conoce la orientación del mapa correctamente. Eso no cambia. Qué estamos cambiando entonces?
-
-Recordemos de qué manera medíamos la distancia al tritono de un grupo de notas. Considerábamos la cantidad de notas que hay que agregar al grupo para que contenga un tritono. Suponemos que el oyente hace esto de manera automática. Es como si completase las notas que faltan y notase que está cerca de escuchar un tritono. Nos quedamos en que debería haber alguna fórmula para calcular correctamente la distancia al tritono que se percibe y que probablemente, el hecho de que en el grupo de notas ya estuviese presente una nota perteneciente al tritono, aumentaría esa percepción.
-
-\begin{table}[H]
-  \centering
-  \begin{subtable}{1\linewidth}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        &&&&&&\\
-        \iparticle{2,1,2,1,1,2} & \iparticle{2,1,1,2,1,2} & \iparticle{1,2,1,2,1,1} & \iparticle{1,2,1,1,2,1} & \iparticle{1,1,2,1,2,1} & \iparticle{2,1,2,1,2,1} & \iparticle{1,2,1,2,1,2} \\
-        \hline
-    \end{tabular}
-    \vspace{1em} % Espacio vertical entre las filas
-    \begin{tabular}{|c|c|c|c|c|c|}
-        \hline
-        &&&&&\\
-        \iparticle{2,1,2,1,2} & \iparticle{2,1,1,2,1} & \iparticle{1,1,2,1,2} & \iparticle{2,1,2,1,1} & \iparticle{1,2,1,1,2} & \iparticle{1,2,1,2,1}\\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 2 notas}\label{tab:particles-two-notes}
-  \end{subtable}
- 
-  \vspace{1em} % Espacio vertical entre las filas
-  \begin{subtable}{1\linewidth}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        &&&&&&\\
-        \iparticle{2,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,1} & \iparticle{1,2} & \iparticle{2,1} & \iparticle{1,2} \\
-        C & E & G & B & D & F & A \\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 3 notas}\label{tab:particles-three-notes}
-  \end{subtable}
-  \vspace{1em} % Espacio vertical entre las filas
+  Las 6 escalas forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y   desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, eliminando tritonos vamos a parar a \texttt{PENTA}, agregándolos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}.
   
-  \begin{subtable}{1\linewidth}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        &&&&&&\\
-        \iparticle{1,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,2} & \iparticle{1,2,1} & \iparticle{2,1,1} \\
-        B & D & F & A & C & E & G \\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 4 notas}\label{tab:particles-four-notes}
-  \end{subtable}
-  \vspace{1em} % Espacio vertical entre las filas
+  .Sensación de las escalas image::scale-sensation-circle.png
   
-  \begin{subtable}{1\linewidth}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        &&&&&&\\
-        \iparticle{1,2,1,2} & \iparticle{2,1,2,1} & \iparticle{1,2,1,1} & \iparticle{2,1,2,1} & \iparticle{1,1,2,1} & \iparticle{1,2,1,2} & \iparticle{2,1,2,1} \\
-        A & C & E & G & B & D & F \\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 5 notas}\label{tab:particles-five-notes}
-  \end{subtable}
-  \vspace{1em} % Espacio vertical entre las filas
- 
-  \begin{subtable}{1\linewidth}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        &&&&&&\\
-        \iparticle{2,1,1,2,1} & \iparticle{1,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,2} & \iparticle{1,2,1,2,1} & \iparticle{2,1,2,1,1} & \iparticle{1,2,1,1,2} \\
-        G & B & D & F & A & C & E\\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 6 notas}\label{tab:particles-six-notes}
-  \end{subtable}
-  \vspace{1em} % Espacio vertical entre las filas
+  En resumen: las nuevas tríadas de nuestro vocabulario no tienen un significado específico, simplemente sirven como señales que indican en qué escala estamos (sea cierto o no) con lo que se creará una sensación claridad, obscuridad o desorientación.
   
-  \begin{subtable}{1\linewidth}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        &&&&&&\\
-        \iparticle{2,1,2,1,2,1} & \iparticle{1,2,1,2,1,1} & \iparticle{2,1,2,1,1,2} & \iparticle{1,2,1,1,2,1} & \iparticle{2,1,1,2,1,2} & \iparticle{1,1,2,1,2,1} & \iparticle{1,2,1,2,1,2} \\
-        F & A & C & E & G & B & D \\
-        \hline
-    \end{tabular}
-    \caption{Partículas \sffamily{WHITE} de 7 notas}\label{tab:particles-seven-notes}
-  \end{subtable}
+  Este es nuestro vocabulario, de momento:
+
+  \floatsetup[table]{capposition=below,capbesideposition={right,center}}
   
-  \caption{Partículas de \sffamily{WHITE}} % Agrega un título general a todas las subtablas
-\end{table}
-
-Si estuviésemos hablando de una materia formada por partículas, estas serían las combinaciones básicas. En primer lugar tenemos la tercera mayor y luego la tercera menor. Esas serían las partículas atómicas. Apilándolas obtendríamos los ``ladrillos'' básicos: la tríada mayor, la tríada menor y la tríada disminuida, recordemos, resumiendo mucho: justicia, injusticia y pregunta sin contestar, respectivamente. Con partículas de este tipo, ya podríamos construir el 90 \% de la materia universal. Para materia más compleja, usamos pilas de cuatro notas, es decir, una de las pilas anteriores con una nota más encima. Esta combinación comparte la partícula central, así que tenemos por ejemplo una tríada mayor sobre una tríada menor.
-
-Con partículas de cuatro notas tenemos una pila de dos elementos básicos, que no comparten notas.
-
-Con cinco notas, es complejo entender cómo observa el oyente las pilas. Si quizá el elemento central actúa como separador de los dos elementos inferior y superior, o si se entiende como un todo.
-
-Con seis notas resulta muy dificil obtener un significado.
-
-Pero una cosa está clara: en cada nivel hemos ido agregando más pistas sobre la cercanía del tritono. De manera que en el último nivel, todas las pilas menos dos contienen un tritono. E incluso esas dos, lo contienen invertido.
-
-Podríamos concluir que en los niveles iniciales, lo que prima es la estructura de la pila y su significado para el oyente. Según vamos agregando notas, el significado se va diluyendo y lo que importa es la situación del tritono, la indicación al oyente de en qué punto de la escala estamos de manera inequívoca, sea para orientarle o precisamente para engañarle en la siguiente curva del camino.
-
-Analicémos entonces el significado correspondiente a cada partícula base.
-
-.Significado de las partículas image::particle-meaning.png
-
-Las dos últimas son especialmente interesantes y ambas estan presentes especialmente en la música moderna. La pila \texttt{434} recibe en notación estandar el nombre de \emph{acorde mayor con séptima mayor} y produce una sensación de cierto relax obscuro e indolente, muy apto para baladas románticas, perezosas y sensuales. Si el elemento central de la tríada fuese una persona sería un ser debil que se se apoya sobre uno fuerte pero a su vez siente encima el peso de otro. Un ser debil que siente la contradicción de la \emph{doble moral}, por una parte debería quejarse debido al peso que le oprime, pero por otra disfruta de la solidaridad y el soporte que recibe. Así que permanece en silencio, aceptando su destino y añorando que su situación cambie. En cuanto a la pila \texttt{343}, en estandar es un acorde \emph{menor con séptima}. En este caso, el elemento central del esquema sería un ser fuerte, que soporta a un ser debil encima, pero que también está apoyado sobre otro debil. Cómo puede sentirse? Si el de la tríada anterior ocultaba su queja por la doble moral, este debe ocultar su alegría, puesto que no está sufriendo, ya que soporta a un ser más debil que él. Puede que se sienta culpable por oprimir a un debil pero diríamos que está en paz consigo mismo, puesto que ya está pagando su deuda. ``Sé que otros sufren por mi culpa, pero ya contribuyo con mis buenas obras, así que olvidemos la injusticia y disfrutemos de la vida''. Esto sugiere civilización, sociedad, avance, optimismo. Un ermitaño que vive en el desierto nunca sentirá esa sensación, su vida diaria no contiene ventajas a costa de que otros sufran, simplemente no hay otros. Si vives en una sociedad moderna, todo funciona gracias a que los servicios que utilizas los pagas con tu trabajo. Otros trabajan para que tú estés cómodo, pero tú también trabajas para que otros lo estén. Así funciona, es la base de la sociedad de consumo. Estos acordes se utilizan profusamente en la música pop, en el jazz, la bossa nova, en el rock, y en general en toda la música moderna. Son poco comunes en música tradicional, incluso en música clásica: parece que suenan demasiado ``modernos''.
-
-\subsection{Nombres para las partículas}
-
-.Nombres para las partículas image::basic-particle-names.png
-
-Asignaremos nombres básicos a nuestras partículas básicas, para pensar de forma un poco más cómoda. Si llamamos a la tríada disminuida (la del \emph{t}ritono) \texttt{T}, a la tríada m\emph{a}yor \texttt{A} y a la tríada m\emph{e}nor \texttt{E}, entonces, las pilas de cuatro notas se llamarán \texttt{TE,\ AT,\ AE} y \texttt{EA}. Parece útil y resulta fácil deducir el nombre a partir del dibujo o de las notas, solo memorizando tres letras. Veamos entonces las pilas de cinco notas y sus posibles nombres:
-
-.Agregar un guión en el nombre image::more-particle-names.png
-
-Como vemos, llamarle a las pilas de tres notas con las dos letras, aún cuando el elemento central se comparte en ambas, nos ha costado tener que agregar un guión en medio (-) para indicar que un elemento completo está encima del otro. Por ejemplo, la pila \texttt{AE} contiene dos pilas de tres notas pero comparten las dos notas centrales, así que en total son cuatro notas, pero en la pila \texttt{A-E} hay dos pilas una encima de otra y comparten la nota que queda en medio, así que en lugar de 6 nos quedan 5 notas. Vale la pena. Veamos las de seis y siete notas:
-
-.Pilas WHITE image::white-piles.png
-
-No parece muy fácil de pronunciar. Pero, al menos, es una nomenclatura uniforme y simple: puede deducirse a partir de las pilas de notas. +
-
-WARNING:: Recordemos la regla: cuando es un número impar de notas, usamos una guión en medio de las letras para indicar que las dos pilas comparten la nota central.
-
-Si no hay guión, significa que el número de notas es par, así que las dos pilas comparten las dos notas que quedan en el centro. Así que, \texttt{AETA} significa una pila \texttt{AE} que comparte la partícula central con una pila \texttt{TA}, en cambio \texttt{AE-ET} significa que las dos pilas comparten las dos notas centrales. (Podría usarse como regla nemotécnica la idea de que los cuadrados son intervalos, de modo que sus aristas horizontales son las notas que los forman. Por ejemplo, la pilas de tres notas se representan con dos bloques, que tienen tres aristas horizontales, así que cada arista es una nota de la pila)
-
-Tenemos pues un sencillo catálogo de pilas de notas, con sus nombres. Los significados intrínsecos están claros para las pilas de tres notas y para las de cuatro. A partir de ahí, el significado deja de tener importancia y pasa a primar la información posicional, es decir, la relación con el tritono de la escala.
-
-De momento hemos hecho todo esto con la escala \texttt{WHITE}. Vamos a intentar lo mismo con \texttt{BLUE}.
-
-.Pilas BLUE image::blue-piles-by-notes.png
-
-Observamos, por supuesto, la misma simetría y el mismo descenso por grados con cada nueva nota. Sin embargo, aparece una nueva partícula con la que no habíamos contado aún: la tríada \texttt{44}. Tendrá que formar parte de nuestro vocabulario. La sensación que produce esta tríada tiene que ver con la orientación. Se trata de dos terceras mayores, no se sabe cuál es la base porque podría ser cualquiera, al estar a distancia de 4 semitonos, apilando 3 de ellas llegamos a la octava, es decir, se termina la escala. Esto es lo mismo que le ocurre a la escala \texttt{TONES}, no tiene orientación. El oyente siente la presencia de tritonos por todas partes, no hay ningún lugar seguro, no se puede huir en ninguna dirección. Da lo mismo en qué grado de la escala estemos, la sensación persiste: amenaza constante y ninguna posibilidad de escape. La diferencia con \texttt{PENTA}, donde no hay ningún tritono es apreciable, aunque allí sí hay una orientación: se sabe en qué grado de la escala estamos, pero no hay necesidad de huir de ningún punto. La tríada \texttt{44} crea una sensación de perplejidad y de amenaza irremisible.
-
-Este sería nuestro nuevo diccionario de partículas básicas:
-
-.Nuevo diccionario de partículas básicas image::advanced-pile-meaning.png
-
-Al agregar todas las combinaciones únicas que aparecen en \texttt{BLUE}, nuestro vocabulario se amplía:
-
-Hagamos lo mismo con \texttt{RED}, usando \texttt{E} como centro tonal.
-
-.Pilas RED image::red-piles.png
-
-Nuevas partículas! Hemos hallado un nuevo intervalo de 2 semitonos, así que aparecen dos nuevas tríadas: \texttt{24} y \texttt{42}. Las hemos representado con fondo negro. La simetría sigue siendo perfecta. Cuál será el significado de estas tríadas?
-
-Vamos a crear la tabla
-
-.Pilas RED con nombres image::red-piles-with-names.png
-
-Bien, hemos de considerar la dificultad intrínseca de cada escala como parte del problema. Digamos que el oyente se sentirá mejor en una escala con pocos tritonos y pocos grados equívocos. Si cada escala tiene algun sonido concreto que la caracteriza, el hecho de presentar al oyente ese sonido hará que se crea que estamos en esa escala. Recordemos que la tríada \texttt{44} aparecía en \texttt{BLUE} y no en \texttt{WHITE}, de manera que actúa como una especie de \_aroma inconfundible. \_Por contra, las pilas \texttt{24} y \texttt{42} hacen su aparición en \texttt{RED}. Tampoco parecen tener un significado especial, más que representar a su escala.
-
-Las 6 escalas forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y   desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, eliminando tritonos vamos a parar a \texttt{PENTA}, agregándolos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}.
-
-.Sensación de las escalas image::scale-sensation-circle.png
-
-En resumen: las nuevas tríadas de nuestro vocabulario no tienen un significado específico, simplemente sirven como señales que indican en qué escala estamos (sea cierto o no) con lo que se creará una sensación claridad, obscuridad o desorientación.
-
-Este es nuestro vocabulario, de momento:
-
-.Nuevo diccionario de partículas con una más image::advanced-pile-meaning-with-new-particle.png
-
-Ahora deberíamos preguntarnos lo siguiente:
-
-Si un bloque 4 sobre uno 3 significa ``injusticia'', ¿por qué no ocurre lo mismo con un bloque 4 sobre uno 2 ?
-
-La respuesta a esta pregunta fundamental es simple. En el bloque \texttt{34} no aparecen trazas de ninguna otra escala, estamos en \texttt{WHITE} y no se detecta ninguna amenaza, el camino está claro, los puntos en el mapa se distinguen perfectamente y hay una pendiente por la que caen las cosas alejándose de la \emph{montaña-tritono}.
-
-Con un bloque \texttt{24}, la sensación de justicia o injusticia desaparece inmediatamente debido a la señal de peligro que representa su estructura. Se trata de una alarma encendida, una puerta a lo desconocido, un imprevisto en el camino que hará que revisemos nuestra situación y nos preparemos para encontrarnos problemas: el camino que anuncia es, o bien, más oscuro y peligroso, o más sorprendente y equívoco. Sea lo que sea, no importa su forma, sino lo que ésta indica: problemas.
-
-Continuemos con \texttt{BLACK} y \texttt{TONES}
-
-.Tritonos en BLACK y en TONES image::tritones-in-black-and-tones.png
-
-Hay un ligero inconveniente: una tiene 8 notas y la otra 6. Si las apilamos en notas alternas solo alcanzaremos la mitad de ellas. Se crean dos subconjuntos diferentes. Además de eso, cada nota forma parte de un tritono. Está claro que no son escalas muy útiles para armonizar, son una especie de pozos sin fondo o callejones sin salida. Volveremos sobre ellas más adelante.
-
-Recapitulemos. Algunas pilas de notas anuncian el carácter de una escala, es decir, la claridad, oscuridad o desorientación de la misma. Sin embargo, algunas lo anuncian de una forma más exclusiva, más definitiva, que otras. Por qué?
-
-Algunas combinaciones de notas pueden obtenerse en varias escalas, cambiando simplemente la forma de apilar las notas. Cuando acostumbramos al oyente a las pilas de notas alternas, y escucha la pila \texttt{FAB} (una pila ´42´) puede pensar que hemos cambiado la forma de apilar y ahora apilamos dos notas seguidas (\texttt{A} y \texttt{B}), o bien puede pensar que estamos en una escala donde entre \texttt{A} y \texttt{B} hay una nota más, con lo que seguimos apilandolas de forma alterna. La única escala que tiene 3 notas seguidas es \texttt{RED}. Así que esa pila anuncia la oscuridad de una manera digamos \emph{probable}.
-
-Por el contrario, si aparecen las notas \texttt{CEa} (una pila \texttt{44}) eso anuncia irremisiblemente desorientación, puesto que solo empieza a aparecer en \texttt{BLUE}, y no puede conseguirse apilando las notas de \texttt{WHITE} de forma alguna.
-
-La sensación de desorientación es definitiva, se produce de manera inequívoca y directa, en cambio, la sensación de obscuridad se produce de manera más gradual: una vez que aparece el primer síntoma, todavía hay alguna probabilidad de que no sea cierta.
-
-En realidad, mientras para la desorientación solo hace falta la pila \texttt{44}, para la oscuridad disponemos de \emph{dos puertas al averno}: la pila \texttt{24} y la \texttt{42}.
-
-Parece lógico que si son dos, se repartan de alguna manera el efecto. En el caso de la \texttt{24} el oyente se guía más por la tercera mayor y llega a pensar que está oyendo una pila que comienza en la segunda nota, así que cree que es un acorde de cuatro notas donde falta una. Cree que hemos olvidado apilar algunas notas, mientras que en la \texttt{42} cree que hemos decidido apilar las notas sin alternar. Son dos caminos diferentes para ser optimista y evitar pensar en lo peor: que hemos caido en la terrible escala \texttt{BLACK}, la oscuridad total.
-
-.Mapa de pilas image::pile-map.png
-
-.Equivalencias estandar de las pilas image::standard-names-of-piles.png
-
-.Pilas y nombres estandar image::piles-and-standard-names.png
-
-En esta tabla vemos las pilas de 3 y 4 notas de \texttt{WHITE}, \texttt{BLUE} y \texttt{RED}. Se ha numerado cada posición con números enteros de forma que el centro tonal ocupe la posición 0. Aquí se observa claramente, por ejemplo en las pilas de 3 notas las marcas de ``sabor'' de cada conjunto de notas, el sabor ``básico'' de \texttt{WHITE}, con su único tritono y su equilibrio perfecto, el sabor ``desorientador'' de \texttt{BLUE}, con la pila \texttt{-4} y el sabor ``oscuro'' de red, representado en las pilas \texttt{-1} y \texttt{-5}. Observamos también que que la desorientación de \texttt{BLUE} está presente también en \texttt{RED}, en la pila \texttt{-4}.
-
-En las pilas de 4 notas ocurre lo mismo pero en diferentes posiciones: la desorientación de \texttt{BLUE} aparece en las posiciones \texttt{-4} y \texttt{-5} y se comparte con \texttt{RED} en exactamente las mismas posiciones. La marca oscura de \texttt{RED} aparece ahora en tres posiciones: \texttt{-5}, \texttt{-1} y \texttt{4}.
-
-.Nueva partícula en las pilas image::new-particle-in-piles.png
-
+  \begin{table}[H]
+    \centering
+      \begin{tabular}{|m{1em}|m{10cm}|}
+        \hline
+        &\\
+        \iparticle{1,1} & Pregunta sin contestar. Conflicto, indecisión, desenlace latente, tensión\\
+        \hline
+        &\\
+        \iparticle{2,1} & Justicia, naturalidad, triunfo, orden\\
+        \hline
+        &\\
+        \iparticle{1,2} & Injusticia, muerte, drama, fracaso, tristeza\\
+        \hline
+        &\\
+        \iparticle{2,2} & Desorientación, ingravidez, perplejidad, amenaza irremisible\\
+        \hline
+        &\\
+        \iparticle{3,2} & Trazas de \texttt{RED}. Oscuridad, drama, caos \\
+        \hline
+        &\\
+        \iparticle{2,3} & Trazas de \texttt{RED}. Oscuridad, drama, caos \\
+        \hline
+        &\\
+        \iparticle{1,1,2} & Injusticia y pregunta. La sensación es de injusticia, tristeza, dolor, muerte y desolación. Además se presenta un tritono para generar un conflicto a resolver\\
+        \hline
+        &\\
+        \iparticle{2,2,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
+        \hline
+        &\\
+        \iparticle{2,1,2} & Injusticia sobre justicia. La entidad debil es oprimida pero, simultaneamente, es soportada. Doble moral, vicio, sensualidad, indolencia, desgana...
+        \\
+        \hline
+        &\\
+        \iparticle{1,2,1} & Justicia sobre injusticia. Ente opresor que actúa simultaneamente como soporte. Modernidad, avance, dinamismo, consumo, adaptación, el poder soporta a sus vástagos débiles apoyándose en otros como ellos, crecimiento, industria, progreso...\\
+        \hline
+        
+    \end{tabular}
+    \caption{Catálogo de partículas definitivo}\label{tab:particle-catalog}
+  \end{table}
+  
+  Ahora deberíamos preguntarnos lo siguiente:
+  
+  Si un bloque 4 sobre uno 3 significa ``injusticia'', ¿por qué no ocurre lo mismo con un bloque 4 sobre uno 2 ?
+  
+  La respuesta a esta pregunta fundamental es simple. En el bloque \texttt{34} no aparecen trazas de ninguna otra escala, estamos en \texttt{WHITE} y no se detecta ninguna amenaza, el camino está claro, los puntos en el mapa se distinguen perfectamente y hay una pendiente por la que caen las cosas alejándose de la \emph{montaña-tritono}.
+  
+  Con un bloque \texttt{24}, la sensación de justicia o injusticia desaparece inmediatamente debido a la señal de peligro que representa su estructura. Se trata de una alarma encendida, una puerta a lo desconocido, un imprevisto en el camino que hará que revisemos nuestra situación y nos preparemos para encontrarnos problemas: el camino que anuncia es, o bien, más oscuro y peligroso, o más sorprendente y equívoco. Sea lo que sea, no importa su forma, sino lo que ésta indica: problemas.
+  
+  Continuemos con \texttt{BLACK} y \texttt{TONES}
+  
+  .Tritonos en BLACK y en TONES image::tritones-in-black-and-tones.png
+  
+  Hay un ligero inconveniente: una tiene 8 notas y la otra 6. Si las apilamos en notas alternas solo alcanzaremos la mitad de ellas. Se crean dos subconjuntos diferentes. Además de eso, cada nota forma parte de un tritono. Está claro que no son escalas muy útiles para armonizar, son una especie de pozos sin fondo o callejones sin salida. Volveremos sobre ellas más adelante.
+  
+  Recapitulemos. Algunas pilas de notas anuncian el carácter de una escala, es decir, la claridad, oscuridad o desorientación de la misma. Sin embargo, algunas lo anuncian de una forma más exclusiva, más definitiva, que otras. Por qué?
+  
+  Algunas combinaciones de notas pueden obtenerse en varias escalas, cambiando simplemente la forma de apilar las notas. Cuando acostumbramos al oyente a las pilas de notas alternas, y escucha la pila \texttt{FAB} (una pila ´42´) puede pensar que hemos cambiado la forma de apilar y ahora apilamos dos notas seguidas (\texttt{A} y \texttt{B}), o bien puede pensar que estamos en una escala donde entre \texttt{A} y \texttt{B} hay una nota más, con lo que seguimos apilandolas de forma alterna. La única escala que tiene 3 notas seguidas es \texttt{RED}. Así que esa pila anuncia la oscuridad de una manera digamos \emph{probable}.
+  
+  Por el contrario, si aparecen las notas \texttt{CEa} (una pila \texttt{44}) eso anuncia irremisiblemente desorientación, puesto que solo empieza a aparecer en \texttt{BLUE}, y no puede conseguirse apilando las notas de \texttt{WHITE} de forma alguna.
+  
+  La sensación de desorientación es definitiva, se produce de manera inequívoca y directa, en cambio, la sensación de obscuridad se produce de manera más gradual: una vez que aparece el primer síntoma, todavía hay alguna probabilidad de que no sea cierta.
+  
+  En realidad, mientras para la desorientación solo hace falta la pila \texttt{44}, para la oscuridad disponemos de \emph{dos puertas al averno}: la pila \texttt{24} y la \texttt{42}.
+  
+  Parece lógico que si son dos, se repartan de alguna manera el efecto. En el caso de la \texttt{24} el oyente se guía más por la tercera mayor y llega a pensar que está oyendo una pila que comienza en la segunda nota, así que cree que es un acorde de cuatro notas donde falta una. Cree que hemos olvidado apilar algunas notas, mientras que en la \texttt{42} cree que hemos decidido apilar las notas sin alternar. Son dos caminos diferentes para ser optimista y evitar pensar en lo peor: que hemos caido en la terrible escala \texttt{BLACK}, la oscuridad total.
+  
+  .Mapa de pilas image::pile-map.png
+  
+  .Equivalencias estandar de las pilas image::standard-names-of-piles.png
+  
+  .Pilas y nombres estandar image::piles-and-standard-names.png
+  
+  En esta tabla vemos las pilas de 3 y 4 notas de \texttt{WHITE}, \texttt{BLUE} y \texttt{RED}. Se ha numerado cada posición con números enteros de forma que el centro tonal ocupe la posición 0. Aquí se observa claramente, por ejemplo en las pilas de 3 notas las marcas de ``sabor'' de cada conjunto de notas, el sabor ``básico'' de \texttt{WHITE}, con su único tritono y su equilibrio perfecto, el sabor ``desorientador'' de \texttt{BLUE}, con la pila \texttt{-4} y el sabor ``oscuro'' de red, representado en las pilas \texttt{-1} y \texttt{-5}. Observamos también que que la desorientación de \texttt{BLUE} está presente también en \texttt{RED}, en la pila \texttt{-4}.
+  
+  En las pilas de 4 notas ocurre lo mismo pero en diferentes posiciones: la desorientación de \texttt{BLUE} aparece en las posiciones \texttt{-4} y \texttt{-5} y se comparte con \texttt{RED} en exactamente las mismas posiciones. La marca oscura de \texttt{RED} aparece ahora en tres posiciones: \texttt{-5}, \texttt{-1} y \texttt{4}.
+  
+  .Nueva partícula en las pilas image::new-particle-in-piles.png
+  
 \end{document}
-
