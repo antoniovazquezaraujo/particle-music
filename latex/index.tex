@@ -2,9 +2,10 @@
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[]{article}
+\documentclass[]{report}
 \usepackage{amsmath,amssymb}
 \usepackage{standalone}
+\usepackage{titlesec}
 \usepackage{booktabs}
 \usepackage{subcaption}
 \usepackage{graphicx} 
@@ -147,10 +148,21 @@
         \caption{#2}\label{#3}
     \end{figure}
 }
-\author{}
-\date{}
+
+\titleformat{\subtitle}[block]{\bfseries\large}{\thetitle}{1em}{}
+
+\title{Música de partículas \\[1ex] \large Un nuevo marco para la comprensión de la armonía musical}
+
+
+\author{Antonio Vázquez Araújo}
+
+\date{\today}
 
 \begin{document}
+
+\maketitle
+
+
 \floatsetup[table]{capposition=bottom,capbesideposition={bottom,center}}
 \tableofcontents
 \section{Propósito}
@@ -3674,10 +3686,9 @@ every label/.style={green},
         \hline
         
     \end{tabular}
-    \caption{Catálogo de partículas definitivo}\label{tab:particle-catalog}
+    \caption{Catálogo de partículas con sus nombres estandar}\label{tab:particle-catalog}
   \end{table}
 
-  
   
   
 \end{document}
