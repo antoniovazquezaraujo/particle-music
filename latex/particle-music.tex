@@ -52,6 +52,7 @@
 \fi
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+
 \usepackage{pgffor}
 \usepackage{tikz}
 \usepackage{pgf}
@@ -161,11 +162,11 @@
 \begin{document}
 
 \maketitle
+\tableofcontents
 
 
 \floatsetup[table]{capposition=bottom,capbesideposition={bottom,center}}
-\tableofcontents
-\section{Propósito}
+\subsection{Propósito}
 El propósito de este documento es intentar \emph{entender cómo funciona la música}. Es un proyecto personal, guiado simplemente por mi propia curiosidad y por mi afición musical. No pretendo cambiar la forma en que se estudia y enseña música, pero quizá no estaría mal revisar algunas cosas que vienen haciéndose igual durante siglos.
 
 Lógicamente, se puede argumentar que, si algo funciona, para qué cambiarlo. El problema es que \emph{no funciona}. Cualquier persona que se plantee el estudio musical desde cualquier perspectiva, clásica en un conservatorio, jazz en una escuela, electrónica en un laboratorio, o simplemente tocando con amigos en un local de ensayo, encontrará las mismas insatisfactorias viejas respuestas a algunas preguntas que parecen ya abandonadas por imposibles.
@@ -206,18 +207,16 @@ En el universo que habitamos hay algunas reglas establecidas que solemos dar por
 
 \begin{itemize}
 \tightlist%
-  \item         Las cosas tienen una masa y un volumen.
-  \item         Las cosas grandes pesan más que las pequeñas
-  \item         Las cosas pequeñas se mueven más fácilmente que las grandes
-  \item         Las cosas grandes suelen estar abajo, las pequeñas arriba
-  \item         Las cosas pequeñas suelen ser frágiles, las grandes fuertes
-  \item         Los seres vivos son frágiles
-  \item         La luz suele estar arriba, la oscuridad abajo
-  \item         Los cuerpos muertos suelen estar abajo
-  \item         etc, etc.
+  \item Las cosas grandes suelen pesar más que las pequeñas
+  \item Las cosas pequeñas suelen moverse más fácilmente que las grandes
+  \item Las cosas grandes suelen estar abajo, las pequeñas arriba
+  \item Las cosas pequeñas suelen ser más frágiles que las cosas grandes
+  \item La luz suele estar arriba, la oscuridad abajo
+  \item Los cuerpos muertos suelen estar abajo
+  \item etc, etc.
 \end{itemize}
 
-Todas estas ideas están en nuestro cerebro durante toda nuestra vida, y nos sirven para sobrevivir a la realidad. Así que las         utilizamos, casi siempre de forma inconsciente para interpretar lo que         vemos, rechazar lo que tememos, jugar al tenis o beber un vaso de         agua. Lógicamente, forman parte de nuestro lenguaje musical, y además         no se necesita ningún traductor: todos los seres humanos las conocen.         Por eso la música es un lenguaje universal, porque utiliza palabras         que cualquier habitante del mundo real puede reconocer.
+Todas estas ideas están en nuestro cerebro durante toda nuestra vida y nos sirven para sobrevivir a la realidad. Así que las utilizamos, casi siempre de forma inconsciente para interpretar lo que vemos, rechazar lo que tememos, jugar al tenis o beber un vaso de agua. Lógicamente, forman parte de nuestro lenguaje musical, y además no se necesita ningún traductor: todos los seres humanos las conocen. Por eso la música es un lenguaje universal, porque utiliza palabras que cualquier habitante del mundo real puede reconocer.
 
 \subsection{Escala}
 
@@ -2262,7 +2261,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
   \caption{Tabla de tríadas y sus características}\label{tab:triadas}
 \end{table}
 
-\section{Acordes de cada escala}
+\subsection{Acordes de cada escala}
 
 Los acordes que se forman a partir de cada una de las seis escalas son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos. 
 
@@ -3301,7 +3300,7 @@ every label/.style={green},
         \iparticle{1,1,2} & Injusticia y pregunta. La sensación es de injusticia, tristeza, dolor, muerte y desolación. Además se presenta un tritono para generar un conflicto a resolver\\
         \hline
         &\\
-        \iparticle{2,2,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
+        \iparticle{2,1,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
         \hline
         &\\
         \iparticle{2,1,2} & Injusticia sobre justicia. La entidad debil es oprimida pero, simultaneamente, es soportada. Doble moral, vicio, sensualidad, indolencia, desgana...
@@ -3438,7 +3437,7 @@ every label/.style={green},
         \iparticle{1,1,2} & Injusticia y pregunta. La sensación es de injusticia, tristeza, dolor, muerte y desolación. Además se presenta un tritono para generar un conflicto a resolver\\
         \hline
         &\\
-        \iparticle{2,2,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
+        \iparticle{2,1,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
         \hline
         &\\
         \iparticle{2,1,2} & Injusticia sobre justicia. La entidad debil es oprimida pero, simultaneamente, es soportada. Doble moral, vicio, sensualidad, indolencia, desgana...
@@ -3606,7 +3605,7 @@ every label/.style={green},
         \iparticle{1,1,2} & Injusticia y pregunta. La sensación es de injusticia, tristeza, dolor, muerte y desolación. Además se presenta un tritono para generar un conflicto a resolver\\
         \hline
         &\\
-        \iparticle{2,2,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
+        \iparticle{2,1,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
         \hline
         &\\
         \iparticle{2,1,2} & Injusticia sobre justicia. La entidad debil es oprimida pero, simultaneamente, es soportada. Doble moral, vicio, sensualidad, indolencia, desgana...
@@ -3667,16 +3666,16 @@ every label/.style={green},
         \iparticle{2,2} & Mayor con quinta aumentada \\
         \hline
         &\\
-        \iparticle{3,2} & Tercera disminuída y quinta aumentada\\
+        \iparticle{3,2} & Tercera disminuída y quinta bemol\\
         \hline
         &\\
-        \iparticle{2,3} & Mayor con quinta aumentada \\
+        \iparticle{2,3} & Mayor con quinta bemol \\
         \hline
         &\\
         \iparticle{1,1,2} & Medio disminuído\\
         \hline
         &\\
-        \iparticle{2,2,1} & Mayor con séptima bemol o dominante\\
+        \iparticle{2,1,1} & Mayor con séptima bemol o dominante\\
         \hline
         &\\
         \iparticle{2,1,2} & Mayor con séptima mayor\\
@@ -3689,6 +3688,4 @@ every label/.style={green},
     \caption{Catálogo de partículas con sus nombres estandar}\label{tab:particle-catalog}
   \end{table}
 
-  
-  
 \end{document}
