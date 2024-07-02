@@ -4,16 +4,24 @@
 %
 \documentclass[]{report}
 \usepackage{amsmath,amssymb}
-\usepackage{standalone}
-\usepackage{titlesec}
+\usepackage{bookmark}
 \usepackage{booktabs}
-\usepackage{subcaption}
-\usepackage{graphicx} 
-\usepackage{tabularx} 
 \usepackage{floatrow}
+\usepackage{graphicx} 
 \usepackage{iftex}
+\usepackage{lmodern}
+\usepackage{pgf}
+\usepackage{pgffor}
+\usepackage{standalone}
+\usepackage{subcaption}
+\usepackage{tabularx} 
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[spanish]{babel}
+
 \ifPDFTeX%
-\usepackage[T1]{fontenc}
+  \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else% if luatex or xetex
@@ -21,41 +29,43 @@
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
-\usepackage{lmodern}
-\ifPDFTeX\else
-  % xetex/luatex font selection
-\fi
+
 % Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
+\IfFileExists{upquote.sty}{
+  \usepackage{upquote}
+}{}
+
+\IfFileExists{microtype.sty}{
   \usepackage[]{microtype}
   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+
 \makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
+  \@ifundefined{KOMAClassName}{% if non-KOMA class
+    \IfFileExists{parskip.sty}{%
+      \usepackage{parskip}
+    }{% else
+      \setlength{\parindent}{0pt}
+      \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+  }{% if KOMA class
+    \KOMAoptions{parskip=half}
+  }
 \makeatother
-\usepackage{xcolor}
+
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
-  \setlength{
-\itemsep}{0pt}\setlength{\parskip}{0pt}}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+}
+
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
 \ifLuaTeX%
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 
-\usepackage{pgffor}
-\usepackage{tikz}
-\usepackage{pgf}
 \usetikzlibrary{
   arrows.meta,
   decorations.pathmorphing,
@@ -68,10 +78,12 @@
 \usegdlibrary{circular}
 
 \urlstyle{same}
+
 \hypersetup{
   hidelinks,
   pdfcreator={LaTeX via pandoc}
 }
+
 \NewDocumentCommand{\iparticle}{m}{%
     \begin{tikzpicture}[baseline=(current bounding box.base)]
         \tikzset{
@@ -1813,7 +1825,7 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (28) [st, right=of 27] { };
       \node (29) [st, right=of 28] {E};
 
-      \draw [->, ultra thick, color=red] (12.north) to [out=45,in=135] (18.north);
+      \draw [ultra thick, color=red] (12.north) to [out=45,in=135] (18.north);
 
       \node (t1-C) [st, draw=none, below=3pt of 1]  { };
       \node (t1-E) [st, draw=none, below=3pt of 5]  {E};
@@ -1826,8 +1838,8 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (t2-C) [st, draw=none, below=3pt of 25] {C};
       \node (t2-E) [st, draw=none, below=3pt of 29] { };
       
-      \draw [->, rounded corners=2mm] (t1-E.north west) rectangle (t1-B.south east);
-      \draw [->, rounded corners=2mm] (t2-F.north west) rectangle (t2-C.south east);
+      \draw [rounded corners=2mm] (t1-E.north west) rectangle (t1-B.south east);
+      \draw [rounded corners=2mm] (t2-F.north west) rectangle (t2-C.south east);
 
       \node (t3-C) [st, draw=none, below=3pt of t1-C] { };
       \node (t3-E) [st, draw=none, below=3pt of t1-E] { };
@@ -1839,8 +1851,8 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (t4-C) [st, draw=none, below=3pt of t2-C] { };
       \node (t4-E) [st, draw=none, below=3pt of t2-E] { };
       
-      \draw [->, rounded corners=2mm] (t3-G.north west) rectangle (t4-D.south east);
-      \draw [->, rounded corners=2mm] (t4-D.north west) rectangle (t4-A.south east);
+      \draw [rounded corners=2mm] (t3-G.north west) rectangle (t4-D.south east);
+      \draw [rounded corners=2mm] (t4-D.north west) rectangle (t4-A.south east);
 
       \node (t5-C) [st, draw=none, below=3pt of t3-C] {C};
       \node (t5-E) [st, draw=none, below=3pt of t3-E] {E};
@@ -1852,9 +1864,9 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (t7-C) [st, draw=none, below=3pt of t4-C] {C};
       \node (t7-E) [st, draw=none, below=3pt of t4-E] {E};
 
-      \draw [->, rounded corners=2mm] (t5-C.north west) rectangle (t5-G.south east);
-      \draw [->, rounded corners=2mm] (t6-B.north west) rectangle (t6-F.south east);
-      \draw [->, rounded corners=2mm] (t7-A.north west) rectangle (t7-E.south east);
+      \draw [rounded corners=2mm] (t5-C.north west) rectangle (t5-G.south east);
+      \draw [rounded corners=2mm] (t6-B.north west) rectangle (t6-F.south east);
+      \draw [rounded corners=2mm] (t7-A.north west) rectangle (t7-E.south east);
     \end{tikzpicture}    
     
   \end{subfigure}
@@ -1912,8 +1924,8 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (28) [st, right=of 27] { };
       \node (29) [st, right=of 28] {A};
 
-      \draw [->, ultra thick, color=red] (5.north) to [out=45,in=135] (11.north);
-      \draw [->, ultra thick, color=red] (19.north) to [out=45,in=135] (25.north);
+      \draw [ultra thick, color=red] (5.north) to [out=45,in=135] (11.north);
+      \draw [ultra thick, color=red] (19.north) to [out=45,in=135] (25.north);
 
       \node (t1-F) [st, draw=none, below=3pt of 1]  { };
       \node (t1-A) [st, draw=none, below=3pt of 5]  {A};
@@ -1926,8 +1938,8 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (t2-F) [st, draw=none, below=3pt of 25] {F};
       \node (t2-A) [st, draw=none, below=3pt of 29] { };
       
-      \draw [->, rounded corners=2mm] (t1-A.north west) rectangle (t1-e.south east);
-      \draw [->, rounded corners=2mm] (t2-B.north west) rectangle (t2-F.south east);
+      \draw [rounded corners=2mm] (t1-A.north west) rectangle (t1-e.south east);
+      \draw [rounded corners=2mm] (t2-B.north west) rectangle (t2-F.south east);
 
       \node (t3-F) [st, draw=none, below=3pt of t1-F] { };
       \node (t3-A) [st, draw=none, below=3pt of t1-A] { };
@@ -1939,8 +1951,8 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (t4-F) [st, draw=none, below=3pt of t2-F] { };
       \node (t4-A) [st, draw=none, below=3pt of t2-A] { };
       
-      \draw [->, rounded corners=2mm] (t3-C.north west) rectangle (t4-G.south east);
-      \draw [->, rounded corners=2mm] (t4-G.north west) rectangle (t4-D.south east);
+      \draw [rounded corners=2mm] (t3-C.north west) rectangle (t4-G.south east);
+      \draw [rounded corners=2mm] (t4-G.north west) rectangle (t4-D.south east);
 
       \node (t5-F) [st, draw=none, below=3pt of t3-F] {F};
       \node (t5-A) [st, draw=none, below=3pt of t3-A] {A};
@@ -1952,9 +1964,9 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (t7-F) [st, draw=none, below=3pt of t4-F] {F};
       \node (t7-A) [st, draw=none, below=3pt of t4-A] {A};
 
-      \draw [->, rounded corners=2mm] (t5-F.north west) rectangle (t5-C.south east);
-      \draw [->, rounded corners=2mm] (t6-e.north west) rectangle (t6-B.south east);
-      \draw [->, rounded corners=2mm] (t7-D.north west) rectangle (t7-A.south east);
+      \draw [rounded corners=2mm] (t5-F.north west) rectangle (t5-C.south east);
+      \draw [rounded corners=2mm] (t6-e.north west) rectangle (t6-B.south east);
+      \draw [rounded corners=2mm] (t7-D.north west) rectangle (t7-A.south east);
     \end{tikzpicture}    
     
   \end{subfigure}
@@ -2803,7 +2815,7 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
         \draw[ultra thick, color=red] (4) -- (10);
         \draw[ultra thick, color=red] (2) -- (8);
         % \draw [-> ] (11.east) to [out=45,in=135] (8.east);
-        \draw [->] (2cm,0mm) arc [start angle=-40, end angle=60, radius=2cm];
+        \draw (2cm,0mm) arc [start angle=-40, end angle=60, radius=2cm];
       \end{tikzpicture}
     \caption{Agregamos un tritono. Ahora estamos en \textsf{RED}}
     
