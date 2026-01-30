@@ -4,16 +4,24 @@
 %
 \documentclass[]{report}
 \usepackage{amsmath,amssymb}
-\usepackage{standalone}
-\usepackage{titlesec}
+\usepackage{bookmark}
 \usepackage{booktabs}
-\usepackage{subcaption}
-\usepackage{graphicx} 
-\usepackage{tabularx} 
 \usepackage{floatrow}
+\usepackage{graphicx} 
 \usepackage{iftex}
+\usepackage{lmodern}
+\usepackage{pgf}
+\usepackage{pgffor}
+\usepackage{standalone}
+\usepackage{subcaption}
+\usepackage{tabularx} 
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[spanish]{babel}
+
 \ifPDFTeX%
-\usepackage[T1]{fontenc}
+  \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else% if luatex or xetex
@@ -21,40 +29,43 @@
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
-\usepackage{lmodern}
-\ifPDFTeX\else
-  % xetex/luatex font selection
-\fi
+
 % Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
+\IfFileExists{upquote.sty}{
+  \usepackage{upquote}
+}{}
+
+\IfFileExists{microtype.sty}{
   \usepackage[]{microtype}
   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+
 \makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
+  \@ifundefined{KOMAClassName}{% if non-KOMA class
+    \IfFileExists{parskip.sty}{%
+      \usepackage{parskip}
+    }{% else
+      \setlength{\parindent}{0pt}
+      \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+  }{% if KOMA class
+    \KOMAoptions{parskip=half}
+  }
 \makeatother
-\usepackage{xcolor}
+
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
-  \setlength{
-\itemsep}{0pt}\setlength{\parskip}{0pt}}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+}
+
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
 \ifLuaTeX%
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\usepackage{pgffor}
-\usepackage{tikz}
-\usepackage{pgf}
+
 \usetikzlibrary{
   arrows.meta,
   decorations.pathmorphing,
@@ -66,11 +77,16 @@
 } 
 \usegdlibrary{circular}
 
+\tikzset{every picture/.append style={baseline=(current bounding box.center)}}
+\tikzset{graphs/.cd, simple necklace layout/.append style={node distance=0pt,node sep=0pt}}
+
 \urlstyle{same}
+
 \hypersetup{
   hidelinks,
   pdfcreator={LaTeX via pandoc}
 }
+
 \NewDocumentCommand{\iparticle}{m}{%
     \begin{tikzpicture}[baseline=(current bounding box.base)]
         \tikzset{
@@ -161,73 +177,76 @@
 \begin{document}
 
 \maketitle
+\tableofcontents
 
 
 \floatsetup[table]{capposition=bottom,capbesideposition={bottom,center}}
-\tableofcontents
-\section{Propósito}
-El propósito de este documento es intentar \emph{entender cómo funciona la música}. Es un proyecto personal, guiado simplemente por mi propia curiosidad y por mi afición musical. No pretendo cambiar la forma en que se estudia y enseña música, pero quizá no estaría mal revisar algunas cosas que vienen haciéndose igual durante siglos.
+\subsection{Propósito}
+Este documento es un intento de \emph{entender cómo funciona la música} desde un punto de vista explícitamente estructural: qué información aporta un conjunto de notas (acorde/escala) y cómo esa información guía la expectativa del oyente.
 
-Lógicamente, se puede argumentar que, si algo funciona, para qué cambiarlo. El problema es que \emph{no funciona}. Cualquier persona que se plantee el estudio musical desde cualquier perspectiva, clásica en un conservatorio, jazz en una escuela, electrónica en un laboratorio, o simplemente tocando con amigos en un local de ensayo, encontrará las mismas insatisfactorias viejas respuestas a algunas preguntas que parecen ya abandonadas por imposibles.
+La teoría musical tradicional es muy eficaz como \emph{notación y oficio} (permite escribir, interpretar y transmitir música), pero es menos útil cuando buscamos explicaciones: con demasiada frecuencia aparecen respuestas del tipo ``\emph{se hace así}'', ``\emph{queda mejor}'' o ``\emph{tal compositor lo hizo}''.
 
-Me refiero a respuestas del tipo ``\emph{Se puede hacer   así\ldots{}}'' o ``\emph{Queda mejor así}'' o ``\emph{Siempre se ha hecho así}'', o mucho peor aún, ``\emph{Tal compositor lo hizo así}''. Evidentemente, nuestro conocimiento de la música no funciona. Somos capaces de componerla, interpretarla, escribirla y disfrutarla, pero no la entendemos. En absoluto.
+La hipótesis de partida es simple: muchas sensaciones armónicas pueden describirse como consecuencias de relaciones internas (simetrías, distancias, presencia de tritonos, etc.). En lugar de tomar como axiomático que una nota es ``fundamental'' porque produce descanso, intentaremos describir qué condiciones producen esa sensación.
 
-Quizá convendría recordar que la música es un descubrimiento del ser humano, no un invento.
+A lo largo del texto se proponen dos herramientas:
+\begin{itemize}
+\tightlist%
+  \item una notación gráfica/numérica para ver patrones (simetrías, tritonos, ambigüedades),
+  \item un vocabulario mínimo de ``partículas'' para nombrar estructuras sin depender de terminología histórica.
+\end{itemize}
 
-La notación y el compendio teórico que se usan en la actualidad proceden del pasado, donde tampoco la entendía nadie, y evidentemente no son herramientas pensadas para entenderla. Basta con que sirvan para componer, escribir, interpretar y transmitir la música. Para eso sí funcionan, de forma, digamos, aceptable.
-
-Para entenderla, no solo no funcionan, sino que dificultan la tarea hasta el absurdo. Desde los nombres de las notas, las escalas, los acordes, las cadencias, los estilos, hasta el mismo pentagrama y sus estrafalarios símbolos.
-
-Del mismo modo que Copérnico facilitó la comprensión del sistema solar, simplemente cambiando el punto de vista, yo creo (salvando las distancias, astronómicas, por cierto) que se debería cambiar el punto de vista para entender la música, y me explico: pensar que se trata de un invento del capricho humano nos lleva por el camino equivocado, empezando ya por ordenar las notas erróneamente. Tomamos el DO (en la escala natural) como nota inicial, y además le llamamos \emph{fundamental} solo porque nos parece que ``suena bien'', porque nos da una agradable sensación de descanso, terminación y completitud.
-
-Sería equivalente a ordenar los planetas por lo bonitos que son.
-
-La música es armonía matemática (sus reglas no pueden cambiarse), no es un arte decorativo disponible para nuestros caprichos. Sus reglas forman un sistema perfecto, y tienen una estructura interna perfectamente lógica y exacta, no podemos cambiar su orden por uno que nos resulte más agradable, lo que necesitamos es descubrir cuál es ese orden interno.
+El objetivo no es sustituir el lenguaje musical existente, sino aportar un marco que permita:
+\begin{itemize}
+\tightlist%
+  \item explicar por qué ciertas tríadas sugieren estabilidad o tensión,
+  \item comparar escalas por propiedades internas (número y posición de tritonos, ambigüedades, etc.),
+  \item describir (y, en lo posible, predecir) efectos típicos de modulación y reorientación.
+\end{itemize}
 
 \subsection{Simplificación}
 
-En general, el estudio de la música se realiza mediante una serie de conceptos, palabras, símbolos y notaciones que proceden de hace varios siglos. Las reglas se han ido superponiendo según cada compositor iba rompiendo las anteriores. Todo lo que se usa es un poco farragoso y falto de un método científico. Intentaremos simplificarlo un poco, creando una notación más simple, una teoría más clara y sobre todo, que explique de verdad qué es lo que estamos escuchando, sin recurrir nunca a explicaciones caprichosas.
+El estudio de la música suele apoyarse en conceptos, palabras, símbolos y notaciones heredados de hace siglos. Con el tiempo, las reglas se han ido superponiendo a medida que los compositores estiraban o rompían las anteriores, y el resultado es un sistema útil para escribir e interpretar, pero a menudo poco claro para explicar.
+
+Aquí intentaremos simplificar: proponer una notación más directa y una teoría más explícita que describa qué información contiene lo que escuchamos, sin recurrir a explicaciones meramente tradicionales.
 
 \subsection{Reglas matemáticas}
 
-En la música todo tiene una razón. Insisto: no es un invento del ser humano, es un descubrimiento. Tiene reglas matemáticas y no podemos cambiarlas.
+En música, muchas regularidades no son arbitrarias: provienen de relaciones físicas y matemáticas entre frecuencias. El objetivo aquí no es dictar qué ``debería'' gustar, sino describir qué estructuras aparecen y qué consecuencias perceptivas suelen tener.
 
-Es importante no utilizar conceptos como ``\emph{suena   bien}'' o ``\emph{suena mal}''. Esos conceptos nos llevarían por el camino equivocado al analizar, por ejemplo, la escala como un conjunto de notas que comienza y termina en una nota por la única curiosa razón de que esa nota nos produce a nosotros una impresión de descanso o estabilidad.
+Por eso conviene evitar, en lo posible, etiquetas vagas como ``\emph{suena bien}'' o ``\emph{suena mal}'' cuando estamos analizando. En su lugar, intentaremos explicar qué condiciones producen sensaciones como reposo, tensión, expectativa o ambigüedad.
 
 \subsection{Física y sentido común}
 
-Las reglas que rigen la física del mundo en que vivimos influyen completamente en la forma como interpretamos la música. Si algo nos suena conocido intentamos compararlo, catalogarlo, etiquetarlo, asimilarlo. Por eso, la música sirve para expresar ideas, porque recuerda, simula, revive o reconstruye sensaciones del mundo real. Así que no solamente podemos expresar conceptos como grave/agudo, rápido/lento o fuerte/débil. También podemos \emph{evocar} escenas del mundo real. Cuando decimos que una música nos gusta, suele deberse a que representa cosas que nos gustan, nos recuerda a escenas interesantes o a realidades agradables.
+Las reglas físicas del mundo en que vivimos influyen en cómo interpretamos la música. Cuando algo nos suena familiar, intentamos compararlo, etiquetarlo y asimilarlo. Por eso la música no solo describe relaciones internas (intervalos, escalas, acordes), sino que también puede \emph{evocar} escenas y sensaciones del mundo real.
 
-Si los números pudiesen expresar la belleza que esconden, podríamos hablar de lo bonito que es un número por ser primo, por ser la raiz de otro, o por cualquier otra razón puramente matemática. Pero no parece muy serio pretender que los números son más bonitos si nos recuerdan una fecha feliz, o si nos han tocado en un sorteo de la lotería. Sin embargo calificamos la música de esa forma, porque, además de ser un sistema matemático, es un lenguaje que nos permite expresar ideas.
+Si los números pudiesen expresar la belleza que esconden, podríamos decir que un número es ``bonito'' por ser primo, por ser la raíz de otro, o por alguna otra propiedad matemática. Pero no parece muy serio llamar ``bonito'' a un número por recordarnos una fecha feliz. Con la música ocurre algo parecido: además de estructura, funciona como lenguaje y dispara asociaciones.
 
-Dicho de otro modo, la música nos permite emular conceptos que son externos a su propia estructura, por simple parecido a las estructuras de dichos conceptos. Igual que con un lápiz podemos dibujar un gato, mejor dicho, realizar un trazado que a un humano le sugiera, de forma inequívoca y fácilmente analizable, el concepto de ``gato'', con música podemos realizar combinaciones de notas que nos sugieran conceptos como ``alegría'', ``dolor'', ``vértigo'', ``esperanza'', aunque de forma más abstracta, es decir, que nos resulta dificil explicar por qué experimentamos esas percepciones, simplemente nos quedamos en que la música realmente nos sugiere eso. Pero lo hace por simple parecido, igual que el dibujo del gato: hay algo en común entre la estructura interna del concepto de ``alegría'' por ejemplo, y una música determinada.
+Dicho de otro modo, podemos construir patrones sonoros que se parezcan (estructuralmente) a patrones de ideas o emociones. Igual que con un lápiz podemos trazar algo que un humano reconozca como ``gato'', con música podemos producir configuraciones que sugieran ``alegría'', ``dolor'' o ``vértigo''. A menudo no sabemos explicar por qué lo sentimos, pero el paralelismo estructural está ahí.
 
 En el universo que habitamos hay algunas reglas establecidas que solemos dar por supuestas, aunque podrían no estar ahí. Recordemos unas cuantas reglas de sentido común:
 
 \begin{itemize}
 \tightlist%
-  \item         Las cosas tienen una masa y un volumen.
-  \item         Las cosas grandes pesan más que las pequeñas
-  \item         Las cosas pequeñas se mueven más fácilmente que las grandes
-  \item         Las cosas grandes suelen estar abajo, las pequeñas arriba
-  \item         Las cosas pequeñas suelen ser frágiles, las grandes fuertes
-  \item         Los seres vivos son frágiles
-  \item         La luz suele estar arriba, la oscuridad abajo
-  \item         Los cuerpos muertos suelen estar abajo
-  \item         etc, etc.
+  \item Las cosas grandes suelen pesar más que las pequeñas
+  \item Las cosas pequeñas suelen moverse más fácilmente que las grandes
+  \item Las cosas grandes suelen estar abajo, las pequeñas arriba
+  \item Las cosas pequeñas suelen ser más frágiles que las cosas grandes
+  \item La luz suele estar arriba, la oscuridad abajo
+  \item Los cuerpos muertos suelen estar abajo
+  \item etc, etc.
 \end{itemize}
 
-Todas estas ideas están en nuestro cerebro durante toda nuestra vida, y nos sirven para sobrevivir a la realidad. Así que las         utilizamos, casi siempre de forma inconsciente para interpretar lo que         vemos, rechazar lo que tememos, jugar al tenis o beber un vaso de         agua. Lógicamente, forman parte de nuestro lenguaje musical, y además         no se necesita ningún traductor: todos los seres humanos las conocen.         Por eso la música es un lenguaje universal, porque utiliza palabras         que cualquier habitante del mundo real puede reconocer.
+Todas estas ideas están en nuestro cerebro durante toda nuestra vida y nos sirven para sobrevivir a la realidad. Así que las utilizamos, casi siempre de forma inconsciente para interpretar lo que vemos, rechazar lo que tememos, jugar al tenis o beber un vaso de agua. Lógicamente, forman parte de nuestro lenguaje musical, y además no se necesita ningún traductor: todos los seres humanos las conocen. Por eso la música es un lenguaje universal, porque utiliza palabras que cualquier habitante del mundo real puede reconocer.
 
 \subsection{Escala}
 
-Las ondas de sonido proceden de elementos físicos que vibran. Cuerdas, campanas, tubos, etc. Casi ningún elemento vibra de una forma perfecta, formando una onda senoidal, sino que tienen lo que se dice un timbre determinado, es decir, una forma de onda propia. La forma de una onda depende de la cantidad de armónicos que se superpongan a la vibración principal, es decir, de vibraciones simultaneas a velocidades múltiplos de la velocidad base. Así diferenciamos el sonido de un violín del de un saxo, porque tienen diferentes armónicos. Si una onda vibra a una velocidad múltiplo de otra, se combinan formando un sonido uniforme y reconocible, así que decimos que forman armonía. Hay varias mezclas posibles que resultan armónicas, basándose en la proporción matemática entre ellas. Por ejemplo, si una nota vibra 440 veces por segundo y otra 880 forman una armonía perfecta. Pero no ocurre lo mismo con 440 y 457, por ejemplo. El oido separa las dos y detecta que no forman una proporción matemática reconocible. Podríamos calificar de armónicas las proporciones justas, es decir, el doble, el triple, el cuádruple, etc.
+Las ondas de sonido proceden de elementos físicos que vibran: cuerdas, campanas, tubos, etc. Casi ningún elemento vibra de forma perfectamente senoidal; en su lugar aparece un \emph{timbre}, es decir, una forma de onda resultante de superponer a la vibración principal varios armónicos (vibraciones simultáneas a frecuencias múltiplos de la base). Por eso distinguimos un violín de un saxo.
 
-Si tomamos los armónicos que se generan desde una onda base al agregarle más ondas que sean múltiplos de la misma, obtenemos una escala. Está ahí, no se puede cambiar.
+Cuando dos frecuencias guardan una proporción sencilla (por ejemplo $440$ y $880$ Hz), el oído tiende a integrarlas como un todo estable; cuando la proporción es compleja (por ejemplo $440$ y $457$), percibimos batidos o fricción y el cerebro las separa. En este sentido, las relaciones entre armónicos actúan como el sustrato físico de la armonía.
 
-Ese conjunto de notas es el que utilizamos para hacer música, notas que mantienen una relación matemática entre ellas.
+Si tomamos los armónicos generados a partir de una frecuencia base y los ordenamos, obtenemos un conjunto potencial de alturas. Ese conjunto es el que reutiliza la música: notas relacionadas entre sí por proporciones relativamente simples.
 
-Así pues, una \emph{escala} es un conjunto de notas basado en los armónicos naturales. Hay 12 notas, puesto que a partir de ahí, comienzan a repetirse. De entre las 12 se selecciona un subconjunto, generalmente de 7 notas, que nos permite formar un ``mapa'' que tiene una serie de propiedades muy útiles que veremos más adelante.
+Así pues, una \emph{escala} es un subconjunto de notas seleccionado de ese espacio de relaciones. En la práctica occidental hablamos de 12 notas por octava, y de ahí suelen escogerse subconjuntos (a menudo de 7) que sirven como ``mapa'' para orientar la percepción.
 
 \subsection{Tonalidad}
 
@@ -1814,7 +1833,7 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (28) [st, right=of 27] { };
       \node (29) [st, right=of 28] {E};
 
-      \draw [->, ultra thick, color=red] (12.north) to [out=45,in=135] (18.north);
+      \draw [ultra thick, color=red] (12.north) to [out=45,in=135] (18.north);
 
       \node (t1-C) [st, draw=none, below=3pt of 1]  { };
       \node (t1-E) [st, draw=none, below=3pt of 5]  {E};
@@ -1827,8 +1846,8 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (t2-C) [st, draw=none, below=3pt of 25] {C};
       \node (t2-E) [st, draw=none, below=3pt of 29] { };
       
-      \draw [->, rounded corners=2mm] (t1-E.north west) rectangle (t1-B.south east);
-      \draw [->, rounded corners=2mm] (t2-F.north west) rectangle (t2-C.south east);
+      \draw [rounded corners=2mm] (t1-E.north west) rectangle (t1-B.south east);
+      \draw [rounded corners=2mm] (t2-F.north west) rectangle (t2-C.south east);
 
       \node (t3-C) [st, draw=none, below=3pt of t1-C] { };
       \node (t3-E) [st, draw=none, below=3pt of t1-E] { };
@@ -1840,8 +1859,8 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (t4-C) [st, draw=none, below=3pt of t2-C] { };
       \node (t4-E) [st, draw=none, below=3pt of t2-E] { };
       
-      \draw [->, rounded corners=2mm] (t3-G.north west) rectangle (t4-D.south east);
-      \draw [->, rounded corners=2mm] (t4-D.north west) rectangle (t4-A.south east);
+      \draw [rounded corners=2mm] (t3-G.north west) rectangle (t4-D.south east);
+      \draw [rounded corners=2mm] (t4-D.north west) rectangle (t4-A.south east);
 
       \node (t5-C) [st, draw=none, below=3pt of t3-C] {C};
       \node (t5-E) [st, draw=none, below=3pt of t3-E] {E};
@@ -1853,9 +1872,9 @@ Resulta que en notación estandar, a estas tríadas se les llaman \emph{grado fu
       \node (t7-C) [st, draw=none, below=3pt of t4-C] {C};
       \node (t7-E) [st, draw=none, below=3pt of t4-E] {E};
 
-      \draw [->, rounded corners=2mm] (t5-C.north west) rectangle (t5-G.south east);
-      \draw [->, rounded corners=2mm] (t6-B.north west) rectangle (t6-F.south east);
-      \draw [->, rounded corners=2mm] (t7-A.north west) rectangle (t7-E.south east);
+      \draw [rounded corners=2mm] (t5-C.north west) rectangle (t5-G.south east);
+      \draw [rounded corners=2mm] (t6-B.north west) rectangle (t6-F.south east);
+      \draw [rounded corners=2mm] (t7-A.north west) rectangle (t7-E.south east);
     \end{tikzpicture}    
     
   \end{subfigure}
@@ -1913,8 +1932,8 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (28) [st, right=of 27] { };
       \node (29) [st, right=of 28] {A};
 
-      \draw [->, ultra thick, color=red] (5.north) to [out=45,in=135] (11.north);
-      \draw [->, ultra thick, color=red] (19.north) to [out=45,in=135] (25.north);
+      \draw [ultra thick, color=red] (5.north) to [out=45,in=135] (11.north);
+      \draw [ultra thick, color=red] (19.north) to [out=45,in=135] (25.north);
 
       \node (t1-F) [st, draw=none, below=3pt of 1]  { };
       \node (t1-A) [st, draw=none, below=3pt of 5]  {A};
@@ -1927,8 +1946,8 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (t2-F) [st, draw=none, below=3pt of 25] {F};
       \node (t2-A) [st, draw=none, below=3pt of 29] { };
       
-      \draw [->, rounded corners=2mm] (t1-A.north west) rectangle (t1-e.south east);
-      \draw [->, rounded corners=2mm] (t2-B.north west) rectangle (t2-F.south east);
+      \draw [rounded corners=2mm] (t1-A.north west) rectangle (t1-e.south east);
+      \draw [rounded corners=2mm] (t2-B.north west) rectangle (t2-F.south east);
 
       \node (t3-F) [st, draw=none, below=3pt of t1-F] { };
       \node (t3-A) [st, draw=none, below=3pt of t1-A] { };
@@ -1940,8 +1959,8 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (t4-F) [st, draw=none, below=3pt of t2-F] { };
       \node (t4-A) [st, draw=none, below=3pt of t2-A] { };
       
-      \draw [->, rounded corners=2mm] (t3-C.north west) rectangle (t4-G.south east);
-      \draw [->, rounded corners=2mm] (t4-G.north west) rectangle (t4-D.south east);
+      \draw [rounded corners=2mm] (t3-C.north west) rectangle (t4-G.south east);
+      \draw [rounded corners=2mm] (t4-G.north west) rectangle (t4-D.south east);
 
       \node (t5-F) [st, draw=none, below=3pt of t3-F] {F};
       \node (t5-A) [st, draw=none, below=3pt of t3-A] {A};
@@ -1953,9 +1972,9 @@ No es una escala muy cómoda, por esta razón: cuando llegamos a un grado da la 
       \node (t7-F) [st, draw=none, below=3pt of t4-F] {F};
       \node (t7-A) [st, draw=none, below=3pt of t4-A] {A};
 
-      \draw [->, rounded corners=2mm] (t5-F.north west) rectangle (t5-C.south east);
-      \draw [->, rounded corners=2mm] (t6-e.north west) rectangle (t6-B.south east);
-      \draw [->, rounded corners=2mm] (t7-D.north west) rectangle (t7-A.south east);
+      \draw [rounded corners=2mm] (t5-F.north west) rectangle (t5-C.south east);
+      \draw [rounded corners=2mm] (t6-e.north west) rectangle (t6-B.south east);
+      \draw [rounded corners=2mm] (t7-D.north west) rectangle (t7-A.south east);
     \end{tikzpicture}    
     
   \end{subfigure}
@@ -2262,7 +2281,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
   \caption{Tabla de tríadas y sus características}\label{tab:triadas}
 \end{table}
 
-\section{Acordes de cada escala}
+\subsection{Acordes de cada escala}
 
 Los acordes que se forman a partir de cada una de las seis escalas son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos. 
 
@@ -2506,7 +2525,7 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
         \graph [    
           simple necklace layout,
           node sep=0pt, 
-          grow'=up,
+          grow=up,
           node distance=0pt,    
           nodes={
             draw,
@@ -2530,7 +2549,7 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
           -- 11 [as = C]
           -- 12 [draw=none]
         };
-        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw [] (current bounding box.center) circle [radius=28pt];
         \draw[ultra thick, color=red] (4) -- (10);
       \end{tikzpicture}
     \caption{\textsf{WHITE} con su centro tritonal en rojo}
@@ -2547,8 +2566,8 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
         \graph [    
           simple necklace layout,
           node sep=0pt, 
-          grow'=up,
-          node distance=0pt,    
+          grow=up,
+          node distance=0pt,
           nodes={
             draw,
             circle, 
@@ -2571,7 +2590,7 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
           -- 11 [as = C]
           -- 12 [draw=none]
         };
-        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw [] (current bounding box.center) circle [radius=28pt];
         \draw[ultra thick, color=red] (4) -- (10);
         \draw[ultra thick, color=red] (2) -- (8);
       \end{tikzpicture}
@@ -2589,8 +2608,8 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
         \graph [    
           simple necklace layout,
           node sep=0pt, 
-          grow'=up,
-          node distance=0pt,    
+          grow=up,
+          node distance=0pt,
           nodes={
             draw,
             circle, 
@@ -2613,7 +2632,7 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
           -- 11 [as = F]
           -- 12 [draw=none]
         };
-        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw [] (current bounding box.center) circle [radius=28pt];
         \draw[ultra thick, color=red] (3) -- (9);
         \draw[ultra thick, color=red] (5) -- (11);
       \end{tikzpicture}
@@ -2639,8 +2658,7 @@ En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tri
         \graph [    
           simple necklace layout,
           node sep=0pt, 
-          grow'=up,
-          node distance=0pt,    
+          grow=up,
           nodes={
             draw,
             circle, 
@@ -2663,7 +2681,7 @@ En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tri
           -- 11 [as = C]
           -- 12 [draw=none]
         };
-        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw [] (current bounding box.center) circle [radius=28pt];
         \draw[ultra thick, color=red] (4) -- (10);
       \end{tikzpicture}
     \caption{\textsf{WHITE} con su centro tritonal en rojo}
@@ -2680,8 +2698,7 @@ En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tri
         \graph [    
           simple necklace layout,
           node sep=0pt, 
-          grow'=up,
-          node distance=0pt,    
+          grow=up,
           nodes={
             draw,
             circle, 
@@ -2704,7 +2721,7 @@ En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tri
           -- 11 [as = C]
           -- 12 [draw=none]
         };
-        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw [] (current bounding box.center) circle [radius=28pt];
         \draw[ultra thick, color=red] (3) -- (9);
         \draw[ultra thick, color=red] (5) -- (11);
       \end{tikzpicture}
@@ -2734,8 +2751,7 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
         \graph [    
           simple necklace layout,
           node sep=0pt, 
-          grow'=up,
-          node distance=0pt,    
+          grow=up,
           nodes={
             draw,
             circle, 
@@ -2758,7 +2774,7 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
           -- 11 [as = C]
           -- 12 [draw=none]
         };
-        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw [] (current bounding box.center) circle [radius=28pt];
         \draw[ultra thick, color=red] (4) -- (10);
       \end{tikzpicture}
     \caption{\textsf{WHITE} con su centro tritonal en rojo}
@@ -2775,8 +2791,7 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
         \graph [    
           simple necklace layout,
           node sep=0pt, 
-          grow'=up,
-          node distance=0pt,    
+          grow=up,
           nodes={
             draw,
             circle, 
@@ -2800,11 +2815,11 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
           -- 12 [draw=none]
           -- 12 [draw=none]
         };
-        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw [] (current bounding box.center) circle [radius=28pt];
         \draw[ultra thick, color=red] (4) -- (10);
         \draw[ultra thick, color=red] (2) -- (8);
         % \draw [-> ] (11.east) to [out=45,in=135] (8.east);
-        \draw [->] (2cm,0mm) arc [start angle=-40, end angle=60, radius=2cm];
+        \draw (2cm,0mm) arc [start angle=-40, end angle=60, radius=2cm];
       \end{tikzpicture}
     \caption{Agregamos un tritono. Ahora estamos en \textsf{RED}}
     
@@ -2821,8 +2836,7 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
         \graph [    
           simple necklace layout,
           node sep=0pt, 
-          grow'=up,
-          node distance=0pt,    
+          grow=up,
           nodes={
             draw,
             circle, 
@@ -2845,7 +2859,7 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
           -- 11 [draw=none]
           -- 12 [as = e]
         };
-        \draw [] (0,39.50pt) circle [radius=28pt];
+        \draw [] (current bounding box.center) circle [radius=28pt];
         \draw[ultra thick, color=red] (2) -- (8);
         \draw[ultra thick, color=red] (6) -- (12);
       \end{tikzpicture}
@@ -2868,8 +2882,7 @@ Uno de los conceptos más utilizados en el jazz es el de la substitución triton
 		  \graph [    
 			simple necklace layout,
 			node sep=0pt, 
-			grow'=up,
-			node distance=0pt,    
+			grow=up,
 			nodes={
 			  draw,
 			  circle, 
@@ -2892,7 +2905,7 @@ Uno de los conceptos más utilizados en el jazz es el de la substitución triton
 			-- 11 [as = C]
 			-- 12 [draw=none]
 		  };
-		  \draw [] (0,39.50pt) circle [radius=28pt];
+		  \draw [] (current bounding box.center) circle [radius=28pt];
 		  \draw[ultra thick, color=red] (4) -- (10);
 		\end{tikzpicture}
 	  \caption{\textsf{WHITE} con su centro tritonal en rojo}
@@ -2909,8 +2922,7 @@ every label/.style={green},
 		  \graph [    
 			simple necklace layout,
 			node sep=0pt, 
-			grow'=up,
-			node distance=0pt,    
+			grow=up,
 			nodes={
 			  draw,
 			  circle, 
@@ -2933,7 +2945,7 @@ every label/.style={green},
 			-- 11 [draw=none]
 			-- 12 [as = d]
 		  };
-		  \draw [] (0,39.50pt) circle [radius=28pt];
+		  \draw [] (current bounding box.center) circle [radius=28pt];
 		  \draw[ultra thick, color=red] (4) -- (10);
 		  \draw[ultra thick, color=red] (6) -- (12);
 		\end{tikzpicture}
@@ -2951,8 +2963,7 @@ every label/.style={green},
 		  \graph [    
 			simple necklace layout,
 			node sep=0pt, 
-			grow'=up,
-			node distance=0pt,    
+			grow=up,
 			nodes={
 			  draw,
 			  circle, 
@@ -2975,7 +2986,7 @@ every label/.style={green},
 			-- 11 [as = G]
 			-- 12 [draw=none]
 		  };
-		  \draw [] (0,39.50pt) circle [radius=28pt];
+		  \draw [] (current bounding box.center) circle [radius=28pt];
 		  \draw[ultra thick, color=red] (3) -- (9);
 		  \draw[ultra thick, color=red] (5) -- (11);
 		\end{tikzpicture}
@@ -2993,8 +3004,7 @@ every label/.style={green},
 			\graph [    
 			  simple necklace layout,
 			  node sep=0pt, 
-			  grow'=up,
-			  node distance=0pt,    
+			  grow=up,
 			  nodes={
 				draw,
 				circle, 
@@ -3017,7 +3027,7 @@ every label/.style={green},
 			  -- 11 [as = G]
 			  -- 12 [as=a]
 			};
-			\draw [] (0,39.50pt) circle [radius=28pt];
+			\draw [] (current bounding box.center) circle [radius=28pt];
 			\draw[ultra thick, color=red] (3) -- (9);
 			\draw[ultra thick, color=red] (5) -- (11);
 		  \end{tikzpicture}
@@ -3035,8 +3045,7 @@ every label/.style={green},
 			\graph [    
 			  simple necklace layout,
 			  node sep=0pt, 
-			  grow'=up,
-			  node distance=0pt,    
+			  grow=up,
 			  nodes={
 				draw,
 				circle, 
@@ -3059,7 +3068,7 @@ every label/.style={green},
 			  -- 11 [as = d]
 			  -- 12 [draw=none]
 			};
-			\draw [] (0,39.50pt) circle [radius=28pt];
+			\draw [] (current bounding box.center) circle [radius=28pt];
 			\draw[ultra thick, color=red] (3) -- (9);
 			\draw[ultra thick, color=red] (5) -- (11);
 		  \end{tikzpicture}
@@ -3088,17 +3097,17 @@ every label/.style={green},
       \hline
       Tríada &  0  & 1&    2    &    3    &    4    &    5    &    6    &    7    &    8    \\
       \hline
-      23  & \bullet&  & \bullet &         &         & \bullet &         &         &         \\
+      23  & $\bullet$ &  & $\bullet$ &         &         & $\bullet$ &         &         &         \\
       \hline
-      33  & \bullet&  &         & \bullet &         &         & \bullet &         &         \\
+      33  & $\bullet$ &  &         & $\bullet$ &         &         & $\bullet$ &         &         \\
       \hline
-      34  & \bullet&  &         & \bullet &         &         &         & \bullet &         \\
+      34  & $\bullet$ &  &         & $\bullet$ &         &         &         & $\bullet$ &         \\
       \hline
-      42  & \bullet&  &         &         & \bullet &         & \bullet &         &         \\
+      42  & $\bullet$ &  &         &         & $\bullet$ &         & $\bullet$ &         &         \\
       \hline
-      43  & \bullet&  &         &         & \bullet &         &         & \bullet &         \\
+      43  & $\bullet$ &  &         &         & $\bullet$ &         &         & $\bullet$ &         \\
       \hline
-      44  & \bullet&  &         &         & \bullet &         &         &         & \bullet \\
+      44  & $\bullet$ &  &         &         & $\bullet$ &         &         &         & $\bullet$ \\
       \hline
     \end{tabularx}
   \caption{Tabla de partículas}\label{tab:particulas}
@@ -3221,7 +3230,7 @@ every label/.style={green},
         \begin{tabular}{|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|m{1em}|}
           \hline
           &&&&&&\\
-          \iparticle{1,2,1,2} & \iparticle{2,1,2,1} & \iparticle{1,2,1,1} & \iparticle{2,1,1,2} & \iparticle{1,1,2,1} & \iparticle{1,2,1,2} & \iparticle{2,1,2,1} \\
+          \iparticle{1,2,1,2} & \iparticle{2,1,2,1} & \iparticle{1,2,1,1} & \iparticle{2,1,2,1} & \iparticle{1,1,2,1} & \iparticle{1,2,1,2} & \iparticle{2,1,2,1} \\
           A & C & E & G & B & D & F \\
           \hline
       \end{tabular}
@@ -3301,7 +3310,7 @@ every label/.style={green},
         \iparticle{1,1,2} & Injusticia y pregunta. La sensación es de injusticia, tristeza, dolor, muerte y desolación. Además se presenta un tritono para generar un conflicto a resolver\\
         \hline
         &\\
-        \iparticle{2,2,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
+        \iparticle{2,1,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
         \hline
         &\\
         \iparticle{2,1,2} & Injusticia sobre justicia. La entidad debil es oprimida pero, simultaneamente, es soportada. Doble moral, vicio, sensualidad, indolencia, desgana...
@@ -3438,7 +3447,7 @@ every label/.style={green},
         \iparticle{1,1,2} & Injusticia y pregunta. La sensación es de injusticia, tristeza, dolor, muerte y desolación. Además se presenta un tritono para generar un conflicto a resolver\\
         \hline
         &\\
-        \iparticle{2,2,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
+        \iparticle{2,1,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
         \hline
         &\\
         \iparticle{2,1,2} & Injusticia sobre justicia. La entidad debil es oprimida pero, simultaneamente, es soportada. Doble moral, vicio, sensualidad, indolencia, desgana...
@@ -3606,7 +3615,7 @@ every label/.style={green},
         \iparticle{1,1,2} & Injusticia y pregunta. La sensación es de injusticia, tristeza, dolor, muerte y desolación. Además se presenta un tritono para generar un conflicto a resolver\\
         \hline
         &\\
-        \iparticle{2,2,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
+        \iparticle{2,1,1} & Justicia y pregunta. Se emite una sensación de justicia y, simultaneamente se presenta el tritono para plantear un conflicto que se debe resolver\\
         \hline
         &\\
         \iparticle{2,1,2} & Injusticia sobre justicia. La entidad debil es oprimida pero, simultaneamente, es soportada. Doble moral, vicio, sensualidad, indolencia, desgana...
@@ -3667,16 +3676,16 @@ every label/.style={green},
         \iparticle{2,2} & Mayor con quinta aumentada \\
         \hline
         &\\
-        \iparticle{3,2} & Tercera disminuída y quinta aumentada\\
+        \iparticle{3,2} & Tercera disminuída y quinta bemol\\
         \hline
         &\\
-        \iparticle{2,3} & Mayor con quinta aumentada \\
+        \iparticle{2,3} & Mayor con quinta bemol \\
         \hline
         &\\
         \iparticle{1,1,2} & Medio disminuído\\
         \hline
         &\\
-        \iparticle{2,2,1} & Mayor con séptima bemol o dominante\\
+        \iparticle{2,1,1} & Mayor con séptima bemol o dominante\\
         \hline
         &\\
         \iparticle{2,1,2} & Mayor con séptima mayor\\
@@ -3689,6 +3698,4 @@ every label/.style={green},
     \caption{Catálogo de partículas con sus nombres estandar}\label{tab:particle-catalog}
   \end{table}
 
-  
-  
 \end{document}
