@@ -62,6 +62,9 @@
 }
 
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{etoolbox}
+\preto\subsection{\phantomsection}
+\preto\subsubsection{\phantomsection}
 
 \ifLuaTeX%
   \usepackage{selnolig}  % disable illegal ligatures
@@ -87,7 +90,8 @@
 
 \hypersetup{
   hidelinks,
-  pdfcreator={LaTeX via pandoc}
+  pdfcreator={LaTeX via pandoc},
+  hypertexnames=false % avoid duplicate destination names (page.1) in PDF
 }
 
 \NewDocumentCommand{\iparticle}{m}{%
