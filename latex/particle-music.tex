@@ -24,6 +24,8 @@
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
+  % Fail early: pgf graphdrawing requires LuaTeX; prevent accidental pdflatex runs
+  \PackageError{particle-music}{This document requires LuaLaTeX to draw graphs (pgf graphdrawing).\MessageBreak Please compile with lualatex instead of pdflatex}{Use lualatex}
 \else% if luatex or xetex
   \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
@@ -52,7 +54,8 @@
   }
 \makeatother
 
-\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setlength{\emergencystretch}{4em} % prevent overfull lines (increased from 3em)
+\overfullrule=5pt
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}
   \setlength{\parskip}{0pt}
@@ -2515,7 +2518,7 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
 \subsection{Notación circular}
 
 \begin{figure}[H]
-  \begin{subfigure}{.30\textwidth}
+  \begin{subfigure}{.29\textwidth}
     \centering
       \begin{tikzpicture}
         [
@@ -2556,7 +2559,7 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
     
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.30\textwidth}
+  \begin{subfigure}{0.29\textwidth}
     \centering
       \begin{tikzpicture}
         [
@@ -2598,7 +2601,7 @@ El truco consiste en cambiar el centro tonal sin que se mueva el centro tritonal
     
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.30\textwidth}
+  \begin{subfigure}{0.29\textwidth}
     \centering
       \begin{tikzpicture}
         [
@@ -2648,7 +2651,7 @@ En este ejemplo, con una notación circular, más práctica para el análisis de
 En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tritonal no se ha movido, simplemente ha aparecido uno nuevo entre \texttt{A} y \texttt{e}. En el mapa imaginario había una elevación en el terreno, que formaba una pendiente a su alrededor. Ahora hay dos. Pero en algunos puntos, la pendiente sigue siendo idéntica, y en la misma dirección. Esa es la \emph{sencilla} razón de que algunas modulaciones sean más cercanas o agradables al oído que otras.
 
 \begin{figure}[H]
-  \begin{subfigure}{.30\textwidth}
+  \begin{subfigure}{.29\textwidth}
     \centering
       \begin{tikzpicture}
         [
@@ -2688,7 +2691,7 @@ En resumen: hemos cambiado la nota \texttt{E} por \texttt{e}, pero el centro tri
     
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.30\textwidth}
+  \begin{subfigure}{0.29\textwidth}
     \centering
       \begin{tikzpicture}
         [
@@ -2740,8 +2743,8 @@ Otro ejemplo de modulación muy utilizado, entre \texttt{WHITE} de \texttt{D} y 
 
 Deberíamos poner atención al hecho de que una enorme cantidad de música flamenca está basada en solo dos acordes, \texttt{EaB} y \texttt{FAC}. La razón es que esos son los dos más estables de la escala, y de los pocos que tienen una tercera. Se puedes pasar de uno a otro constantemente sin ver la posibilidad de salir de ahí, a no ser que se vuelva a la escala \texttt{WHITE}, haciéndo desaparecer el amenazante tritono entre \texttt{A} y \texttt{e}. Basta con saltar a la tríada \texttt{ACE}, lo cual hacen la mayor parte de las veces, para luego volver a \texttt{GBD}, a \texttt{FAC} y de nuevo a \texttt{EaB}.
 
-\begin{figure}{H}
-  \begin{subfigure}{.30\textwidth}
+\begin{figure}[H]
+  \begin{subfigure}{.31\textwidth}
     \centering
       \begin{tikzpicture}
         [
@@ -2781,7 +2784,7 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
     
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.30\textwidth}
+  \begin{subfigure}{0.35\textwidth}
     \centering
       \begin{tikzpicture}
         [
@@ -2821,12 +2824,12 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
         % \draw [-> ] (11.east) to [out=45,in=135] (8.east);
         \draw (2cm,0mm) arc [start angle=-40, end angle=60, radius=2cm];
       \end{tikzpicture}
-    \caption{Agregamos un tritono. Ahora estamos en \textsf{RED}}
+    {\captionsetup{justification=raggedright,singlelinecheck=false}\caption{Agregamos un tritono. Ahora estamos en \textsf{RED}}}
     
   \end{subfigure}
   \hfill
   \hfill
-  \begin{subfigure}{0.30\textwidth}
+  \begin{subfigure}{0.31\textwidth}
     \centering
       \begin{tikzpicture}
         [ 
@@ -2863,7 +2866,7 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
         \draw[ultra thick, color=red] (2) -- (8);
         \draw[ultra thick, color=red] (6) -- (12);
       \end{tikzpicture}
-    \caption{\textsf{RED} reorientada por el oyente para asimilar el nuevo centro tonal en \textsf{E}}
+    \caption{\parbox{0.85\linewidth}{\textsf{RED} reorientada por el oyente para asimilar el nuevo centro tonal en \textsf{E}}}
     
   \end{subfigure}  
   \caption{Modulación base del flamenco}\label{fig:flamento-modulation}
@@ -2872,7 +2875,7 @@ Deberíamos poner atención al hecho de que una enorme cantidad de música flame
 
 Uno de los conceptos más utilizados en el jazz es el de la substitución tritonal, que consiste en sustituir directamente la escala que se usa para improvisar sobre un acorde dominante por la de un acorde que está a un tritono de distancia. Este sería el mecanismo que hay detrás.
 \begin{figure}[H]
-	\begin{subfigure}{.30\textwidth}
+	\begin{subfigure}{.29\textwidth}
 	  \centering
 		\begin{tikzpicture}
       [
@@ -2912,7 +2915,7 @@ Uno de los conceptos más utilizados en el jazz es el de la substitución triton
 	  
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.30\textwidth}
+	\begin{subfigure}{0.29\textwidth}
 	  \centering
 		\begin{tikzpicture}
       [
@@ -2953,7 +2956,7 @@ every label/.style={green},
 	  
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.30\textwidth}
+	\begin{subfigure}{0.29\textwidth}
 	  \centering
 		\begin{tikzpicture}
       [
@@ -2994,7 +2997,7 @@ every label/.style={green},
 	  
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.30\textwidth}
+	\begin{subfigure}{0.29\textwidth}
 		\centering
 		  \begin{tikzpicture}
         [
@@ -3035,7 +3038,7 @@ every label/.style={green},
 		
 	  \end{subfigure}
 	  \hfill	
-	  \begin{subfigure}{0.30\textwidth}
+	  \begin{subfigure}{0.29\textwidth}
 		\centering
 		  \begin{tikzpicture}
         [
@@ -3125,6 +3128,7 @@ every label/.style={green},
   
   \begin{table}[H]
     \centering
+    \begingroup\setlength{\tabcolsep}{3pt}\small
     \begin{tabular}{|l|l|l|l|l|l|l|l|}
       \hline
       ESTANDAR & ab & WHITE & BLUE & RED & BLACK & PENTA & TONES \\
@@ -3141,7 +3145,8 @@ every label/.style={green},
       \hline
       ? & 23 & 1,4,5,7 & 1,2,4 & 7 & 2,4,6,8 & 1,3 & --- \\
       \hline
-    \end{tabular} 
+    \end{tabular}
+    \endgroup
   \end{table}
   
   
@@ -3183,7 +3188,7 @@ every label/.style={green},
           E & G & B & D & F & A & C \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{WHITE} de 1 nota}\label{tab:particles-one-note}
+      \caption{Partículas \sffamily{WHITE} de 1 nota}\label{tab:particles-one-note-white}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     \begin{table}[H]
@@ -3195,7 +3200,7 @@ every label/.style={green},
           D & F & A & C & E & G & B \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{WHITE} de 2 notas}\label{tab:particles-two-notes}
+      \caption{Partículas \sffamily{WHITE} de 2 notas}\label{tab:particles-two-notes-white}
     \end{table}
    
     \vspace{-2em} % Ajusta el valor según sea necesario
@@ -3208,7 +3213,7 @@ every label/.style={green},
           C & E & G & B & D & F & A \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{WHITE} de 3 notas}\label{tab:particles-three-notes}
+      \caption{Partículas \sffamily{WHITE} de 3 notas}\label{tab:particles-three-notes-white}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     
@@ -3221,7 +3226,7 @@ every label/.style={green},
           B & D & F & A & C & E & G \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{WHITE} de 4 notas}\label{tab:particles-four-notes}
+      \caption{Partículas \sffamily{WHITE} de 4 notas}\label{tab:particles-four-notes-white}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     
@@ -3234,7 +3239,7 @@ every label/.style={green},
           A & C & E & G & B & D & F \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{WHITE} de 5 notas}\label{tab:particles-five-notes}
+      \caption{Partículas \sffamily{WHITE} de 5 notas}\label{tab:particles-five-notes-white}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
    
@@ -3247,7 +3252,7 @@ every label/.style={green},
           G & B & D & F & A & C & E\\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{WHITE} de 6 notas}\label{tab:particles-six-notes}
+      \caption{Partículas \sffamily{WHITE} de 6 notas}\label{tab:particles-six-notes-white}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     
@@ -3260,7 +3265,7 @@ every label/.style={green},
           F & A & C & E & G & B & D \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{WHITE} de 7 notas}\label{tab:particles-seven-notes}
+      \caption{Partículas \sffamily{WHITE} de 7 notas}\label{tab:particles-seven-notes-white}
     \end{table}
     
   Cuando tenemos simplemente una nota, observamos que, en la escala \texttt{WHITE}, el centro es la nota \texttt{D}. Recordemos que marca el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo.
@@ -3341,7 +3346,7 @@ every label/.style={green},
           A & C & e & G & B & D & F \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{BLUE} de 1 nota}\label{tab:particles-one-note}
+      \caption{Partículas \sffamily{BLUE} de 1 nota}\label{tab:particles-one-note-blue}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     \begin{table}[H]
@@ -3353,7 +3358,7 @@ every label/.style={green},
           G & B & D & F & A & C & e \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{BLUE} de 2 notas}\label{tab:particles-two-notes}
+      \caption{Partículas \sffamily{BLUE} de 2 notas}\label{tab:particles-two-notes-blue}
     \end{table}
    
     \vspace{-2em} % Ajusta el valor según sea necesario
@@ -3366,7 +3371,7 @@ every label/.style={green},
           F & A & C & e & G & B & D \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{BLUE} de 3 notas}\label{tab:particles-three-notes}
+      \caption{Partículas \sffamily{BLUE} de 3 notas}\label{tab:particles-three-notes-blue}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     
@@ -3379,7 +3384,7 @@ every label/.style={green},
           e & G & B & D & F & A & C \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{BLUE} de 4 notas}\label{tab:particles-four-notes}
+      \caption{Partículas \sffamily{BLUE} de 4 notas}\label{tab:particles-four-notes-blue}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     
@@ -3392,7 +3397,7 @@ every label/.style={green},
           D & F & A &C & e & G & B \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{BLUE} de 5 notas}\label{tab:particles-five-notes}
+      \caption{Partículas \sffamily{BLUE} de 5 notas}\label{tab:particles-five-notes-blue}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
    
@@ -3405,7 +3410,7 @@ every label/.style={green},
           C & e & G & B & D & F & A \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{BLUE} de 6 notas}\label{tab:particles-six-notes}
+      \caption{Partículas \sffamily{BLUE} de 6 notas}\label{tab:particles-six-notes-blue}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     
@@ -3418,7 +3423,7 @@ every label/.style={green},
           B & D & F & A & C & e & G \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{BLUE} de 7 notas}\label{tab:particles-seven-notes}
+      \caption{Partículas \sffamily{BLUE} de 7 notas}\label{tab:particles-seven-notes-blue}
     \end{table}
   
   Observamos, por supuesto, la misma simetría y el mismo descenso por grados con cada nueva nota. Sin embargo, aparece una nueva partícula con la que no habíamos contado aún: la tríada \texttt{44}. Tendrá que formar parte de nuestro vocabulario. La sensación que produce esta tríada tiene que ver con la orientación. Se trata de dos terceras mayores, no se sabe cuál es la base porque podría ser cualquiera, al estar a distancia de 4 semitonos, apilando 3 de ellas llegamos a la octava, es decir, se termina la escala. Esto es lo mismo que le ocurre a la escala \texttt{TONES}, no tiene orientación. El oyente siente la presencia de tritonos por todas partes, no hay ningún lugar seguro, no se puede huir en ninguna dirección. Da lo mismo en qué grado de la escala estemos, la sensación persiste: amenaza constante y ninguna posibilidad de escape. La diferencia con \texttt{PENTA}, donde no hay ningún tritono es apreciable, aunque allí sí hay una orientación: se sabe en qué grado de la escala estamos, pero no hay necesidad de huir de ningún punto. La tríada \texttt{44} crea una sensación de perplejidad y de amenaza irremisible.
@@ -3477,7 +3482,7 @@ every label/.style={green},
           F & A & C & E & a & B & e \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{RED} de 1 nota}\label{tab:particles-one-note}
+      \caption{Partículas \sffamily{RED} de 1 nota}\label{tab:particles-one-note-red}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     \begin{table}[H]
@@ -3489,7 +3494,7 @@ every label/.style={green},
           E & a & B & e & F & A & C \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{RED} de 2 notas}\label{tab:particles-two-notes}
+      \caption{Partículas \sffamily{RED} de 2 notas}\label{tab:particles-two-notes-red}
     \end{table}
    
     \vspace{-2em} % Ajusta el valor según sea necesario
@@ -3502,7 +3507,7 @@ every label/.style={green},
           e & F & A & C & E & a & B \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{RED} de 3 notas}\label{tab:particles-three-notes}
+      \caption{Partículas \sffamily{RED} de 3 notas}\label{tab:particles-three-notes-red}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     
@@ -3515,7 +3520,7 @@ every label/.style={green},
           C & E & a & B & e & F & A \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{RED} de 4 notas}\label{tab:particles-four-notes}
+      \caption{Partículas \sffamily{RED} de 4 notas}\label{tab:particles-four-notes-red}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     
@@ -3528,7 +3533,7 @@ every label/.style={green},
           B & e & F & A & C & E & a \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{RED} de 5 notas}\label{tab:particles-five-notes}
+      \caption{Partículas \sffamily{RED} de 5 notas}\label{tab:particles-five-notes-red}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
    
@@ -3541,7 +3546,7 @@ every label/.style={green},
           A & C & E & a & B & e & F \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{RED} de 6 notas}\label{tab:particles-six-notes}
+      \caption{Partículas \sffamily{RED} de 6 notas}\label{tab:particles-six-notes-red}
     \end{table}
     \vspace{-2em} % Ajusta el valor según sea necesario
     
@@ -3554,7 +3559,7 @@ every label/.style={green},
           a & B & e & F & A & C & E \\
           \hline
       \end{tabular}
-      \caption{Partículas \sffamily{RED} de 7 notas}\label{tab:particles-seven-notes}
+      \caption{Partículas \sffamily{RED} de 7 notas}\label{tab:particles-seven-notes-red}
     \end{table}
  
   
@@ -3695,7 +3700,7 @@ every label/.style={green},
         \hline
         
     \end{tabular}
-    \caption{Catálogo de partículas con sus nombres estandar}\label{tab:particle-catalog}
+    \caption{Catálogo de partículas con sus nombres estandar}\label{tab:particle-catalog-estandar}
   \end{table}
 
 \end{document}
