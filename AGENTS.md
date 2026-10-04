@@ -9,8 +9,8 @@
 
 | File | Purpose |
 |------|---------|
-| `latex/particle-music.tex` | Main LaTeX manuscript (~959 lines) |
-| `latex/particle-music.pdf` | Latest compiled version |
+| `latex/particle-music.tex` | Main LaTeX manuscript (~3,770 lines) |
+| `latex/build/particle-music.pdf` | Compiled PDF (generated, not versioned) |
 | `Ideas.adoc` | Pending ideas, notes, and outline |
 | `README.md` | Brief project description |
 | `AGENTS.md` | This file - project instructions |
@@ -18,8 +18,14 @@
 ## 🔧 Compilation
 
 ```bash
-# REQUIRED: LuaLaTeX (pgf graphdrawing needs LuaTeX)
+# Recommended: build via script (latexmk + lualatex, output in latex/build/)
+bash scripts/build.sh
+
+# Or directly with LuaLaTeX (pgf graphdrawing needs LuaTeX)
 lualatex latex/particle-music.tex
+
+# Clean build artifacts
+bash scripts/clean.sh
 ```
 
 ⚠️ **Do NOT use pdflatex** - will fail on TikZ graphdrawing library
@@ -128,10 +134,10 @@ Skills are reusable workflows for common tasks. Located in `.opencode/skills/`:
 
 | Skill | File | Purpose |
 |-------|------|---------|
-| Compile LaTeX | `compile-latex.md` | Compile with lualatex and diagnose errors |
-| TikZ Scale Diagram | `tikz-scale-diagram.md` | Generate 3×5 grid scale diagrams |
-| Music Particle | `music-particle.md` | Create particle visualizations (0/1/2/3 stacks) |
-| Integrate Idea | `integrate-idea.md` | Process for integrating Ideas.adoc content |
+| Compile LaTeX | `.opencode/skills/compile-latex/SKILL.md` | Compile with lualatex and diagnose errors |
+| TikZ Scale Diagram | `.opencode/skills/tikz-scale-diagram/SKILL.md` | Generate 3×5 grid scale diagrams |
+| Music Particle | `.opencode/skills/music-particle/SKILL.md` | Create particle visualizations (0/1/2/3 stacks) |
+| Integrate Idea | `.opencode/skills/integrate-idea/SKILL.md` | Process for integrating Ideas.adoc content |
 
 ## 🎯 Project Goals
 
