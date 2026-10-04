@@ -10,6 +10,7 @@
 | File | Purpose |
 |------|---------|
 | `latex/particle-music.tex` | Main LaTeX manuscript (~3,770 lines) |
+| `latex/translated-particle-music.tex` | English translation (synced with 2.0.0) |
 | `latex/build/particle-music.pdf` | Compiled PDF (generated, not versioned) |
 | `Ideas.adoc` | Pending ideas, notes, and outline |
 | `README.md` | Brief project description |
