@@ -3484,6 +3484,75 @@ Estás en una escala con el centro tonal bien asentado y quieres tomar prestada 
 	\item \textbf{Error típico:} encadenar préstamos seguidos; el oyente deja de saber en qué mapa está.
 \end{itemize}
 
+\subsection{El mapa de rutas}
+
+Si reunimos las seis escalas en una sola imagen, el resultado es el mapa de rutas. \textsf{WHITE} es la escala central, la más equilibrada y completa, con un único tritono. Eliminando tritonos desde ella se llega a \textsf{PENTA}, la escala sin ninguna amenaza (0 tritonos); agregándolos se llega a \textsf{BLUE} (2) y \textsf{RED} (2), más oscuras pero todavía orientables, y a \textsf{TONES} (3) y \textsf{BLACK} (4), donde la orientación misma se pone en cuestión. Este mapa resume en una imagen las rutas entre las escalas y lo que cada una cuesta en orientación.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+		scale node/.style={
+			draw=black,
+			thick,
+			rounded corners=2pt,
+			minimum width=1.75cm,
+			minimum height=0.95cm,
+			inner sep=2pt,
+			align=center,
+			font=\sffamily
+		},
+		sense/.style={font=\footnotesize\sffamily, align=center},
+		op/.style={font=\footnotesize\sffamily, inner sep=1pt}
+	]
+		\node[scale node] (penta) at (0,0) {\textsf{PENTA}\\[-3pt]{\scriptsize 0}};
+		\node[scale node] (white) at (3.3,0) {\textsf{WHITE}\\[-3pt]{\scriptsize 1}};
+		\node[scale node] (blue)  at (6.2,1.8) {\textsf{BLUE}\\[-3pt]{\scriptsize 2}};
+		\node[scale node] (red)   at (6.2,-1.8) {\textsf{RED}\\[-3pt]{\scriptsize 2}};
+		\node[scale node] (tones) at (9.6,1.8) {\textsf{TONES}\\[-3pt]{\scriptsize 3}};
+		\node[scale node] (black) at (9.6,-1.8) {\textsf{BLACK}\\[-3pt]{\scriptsize 4}};
+
+		\node[sense] at (0,-1.05) {claridad};
+		\node[sense] at (3.3,-1.05) {equilibrio};
+		\node[sense] at (6.2,0.85) {desconcierto};
+		\node[sense] at (6.2,-2.5) {oscuridad};
+		\node[sense] at (9.6,0.85) {desorientación};
+		\node[sense] at (9.6,-2.5) {oscuridad total};
+
+		\draw[thick, {Latex[length=2mm]}-{Latex[length=2mm]}] (penta) -- (white);
+		\node[op, anchor=south] at (1.65,0.6) {2 añadir / 3 quitar};
+
+		\draw[thick, -{Latex[length=2mm]}]
+			(white.east) to[out=35, in=180]
+			node[midway, above=1pt, op] {2} (blue.west);
+		\draw[thick, -{Latex[length=2mm]}]
+			(white.east) to[out=-35, in=180]
+			node[midway, below=1pt, op] {2} (red.west);
+
+		\draw[thick, -{Latex[length=2mm]}]
+			(white.north) .. controls (3.3,2.7) and (6.3,3.0) .. (tones.west);
+		\node[op] at (5.9,2.62) {2};
+
+		\draw[thick, -{Latex[length=2mm]}]
+			(white.south east) .. controls (4.6,-2.7) and (6.3,-4.0) .. (black.west);
+		\node[op] at (5.9,-3.05) {2};
+
+		\node[red, font=\footnotesize\sffamily, align=center, text width=11.3cm]
+			at (4.9,-4.0) {4: substitución --- intercambio de eje (no es una ruta entre escalas, sino un salto del centro tritonal)};
+	\end{tikzpicture}
+	\caption{El mapa de las seis escalas y sus rutas}\label{fig:route-map}
+\end{figure}
+
+\subsubsection{Cómo leer el mapa}
+
+\begin{itemize} \tightlist
+	\item Cada flecha hacia la derecha es una maniobra 2 (añadir tritono): más tensión, más oscuridad.
+	\item Cada flecha hacia la izquierda es una maniobra 3 (quitar): menos tensión, más claridad.
+	\item \textsf{PENTA} y \textsf{WHITE} conservan el mapa; \textsf{BLUE} y \textsf{RED} añaden una elevación (sorpresa controlada); \textsf{TONES} y \textsf{BLACK} obligan a reconstruirlo (desorientación).
+	\item La substitución (maniobra 4) no es una ruta entre escalas: es un salto del centro tritonal que se paga con un mapa nuevo.
+\end{itemize}
+
+El mapa no sustituye al oído, pero evita elegir la ruta por costumbre: cada viaje tiene un precio en orientación y ahora se puede decidir con la cuenta hecha.
+
 \subsection{Nombres para las tríadas}
 
 Por qué las tríadas tienen esos curiosos nombres en la notación estandar? \emph{Mayor, menor, menor quinta bemol, mayor quinta   aumentada, disminuida\ldots{}}

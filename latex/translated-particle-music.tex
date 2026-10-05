@@ -3313,6 +3313,75 @@ You are in a scale with its tonal center well settled and you want to borrow a p
 	\item \textbf{Typical mistake:} chaining loans back to back; the listener stops knowing which map they are in.
 \end{itemize}
 
+\subsection{The route map}
+
+If we gather the six scales into a single image, the result is the route map. \textsf{WHITE} is the central scale, the most balanced and complete one, with a single tritone. By removing tritones from it we reach \textsf{PENTA}, the scale with no threat at all (0 tritones); by adding them we reach \textsf{BLUE} (2) and \textsf{RED} (2), darker but still orientable, and \textsf{TONES} (3) and \textsf{BLACK} (4), where orientation itself is called into question. This map summarizes in a single image the routes between the scales and what each one costs in orientation.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+		scale node/.style={
+			draw=black,
+			thick,
+			rounded corners=2pt,
+			minimum width=1.75cm,
+			minimum height=0.95cm,
+			inner sep=2pt,
+			align=center,
+			font=\sffamily
+		},
+		sense/.style={font=\footnotesize\sffamily, align=center},
+		op/.style={font=\footnotesize\sffamily, inner sep=1pt}
+	]
+		\node[scale node] (penta) at (0,0) {\textsf{PENTA}\\[-3pt]{\scriptsize 0}};
+		\node[scale node] (white) at (3.3,0) {\textsf{WHITE}\\[-3pt]{\scriptsize 1}};
+		\node[scale node] (blue)  at (6.2,1.8) {\textsf{BLUE}\\[-3pt]{\scriptsize 2}};
+		\node[scale node] (red)   at (6.2,-1.8) {\textsf{RED}\\[-3pt]{\scriptsize 2}};
+		\node[scale node] (tones) at (9.6,1.8) {\textsf{TONES}\\[-3pt]{\scriptsize 3}};
+		\node[scale node] (black) at (9.6,-1.8) {\textsf{BLACK}\\[-3pt]{\scriptsize 4}};
+
+		\node[sense] at (0,-1.05) {clarity};
+		\node[sense] at (3.3,-1.05) {balance};
+		\node[sense] at (6.2,0.85) {bewilderment};
+		\node[sense] at (6.2,-2.5) {darkness};
+		\node[sense] at (9.6,0.85) {disorientation};
+		\node[sense] at (9.6,-2.5) {total darkness};
+
+		\draw[thick, {Latex[length=2mm]}-{Latex[length=2mm]}] (penta) -- (white);
+		\node[op, anchor=south] at (1.65,0.6) {2 add / 3 remove};
+
+		\draw[thick, -{Latex[length=2mm]}]
+			(white.east) to[out=35, in=180]
+			node[midway, above=1pt, op] {2} (blue.west);
+		\draw[thick, -{Latex[length=2mm]}]
+			(white.east) to[out=-35, in=180]
+			node[midway, below=1pt, op] {2} (red.west);
+
+		\draw[thick, -{Latex[length=2mm]}]
+			(white.north) .. controls (3.3,2.7) and (6.3,3.0) .. (tones.west);
+		\node[op] at (5.9,2.62) {2};
+
+		\draw[thick, -{Latex[length=2mm]}]
+			(white.south east) .. controls (4.6,-2.7) and (6.3,-4.0) .. (black.west);
+		\node[op] at (5.9,-3.05) {2};
+
+		\node[red, font=\footnotesize\sffamily, align=center, text width=11.3cm]
+			at (4.9,-4.0) {4: substitution --- exchange of axis (it is not a route between scales, but a leap of the tritone center)};
+	\end{tikzpicture}
+	\caption{The map of the six scales and their routes}\label{fig:route-map}
+\end{figure}
+
+\subsubsection{How to read the map}
+
+\begin{itemize} \tightlist
+	\item Every arrow to the right is a maneuver 2 (add a tritone): more tension, more darkness.
+	\item Every arrow to the left is a maneuver 3 (remove): less tension, more clarity.
+	\item \textsf{PENTA} and \textsf{WHITE} preserve the map; \textsf{BLUE} and \textsf{RED} add an elevation (controlled surprise); \textsf{TONES} and \textsf{BLACK} force it to be rebuilt (disorientation).
+	\item Substitution (maneuver 4) is not a route between scales: it is a leap of the tritone center that is paid for with a new map.
+\end{itemize}
+
+The map does not replace the ear, but it prevents choosing the route out of habit: every journey has a price in orientation, and now it can be decided with the math done.
+
 \subsection{Names for the triads}
 Why do the triads have those curious names in standard notation? \emph{Major, minor, minor flat fifth, major augmented fifth, diminished\ldots{}}
 These are names from the past, which have simply survived until now for lack of a good \emph{ISO} standardization committee. They pose a major obstacle to theoretical handling and the assimilation of concepts.
