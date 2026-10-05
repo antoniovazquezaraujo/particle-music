@@ -1,3 +1,5 @@
+🌐 **Español** | [English](README.en.md)
+
 ## Música de Partículas: Un nuevo marco para la comprensión de la armonía musical
 
 Este documento presenta un nuevo marco para entender la armonía musical, basado en la estructura matemática y las leyes de la percepción humana. Se propone una reinterpretación de la música, alejándose de las convenciones tradicionales y ofreciendo un enfoque más intuitivo y preciso.
@@ -20,4 +22,4 @@ Este documento presenta un nuevo marco para entender la armonía musical, basado
 
 **Este documento es un trabajo en progreso y ofrece una nueva perspectiva sobre la armonía musical. Se espera que este trabajo sirva como punto de partida para futuras investigaciones y desarrollos en este campo.** 
 
-Se puede descargar el fichero `particle-music.pdf` de la última versión en https://github.com/antoniovazquezaraujo/particle-music/releases/latest
+Se pueden descargar los ficheros `particle-music.pdf` (español) y `particle-music-en.pdf` (inglés) de la última versión en https://github.com/antoniovazquezaraujo/particle-music/releases/latest
