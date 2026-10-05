@@ -3173,6 +3173,317 @@ El valor de la tabla no está en renombrar la música, sino en poder predecir el
 
 Una última advertencia: algunas etiquetas tradicionales agrupan varias maniobras, y otras no son más que un caso particular de una sola. Los nombres, por sí mismos, nunca explicaron nada; la maniobra, en cambio, dice exactamente qué información conserva el oyente y cuál tiene que volver a calcular.
 
+\subsection{Fichas de recetas}
+
+La tabla anterior traduce los nombres; estas fichas los convierten en gestos. Cada una parte de una situación concreta (dónde estás, qué quieres) y muestra los dos mapas, antes y después, junto con lo que el oyente conserva, lo que tiene que recalcular y el error en el que se cae con más frecuencia. Son cuatro recetas de bolsillo: no sustituyen al oído, pero ahorran muchos tanteos.
+
+\subsubsection{Modulación cercana: de \textsf{WHITE} a \textsf{BLUE}}
+
+Estás en \textsf{WHITE} de \texttt{D} y quieres pasar a \textsf{BLUE} de \texttt{G} sin que el oyente pierda el hilo.
+
+\begin{figure}[H]
+	\begin{subfigure}{.29\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				node distance=0pt,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as = D]
+				-- 2  [draw=none]
+				-- 3  [as = E]
+				-- 4  [as = F]
+				-- 5  [draw=none]
+				-- 6  [as = G]
+				-- 7  [draw=none]
+				-- 8  [as = A]
+				-- 9  [draw=none]
+				-- 10 [as = B]
+				-- 11 [as = C]
+				-- 12 [draw=none]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (4) -- (10);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{Antes: \textsf{WHITE} con su centro tritonal en rojo}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.29\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				node distance=0pt,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as = G]
+				-- 2  [draw=none]
+				-- 3  [as = A]
+				-- 4  [draw=none]
+				-- 5  [as = B]
+				-- 6  [as = C]
+				-- 7  [draw=none]
+				-- 8  [as = D]
+				-- 9  [as = e]
+				-- 10 [draw=none]
+				-- 11 [as = F]
+				-- 12 [draw=none]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (3) -- (9);
+			\draw[ultra thick, color=red] (5) -- (11);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{Después: \textsf{BLUE} reorientada, con el nuevo centro tonal en \textsf{G}}
+	\end{subfigure}
+	\hfill
+	\caption{Modulación cercana: el mapa antes y después}
+\end{figure}
+
+\begin{itemize} \tightlist
+	\item \textbf{Se conserva:} el tritono antiguo \texttt{B-F} y la pendiente de los grados comunes.
+	\item \textbf{Cambia:} la nota \texttt{E} se convierte en \texttt{e}; aparece el tritono \texttt{A-e}; el centro simétrico pasa de \texttt{D} a \texttt{G}.
+	\item \textbf{Efecto:} sorpresa sin desorientación; el oyente solo aprende los nuevos puntos peligrosos.
+	\item \textbf{En la práctica:} basta con intercambiar la tríada que contiene la nota alterada (\texttt{CEG} $\rightarrow$ \texttt{CEa}) para que el oído acepte el nuevo mapa.
+	\item \textbf{Error típico:} mover además el centro tritonal en el mismo gesto; el oyente pierde la referencia y la modulación ``da un salto''.
+\end{itemize}
+
+\subsubsection{La ida al flamenco: de \textsf{WHITE} a \textsf{RED}}
+
+Estás en \textsf{WHITE} de \texttt{D} y quieres entrar en el sistema flamenco, \textsf{RED} de \texttt{E}.
+
+\begin{figure}[H]
+	\begin{subfigure}{.31\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as = D]
+				-- 2  [draw=none]
+				-- 3  [as = E]
+				-- 4  [as = F]
+				-- 5  [draw=none]
+				-- 6  [as = G]
+				-- 7  [draw=none]
+				-- 8  [as = A]
+				-- 9  [draw=none]
+				-- 10 [as = B]
+				-- 11 [as = C]
+				-- 12 [draw=none]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (4) -- (10);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{Antes: \textsf{WHITE} con su centro tritonal en rojo}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.31\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as = E]
+				-- 2  [as = F]
+				-- 3  [draw=none]
+				-- 4  [draw=none]
+				-- 5  [as = a]
+				-- 6  [as = A]
+				-- 7  [draw=none]
+				-- 8  [as = B]
+				-- 9  [as = C]
+				-- 10 [draw=none]
+				-- 11 [draw=none]
+				-- 12 [as = e]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (2) -- (8);
+			\draw[ultra thick, color=red] (6) -- (12);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{Después: \textsf{RED} reorientada, con el nuevo centro tonal en \textsf{E}}
+	\end{subfigure}
+	\hfill
+	\caption{La ida al flamenco: el mapa antes y después}
+\end{figure}
+
+\begin{itemize} \tightlist
+	\item \textbf{Se conserva:} el tritono \texttt{B-F} y la orientación general del mapa.
+	\item \textbf{Cambia:} \texttt{CEG} pasa a \texttt{CEa}; aparecen dos tríadas refugio, \texttt{EaB} y \texttt{FAC}.
+	\item \textbf{Efecto:} tensión estable, el ``color'' flamenco; los refugios permiten circular indefinidamente.
+	\item \textbf{En la práctica:} alternar \texttt{EaB} $\leftrightarrow$ \texttt{FAC} y volver a \textsf{WHITE} con \texttt{ACE} / \texttt{GBD} para descansar.
+	\item \textbf{Error típico:} quedarse en \textsf{RED} sin volver; el oyente espera la resolución del tritono añadido.
+\end{itemize}
+
+\subsubsection{Substitución tritonal}
+
+Estás en un acorde dominante y quieres improvisar con la escala del acorde que está a un tritono de distancia.
+
+\begin{figure}[H]
+	\begin{subfigure}{.29\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				node distance=0pt,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as = D]
+				-- 2  [draw=none]
+				-- 3  [as = E]
+				-- 4  [as = F]
+				-- 5  [draw=none]
+				-- 6  [as = G]
+				-- 7  [draw=none]
+				-- 8  [as = A]
+				-- 9  [draw=none]
+				-- 10 [as = B]
+				-- 11 [as = C]
+				-- 12 [draw=none]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (4) -- (10);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{Antes: \textsf{WHITE} con su centro tritonal en rojo}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.29\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				node distance=0pt,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as= e]
+				-- 2  [draw=none]
+				-- 3  [as= F]
+				-- 4  [draw=none]
+				-- 5  [as = G]
+				-- 6  [as = a]
+				-- 7  [draw=none]
+				-- 8  [as = b]
+				-- 9  [as = B]
+				-- 10 [draw=none]
+				-- 11 [as = d]
+				-- 12 [draw=none]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (3) -- (9);
+			\draw[ultra thick, color=red] (5) -- (11);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{Después: la escala del acorde a un tritono, \textsf{BLUE} de \texttt{e}}
+	\end{subfigure}
+	\hfill
+	\caption{Substitución tritonal: el mapa antes y después}
+\end{figure}
+
+\begin{itemize} \tightlist
+	\item \textbf{Se conserva:} la pregunta (el tritono) y la resolución esperada.
+	\item \textbf{Cambia:} la escala con la que se improvisa se sustituye por la del acorde a un tritono; el eje tritonal se intercambia.
+	\item \textbf{Efecto:} el mapa se reconstruye (desorientación controlada) aunque la dirección de la resolución no cambie.
+	\item \textbf{En la práctica:} sobre un acorde dominante, usar la escala del acorde que está a un tritono de distancia.
+	\item \textbf{Error típico:} sustituir sin mantener clara la resolución esperada; sin pregunta, el efecto se pierde.
+\end{itemize}
+
+\subsubsection{Intercambio modal (préstamo)}
+
+Estás en una escala con el centro tonal bien asentado y quieres tomar prestada una partícula de otra escala sin cambiar de mapa; las seis escalas están reunidas en la figura \ref{fig:the-six-scales}.
+
+\begin{itemize} \tightlist
+	\item \textbf{Se conserva:} el centro tonal y el mapa general.
+	\item \textbf{Cambia:} la partícula prestada; aparece o se retira un tritono (o una tercera ambigua) según la escala de la que se tome.
+	\item \textbf{Efecto:} enriquecimiento momentáneo: tensión si trae tritono (maniobra 2), alivio si lo retira (maniobra 3).
+	\item \textbf{En la práctica:} tomar partículas de \textsf{PENTA} (sin tritonos, alivio) o de \textsf{BLUE}/\textsf{RED} (tensión) sin cambiar el centro tonal.
+	\item \textbf{Error típico:} encadenar préstamos seguidos; el oyente deja de saber en qué mapa está.
+\end{itemize}
+
 \subsection{Nombres para las tríadas}
 
 Por qué las tríadas tienen esos curiosos nombres en la notación estandar? \emph{Mayor, menor, menor quinta bemol, mayor quinta   aumentada, disminuida\ldots{}}

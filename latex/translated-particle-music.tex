@@ -3002,6 +3002,317 @@ The value of the table is not in renaming music, but in being able to predict th
 
 One final warning: some traditional labels group several maneuvers together, and others are no more than a particular case of a single one. The names, by themselves, never explained anything; the maneuver, on the other hand, says exactly what information the listener keeps and what must be recalculated.
 
+\subsection{Recipe cards}
+
+The previous table translates the names; these cards turn them into gestures. Each one starts from a concrete situation (where you are, what you want) and shows the two maps, before and after, together with what the listener preserves, what they must recalculate and the mistake that is made most often. They are four pocket recipes: they do not replace the ear, but they save a great deal of fumbling.
+
+\subsubsection{Close modulation: from \textsf{WHITE} to \textsf{BLUE}}
+
+You are in \textsf{WHITE} in \texttt{D} and you want to move to \textsf{BLUE} in \texttt{G} without the listener losing the thread.
+
+\begin{figure}[H]
+	\begin{subfigure}{.29\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				node distance=0pt,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as = D]
+				-- 2  [draw=none]
+				-- 3  [as = E]
+				-- 4  [as = F]
+				-- 5  [draw=none]
+				-- 6  [as = G]
+				-- 7  [draw=none]
+				-- 8  [as = A]
+				-- 9  [draw=none]
+				-- 10 [as = B]
+				-- 11 [as = C]
+				-- 12 [draw=none]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (4) -- (10);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{Before: \textsf{WHITE} with its tritone center in red}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.29\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				node distance=0pt,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as = G]
+				-- 2  [draw=none]
+				-- 3  [as = A]
+				-- 4  [draw=none]
+				-- 5  [as = B]
+				-- 6  [as = C]
+				-- 7  [draw=none]
+				-- 8  [as = D]
+				-- 9  [as = e]
+				-- 10 [draw=none]
+				-- 11 [as = F]
+				-- 12 [draw=none]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (3) -- (9);
+			\draw[ultra thick, color=red] (5) -- (11);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{After: \textsf{BLUE} reoriented, with the new tonal center in \textsf{G}}
+	\end{subfigure}
+	\hfill
+	\caption{Close modulation: the map before and after}
+\end{figure}
+
+\begin{itemize} \tightlist
+	\item \textbf{What is preserved:} the old tritone \texttt{B-F} and the slope of the common degrees.
+	\item \textbf{What changes:} the note \texttt{E} becomes \texttt{e}; the tritone \texttt{A-e} appears; the symmetric center moves from \texttt{D} to \texttt{G}.
+	\item \textbf{Effect:} surprise without disorientation; the listener only learns the new dangerous points.
+	\item \textbf{In practice:} it is enough to swap the triad that contains the altered note (\texttt{CEG} $\rightarrow$ \texttt{CEa}) for the ear to accept the new map.
+	\item \textbf{Typical mistake:} also moving the tritone center in the same gesture; the listener loses the reference and the modulation ``jumps''.
+\end{itemize}
+
+\subsubsection{The journey into flamenco: from \textsf{WHITE} to \textsf{RED}}
+
+You are in \textsf{WHITE} in \texttt{D} and you want to enter the flamenco system, \textsf{RED} in \texttt{E}.
+
+\begin{figure}[H]
+	\begin{subfigure}{.31\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as = D]
+				-- 2  [draw=none]
+				-- 3  [as = E]
+				-- 4  [as = F]
+				-- 5  [draw=none]
+				-- 6  [as = G]
+				-- 7  [draw=none]
+				-- 8  [as = A]
+				-- 9  [draw=none]
+				-- 10 [as = B]
+				-- 11 [as = C]
+				-- 12 [draw=none]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (4) -- (10);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{Before: \textsf{WHITE} with its tritone center in red}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.31\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as = E]
+				-- 2  [as = F]
+				-- 3  [draw=none]
+				-- 4  [draw=none]
+				-- 5  [as = a]
+				-- 6  [as = A]
+				-- 7  [draw=none]
+				-- 8  [as = B]
+				-- 9  [as = C]
+				-- 10 [draw=none]
+				-- 11 [draw=none]
+				-- 12 [as = e]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (2) -- (8);
+			\draw[ultra thick, color=red] (6) -- (12);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{After: \textsf{RED} reoriented, with the new tonal center in \textsf{E}}
+	\end{subfigure}
+	\hfill
+	\caption{The journey into flamenco: the map before and after}
+\end{figure}
+
+\begin{itemize} \tightlist
+	\item \textbf{What is preserved:} the tritone \texttt{B-F} and the general orientation of the map.
+	\item \textbf{What changes:} \texttt{CEG} becomes \texttt{CEa}; two shelter triads appear, \texttt{EaB} and \texttt{FAC}.
+	\item \textbf{Effect:} stable tension, the flamenco ``color''; the shelters make it possible to circulate indefinitely.
+	\item \textbf{In practice:} alternate \texttt{EaB} $\leftrightarrow$ \texttt{FAC} and return to \textsf{WHITE} with \texttt{ACE} / \texttt{GBD} to rest.
+	\item \textbf{Typical mistake:} staying in \textsf{RED} without returning; the listener expects the resolution of the added tritone.
+\end{itemize}
+
+\subsubsection{Tritonal substitution}
+
+You are on a dominant chord and you want to improvise with the scale of the chord a tritone away.
+
+\begin{figure}[H]
+	\begin{subfigure}{.29\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				node distance=0pt,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as = D]
+				-- 2  [draw=none]
+				-- 3  [as = E]
+				-- 4  [as = F]
+				-- 5  [draw=none]
+				-- 6  [as = G]
+				-- 7  [draw=none]
+				-- 8  [as = A]
+				-- 9  [draw=none]
+				-- 10 [as = B]
+				-- 11 [as = C]
+				-- 12 [draw=none]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (4) -- (10);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{Before: \textsf{WHITE} with its tritone center in red}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.29\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[
+				every label/.style={green},
+				radius=1.25cm
+			]
+			\graph [
+				simple necklace layout,
+				node sep=0pt,
+				grow=up,
+				node distance=0pt,
+				nodes={
+						draw,
+						circle,
+						as =  ,
+						minimum size=20pt,
+						font=\sffamily
+					}
+			]
+			{
+				1  [as= e]
+				-- 2  [draw=none]
+				-- 3  [as= F]
+				-- 4  [draw=none]
+				-- 5  [as = G]
+				-- 6  [as = a]
+				-- 7  [draw=none]
+				-- 8  [as = b]
+				-- 9  [as = B]
+				-- 10 [draw=none]
+				-- 11 [as = d]
+				-- 12 [draw=none]
+			};
+			\draw [] (current bounding box.center) circle [radius=28pt];
+			\draw[ultra thick, color=red] (3) -- (9);
+			\draw[ultra thick, color=red] (5) -- (11);
+		\end{tikzpicture}
+		\captionsetup{width=\textwidth}
+		\caption{After: the scale of the chord a tritone away, \textsf{BLUE} in \texttt{e}}
+	\end{subfigure}
+	\hfill
+	\caption{Tritonal substitution: the map before and after}
+\end{figure}
+
+\begin{itemize} \tightlist
+	\item \textbf{What is preserved:} the question (the tritone) and the expected resolution.
+	\item \textbf{What changes:} the scale used to improvise is replaced by that of the chord a tritone away; the tritonal axis is swapped.
+	\item \textbf{Effect:} the map is rebuilt (controlled disorientation) even though the direction of the resolution does not change.
+	\item \textbf{In practice:} over a dominant chord, use the scale of the chord a tritone away.
+	\item \textbf{Typical mistake:} substituting without keeping the expected resolution clear; without a question, the effect is lost.
+\end{itemize}
+
+\subsubsection{Modal exchange (borrowing)}
+
+You are in a scale with its tonal center well settled and you want to borrow a particle from another scale without changing maps; the six scales are gathered in figure \ref{fig:the-six-scales}.
+
+\begin{itemize} \tightlist
+	\item \textbf{What is preserved:} the tonal center and the general map.
+	\item \textbf{What changes:} the borrowed particle; a tritone (or an ambiguous third) appears or is withdrawn depending on the scale it is taken from.
+	\item \textbf{Effect:} momentary enrichment: tension if it brings a tritone (maneuver 2), relief if it removes one (maneuver 3).
+	\item \textbf{In practice:} take particles from \textsf{PENTA} (no tritones, relief) or from \textsf{BLUE}/\textsf{RED} (tension) without changing the tonal center.
+	\item \textbf{Typical mistake:} chaining loans back to back; the listener stops knowing which map they are in.
+\end{itemize}
+
 \subsection{Names for the triads}
 Why do the triads have those curious names in standard notation? \emph{Major, minor, minor flat fifth, major augmented fifth, diminished\ldots{}}
 These are names from the past, which have simply survived until now for lack of a good \emph{ISO} standardization committee. They pose a major obstacle to theoretical handling and the assimilation of concepts.
