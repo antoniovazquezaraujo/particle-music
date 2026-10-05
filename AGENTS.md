@@ -118,6 +118,13 @@ git status
 - Table width exceeds textwidth → use `\resizebox`
 - TikZ baseline misalignment → check `baseline=` option
 
+## 🌿 Git Workflow
+
+- **Never commit directly to `main` or `develop`**: every change goes on a branch (`feat/`, `fix/`, `docs/`, `chore/`).
+- Open a Pull Request for every change, even small ones: `gh pr create --base develop`.
+- After merging, delete the branch (local and remote).
+- Releases: bump `\docversion`, fast-forward `main`, tag, and publish with `gh release create`.
+
 ## 🤖 Agents
 
 Agents are specialized configurations for different types of work. Located in `.opencode/agents/`:
