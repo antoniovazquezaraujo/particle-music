@@ -122,8 +122,9 @@ git status
 
 - **Never commit directly to `main` or `develop`**: every change goes on a branch (`feat/`, `fix/`, `docs/`, `chore/`).
 - Open a Pull Request for every change, even small ones: `gh pr create --base develop`.
-- After merging, delete the branch (local and remote).
-- Releases: bump `\docversion`, fast-forward `main`, tag, and publish with `gh release create`.
+- **Only the author merges.** Agents must never merge their own PRs: leave them open for review and wait for explicit approval before merging.
+- After the PR is merged (by the author), delete the branch (local and remote).
+- Releases: bump `\docversion`, fast-forward `main`, tag, and publish with `gh release create` — only with explicit author approval at each step.
 
 ## 🤖 Agents
 
