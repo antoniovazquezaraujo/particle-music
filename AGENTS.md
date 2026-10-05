@@ -135,7 +135,7 @@ Agents are specialized configurations for different types of work. Located in `.
 | TikZ Artist | `tikz-artist.md` | Creates scale diagrams and particle visualizations |
 | Content Integrator | `content-integrator.md` | Integrates pending ideas from Ideas.adoc |
 | Theory Reviewer | `theory-reviewer.md` | Reviews theoretical coherence and terminology |
-| Jazz Harmony Expert | `jazz-harmony-expert.md` | Provides and verifies jazz practice (repertoire, substitutions, modal interchange) without inventing framework theory |
+| Miles (Jazz Harmony Expert) | `miles.md` | Provides and verifies jazz practice (repertoire, substitutions, modal interchange) without inventing framework theory |
 
 ## 🛠️ Skills
 
