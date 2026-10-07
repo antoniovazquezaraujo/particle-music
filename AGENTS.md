@@ -137,6 +137,7 @@ Agents are specialized configurations for different types of work. Located in `.
 | Content Integrator | `content-integrator.md` | Integrates pending ideas from Ideas.adoc |
 | Theory Reviewer | `theory-reviewer.md` | Reviews theoretical coherence and terminology |
 | Miles (Jazz Harmony Expert) | `miles.md` | Provides and verifies jazz practice (repertoire, substitutions, modal interchange) without inventing framework theory |
+| Todd (Fresh Ears) | `todd.md` | Theory-free, pitch-perfect 14-year-old: comprehension tests, fresh questions and experiments |
 
 ## 🛠️ Skills
 
