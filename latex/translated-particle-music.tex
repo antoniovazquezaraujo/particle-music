@@ -345,12 +345,20 @@ These are the scales that are commonly used and the names that have been assigne
 \textsf{BLUE} & Melodic minor scale & \\
 \textsf{RED} & Harmonic minor scale & \\
 \textsf{BLACK} & Diminished scale & \\
-\textsf{PENTA} & Pentatonic scale & \\
+\textsf{PENTA} & Pentatonic view of \textsf{WHITE}/\textsf{BLUE} & \\
 \textsf{TONES} & Whole tone scale & \\
 \bottomrule
 \end{tabular}
 \caption{Table of musical scales}\label{tab:scale-name-equivalences}
 \end{table}
+
+\textsf{PENTA} is included in the table because its note set and character are
+part of the theory, but it is not a parent scale: it is a view of
+\textsf{WHITE} or \textsf{BLUE}. The parent scales are \textsf{WHITE},
+\textsf{BLUE}, \textsf{RED}, \textsf{BLACK} and \textsf{TONES}; \textsf{FULL} is
+the complete chromatic set. We will return to this distinction when discussing
+modulation and oriented tritones.
+
 In the notation created, the degrees of the scale are represented as numbers. It should be noted that the first degree of the scale is not, as in traditional notation, the degree farthest from the tritone (in the diatonic scale it would be C), but the degree that, as the figures show, occupies the center of the structure (in the diatonic scale it would be D). Starting from the initial note and rotating clockwise, we go up a tone until we return to the initial tone, that is, we go up an octave.
 \begin{figure}[H]
 	\begin{subfigure}{0.3\textwidth}
@@ -469,7 +477,7 @@ In the notation created, the degrees of the scale are represented as numbers. It
 			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
 		\end{tikzpicture}
-		\caption{\textsf{PENTA}}
+		\caption{\textsf{PENTA (view)}}
 
 	\end{subfigure}
 	\hfill
@@ -496,7 +504,7 @@ In the notation created, the degrees of the scale are represented as numbers. It
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{The six scales}\label{fig:the-six-scales}
+	\caption{The five parent scales and the \textsf{PENTA} view}\label{fig:the-six-scales}
 \end{figure}
 Note that in the \textsf{BLACK} scale, the symmetry is not based on the notes, but on the space between them, and there is not a central note, but a space between notes in the center. The feeling of symmetry that the listener perceives is identical and the notation reflects this.
 This notation is very simple, portable and practical. At a glance, one can observe the symmetry of all the scales. If you compare it with traditional notation, where no symmetry is appreciated, you will notice an incredible improvement in the possibilities it offers for analysis, study and assimilation.
@@ -547,7 +555,7 @@ This would be the representation of the \texttt{BLUE} scale of \texttt{A}, that 
 	\caption{The BLUE scale of A}\label{fig:blue-scale-of-a}
 \end{figure}
 \subsection{Modes}
-Modes are the different ``views'' of existing scales, that is, the same scale taken starting from different notes.
+Modes are the different \emph{orientations} of existing scales, that is, the same scale taken starting from different notes. In this text we will reserve the word \emph{view} (or \emph{projection}) for reductions by collapse, such as \textsf{PENTA}; a mode does not remove notes, it only changes the starting point.
 From the scales presented, these modes are generated. For now, we have assigned a number to each (let's not invent names, if possible!), taking zero as the central mode and then positive or negative numbers if we go down or up the scale.
 The historical names of the modes are directly taken from Greek culture, they are \textsf{Dorian}, \textsf{Ionian}, \textsf{Mixolydian}\ldots etc. As if they were ancient buildings. And let's not talk about the modes of the melodic minor scale (our \textsf{BLUE} scale), \textsf{Phrygian augmented}, \textsf{Lydian$\sharp$4}, \textsf{Locrian$\sharp$2}, \textsf{Superlocrian $\flat$$\flat$7}. No doubt something needs to be done to stop using these outlandish ``proto-phonetic'' artifacts of antiquity.
 \begin{figure}[H]
@@ -1285,7 +1293,10 @@ The historical names of the modes are directly taken from Greek culture, they ar
 	\caption{The only mode of \textsf{TONES}}\label{fig:the-tones-modes}
 \end{figure}
 \subsection{Triads of \textsf{PENTA}}
-The \textsf{PENTA} scale has triads like the others. If they are taken as in standard notation, it seems that instead of thirds, they are formed by fourths, so they are talked about as \emph{fourths chords}, or \emph{quartal harmony}. This is totally unnecessary. The only thing that happens is that those notes do not exist in that scale. They are simply the thirds of that scale. There is no need to make exceptions. The difference with the triads of a scale that contains tritones is that these do not lead anywhere, they all work equally well. They are all equally stable and there is no need to move away from any point.
+\textsf{PENTA} is a pentatonic view of \textsf{WHITE} or \textsf{BLUE}, not a
+parent scale. The triads below describe that note set and its character, but
+its centre and tritones are inherited from the parent.
+The \textsf{PENTA} view has triads like the others. If they are taken as in standard notation, it seems that instead of thirds, they are formed by fourths, so they are talked about as \emph{fourths chords}, or \emph{quartal harmony}. This is totally unnecessary. The only thing that happens is that those notes do not exist in that scale. They are simply the thirds of that scale. There is no need to make exceptions. The difference with the triads of a scale that contains tritones is that these do not lead anywhere, they all work equally well. They are all equally stable and there is no need to move away from any point.
 Perhaps this concept should also make us review the name of the intervals: the words ``third'' or ``fourth'' should not continue to be used either, they are simply the intervals that are found between the alternate notes of a scale. It doesn't matter if they are 3 or 4, what matters is that they are the alternate intervals of that particular scale.
 \subsection{Non-orientative triads}
 A chord can be used to mark the degree or not. Thus, you can play chords above the same degree without disorienting the listener, generally suggesting, for example with the rhythm, that you are not changing degrees, it is simply a melody made of triads. Thus, jazz musicians often improvise using fourths chords (\emph{quartal harmony}) without emphasizing them too much so as not to confuse the listener, marking the weak beats or making irregular rhythmic patterns, more typical of a melody than a harmonic bass. Even the bass can do the same thing, improvise on a harmonic structure without changing its character, simply making it clear that it is not what it wants to do, either by rhythmic scheme, the sound used, or any other trick. What it's all about is that the listener clearly distinguishes what degree of the scale is at each moment, so that they can analyze and assimilate everything they hear above.
@@ -1427,7 +1438,7 @@ When representing the tritones, it is observed that they also occupy their perfe
 			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
 		\end{tikzpicture}
-		\caption{\textsf{PENTA}}
+		\caption{\textsf{PENTA (view)}}
 
 	\end{subfigure}
 	\hfill
@@ -1458,13 +1469,13 @@ When representing the tritones, it is observed that they also occupy their perfe
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{The six scales and their tritones}\label{fig:the-six-scales-and-tritones}
+	\caption{The five parent scales, the \textsf{PENTA} view and their tritones}\label{fig:the-six-scales-and-tritones}
 \end{figure}
 As you can see, the \texttt{WHITE} scale (diatonic major scale, the most used in classical music) only has one tritone.
 The \texttt{BLUE} scale (remember, in standard terminology, \emph{melodic minor}) is, by far, the most used in jazz. It has two tritones and this allows for greater capacity for deception and surprise, varying almost imperceptibly between major/minor and minor/major sensations.
 The \texttt{RED} scale is widely used in flamenco, also with two tritones.
 The \texttt{BLACK} scale has 4 tritones, it is used a lot in classical music when you want to emphasize the tritone sensation, without palliatives or tricks, it does not offer any space for relaxation and is usually used for short periods of time.
-The \texttt{PENTA} scale does not have any tritone. There are no threats, it is used in simple music, children's songs or basically in all primitive civilizations. There is no possibility of deception or surprise and it does not ask the listener any questions. It is rather decorative, suitable for the adornment of parties and primary expressions. Its triads give rise to a type of harmony called \emph{fourths harmony}.
+The \texttt{PENTA} view does not have any tritone. There are no threats, it is used in simple music, children's songs or basically in all primitive civilizations. There is no possibility of deception or surprise and it does not ask the listener any questions. It is rather decorative, suitable for the adornment of parties and primary expressions. Its triads give rise to a type of harmony called \emph{fourths harmony}.
 The \texttt{TONES} scale has three tritones, but only six notes and also, it has no possible orientation. We will talk about this later.
 This same thing happens with \texttt{BLUE} and \texttt{RED}, although there are two tritones.
 However, in \texttt{BLACK} we find eight notes in the scale, so between each note of the tritone there are always three, no matter in what direction we move.
@@ -1593,7 +1604,7 @@ Some scales have an ambiguous third on one of their degrees, that is, it could b
 			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
 		\end{tikzpicture}
-		\caption{\textsf{PENTA}}
+		\caption{\textsf{PENTA (view)}}
 
 	\end{subfigure}
 	\hfill
@@ -1620,7 +1631,7 @@ Some scales have an ambiguous third on one of their degrees, that is, it could b
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{The six scales and ambiguous thirds}\label{fig:the-six-scales-and-ambiguous-thirds}
+	\caption{The five parent scales, the \textsf{PENTA} view and ambiguous thirds}\label{fig:the-six-scales-and-ambiguous-thirds}
 \end{figure}
 In this scheme we observe (marked in dark) the degrees that form a third that can be major and also minor.
 \begin{itemize} \tightlist
@@ -1679,7 +1690,7 @@ If all the degrees of the scale have a third, major or minor, we will consider t
 			\node (11)[st=white,below of= 12] { }; \node (21) [st=red,   right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
 		\end{tikzpicture}
-		\caption{\textsf{PENTA}}
+		\caption{\textsf{PENTA (view)}}
 
 	\end{subfigure}
 	\caption{Scales with degrees without thirds}\label{fig:scales-with-no-thirds}
@@ -1888,7 +1899,7 @@ Looking for more is an interesting exercise. It would be fantastic to find some,
 \item That the orientation is unique
 \item That the notes are distributed without being grouped into blocks
 \end{itemize}
-Any combination that is found will simply be a different ordering of one of the six presented (which would be a mode, remember). If you rotate it in the scheme you will get to it. Let's try a few:
+Any combination that is found will simply be a different ordering of one of the five parent scales presented or one of their projections (which would be a mode, remember). If you rotate it in the scheme you will get to it. Let's try a few:
 \begin{figure}[H]
 	\begin{subfigure}{0.15\textwidth}
 		\centering
@@ -2170,7 +2181,7 @@ FAC & 2 & 1 \\
 \caption{Table of triads and their characteristics}\label{tab:triadas}
 \end{table}
 \subsection{Chords of each scale}
-The chords that are formed from each of the six scales are the same ones that are normally used, but it would be necessary to refer to them without having to use the inconsistent classical names.
+The chords that are formed from each of the five parent scales and the \textsf{PENTA} view are the same ones that are normally used, but it would be necessary to refer to them without having to use the inconsistent classical names.
 A possible notation for naming chords could consist of specifying only three elements:
 \begin{itemize}
 \item The scale
@@ -2504,6 +2515,12 @@ The trick is to change the tonal center without moving the tritone center. But h
 \end{figure}
 In this example, with a circular notation, more practical for the analysis of orientation, between \texttt{WHITE} in \texttt{D} and \texttt{BLUE} in \texttt{G}, we observe that a new tritone center is simply added, but the one we had remains in the same place. So all you have to do is ``rotate the map'' to reorient yourself.
 In summary: we have changed the note \texttt{E} for \texttt{e}, but the tritone center has not moved, it has simply appeared a new one between \texttt{A} and \texttt{e}. In the imaginary map there was an elevation in the terrain, which formed a slope around it. Now there are two. But at some points, the slope is still identical, and in the same direction. That is the \emph{simple} reason why some modulations are closer or more pleasing to the ear than others.
+
+\emph{Note for the oriented reading.} If the tritone is read in the order in
+which it appears in the scale (in \texttt{WHITE} in \texttt{D}, \texttt{F}
+before \texttt{B}), this example preserves the pair but inverts its
+orientation. The pure modulation, without inversion, is the flamenco example
+below; the section \hyperref[sec:oriented-tritones]{``Oriented tritones and tritone-count modulation''} will make the difference precise.
 \begin{figure}[H]
 	\begin{subfigure}{.29\textwidth}
 		\centering
@@ -2939,8 +2956,105 @@ One of the most used concepts in jazz is that of tritone substitution, which con
 	\hfill
 	\caption{The basis of tritonal substitution}\label{fig:tritonal-substitution}
 \end{figure}
+
+\emph{Oriented reading.} Tritonal substitution preserves the note pair but
+inverts its orientation; it is the opposite case from pure modulation.
+The section \hyperref[sec:oriented-tritones]{``Oriented tritones and tritone-count modulation''} treats it as a separate inversion.
  
   
+\subsection{Oriented tritones and tritone-count modulation}
+\label{sec:oriented-tritones}
+
+Until now we have treated the tritone as an unordered pair of notes: the same
+object whether it is written \texttt{F-B} or \texttt{B-F}. That reading is
+enough to describe tension, but not to compare two scales precisely. If we
+order the notes of the scale from its tonal centre and write the tritone in the
+order in which its two notes appear, we obtain an oriented pair. In
+\texttt{WHITE} in \texttt{D} the tritone is \texttt{F-B}, because \texttt{F}
+appears before \texttt{B}. In \texttt{BLUE} in \texttt{G} the same pair appears
+as \texttt{B-F}. The note set is the same, but the orientation has been
+inverted.
+
+We will call this change of orientation an \emph{inversion}. It neither adds
+nor removes tritonal centres: it fixes the two notes of the tritone and moves
+the rest of the scale. The concrete operation is a six-semitone shift of the
+key, keeping the scale and the view. For example, \texttt{WHITE} in \texttt{D}
+becomes \texttt{WHITE} in \texttt{G\#}; the pair \texttt{F-B} becomes
+\texttt{B-F}. The same happens from \texttt{BLUE} in \texttt{G} to
+\texttt{BLUE} in \texttt{C\#}: both tritones keep their note pairs and change
+orientation.
+
+\subsubsection*{Tritone-count modulation}
+
+Inversion separates two things that used to be mixed: changing the number of
+tritones and changing their orientation. For the first we have a criterion that
+does not need to name the destination scale. Starting from the current scale
+and key, we choose how many tritones to add or remove and which position the
+preserved tritone should occupy. Then we search the parent scales and keys for
+the one that:
+
+\begin{enumerate}
+	\item has exactly the requested number of tritones;
+	\item preserves the tritone in the indicated orientation and position;
+	\item preserves the maximum number of oriented tritones from the original scale;
+	\item changes the fewest notes.
+\end{enumerate}
+
+The search never inverts. If the only way to obtain the requested number
+inverts the tritone, there is no pure modulation: inversion is a separate
+operation.
+
+From \texttt{WHITE} in \texttt{D}, with \texttt{F-B} as its only tritone, the
+minimal cases are:
+
+\begin{table}[H]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{llll}
+			\toprule
+			Operation & Result & Preserved tritone & Change \\
+			\midrule
+			Add, keep the first & \texttt{RED} in \texttt{E} & \texttt{F-B} first & 2 notes \\
+			Add, keep the second & \texttt{RED} in \texttt{C} & \texttt{F-B} second & 2 notes \\
+			Invert & \texttt{WHITE} in \texttt{G\#} & \texttt{B-F} & key $+6$ \\
+			Remove & --- & --- & it is a view: \texttt{PENTA} \\
+			\bottomrule
+		\end{tabular}%
+	}
+	\caption{Tritone-count modulation from \texttt{WHITE} in \texttt{D}.}
+	\label{tab:tritone-count-examples-en}
+\end{table}
+
+Removing the last tritone is different. \texttt{PENTA} is not a parent scale
+to modulate to: it is a pentatonic view of \texttt{WHITE} or \texttt{BLUE},
+obtained by collapsing the semitones that touch the tritones. Its note set,
+modes and particles remain valid, but its centre and tritones are inherited
+from the parent. In practice, \texttt{WHITE} with the view that keeps the lower
+note of the first semitone and the upper note of the second produces
+\texttt{PENTA}; removing the only tritone of \texttt{WHITE} is therefore a
+change of view, not a modulation to another parent scale.
+
+There is no parent scale with five tritones. Adding one to \texttt{BLACK} or
+\texttt{FULL}, or removing one from \texttt{FULL}, has no parent destination.
+The step \texttt{TONES} $\leftrightarrow$ \texttt{BLACK} changes the net number
+by one, but only preserves two tritones: it is an exchange, not a complete
+preservation.
+
+\paragraph{What changes in the earlier examples.}
+Under this reading, the first modulation example (\texttt{WHITE} in \texttt{D}
+to \texttt{BLUE} in \texttt{G}) preserves the \texttt{F-B} pair but inverts it:
+it is a modulation with inversion. The flamenco example (\texttt{WHITE} in
+\texttt{D} to \texttt{RED} in \texttt{E}) preserves \texttt{F-B} and is the pure
+case. Tritonal substitution (\texttt{WHITE} in \texttt{D} to \texttt{BLUE} in
+\texttt{A}) also inverts the pair. All three remain valid; their classification
+changes.
+
+\paragraph{Implementation note.}
+The model is implemented in Carmen as the procedure operations
+\texttt{ADD TRITONE KEEP}, \texttt{REMOVE TRITONE KEEP} and
+\texttt{INVERT TRITONE}; views are activated with \texttt{COLLAPSE}. The search
+and tables in this section are the same ones used by the project's tritone lab.
+
 \subsection{Names for the triads}
 Why do the triads have those curious names in standard notation? \emph{Major, minor, minor flat fifth, major augmented fifth, diminished\ldots{}}
 These are names from the past, which have simply survived until now for lack of a good \emph{ISO} standardization committee. They pose a major obstacle to theoretical handling and the assimilation of concepts.
@@ -3407,14 +3521,14 @@ Let's create the table
 New particles! We have found a new interval of 2 semitones, so two new triads appear: \texttt{24} and \texttt{42}. We have represented them with a black background. The symmetry remains perfect. What will be the meaning of these triads?
 Well, we have to consider the intrinsic difficulty of each scale as part of the problem. Let's say that the listener will feel better in a scale with few tritones and few ambiguous degrees. If each scale has a certain sound that characterizes it, the fact of presenting the listener with that sound will make them believe that we are in that scale. Remember that the \texttt{44} triad appeared in \texttt{BLUE} and not in \texttt{WHITE}, so it acts as a kind of unmistakable aroma.
 On the other hand, the stacks \texttt{24} and \texttt{42} make their appearance in \texttt{RED}. They don't seem to have a special meaning either, other than representing their scale.
-The 6 scales form a simple scheme where three basic concepts are expressed: \emph{clarity, darkness and disorientation}. When analyzing each one, we saw that there were differences in the number of tritones, the ability to orient, the number of ambiguous stacks, etc. We consider the \texttt{WHITE} scale the central scale, the most balanced and complete. From it, by eliminating tritones we go to \texttt{PENTA}, adding them we can reach \texttt{BLUE}, which is a little disconcerting but not as much as \texttt{TONES}, or else to \texttt{RED}, which is a little darker, but not as much as \texttt{BLACK}.
+The five parent scales form a simple scheme where three basic concepts are expressed: \emph{clarity, darkness and disorientation}. When analyzing each one, we saw that there were differences in the number of tritones, the ability to orient, the number of ambiguous stacks, etc. We consider the \texttt{WHITE} scale the central scale, the most balanced and complete. From it, the \texttt{PENTA} view is obtained by collapsing the semitones that touch the tritone; by adding tritones we can reach \texttt{BLUE}, which is a little disconcerting but not as much as \texttt{TONES}, or else to \texttt{RED}, which is a little darker, but not as much as \texttt{BLACK}. \texttt{PENTA} appears on the map for its character, but not as a parent scale: it is a view of \texttt{WHITE} or \texttt{BLUE}.
 \begin{figure}[H]
 \begin{tikzpicture}
 % Dibuja los círculos para los conjuntos A y B
 \node[circle,draw,color=red,minimum size=6cm,label=200:Darkness] (A) at (0,0) {};
 \node[circle,draw,color=blue,minimum size=6cm,label=340:Disorientation] (B) at (2,0) {};
 \node[circle,draw,color=green,minimum size=6cm,label=90:Clarity] (B) at (1,2) {};
-\node at (1,4) {\texttt{PENTA}};
+\node[align=center] at (1,4) {\texttt{PENTA}\\(view)};
 \node at (1,1) {\texttt{WHITE}};
 \node at (-1,2) {\texttt{RED}};
 \node at (3,2) {\texttt{BLUE}};
@@ -3422,7 +3536,7 @@ The 6 scales form a simple scheme where three basic concepts are expressed: \emp
 \node at (4,-1) {\texttt{TONES}};
 
 \end{tikzpicture}
-\caption{Sensations of each scale }\label{tab:scale-sensation}
+\caption{Sensations of the parent scales and the \texttt{PENTA} view}\label{tab:scale-sensation}
 \end{figure}
 In summary: the new triads in our vocabulary do not have a specific meaning, they simply serve as signals that indicate what scale we are in (whether it is true or not) so a feeling of clarity, darkness or disorientation will be created.
 This is our vocabulary, for now:

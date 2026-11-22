@@ -33,13 +33,16 @@ bash scripts/clean.sh
 
 ## 📚 Core Theory Summary
 
-### Six Fundamental Scales
+### Five Parent Scales + PENTA View
 - **WHITE** - Diatonic (7 notes, 1 tritone, centered on RE)
 - **BLUE** - Melodic minor (7 notes, 1 tritone)
 - **RED** - Harmonic minor (7 notes, 2 tritones)
 - **BLACK** - Diminished (8 notes, space-centered symmetry)
-- **PENTA** - Pentatonic (5 notes, 0 tritones)
 - **TONES** - Whole tone (6 notes, multiple tritones)
+- **PENTA** - Pentatonic **view** of WHITE/BLUE (5 notes, 0 tritones), not a parent scale
+- **FULL** - Complete chromatic set (implementation limit, no tonal center of its own)
+
+Tritones are **oriented by their first appearance in the scale**: `F-B` and `B-F` are different. Modulation by tritone count preserves orientation; `INVERT` (`KEY + 6`) is a separate operation.
 
 ### Notation System
 - Scales shown as 3×5 grids with central note/space at center
