@@ -6,10 +6,10 @@ Este documento presenta un nuevo marco para entender la armonía musical, basado
 
 **Ideas Clave:**
 
-* **Representación de Escalas:** Se redefine la notación de las escalas musicales, utilizando su nota central y un sistema numérico para representar sus grados. Se introducen 6 escalas fundamentales: WHITE, BLUE, RED, BLACK, PENTA y TONES. 
+* **Representación de Escalas:** Se redefine la notación de las escalas musicales, utilizando su nota central y un sistema numérico para representar sus grados. Se distinguen cinco escalas padre (WHITE, BLUE, RED, BLACK y TONES) y una vista pentatónica (PENTA); FULL es el conjunto cromático completo.
 * **El Tritono como Elemento de Tensión:** Se explora el papel del tritono como un elemento central de tensión e incertidumbre en la música. 
 * **Las Tríadas como Bloques Básicos:** Se propone un nuevo sistema para nombrar y comprender las tríadas, usando números para representar sus intervalos. Se analizan las emociones que evocan las diferentes tríadas.
-* **Modulación como Cambio de Centro Tritonal:** Se explica cómo la modulación se basa en la adición de nuevos centros tritonales, sin cambiar el centro tonal original.
+* **Modulación como Cambio de Centro Tritonal:** Se explica cómo la modulación se basa en la adición de nuevos centros tritonales, sin cambiar el centro tonal original. Los tritonos se leen orientados por su orden en la escala y la inversión (KEY + 6) se trata como una operación separada.
 * **Acordes como Pilas de Partículas:** Se introduce un sistema de notación para acordes, usando la escala, el modo y la densidad del acorde. 
 * **"Partículas" Musicales:** Se analizan las pilas de notas (partículas) que se forman al apilar notas de una escala. Cada pila tiene un significado particular que refleja la sensación de claridad, oscuridad o desorientación.
 
