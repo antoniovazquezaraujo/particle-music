@@ -1571,6 +1571,80 @@ También en \texttt{TONES} pasa lo mismo, aunque quedan solamente dos notas en c
 
 La sensación para el oyente de que la pila que está sonando está cerca o lejos del tritono se ha de contar siempre ascendentemente, es decir, cuántas notas alternas han de agregarse para que acabe sonando un tritono (si llega a ocurrir).
 
+\subsection{Las vistas por colapso}
+\label{sec:vistas-por-colapso}
+
+La técnica de colapsar no produce una sola escala: produce varias. La idea es
+sencilla. Cada semitono que toca un extremo de un tritono tiene dos notas;
+elegimos una de las dos y ocultamos la otra. Como hay dos grupos de semitonos
+(alrededor de cada tritono o de cada par de tritonos), hay cuatro combinaciones
+posibles: subir/subir, bajar/bajar, bajar/subir y subir/bajar. En la
+implementación de Carmen se llaman \texttt{BOTH\_HIGH}, \texttt{BOTH\_LOW},
+\texttt{LOW\_HIGH} y \texttt{HIGH\_LOW}.
+
+La vista conserva el centro tonal y la key del padre, pero reindexa los grados
+visibles de 1 a $n$. No es una escala padre independiente: es una lente sobre
+la escala padre. Algunas vistas conservan uno o varios tritonos; otras los
+eliminan por completo. En la tabla siguiente se muestran las notas desde
+\texttt{C} y los tritonos que sobreviven; para otra key basta transportar.
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{llll}
+		\toprule
+		Padre & Vista & Notas & Tritonos \\
+		\midrule
+		\texttt{WHITE} & subir/subir   & C, e, F, G, b & --- \\
+		\texttt{WHITE} & bajar/bajar   & C, D, F, G, A & --- \\
+		\texttt{WHITE} & bajar/subir   & C, D, F, G, b & --- \\
+		\texttt{WHITE} & subir/bajar   & C, e, F, G, A & e-A \\
+		\midrule
+		\texttt{BLUE}  & subir/subir   & C, D, F, a, b & D-a \\
+		\texttt{BLUE}  & bajar/bajar   & C, D, E, G, b & E-b \\
+		\texttt{BLUE}  & bajar/subir   & C, D, E, a, b & D-a, E-b \\
+		\texttt{BLUE}  & subir/bajar   & C, D, F, G, b & --- \\
+		\midrule
+		\texttt{RED}   & subir/subir   & C, d, F, a & --- \\
+		\texttt{RED}   & bajar/bajar   & C, E, G, B & --- \\
+		\texttt{RED}   & bajar/subir   & C, F, G & --- \\
+		\texttt{RED}   & subir/bajar   & d, E, a, B & --- \\
+		\midrule
+		\texttt{BLACK} & subir/subir   & D, F, a, B & D-a, F-B \\
+		\texttt{BLACK} & bajar/bajar   & d, E, G, b & d-G, E-b \\
+		\texttt{BLACK} & bajar/subir   & d, F, G, B & d-G, F-B \\
+		\texttt{BLACK} & subir/bajar   & D, E, a, b & D-a, E-b \\
+		\bottomrule
+	\end{tabular}
+	\caption{Las cuatro vistas por colapso de cada escala padre.}
+	\label{tab:collapse-views}
+\end{table}
+
+La lectura de la tabla explica por qué \texttt{PENTA} no es una escala única.
+En \texttt{WHITE}, las vistas subir/subir, bajar/bajar y bajar/subir son tres
+pentatónicas distintas; la tercera es la que hemos llamado \texttt{PENTA}. La
+vista subir/bajar conserva el tritono \texttt{e-A} y, por tanto, no es
+pentatónica en el mismo sentido: sigue teniendo una zona de tensión. En
+\texttt{BLUE}, dos vistas conservan un tritono, una conserva los dos y solo
+subir/bajar elimina ambos; esa última coincide con la \texttt{PENTA} de
+\texttt{WHITE}, aunque su padre y su centro son otros. Es el mismo conjunto de
+notas con dos lecturas armónicas distintas.
+
+\texttt{RED} produce vistas más pobres: tres o cuatro notas, sin tritonos. Dos
+de ellas conservan un semitono; las otras dos no tienen ni semitonos ni
+tritonos. Son conjuntos muy abiertos, casi sin dirección, y no deben
+confundirse con las pentatónicas de \texttt{WHITE} o \texttt{BLUE}.
+\texttt{BLACK} produce tetracordos de terceras menores alternas con dos
+tritonos cada uno: la tensión no desaparece, se concentra. \texttt{TONES} no
+tiene semitonos, así que las cuatro vistas son la identidad. \texttt{FULL} no
+es una escala padre con centro propio; en el modelo computacional se trata como
+el conjunto cromático completo y no se proyecta.
+
+Estas vistas explican también por qué la modulación por conteo no busca en las
+vistas: una vista no tiene una escala padre de destino, solo hereda el centro y
+los tritonos del padre. Para bajar de un tritono a cero se cambia de vista; para
+cambiar de padre se usa la modulación.
+
 \subsection{Sentido tritonal}
 Es importante observar que la situación de los tritonos tiene un sentido, es decir, puede no ser lo mismo ir de una nota a otra cambiando la nota de partida, eso depende de si hay las mismas notas entre ambas por los dos caminos. Vemos que en \texttt{WHITE}, yendo desde el grado 6 hasta el 3, apilando notas alternas, formaríamos el acorde 6 1 3. Sin embargo, para ir desde 3 a 6 apilaríamos 3,5,7,2,4,6. Es decir, el grado 3 está mucho más lejos de llegar a tener un tritono que el 6, concretamente, cuatro niveles de apilamiento más lejos.
 

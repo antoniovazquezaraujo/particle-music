@@ -42,6 +42,8 @@ bash scripts/clean.sh
 - **PENTA** - Pentatonic **view** of WHITE/BLUE (5 notes, 0 tritones), not a parent scale
 - **FULL** - Complete chromatic set (implementation limit, no tonal center of its own)
 
+Collapse views: each parent exposes four semitone-collapse views (up/up, down/down, down/up, up/down). WHITE/BLUE give pentatonic variants (some keep one or two tritones); RED gives sparse 3/4-note views; BLACK gives four-note stacks with two tritones; TONES is the identity.
+
 Tritones are **oriented by their first appearance in the scale**: `F-B` and `B-F` are different. Modulation by tritone count preserves orientation; `INVERT` (`KEY + 6`) is a separate operation.
 
 ### Notation System
