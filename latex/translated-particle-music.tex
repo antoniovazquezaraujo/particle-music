@@ -1481,6 +1481,126 @@ This same thing happens with \texttt{BLUE} and \texttt{RED}, although there are 
 However, in \texttt{BLACK} we find eight notes in the scale, so between each note of the tritone there are always three, no matter in what direction we move.
 The same thing happens with \texttt{TONES}, although there are only two notes in each direction, so by alternating jumps we can never complete a tritone.
 The feeling for the listener that the stack that is sounding is close to or far from the tritone must always be counted upwards, that is, how many alternate notes must be added so that a tritone ends up sounding (if it ever happens).
+
+\subsection{Collapse views}
+\label{sec:collapse-views}
+
+The collapse technique does not produce a single scale: it produces several.
+The idea is simple. Each semitone that touches an endpoint of a tritone has
+two notes; we keep one and hide the other. Since there are two groups of
+semitones (around each tritone or around each pair of tritones), there are four
+possible combinations: up/up, down/down, down/up and up/down. In Carmen's
+implementation they are called \texttt{BOTH\_HIGH}, \texttt{BOTH\_LOW},
+\texttt{LOW\_HIGH} and \texttt{HIGH\_LOW}.
+
+The view keeps the parent's tonal centre and key, but reindexes the visible
+degrees from 1 to $n$. It is not an independent parent scale: it is a lens on
+the parent. Some views keep one or more tritones; others remove them entirely.
+The figure below shows each view's degrees, with degree 1 bottom centre; red
+lines join the tritones that survive.
+
+\newcommand{\collapsedviewcoord}[1]{%
+	\ifcase#1
+		0.5,0\or0,0\or0,0.5\or0,1\or0,1.5\or0,2%
+		\or0.5,2\or1,2\or1,1.5\or1,1\or1,0.5\or1,0%
+	\fi}
+
+\newcommand{\collapsedviewbody}[1]{%
+	\foreach \val [count=\i from 0] in {#1} {
+		\ifnum\val=0
+			\node at (\collapsedviewcoord{\i}) [st=white] {};
+		\else
+			\node at (\collapsedviewcoord{\i}) [st] {\val};
+		\fi
+	}}
+
+\newcommand{\collapsedviewx}[1]{%
+	\ifcase#1 0.5\or0\or0\or0\or0\or0\or0.5\or1\or1\or1\or1\or1\fi}
+\newcommand{\collapsedviewy}[1]{%
+	\ifcase#1 0\or0\or0.5\or1\or1.5\or2\or2\or2\or1.5\or1\or0.5\or0\fi}
+
+\newcommand{\collapsedviewtritones}[1]{%
+	\foreach \a/\b in {#1} {
+		\pgfmathsetmacro{\ax}{\collapsedviewx{\a}}
+		\pgfmathsetmacro{\ay}{\collapsedviewy{\a}}
+		\pgfmathsetmacro{\bx}{\collapsedviewx{\b}}
+		\pgfmathsetmacro{\by}{\collapsedviewy{\b}}
+		% Pairs run from the left column to the right: start at the centre of
+		% the right vertical edge and enter through the left one.
+		\draw[very thick, color=red]
+			(\ax+0.25,\ay) -- (\bx-0.25,\by);
+	}}
+
+\newcommand{\collapsedviewgrid}[4]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\collapsedviewbody{#3}
+		\collapsedviewtritones{#4}
+	\end{scope}}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+		st/.style={rectangle,minimum size=.5cm,node distance=.5cm,inner sep=0cm,draw=black,thick,fill=#1!50,font=\sffamily},
+		st/.default=gray]
+		\useasboundingbox (0,-10.6) rectangle (9.6,3);
+		\node at (2.5,2.8) {\scriptsize up/up};
+		\node at (4.5,2.8) {\scriptsize down/down};
+		\node at (6.5,2.8) {\scriptsize down/up};
+		\node at (8.5,2.8) {\scriptsize up/down};
+		\node[anchor=east] at (1.1,1) {\texttt{WHITE}};
+		\node[anchor=east] at (1.1,-2) {\texttt{BLUE}};
+		\node[anchor=east] at (1.1,-5) {\texttt{RED}};
+		\node[anchor=east] at (1.1,-8) {\texttt{BLACK}};
+
+		\collapsedviewgrid{2}{0}{1,0,0,2,0,3,0,4,0,0,5,0}{}
+		\collapsedviewgrid{4}{0}{1,0,2,0,0,3,0,4,0,5,0,0}{}
+		\collapsedviewgrid{6}{0}{1,0,2,0,0,3,0,4,0,0,5,0}{}
+		\collapsedviewgrid{8}{0}{1,0,0,2,0,3,0,4,0,5,0,0}{3/9}
+
+		\collapsedviewgrid{2}{-3}{1,0,2,0,0,3,0,0,4,0,5,0}{2/8}
+		\collapsedviewgrid{4}{-3}{1,0,2,0,3,0,0,4,0,0,5,0}{4/10}
+		\collapsedviewgrid{6}{-3}{1,0,2,0,3,0,0,0,4,0,5,0}{2/8,4/10}
+		\collapsedviewgrid{8}{-3}{1,0,2,0,0,3,0,4,0,0,5,0}{}
+
+		\collapsedviewgrid{2}{-6}{1,2,0,0,0,3,0,0,4,0,0,0}{}
+		\collapsedviewgrid{4}{-6}{1,0,0,0,2,0,0,3,0,0,0,4}{}
+		\collapsedviewgrid{6}{-6}{1,0,0,0,0,2,0,3,0,0,0,0}{}
+		\collapsedviewgrid{8}{-6}{0,1,0,0,2,0,0,0,3,0,0,4}{}
+
+		\collapsedviewgrid{2}{-9}{0,0,1,0,0,2,0,0,3,0,0,4}{2/8,5/11}
+		\collapsedviewgrid{4}{-9}{0,1,0,0,2,0,0,3,0,0,4,0}{1/7,4/10}
+		\collapsedviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{1/7,5/11}
+		\collapsedviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{2/8,4/10}
+	\end{tikzpicture}
+	\caption{The four collapse views of each parent scale. Degree 1 is bottom
+	centre; red lines join the tritones that survive.}
+	\label{tab:collapse-views-en}
+\end{figure}
+
+The figure explains why \texttt{PENTA} is not a single scale. In \texttt{WHITE},
+up/up, down/down and down/up are three different pentatonics; the third is what
+we have called \texttt{PENTA}. The up/down view keeps the \texttt{e-A} tritone
+and therefore is not pentatonic in the same sense: it still has a tension zone.
+In \texttt{BLUE}, two views keep one tritone, one keeps both and only up/down
+removes both; that last one coincides with \texttt{PENTA} from \texttt{WHITE},
+although its parent and centre are different. It is the same note set with two
+different harmonic readings.
+
+\texttt{RED} produces sparser views: three or four notes, with no tritones. Two
+of them keep a semitone; the other two have neither semitones nor tritones.
+They are very open sets, almost without direction, and should not be confused
+with the pentatonics of \texttt{WHITE} or \texttt{BLUE}. \texttt{BLACK}
+produces four-note stacks of alternating minor thirds with two tritones each:
+tension does not disappear, it is concentrated. \texttt{TONES} has no
+semitones, so all four views are the identity. \texttt{FULL} is not a parent
+scale with its own centre; in the computational model it is the complete
+chromatic set and is not projected.
+
+These views also explain why tritone-count modulation does not search views: a
+view has no destination parent scale; it only inherits the parent's centre and
+tritones. To go from one tritone to zero, change the view; to change the
+parent, use modulation.
+
 \subsection{Tritonal sense}
 It is important to observe that the situation of the tritones has a sense, that is, it may not be the same to go from one note to another by changing the starting note, that depends on whether there are the same notes between the two by both paths. We see that in \texttt{WHITE}, going from degree 6 to degree 3, stacking alternate notes, we would form the chord 6 1 3. However, to go from 3 to 6 we would stack 3, 5, 7, 2, 4, 6. That is, degree 3 is much further away from having a tritone than degree 6, specifically, four levels of stacking further away.
 \subsection{Tonal center}
