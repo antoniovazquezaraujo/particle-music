@@ -1585,42 +1585,75 @@ implementación de Carmen se llaman \texttt{BOTH\_HIGH}, \texttt{BOTH\_LOW},
 La vista conserva el centro tonal y la key del padre, pero reindexa los grados
 visibles de 1 a $n$. No es una escala padre independiente: es una lente sobre
 la escala padre. Algunas vistas conservan uno o varios tritonos; otras los
-eliminan por completo. En la tabla siguiente se muestran las notas desde
-\texttt{C} y los tritonos que sobreviven; para otra key basta transportar.
+eliminan por completo. En la figura siguiente se muestran los grados de cada
+vista, con el grado 1 abajo, centro; debajo de cada anillo aparecen los
+tritonos que sobreviven.
 
-\begin{table}[H]
+\newcommand{\collapseviewcoord}[1]{%
+	\ifcase#1
+		0.5,0\or0,0\or0,0.5\or0,1\or0,1.5\or0,2%
+		\or0.5,2\or1,2\or1,1.5\or1,1\or1,0.5\or1,0%
+	\fi}
+
+\newcommand{\collapseviewbody}[1]{%
+	\foreach \val [count=\i from 0] in {#1} {
+		\ifnum\val=0
+			\node at (\collapseviewcoord{\i}) [empty] {};
+		\else
+			\node at (\collapseviewcoord{\i}) [st] {\val};
+		\fi
+	}}
+
+\newcommand{\collapseviewgrid}[4]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\collapseviewbody{#3}
+	\end{scope}
+	\pgfmathsetmacro{\collapseviewlabelx}{#1+0.5}
+	\pgfmathsetmacro{\collapseviewlabely}{#2-0.3}
+	\node at (\collapseviewlabelx,\collapseviewlabely) {\scriptsize #4};}
+
+\begin{figure}[H]
 	\centering
-	\small
-	\begin{tabular}{llll}
-		\toprule
-		Padre & Vista & Notas & Tritonos \\
-		\midrule
-		\texttt{WHITE} & subir/subir   & C, e, F, G, b & --- \\
-		\texttt{WHITE} & bajar/bajar   & C, D, F, G, A & --- \\
-		\texttt{WHITE} & bajar/subir   & C, D, F, G, b & --- \\
-		\texttt{WHITE} & subir/bajar   & C, e, F, G, A & e-A \\
-		\midrule
-		\texttt{BLUE}  & subir/subir   & C, D, F, a, b & D-a \\
-		\texttt{BLUE}  & bajar/bajar   & C, D, E, G, b & E-b \\
-		\texttt{BLUE}  & bajar/subir   & C, D, E, a, b & D-a, E-b \\
-		\texttt{BLUE}  & subir/bajar   & C, D, F, G, b & --- \\
-		\midrule
-		\texttt{RED}   & subir/subir   & C, d, F, a & --- \\
-		\texttt{RED}   & bajar/bajar   & C, E, G, B & --- \\
-		\texttt{RED}   & bajar/subir   & C, F, G & --- \\
-		\texttt{RED}   & subir/bajar   & d, E, a, B & --- \\
-		\midrule
-		\texttt{BLACK} & subir/subir   & D, F, a, B & D-a, F-B \\
-		\texttt{BLACK} & bajar/bajar   & d, E, G, b & d-G, E-b \\
-		\texttt{BLACK} & bajar/subir   & d, F, G, B & d-G, F-B \\
-		\texttt{BLACK} & subir/bajar   & D, E, a, b & D-a, E-b \\
-		\bottomrule
-	\end{tabular}
-	\caption{Las cuatro vistas por colapso de cada escala padre.}
-	\label{tab:collapse-views}
-\end{table}
+	\begin{tikzpicture}[
+		st/.style={rectangle,minimum size=.36cm,inner sep=0cm,draw=black,thick,fill=#1!50,font=\sffamily},
+		st/.default=gray,
+		empty/.style={rectangle,minimum size=.36cm,inner sep=0cm,draw=gray!35,fill=white,font=\sffamily}]
+		\useasboundingbox (0,-9.5) rectangle (9.5,2.8);
+		\node at (2.5,2.5) {\scriptsize subir/subir};
+		\node at (4.5,2.5) {\scriptsize bajar/bajar};
+		\node at (6.5,2.5) {\scriptsize bajar/subir};
+		\node at (8.5,2.5) {\scriptsize subir/bajar};
+		\node[anchor=east] at (1.7,1) {\texttt{WHITE}};
+		\node[anchor=east] at (1.7,-2) {\texttt{BLUE}};
+		\node[anchor=east] at (1.7,-5) {\texttt{RED}};
+		\node[anchor=east] at (1.7,-8) {\texttt{BLACK}};
 
-La lectura de la tabla explica por qué \texttt{PENTA} no es una escala única.
+		\collapseviewgrid{2}{0}{1,0,0,2,0,3,0,4,0,0,5,0}{---}
+		\collapseviewgrid{4}{0}{1,0,2,0,0,3,0,4,0,5,0,0}{---}
+		\collapseviewgrid{6}{0}{1,0,2,0,0,3,0,4,0,0,5,0}{---}
+		\collapseviewgrid{8}{0}{1,0,0,2,0,3,0,4,0,5,0,0}{e-A}
+
+		\collapseviewgrid{2}{-3}{1,0,2,0,0,3,0,0,4,0,5,0}{D-a}
+		\collapseviewgrid{4}{-3}{1,0,2,0,3,0,0,4,0,0,5,0}{E-b}
+		\collapseviewgrid{6}{-3}{1,0,2,0,3,0,0,0,4,0,5,0}{D-a, E-b}
+		\collapseviewgrid{8}{-3}{1,0,2,0,0,3,0,4,0,0,5,0}{---}
+
+		\collapseviewgrid{2}{-6}{1,2,0,0,0,3,0,0,4,0,0,0}{---}
+		\collapseviewgrid{4}{-6}{1,0,0,0,2,0,0,3,0,0,0,4}{---}
+		\collapseviewgrid{6}{-6}{1,0,0,0,0,2,0,3,0,0,0,0}{---}
+		\collapseviewgrid{8}{-6}{0,1,0,0,2,0,0,0,3,0,0,4}{---}
+
+		\collapseviewgrid{2}{-9}{0,0,1,0,0,2,0,0,3,0,0,4}{D-a, F-B}
+		\collapseviewgrid{4}{-9}{0,1,0,0,2,0,0,3,0,0,4,0}{d-G, E-b}
+		\collapseviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{d-G, F-B}
+		\collapseviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{D-a, E-b}
+	\end{tikzpicture}
+	\caption{Las cuatro vistas por colapso de cada escala padre. El grado 1
+	está abajo, centro; las celdas vacías son notas ausentes u ocultas.}
+	\label{tab:collapse-views}
+\end{figure}
+
+La lectura de la figura explica por qué \texttt{PENTA} no es una escala única.
 En \texttt{WHITE}, las vistas subir/subir, bajar/bajar y bajar/subir son tres
 pentatónicas distintas; la tercera es la que hemos llamado \texttt{PENTA}. La
 vista subir/bajar conserva el tritono \texttt{e-A} y, por tanto, no es

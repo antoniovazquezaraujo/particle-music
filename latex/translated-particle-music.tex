@@ -1496,42 +1496,74 @@ implementation they are called \texttt{BOTH\_HIGH}, \texttt{BOTH\_LOW},
 The view keeps the parent's tonal centre and key, but reindexes the visible
 degrees from 1 to $n$. It is not an independent parent scale: it is a lens on
 the parent. Some views keep one or more tritones; others remove them entirely.
-The table below shows the notes from \texttt{C} and the surviving tritones;
-transport them for another key.
+The figure below shows each view's degrees, with degree 1 bottom centre; the
+surviving tritones appear below each ring.
 
-\begin{table}[H]
+\newcommand{\collapsedviewcoord}[1]{%
+	\ifcase#1
+		0.5,0\or0,0\or0,0.5\or0,1\or0,1.5\or0,2%
+		\or0.5,2\or1,2\or1,1.5\or1,1\or1,0.5\or1,0%
+	\fi}
+
+\newcommand{\collapsedviewbody}[1]{%
+	\foreach \val [count=\i from 0] in {#1} {
+		\ifnum\val=0
+			\node at (\collapsedviewcoord{\i}) [empty] {};
+		\else
+			\node at (\collapsedviewcoord{\i}) [st] {\val};
+		\fi
+	}}
+
+\newcommand{\collapsedviewgrid}[4]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\collapsedviewbody{#3}
+	\end{scope}
+	\pgfmathsetmacro{\collapsedviewlabelx}{#1+0.5}
+	\pgfmathsetmacro{\collapsedviewlabely}{#2-0.3}
+	\node at (\collapsedviewlabelx,\collapsedviewlabely) {\scriptsize #4};}
+
+\begin{figure}[H]
 	\centering
-	\small
-	\begin{tabular}{llll}
-		\toprule
-		Parent & View & Notes & Tritones \\
-		\midrule
-		\texttt{WHITE} & up/up     & C, e, F, G, b & --- \\
-		\texttt{WHITE} & down/down & C, D, F, G, A & --- \\
-		\texttt{WHITE} & down/up   & C, D, F, G, b & --- \\
-		\texttt{WHITE} & up/down   & C, e, F, G, A & e-A \\
-		\midrule
-		\texttt{BLUE}  & up/up     & C, D, F, a, b & D-a \\
-		\texttt{BLUE}  & down/down & C, D, E, G, b & E-b \\
-		\texttt{BLUE}  & down/up   & C, D, E, a, b & D-a, E-b \\
-		\texttt{BLUE}  & up/down   & C, D, F, G, b & --- \\
-		\midrule
-		\texttt{RED}   & up/up     & C, d, F, a & --- \\
-		\texttt{RED}   & down/down & C, E, G, B & --- \\
-		\texttt{RED}   & down/up   & C, F, G & --- \\
-		\texttt{RED}   & up/down   & d, E, a, B & --- \\
-		\midrule
-		\texttt{BLACK} & up/up     & D, F, a, B & D-a, F-B \\
-		\texttt{BLACK} & down/down & d, E, G, b & d-G, E-b \\
-		\texttt{BLACK} & down/up   & d, F, G, B & d-G, F-B \\
-		\texttt{BLACK} & up/down   & D, E, a, b & D-a, E-b \\
-		\bottomrule
-	\end{tabular}
-	\caption{The four collapse views of each parent scale.}
-	\label{tab:collapse-views-en}
-\end{table}
+	\begin{tikzpicture}[
+		st/.style={rectangle,minimum size=.36cm,inner sep=0cm,draw=black,thick,fill=#1!50,font=\sffamily},
+		st/.default=gray,
+		empty/.style={rectangle,minimum size=.36cm,inner sep=0cm,draw=gray!35,fill=white,font=\sffamily}]
+		\useasboundingbox (0,-9.5) rectangle (9.5,2.8);
+		\node at (2.5,2.5) {\scriptsize up/up};
+		\node at (4.5,2.5) {\scriptsize down/down};
+		\node at (6.5,2.5) {\scriptsize down/up};
+		\node at (8.5,2.5) {\scriptsize up/down};
+		\node[anchor=east] at (1.7,1) {\texttt{WHITE}};
+		\node[anchor=east] at (1.7,-2) {\texttt{BLUE}};
+		\node[anchor=east] at (1.7,-5) {\texttt{RED}};
+		\node[anchor=east] at (1.7,-8) {\texttt{BLACK}};
 
-The table explains why \texttt{PENTA} is not a single scale. In \texttt{WHITE},
+		\collapsedviewgrid{2}{0}{1,0,0,2,0,3,0,4,0,0,5,0}{---}
+		\collapsedviewgrid{4}{0}{1,0,2,0,0,3,0,4,0,5,0,0}{---}
+		\collapsedviewgrid{6}{0}{1,0,2,0,0,3,0,4,0,0,5,0}{---}
+		\collapsedviewgrid{8}{0}{1,0,0,2,0,3,0,4,0,5,0,0}{e-A}
+
+		\collapsedviewgrid{2}{-3}{1,0,2,0,0,3,0,0,4,0,5,0}{D-a}
+		\collapsedviewgrid{4}{-3}{1,0,2,0,3,0,0,4,0,0,5,0}{E-b}
+		\collapsedviewgrid{6}{-3}{1,0,2,0,3,0,0,0,4,0,5,0}{D-a, E-b}
+		\collapsedviewgrid{8}{-3}{1,0,2,0,0,3,0,4,0,0,5,0}{---}
+
+		\collapsedviewgrid{2}{-6}{1,2,0,0,0,3,0,0,4,0,0,0}{---}
+		\collapsedviewgrid{4}{-6}{1,0,0,0,2,0,0,3,0,0,0,4}{---}
+		\collapsedviewgrid{6}{-6}{1,0,0,0,0,2,0,3,0,0,0,0}{---}
+		\collapsedviewgrid{8}{-6}{0,1,0,0,2,0,0,0,3,0,0,4}{---}
+
+		\collapsedviewgrid{2}{-9}{0,0,1,0,0,2,0,0,3,0,0,4}{D-a, F-B}
+		\collapsedviewgrid{4}{-9}{0,1,0,0,2,0,0,3,0,0,4,0}{d-G, E-b}
+		\collapsedviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{d-G, F-B}
+		\collapsedviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{D-a, E-b}
+	\end{tikzpicture}
+	\caption{The four collapse views of each parent scale. Degree 1 is bottom
+	centre; empty cells are absent or hidden notes.}
+	\label{tab:collapse-views-en}
+\end{figure}
+
+The figure explains why \texttt{PENTA} is not a single scale. In \texttt{WHITE},
 up/up, down/down and down/up are three different pentatonics; the third is what
 we have called \texttt{PENTA}. The up/down view keeps the \texttt{e-A} tritone
 and therefore is not pentatonic in the same sense: it still has a tension zone.
