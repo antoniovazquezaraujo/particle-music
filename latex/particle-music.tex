@@ -387,7 +387,7 @@ Estas son las escalas que se usan habitualmente y los nombres que se le han asig
 		\textsf{BLUE}            & Escala menor melódica &                   \\
 		\textsf{RED}             & Escala menor armónica &                   \\
 		\textsf{BLACK}           & Escala disminuida     &                   \\
-		\textsf{PENTA}           & Vista pentatónica de \textsf{WHITE}/\textsf{BLUE} & \\
+		\textsf{PENTA}           & Vista compacta de \textsf{WHITE}/\textsf{BLUE} (5 notas) & \\
 		\textsf{TONES}           & Escala por tonos      &                   \\
 		\bottomrule
 	\end{tabular}
@@ -395,8 +395,8 @@ Estas son las escalas que se usan habitualmente y los nombres que se le han asig
 \end{table}
 
 \textsf{PENTA} se incluye en la tabla porque su conjunto de notas y su carácter
-son parte de la teoría, pero no es una escala padre: es una vista de
-\textsf{WHITE} o \textsf{BLUE}. Las escalas padre son \textsf{WHITE},
+son parte de la teoría, pero no es una escala padre: es una vista compacta de
+\textsf{WHITE} o \textsf{BLUE}, y solo una de las varias vistas posibles. Las escalas padre son \textsf{WHITE},
 \textsf{BLUE}, \textsf{RED}, \textsf{BLACK} y \textsf{TONES}; \textsf{FULL} es
 el conjunto cromático completo. Volveremos sobre esta distinción al hablar de
 modulación y de tritonos orientados.
@@ -1328,7 +1328,7 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
 
 	\end{subfigure}
 	\hfill
-	\caption{Los cinco modos de \textsf{PENTA}}\label{fig:the-penta-modes}
+	\caption{Los cinco modos de la vista \textsf{PENTA}}\label{fig:the-penta-modes}
 \end{figure}
 \begin{figure}[H]
 	\begin{subfigure}{1\textwidth}
@@ -1356,7 +1356,7 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
 	\end{subfigure}
 	\caption{El único modo de \textsf{TONES}}\label{fig:the-tones-modes}
 \end{figure}
-\subsection{Tríadas de \textsf{PENTA}}
+\subsection{Tríadas de la vista \textsf{PENTA}}
 
 \textsf{PENTA} es una vista pentatónica de \textsf{WHITE} o \textsf{BLUE}, no
 una escala padre. Las tríadas que siguen describen ese conjunto de notas y su
@@ -1571,21 +1571,26 @@ También en \texttt{TONES} pasa lo mismo, aunque quedan solamente dos notas en c
 
 La sensación para el oyente de que la pila que está sonando está cerca o lejos del tritono se ha de contar siempre ascendentemente, es decir, cuántas notas alternas han de agregarse para que acabe sonando un tritono (si llega a ocurrir).
 
-\subsection{Las vistas por colapso}
+\subsection{Las vistas compactas o colapsadas}
 \label{sec:vistas-por-colapso}
 
-La técnica de colapsar no produce una sola escala: produce varias. La idea es
-sencilla. Cada semitono que toca un extremo de un tritono tiene dos notas;
-elegimos una de las dos y ocultamos la otra. Como hay dos grupos de semitonos
-(alrededor de cada tritono o de cada par de tritonos), hay cuatro combinaciones
-posibles: subir/subir, bajar/bajar, bajar/subir y subir/bajar.
+La técnica de colapsar no produce una sola escala ni una familia de escalas
+pentatónicas: produce una colección de \emph{vistas}. Llamaremos \emph{vista
+compacta} o \emph{vista colapsada} a cada resultado de ocultar una de las dos
+notas de cada semitono que toca un tritono. La operación conserva el centro
+tonal y la key del padre y reindexa los grados visibles de 1 a $n$, pero no crea
+una escala padre nueva: es una proyección de la escala padre.
 
-La vista conserva el centro tonal y la key del padre, pero reindexa los grados
-visibles de 1 a $n$. No es una escala padre independiente: es una lente sobre
-la escala padre. Algunas vistas conservan uno o varios tritonos; otras los
-eliminan por completo. En la figura siguiente se muestran los grados de cada
-vista, con el grado 1 abajo, centro; las líneas rojas unen los tritonos que se
-conservan.
+No hay que buscar un nombre por número de notas. Las vistas pueden tener 3, 4 o
+5 notas; algunas conservan semitonos, otras no; algunas conservan uno o dos
+tritonos, otras ninguno. Lo único que comparten es la operación: tienen menos
+notas que el padre (salvo \texttt{TONES}, que no tiene semitonos y es la
+identidad) y nunca más tritonos. \textsf{PENTA} es solo la etiqueta
+convencional de una de las vistas de cinco notas; no es el nombre de la
+categoría.
+
+En la figura siguiente se muestran los grados de cada vista, con el grado 1
+abajo, centro; las líneas rojas unen los tritonos que se conservan.
 
 \newcommand{\collapseviewcoord}[1]{%
 	\ifcase#1
@@ -1665,25 +1670,42 @@ conservan.
 	\label{tab:collapse-views}
 \end{figure}
 
-La lectura de la figura explica por qué \texttt{PENTA} no es una escala única.
-En \texttt{WHITE}, las vistas subir/subir, bajar/bajar y bajar/subir son tres
-pentatónicas distintas; la tercera es la que hemos llamado \texttt{PENTA}. La
-vista subir/bajar conserva el tritono \texttt{e-A} y, por tanto, no es
-pentatónica en el mismo sentido: sigue teniendo una zona de tensión. En
-\texttt{BLUE}, dos vistas conservan un tritono, una conserva los dos y solo
-subir/bajar elimina ambos; esa última coincide con la \texttt{PENTA} de
-\texttt{WHITE}, aunque su padre y su centro son otros. Es el mismo conjunto de
-notas con dos lecturas armónicas distintas.
+La lectura de la figura muestra que no hay una única \textsf{PENTA}. En
+\texttt{WHITE}, tres vistas tienen cinco notas y ningún tritono; la que
+convencionalmente llamamos \textsf{PENTA} es bajar/subir, pero las otras dos
+también son pentatónicas. La cuarta vista, subir/bajar, conserva el tritono
+\texttt{e-A}: tiene cinco notas, pero no es una pentatónica «sin tensión». En
+\texttt{BLUE}, las cuatro vistas tienen cinco notas; dos conservan un tritono,
+una conserva los dos y solo subir/bajar elimina ambos. Esa última coincide en
+notas con una de las vistas de \texttt{WHITE}, aunque su padre y su centro son
+otros: el mismo conjunto de notas con dos lecturas armónicas distintas.
 
-\texttt{RED} produce vistas más pobres: tres o cuatro notas, sin tritonos. Dos
-de ellas conservan un semitono; las otras dos no tienen ni semitonos ni
-tritonos. Son conjuntos muy abiertos, casi sin dirección, y no deben
-confundirse con las pentatónicas de \texttt{WHITE} o \texttt{BLUE}.
-\texttt{BLACK} produce tetracordos de terceras menores alternas con dos
-tritonos cada uno: la tensión no desaparece, se concentra. \texttt{TONES} no
-tiene semitonos, así que las cuatro vistas son la identidad. \texttt{FULL} no
-es una escala padre con centro propio; en el modelo computacional se trata como
-el conjunto cromático completo y no se proyecta.
+\texttt{RED} produce vistas de tres o cuatro notas, no pentatónicas. Ninguna
+tiene tritonos; dos conservan un semitono y dos no tienen ni semitonos ni
+tritonos. Son conjuntos muy abiertos, casi sin dirección. \texttt{BLACK}
+produce vistas de cuatro notas, con dos tritonos cada una: la tensión no
+desaparece, se concentra. \texttt{TONES} no tiene semitonos, así que las cuatro
+vistas son la identidad. \texttt{FULL} no es una escala padre con centro
+propio; en el modelo computacional se trata como el conjunto cromático completo
+y no se proyecta.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lccc}
+		\toprule
+		Padre & Número de notas & Semitonos & Tritonos \\
+		\midrule
+		\texttt{WHITE} & 5 & 0 & 0 o 1 \\
+		\texttt{BLUE}  & 5 & 0 & 0, 1 o 2 \\
+		\texttt{RED}   & 3 o 4 & 0 o 1 & 0 \\
+		\texttt{BLACK} & 4 & 0 & 2 \\
+		\texttt{TONES} & 6 & 0 & 3 (identidad) \\
+		\bottomrule
+	\end{tabular}
+	\caption{Rasgos de las vistas compactas. Ninguna vista tiene más tritonos
+	que su padre; algunas conservan todos, otras solo algunos y otras los eliminan.}
+	\label{tab:collapse-view-traits}
+\end{table}
 
 Estas vistas explican también por qué la modulación por conteo no busca en las
 vistas: una vista no tiene una escala padre de destino, solo hereda el centro y

@@ -345,7 +345,7 @@ These are the scales that are commonly used and the names that have been assigne
 \textsf{BLUE} & Melodic minor scale & \\
 \textsf{RED} & Harmonic minor scale & \\
 \textsf{BLACK} & Diminished scale & \\
-\textsf{PENTA} & Pentatonic view of \textsf{WHITE}/\textsf{BLUE} & \\
+\textsf{PENTA} & Compact view of \textsf{WHITE}/\textsf{BLUE} (5 notes) & \\
 \textsf{TONES} & Whole tone scale & \\
 \bottomrule
 \end{tabular}
@@ -353,8 +353,9 @@ These are the scales that are commonly used and the names that have been assigne
 \end{table}
 
 \textsf{PENTA} is included in the table because its note set and character are
-part of the theory, but it is not a parent scale: it is a view of
-\textsf{WHITE} or \textsf{BLUE}. The parent scales are \textsf{WHITE},
+part of the theory, but it is not a parent scale: it is a compact view of
+\textsf{WHITE} or \textsf{BLUE}, and only one of the possible views. The parent
+scales are \textsf{WHITE},
 \textsf{BLUE}, \textsf{RED}, \textsf{BLACK} and \textsf{TONES}; \textsf{FULL} is
 the complete chromatic set. We will return to this distinction when discussing
 modulation and oriented tritones.
@@ -1264,7 +1265,7 @@ The historical names of the modes are directly taken from Greek culture, they ar
 
 	\end{subfigure}
 	\hfill
-	\caption{The five modes of \textsf{PENTA}}\label{fig:the-penta-modes}
+	\caption{The five modes of the \textsf{PENTA} view}\label{fig:the-penta-modes}
 \end{figure}
 \begin{figure}[H]
 	\begin{subfigure}{1\textwidth}
@@ -1292,7 +1293,7 @@ The historical names of the modes are directly taken from Greek culture, they ar
 	\end{subfigure}
 	\caption{The only mode of \textsf{TONES}}\label{fig:the-tones-modes}
 \end{figure}
-\subsection{Triads of \textsf{PENTA}}
+\subsection{Triads of the \textsf{PENTA} view}
 \textsf{PENTA} is a pentatonic view of \textsf{WHITE} or \textsf{BLUE}, not a
 parent scale. The triads below describe that note set and its character, but
 its centre and tritones are inherited from the parent.
@@ -1482,18 +1483,23 @@ However, in \texttt{BLACK} we find eight notes in the scale, so between each not
 The same thing happens with \texttt{TONES}, although there are only two notes in each direction, so by alternating jumps we can never complete a tritone.
 The feeling for the listener that the stack that is sounding is close to or far from the tritone must always be counted upwards, that is, how many alternate notes must be added so that a tritone ends up sounding (if it ever happens).
 
-\subsection{Collapse views}
+\subsection{Compact or collapsed views}
 \label{sec:collapse-views}
 
-The collapse technique does not produce a single scale: it produces several.
-The idea is simple. Each semitone that touches an endpoint of a tritone has
-two notes; we keep one and hide the other. Since there are two groups of
-semitones (around each tritone or around each pair of tritones), there are four
-possible combinations: up/up, down/down, down/up and up/down.
+The collapse technique does not produce a single scale or a family of
+pentatonic scales: it produces a collection of \emph{views}. We will call each
+result a \emph{compact view} or \emph{collapsed view}: for every semitone that
+touches a tritone, we hide one of its two notes. The operation keeps the
+parent's tonal centre and key and reindexes the visible degrees from 1 to $n$,
+but it does not create a new parent scale: it is a projection of the parent.
 
-The view keeps the parent's tonal centre and key, but reindexes the visible
-degrees from 1 to $n$. It is not an independent parent scale: it is a lens on
-the parent. Some views keep one or more tritones; others remove them entirely.
+There is no need to name a view after its note count. Views can have 3, 4 or 5
+notes; some keep semitones, others do not; some keep one or two tritones, others
+none. What they share is the operation: they have fewer notes than the parent
+(except \texttt{TONES}, which has no semitones and is the identity) and never
+more tritones. \textsf{PENTA} is only the conventional label of one of the
+five-note views; it is not the name of the category.
+
 The figure below shows each view's degrees, with degree 1 bottom centre; red
 lines join the tritones that survive.
 
@@ -1575,24 +1581,40 @@ lines join the tritones that survive.
 	\label{tab:collapse-views-en}
 \end{figure}
 
-The figure explains why \texttt{PENTA} is not a single scale. In \texttt{WHITE},
-up/up, down/down and down/up are three different pentatonics; the third is what
-we have called \texttt{PENTA}. The up/down view keeps the \texttt{e-A} tritone
-and therefore is not pentatonic in the same sense: it still has a tension zone.
-In \texttt{BLUE}, two views keep one tritone, one keeps both and only up/down
-removes both; that last one coincides with \texttt{PENTA} from \texttt{WHITE},
-although its parent and centre are different. It is the same note set with two
-different harmonic readings.
+The figure shows that there is no single \texttt{PENTA}. In \texttt{WHITE},
+three views have five notes and no tritone; the one conventionally called
+\texttt{PENTA} is down/up, but the other two are pentatonic as well. The fourth
+view, up/down, keeps the \texttt{e-A} tritone: it has five notes, but it is not
+a pentatonic "without tension". In \texttt{BLUE}, all four views have five
+notes; two keep one tritone, one keeps both and only up/down removes both. That
+last one coincides in notes with one of the \texttt{WHITE} views, although its
+parent and centre are different: the same note set with two harmonic readings.
 
-\texttt{RED} produces sparser views: three or four notes, with no tritones. Two
-of them keep a semitone; the other two have neither semitones nor tritones.
-They are very open sets, almost without direction, and should not be confused
-with the pentatonics of \texttt{WHITE} or \texttt{BLUE}. \texttt{BLACK}
-produces four-note stacks of alternating minor thirds with two tritones each:
-tension does not disappear, it is concentrated. \texttt{TONES} has no
-semitones, so all four views are the identity. \texttt{FULL} is not a parent
-scale with its own centre; in the computational model it is the complete
-chromatic set and is not projected.
+\texttt{RED} produces views of three or four notes, not pentatonic. None has
+tritones; two keep a semitone and two have neither semitones nor tritones. They
+are very open sets, almost without direction. \texttt{BLACK} produces four-note
+views with two tritones each: tension does not disappear, it is concentrated.
+\texttt{TONES} has no semitones, so all four views are the identity.
+\texttt{FULL} is not a parent scale with its own centre; in the computational
+model it is the complete chromatic set and is not projected.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lccc}
+		\toprule
+		Parent & Number of notes & Semitones & Tritones \\
+		\midrule
+		\texttt{WHITE} & 5 & 0 & 0 or 1 \\
+		\texttt{BLUE}  & 5 & 0 & 0, 1 or 2 \\
+		\texttt{RED}   & 3 or 4 & 0 or 1 & 0 \\
+		\texttt{BLACK} & 4 & 0 & 2 \\
+		\texttt{TONES} & 6 & 0 & 3 (identity) \\
+		\bottomrule
+	\end{tabular}
+	\caption{Traits of the compact views. No view has more tritones than its
+	parent; some keep all of them, some keep only a few and others remove them.}
+	\label{tab:collapse-view-traits-en}
+\end{table}
 
 These views also explain why tritone-count modulation does not search views: a
 view has no destination parent scale; it only inherits the parent's centre and
