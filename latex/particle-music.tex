@@ -1598,7 +1598,7 @@ tritonos que sobreviven.
 \newcommand{\collapseviewbody}[1]{%
 	\foreach \val [count=\i from 0] in {#1} {
 		\ifnum\val=0
-			\node at (\collapseviewcoord{\i}) [empty] {};
+			\node at (\collapseviewcoord{\i}) [st=white] {};
 		\else
 			\node at (\collapseviewcoord{\i}) [st] {\val};
 		\fi
@@ -1609,24 +1609,23 @@ tritonos que sobreviven.
 		\collapseviewbody{#3}
 	\end{scope}
 	\pgfmathsetmacro{\collapseviewlabelx}{#1+0.5}
-	\pgfmathsetmacro{\collapseviewlabely}{#2-0.3}
+	\pgfmathsetmacro{\collapseviewlabely}{#2-0.55}
 	\node at (\collapseviewlabelx,\collapseviewlabely) {\scriptsize #4};}
 
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}[
-		st/.style={rectangle,minimum size=.36cm,inner sep=0cm,draw=black,thick,fill=#1!50,font=\sffamily},
-		st/.default=gray,
-		empty/.style={rectangle,minimum size=.36cm,inner sep=0cm,draw=gray!35,fill=white,font=\sffamily}]
-		\useasboundingbox (0,-9.5) rectangle (9.5,2.8);
-		\node at (2.5,2.5) {\scriptsize subir/subir};
-		\node at (4.5,2.5) {\scriptsize bajar/bajar};
-		\node at (6.5,2.5) {\scriptsize bajar/subir};
-		\node at (8.5,2.5) {\scriptsize subir/bajar};
-		\node[anchor=east] at (1.7,1) {\texttt{WHITE}};
-		\node[anchor=east] at (1.7,-2) {\texttt{BLUE}};
-		\node[anchor=east] at (1.7,-5) {\texttt{RED}};
-		\node[anchor=east] at (1.7,-8) {\texttt{BLACK}};
+		st/.style={rectangle,minimum size=.5cm,node distance=.5cm,inner sep=0cm,draw=black,thick,fill=#1!50,font=\sffamily},
+		st/.default=gray]
+		\useasboundingbox (0,-10.6) rectangle (9.6,3);
+		\node at (2.5,2.8) {\scriptsize subir/subir};
+		\node at (4.5,2.8) {\scriptsize bajar/bajar};
+		\node at (6.5,2.8) {\scriptsize bajar/subir};
+		\node at (8.5,2.8) {\scriptsize subir/bajar};
+		\node[anchor=east] at (1.1,1) {\texttt{WHITE}};
+		\node[anchor=east] at (1.1,-2) {\texttt{BLUE}};
+		\node[anchor=east] at (1.1,-5) {\texttt{RED}};
+		\node[anchor=east] at (1.1,-8) {\texttt{BLACK}};
 
 		\collapseviewgrid{2}{0}{1,0,0,2,0,3,0,4,0,0,5,0}{---}
 		\collapseviewgrid{4}{0}{1,0,2,0,0,3,0,4,0,5,0,0}{---}
