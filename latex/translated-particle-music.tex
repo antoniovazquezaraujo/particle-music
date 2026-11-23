@@ -335,21 +335,21 @@ In traditional notation, the degree farthest from the tritone is called \emph{fu
 The symmetric scales we use as the core are the ones studied in this first
 part. Symmetry is a pattern that helps the listener recognize harmony. If a scale is symmetrical, it will help us a lot in its analysis to use a notation that respects this symmetry, where the central point is graphically represented in the center. In the notation we present, this idea is very important.
 \subsection{Scales}
-These are the scales that are commonly used and the names that have been assigned to them. In standard notation, the equivalence would be as follows:
+These are the scales that are commonly used and the names that have been assigned to them:
 \begin{table}[htbp]
 \centering
 \small
-\begin{tabular}{llll}
+\begin{tabular}{lll}
 \toprule
-\textbf{\textsf{Scale}} & \textbf{Name} & \textbf{Standard} & \textbf{Type} \\
+\textbf{\textsf{Scale}} & \textbf{Name} & \textbf{Type} \\
 \midrule
-\textsf{WHITE} & Diatonic scale & & symmetric \\
-\textsf{BLUE} & Melodic minor scale & & symmetric \\
-\textsf{RED} & Double harmonic major & & symmetric \\
-\textsf{BLACK} & Diminished scale & & symmetric \\
-\textsf{TONES} & Whole tone scale & & symmetric \\
-\textsf{GREEN} & Harmonic minor scale & & non-symmetric \\
-\textsf{PINK} & Harmonic major scale & & non-symmetric \\
+\textsf{WHITE} & Diatonic & symmetric \\
+\textsf{BLUE} & Melodic minor & symmetric \\
+\textsf{RED} & Double harmonic major & symmetric \\
+\textsf{BLACK} & Diminished & symmetric \\
+\textsf{TONES} & Whole tone & symmetric \\
+\textsf{GREEN} & Harmonic minor & non-symmetric \\
+\textsf{PINK} & Harmonic major & non-symmetric \\
 \bottomrule
 \end{tabular}
 \caption{Table of musical scales}\label{tab:scale-name-equivalences}
@@ -435,6 +435,7 @@ In the notation created, the degrees of the scale are represented as numbers. It
 
 	\end{subfigure}
 	\\[2em]
+	\hfill
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\begin{tikzpicture}
@@ -472,30 +473,6 @@ In the notation created, the degrees of the scale are represented as numbers. It
 					},
 				st/.default=gray]
 
-			\node (15)[st                   ] {3}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {4};
-			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
-			\node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
-			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {5};
-			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
-
-		\end{tikzpicture}
-		\caption{\textsf{WHITE DU}}
-
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.3\textwidth}
-		\centering
-		\begin{tikzpicture}
-			[st/.style={
-						rectangle,
-						minimum size=.5cm,
-						node distance=.5cm,
-						inner sep = 0cm,
-						draw=black,thick,fill=#1!50,
-						font=\sffamily
-					},
-				st/.default=gray]
-
 			\node (15)[st=white             ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st=white, right of= 25] { };
 			\node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of= 35] {5};
 			\node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
@@ -506,7 +483,8 @@ In the notation created, the degrees of the scale are represented as numbers. It
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{The five symmetric parent scales and the \textsf{WHITE DU} view}\label{fig:the-six-scales}
+	\hfill
+	\caption{The five symmetric parent scales}\label{fig:the-five-scales}
 \end{figure}
 \textsf{GREEN} and \textsf{PINK} do not appear in this figure because they are
 not symmetric; they are studied in the non-symmetric base scales section.
@@ -2203,14 +2181,17 @@ share the same tritone skeleton.
 
 We call the \texttt{3,3} skeleton the arrangement in which the four notes that
 form the two tritones are evenly spaced every three semitones. In
-\textsf{GREEN} and \textsf{PINK} of \texttt{C}, the tritones are \texttt{D-Ab}
-and \texttt{F-B}; there are three semitones between the lower notes (\texttt{D}
-and \texttt{F}) and another three between the upper notes (\texttt{Ab} and
+\textsf{GREEN} and \textsf{PINK} the tritones are \texttt{D-Ab} and
+\texttt{F-B}; there are three semitones between the lower notes (\texttt{D} and
+\texttt{F}) and another three between the upper notes (\texttt{Ab} and
 \texttt{B}). In \textsf{RED} and \textsf{BLUE} the skeleton is \texttt{4,2}: the
 four notes alternate distances of four and two semitones.
 
-Since these scales have no centre of symmetry, in the figures we take the tonic
-of the standard scale as degree 1; in the examples, \texttt{C}.
+Degree 1 is the central degree, not the standard tonic. In \textsf{GREEN} the
+centre is \texttt{F}; in \textsf{PINK}, \texttt{D}. The figures place that
+degree in the bottom central cell. That is why \textsf{GREEN} of \texttt{F} and
+\textsf{PINK} of \texttt{D} use, respectively, the note sets of C harmonic
+minor and C harmonic major, but are named after their centre.
 
 \begin{figure}[H]
 	\begin{subfigure}{0.38\textwidth}
@@ -2226,16 +2207,16 @@ of the standard scale as degree 1; in the examples, \texttt{C}.
 					},
 				st/.default=gray]
 
-			\node (15)[st                   ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {5};
-			\node (14)[st=white,below of= 15] { };                                         \node (34) [st,       below of= 35] {6};
-			\node (13)[st,      below of= 14] {3};                                         \node (33) [st=white, below of= 34] { };
-			\node (12)[st,      below of= 13] {2};                                         \node (32) [st=white, below of= 33] { };
-			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {7};
+			\node (15)[st=white,            ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st,       right of= 25] {5};
+			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
-			\draw[very thick, color=red] (12.east) -- (34.west);
-			\draw[very thick, color=red] (15.east) -- (31.west);
+			\draw[very thick, color=red] (21.north) -- (25.south);
+			\draw[very thick, color=red] (13.east) -- (33.west);
 		\end{tikzpicture}
-		\caption{\textsf{GREEN} (harmonic minor)}
+		\caption{\textsf{GREEN} (harmonic minor, centre \texttt{F})}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.38\textwidth}
@@ -2251,19 +2232,20 @@ of the standard scale as degree 1; in the examples, \texttt{C}.
 					},
 				st/.default=gray]
 
-			\node (15)[st                   ] {4}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {5};
-			\node (14)[st,      below of= 15] {3};                                         \node (34) [st,       below of= 35] {6};
-			\node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
-			\node (12)[st,      below of= 13] {2};                                         \node (32) [st=white, below of= 33] { };
-			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st,       right of= 21] {7};
+			\node (15)[st,                  ] {4}; \node (25) [st,       right of=15] {5}; \node (35) [st=white, right of= 25] { };
+			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
-			\draw[very thick, color=red] (12.east) -- (34.west);
-			\draw[very thick, color=red] (15.east) -- (31.west);
+			\draw[very thick, color=red] (21.north) -- (25.south);
+			\draw[very thick, color=red] (13.east) -- (33.west);
 		\end{tikzpicture}
-		\caption{\textsf{PINK} (harmonic major)}
+		\caption{\textsf{PINK} (harmonic major, centre \texttt{D})}
 	\end{subfigure}
-	\caption{The two non-symmetric base scales. Red lines join the tritones of
-	the scale of \texttt{C}: \texttt{D-Ab} and \texttt{F-B}.}
+	\caption{The two non-symmetric base scales. Red lines join the tritones
+	\texttt{D-Ab} and \texttt{F-B}. \textsf{GREEN} is centred on \texttt{F};
+	\textsf{PINK}, on \texttt{D}.}
 	\label{fig:green-pink-en}
 \end{figure}
 
@@ -2272,10 +2254,10 @@ of the standard scale as degree 1; in the examples, \texttt{C}.
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{llcccc}
 			\toprule
-			Scale & Standard & Formula & Tritones & Minor seconds & Symmetric \\
+			Scale & Set & Formula (from the centre) & Tritones & Minor seconds & Symmetric \\
 			\midrule
-			\textsf{GREEN} & Harmonic minor & 1, 2, b3, 4, 5, b6, 7 & D-Ab, F-B & 3 & no \\
-			\textsf{PINK}  & Harmonic major & 1, 2, 3, 4, 5, b6, 7 & D-Ab, F-B & 3 & no \\
+			\textsf{GREEN} & Harmonic minor & 1, 2, b3, \#4, 5, 6, b7 & D-Ab, F-B & 3 & no \\
+			\textsf{PINK}  & Harmonic major & 1, 2, b3, 4, b5, 6, b7 & D-Ab, F-B & 3 & no \\
 			\textsf{RED}   & Double harmonic major & 1, b2, 3, 4, 5, b6, 7 & Db-G, F-B & 4 & yes \\
 			\bottomrule
 		\end{tabular}
@@ -2284,24 +2266,30 @@ of the standard scale as degree 1; in the examples, \texttt{C}.
 	\label{tab:green-pink-en}
 \end{table}
 
-\textsf{GREEN} and \textsf{PINK} are not modes of each other: the third changes
-(b3 in GREEN, 3 in PINK) and the second remains major. Both have three isolated
-minor seconds, not two groups of consecutive semitones, so the current compact
-views, defined for symmetric scales, do not apply directly. A projection rule
-for them is still pending.
+The formulas are expressed from the central degree, as in the rest of the
+book; that is why those of \textsf{GREEN} and \textsf{PINK} do not match the
+standard harmonic minor and harmonic major formulas.
 
-The fifth mode of \textsf{GREEN} is Phrygian dominant. We do not add it as a
+\textsf{GREEN} and \textsf{PINK} are not modes of each other: they are two
+different sets. From their centre, \textsf{GREEN} has \#4 and 5, while
+\textsf{PINK} has 4 and b5; the remaining degrees coincide. Both have three
+isolated minor seconds, not two groups of consecutive semitones, so the current
+compact views, defined for symmetric scales, do not apply directly. A projection
+rule for them is still pending.
+
+The fifth mode of harmonic minor is Phrygian dominant. We do not add it as a
 base scale: it is a mode, like the others. \textsf{PINK} is not a mode of
 \textsf{GREEN}. Their triads and particles can be analysed with the same tools,
 but they are not catalogued here yet.
 
-\textsf{RED} is double harmonic major, not harmonic minor. The difference from
-\textsf{GREEN} is twofold: \textsf{RED} has a flat second and a major third;
-\textsf{GREEN} has a major second and a minor third. The flamenco example in the
-manuscript uses \textsf{RED} in \texttt{E} (E F G\# A B C D\#); the flamenco
-Phrygian dominant is the fifth mode of \textsf{GREEN} of \texttt{A}
-(A B C D E F G\#), harmonic minor. The difference is the seventh. The review of
-that example is still pending.
+\textsf{RED} is double harmonic major, not harmonic minor. The note set of
+\textsf{GREEN} is that of C harmonic minor (C D Eb F G Ab B); \textsf{RED} of
+\texttt{C} is C Db E F G Ab B. If we compare the sets from \texttt{C}, the
+difference is twofold: \textsf{RED} has a flat second and a major third;
+\textsf{GREEN} has a major second and a minor third. The flamenco example in the manuscript uses \textsf{RED} in \texttt{E}
+(E F G\# A B C D\#); the flamenco Phrygian dominant is the fifth mode of A
+harmonic minor (A B C D E F G\#), that is, E F G\# A B C D. The difference is the
+seventh. The review of that example is still pending.
 
 \subsection{Order of triads by distances to the tritones}
 In these two scales \texttt{WHITE} and \texttt{BLUE} the shaded tritones are appreciated. The first has one: \texttt{B-F}, and the second has two: \texttt{A-e} and \texttt{B-F}. To modulate between one and the other, simply change the note \texttt{E} for \texttt{e} (\texttt{Mi} for \texttt{Mi flat}). The symmetrical center was the note \texttt{D} in \texttt{WHITE} and now it becomes \texttt{G} in \texttt{BLUE}.
@@ -2872,6 +2860,13 @@ below; the section \hyperref[sec:oriented-tritones]{``Oriented tritones and trit
 In even more summary: it turns out that by changing \texttt{E} for \texttt{e}, we are changing the character of the triad \texttt{CEG}, from major to minor. We are stealthily changing between joy and sadness. We are \emph{playing}.
 \subsection{The flamenco system}
 Another example of modulation that is very used, between \texttt{WHITE} of \texttt{D} and \texttt{RED} of \texttt{E}. We simply add a tritone but the orientation remains the same. Here the two triads farthest from a tritone become \texttt{EaB} and \texttt{FAC}, since \texttt{CEG} becomes \texttt{CEa} (two stacked major thirds).
+
+\emph{Note on the scale.} \texttt{RED} of \texttt{E} is double harmonic major
+(E F G\# A B C D\#). The flamenco Phrygian dominant (E F G\# A B C D) is the
+fifth mode of A harmonic minor (A B C D E F G\#). The difference is the
+seventh; the example and its chords remain, but the identification of the scale
+is still pending review.
+
 We should pay attention to the fact that a huge amount of flamenco music is based on only two chords, \texttt{EaB} and \texttt{FAC}. The reason is that those are the two most stable in the scale, and among the few that have a third. You can go from one to the other constantly without seeing the possibility of getting out of there, unless you return to the \texttt{WHITE} scale, making the threatening tritone between \texttt{A} and \texttt{e} disappear. Simply jump to the triad \texttt{ACE}, which they do most of the time, and then return to \texttt{GBD}, to \texttt{FAC}, and back to \texttt{EaB}.
 \begin{figure}[H]
 	\begin{subfigure}{.31\textwidth}
