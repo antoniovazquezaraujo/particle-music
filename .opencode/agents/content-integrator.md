@@ -17,7 +17,7 @@ Integra contenido pendiente desde `Ideas.adoc` y otras fuentes al documento prin
 
 ### Alta
 1. Integrar contenido de `Ideas.adoc`
-2. Sección de escalas pentatónicas (3 variantes de WHITE)
+2. Sección de vistas compactas (4 por padre, UU/DD/DU/UD)
 3. Análisis de blue note integration
 4. Estructuras de armonía cuartal
 
@@ -46,7 +46,7 @@ Integra contenido pendiente desde `Ideas.adoc` y otras fuentes al documento prin
 - Esquema de ideas principales agrupadas por nivel de importancia
 - Mapa de ideas
 - Blue note como nota simétrica adicional
-- Escalas pentatónicas (3 de WHITE, posibles de BLUE/RED)
-- Blue note y su influencia en pentatónicas
+- Vistas compactas (WHITE UU/DD/DU/UD, BLUE UU/DD/DU/UD, etc.)
+- Blue note y su relación con las vistas compactas
 - Armonía cuartal
 - Intro completa (qué es, quién soy, por qué, para quién, dónde estoy, a dónde voy)

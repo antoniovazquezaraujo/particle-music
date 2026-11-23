@@ -29,13 +29,13 @@ Revisa coherencia teórica, terminología y estructura académica del manuscrito
 | Cambio de centro | Reorientación | Modulación (solo si cambia centro tonal) |
 | Partícula | Pila de grados alternos | Acorde |
 
-## Escalas fundamentales
+## Escalas padre y vistas compactas
 - **WHITE** - Diatónica (7 notas, 1 tritono, centrada en RE)
-- **BLUE** - Menor melódica (7 notas, 1 tritono)
+- **BLUE** - Menor melódica (7 notas, 2 tritonos)
 - **RED** - Menor armónica (7 notas, 2 tritonos)
-- **BLACK** - Disminuida (8 notas, simetría centrada en espacio)
-- **PENTA** - Pentatónica (5 notas, 0 tritonos)
-- **TONES** - Por tonos (6 notas, múltiples tritonos)
+- **BLACK** - Disminuida (8 notas, 4 tritonos, simetría centrada en espacio)
+- **TONES** - Por tonos (6 notas, 3 tritonos)
+- **Vistas compactas** - Cada padre tiene cuatro vistas nombradas `<PADRE> UU/DD/DU/UD` (U = up, D = down). Varían en cardinalidad (3–5 notas), semitonos y tritonos; nunca tienen más tritonos que el padre.
 
 ## Notas (notación del proyecto)
 - A-G mayúsculas: notas naturales

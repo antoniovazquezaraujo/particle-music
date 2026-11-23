@@ -33,16 +33,15 @@ bash scripts/clean.sh
 
 ## 📚 Core Theory Summary
 
-### Five Parent Scales + PENTA View
+### Five Parent Scales + Compact Views
 - **WHITE** - Diatonic (7 notes, 1 tritone, centered on RE)
 - **BLUE** - Melodic minor (7 notes, 1 tritone)
 - **RED** - Harmonic minor (7 notes, 2 tritones)
 - **BLACK** - Diminished (8 notes, space-centered symmetry)
 - **TONES** - Whole tone (6 notes, multiple tritones)
-- **PENTA** - Pentatonic **view** of WHITE/BLUE (5 notes, 0 tritones), not a parent scale
 - **FULL** - Complete chromatic set (implementation limit, no tonal center of its own)
 
-Collapse views: each parent exposes four semitone-collapse views (up/up, down/down, down/up, up/down). They vary in cardinality, semitones and surviving tritones: WHITE/BLUE give 5-note views (some keep one or two tritones), RED gives 3/4-note views with no tritones, BLACK gives 4-note views with two tritones, TONES is the identity. PENTA is only the conventional label of one 5-note view, not a category; no view has more tritones than its parent.
+Compact views are named `<PARENT> <UU|DD|DU|UD>` (U = up, D = down). Each parent exposes four semitone-collapse views. They vary in cardinality, semitones and surviving tritones: WHITE/BLUE give 5-note views (some keep one or two tritones), RED gives 3/4-note views with no tritones, BLACK gives 4-note views with two tritones, TONES is the identity. No view has more tritones than its parent.
 
 Tritones are **oriented by their first appearance in the scale**: `F-B` and `B-F` are different. Modulation by tritone count preserves orientation; `INVERT` (`KEY + 6`) is a separate operation.
 
@@ -61,7 +60,7 @@ Tritones are **oriented by their first appearance in the scale**: `F-B` and `B-F
 
 ### High
 1. Integrate `Ideas.adoc` content into main document
-2. Add pentatonic scales section (3 variants from WHITE)
+2. Add compact views section (4 variants per parent, named UU/DD/DU/UD)
 3. Blue note integration analysis
 4. Quartal harmony structures
 

@@ -387,19 +387,16 @@ Estas son las escalas que se usan habitualmente y los nombres que se le han asig
 		\textsf{BLUE}            & Escala menor melódica &                   \\
 		\textsf{RED}             & Escala menor armónica &                   \\
 		\textsf{BLACK}           & Escala disminuida     &                   \\
-		\textsf{PENTA}           & Vista compacta de \textsf{WHITE}/\textsf{BLUE} (5 notas) & \\
 		\textsf{TONES}           & Escala por tonos      &                   \\
 		\bottomrule
 	\end{tabular}
 	\caption{Tabla de escalas musicales}\label{tab:scale-name-equivalences}
 \end{table}
 
-\textsf{PENTA} se incluye en la tabla porque su conjunto de notas y su carácter
-son parte de la teoría, pero no es una escala padre: es una vista compacta de
-\textsf{WHITE} o \textsf{BLUE}, y solo una de las varias vistas posibles. Las escalas padre son \textsf{WHITE},
-\textsf{BLUE}, \textsf{RED}, \textsf{BLACK} y \textsf{TONES}; \textsf{FULL} es
-el conjunto cromático completo. Volveremos sobre esta distinción al hablar de
-modulación y de tritonos orientados.
+Las vistas compactas no son escalas padre y se estudian más adelante. Las
+escalas padre son \textsf{WHITE}, \textsf{BLUE}, \textsf{RED}, \textsf{BLACK} y
+\textsf{TONES}; \textsf{FULL} es el conjunto cromático completo. Volveremos
+sobre esta distinción al hablar de modulación y de tritonos orientados.
 
 En la notación creada se representan los grados de la escala como números. Se ha de prestar atención a que el primer grado de la escala no es, como en la notación tradicional, el grado más lejano al tritono (en la escala diatónica sería el DO), sino el grado que, como muestran las figuras, ocupa el centro de la estructura (en la escala diatónica sería el RE). Partiendo de la nota inicial y girando en sentido agujas del reloj se sube de tono hasta que se vuelve al tono inicial, es decir, se sube una octava.
 
@@ -522,7 +519,7 @@ En la notación creada se representan los grados de la escala como números. Se 
 			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
 		\end{tikzpicture}
-		\caption{\textsf{PENTA (vista)}}
+		\caption{\textsf{WHITE DU}}
 
 	\end{subfigure}
 	\hfill
@@ -549,7 +546,7 @@ En la notación creada se representan los grados de la escala como números. Se 
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco escalas padre y la vista \textsf{PENTA}}\label{fig:the-six-scales}
+	\caption{Las cinco escalas padre y la vista \textsf{WHITE DU}}\label{fig:the-six-scales}
 \end{figure}
 
 
@@ -612,7 +609,7 @@ Esta sería la representación de la escala \texttt{BLUE} de \texttt{LA}, es dec
 \end{figure}
 
 \subsection{Modos}
-Los modos son las distintas \emph{orientaciones} de las escalas existentes, es decir, la misma escala tomada comenzando desde diferentes notas. En este texto reservaremos la palabra \emph{vista} (o \emph{proyección}) para las reducciones por colapso, como \textsf{PENTA}; un modo no elimina notas, solo cambia el punto de partida.
+Los modos son las distintas \emph{orientaciones} de las escalas existentes, es decir, la misma escala tomada comenzando desde diferentes notas. En este texto reservaremos la palabra \emph{vista} (o \emph{proyección}) para las reducciones por colapso, como \textsf{WHITE DU}; un modo no elimina notas, solo cambia el punto de partida.
 A partir de las escalas presentadas, se generan estos modos. De momento, hemos asignado a cada uno un número (no inventemos nombres, si es posible!), tomando el cero como el modo central y luego números positivos o negativos si bajamos o subimos por la escala.
 
 Los nombres históricos de los modos están directamente traídos de la cultura griega, son \textsf{dórico}, \textsf{jónico}, \textsf{mixolidio}\ldots etc. Como si fueran edificios antiguos. Y no hablemos de los modos de la escala menor melódica (nuestra escala \textsf{BLUE}), \textsf{Frigio aumentado}, \textsf{Lidio$\sharp$4}, \textsf{Locrio$\sharp$2}, \textsf{Superlocrio $\flat$$\flat$7}. Sin duda hay que hacer algo para dejen de usarse estos estrafalarios artefactos ``proto-fonéticos'' de la antiguedad.
@@ -1328,7 +1325,7 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
 
 	\end{subfigure}
 	\hfill
-	\caption{Los cinco modos de la vista \textsf{PENTA}}\label{fig:the-penta-modes}
+	\caption{Los cinco modos de la vista \textsf{WHITE DU}}\label{fig:white-du-modes}
 \end{figure}
 \begin{figure}[H]
 	\begin{subfigure}{1\textwidth}
@@ -1356,13 +1353,14 @@ Los nombres históricos de los modos están directamente traídos de la cultura 
 	\end{subfigure}
 	\caption{El único modo de \textsf{TONES}}\label{fig:the-tones-modes}
 \end{figure}
-\subsection{Tríadas de la vista \textsf{PENTA}}
+\subsection{Tríadas de la vista \textsf{WHITE DU}}
 
-\textsf{PENTA} es una vista pentatónica de \textsf{WHITE} o \textsf{BLUE}, no
-una escala padre. Las tríadas que siguen describen ese conjunto de notas y su
-carácter, pero su centro y sus tritonos se heredan del padre.
+\textsf{WHITE DU} es la vista compacta de \textsf{WHITE} que coincide en notas
+con \textsf{BLUE UD}; no es una escala padre. Las tríadas que siguen describen
+ese conjunto de notas y su carácter, pero su centro y sus tritonos se heredan
+del padre.
 
-La vista \textsf{PENTA} tiene tríadas como las demás. Si se toman como en la notación estandar, parece que en lugar de terceras, están formadas por cuartas, así que se habla de \emph{acordes por cuartas}, o \emph{armonía cuartal}. Esto es totalmente innecesario. Lo único que ocurre es que en esa escala no existen esas notas. Solo son las terceras de esa escala. No hay por que hacer excepciones. La diferencia con las tríadas de una escala que contenga tritonos es que estas no llevan a ninguna parte, funcionan todas igual de bien. Son todas igual de estables y no hay que alejarse de ningún punto.
+La vista \textsf{WHITE DU} tiene tríadas como las demás. Si se toman como en la notación estandar, parece que en lugar de terceras, están formadas por cuartas, así que se habla de \emph{acordes por cuartas}, o \emph{armonía cuartal}. Esto es totalmente innecesario. Lo único que ocurre es que en esa escala no existen esas notas. Solo son las terceras de esa escala. No hay por que hacer excepciones. La diferencia con las tríadas de una escala que contenga tritonos es que estas no llevan a ninguna parte, funcionan todas igual de bien. Son todas igual de estables y no hay que alejarse de ningún punto.
 
 Quizá este concepto debería hacernos revisar también el nombre de los intervalos: las palabras ``tercera'' o ``cuarta'' tampoco deberían seguir usándose, simplemente son los intervalos que quedan entre las notas alternas de una escala. No importa si son 3 o 4, lo que importa es que son los intervalos alternos de esa escala concreta.
 
@@ -1516,7 +1514,7 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
 			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
 		\end{tikzpicture}
-		\caption{\textsf{PENTA (vista)}}
+		\caption{\textsf{WHITE DU}}
 
 	\end{subfigure}
 	\hfill
@@ -1547,7 +1545,7 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco escalas padre, la vista \textsf{PENTA} y sus tritonos}\label{fig:the-six-scales-and-tritones}
+	\caption{Las cinco escalas padre, la vista \textsf{WHITE DU} y sus tritonos}\label{fig:the-six-scales-and-tritones}
 \end{figure}
 
 
@@ -1559,7 +1557,7 @@ La escala \texttt{RED} se utiliza ampliamente en el flamenco, también con dos t
 
 La escala \texttt{BLACK} tiene 4 tritonos, se utiliza mucho en la música clásica cuando se desea remarcar la sensación tritonal, sin paliativos ni trucos, no ofrece ningún espacio para el relax y suele usarse durante periodos cortos.
 
-La vista \texttt{PENTA} no tiene ningún tritono. No hay amenazas, se utiliza en la música simple, canciones infantiles o básicamente en todas las civilizaciones primitivas. No hay posibilidad de engaño ni de sorpresa y no hace preguntas al oyente. Es más bien decorativa, adecuada para el adorno de fiestas y expresiones primarias. Sus tríadas dan lugar a un tipo de armonía llamada \emph{armonía por cuartas }
+La vista \texttt{WHITE DU} no tiene ningún tritono. No hay amenazas, se utiliza en la música simple, canciones infantiles o básicamente en todas las civilizaciones primitivas. No hay posibilidad de engaño ni de sorpresa y no hace preguntas al oyente. Es más bien decorativa, adecuada para el adorno de fiestas y expresiones primarias. Sus tríadas dan lugar a un tipo de armonía llamada \emph{armonía por cuartas }
 
 La escala \texttt{TONES} tiene tres tritonos, pero solamente seis notas y además, no tiene orientación posible. Hablaremos de esto más adelante.
 
@@ -1574,23 +1572,32 @@ La sensación para el oyente de que la pila que está sonando está cerca o lejo
 \subsection{Las vistas compactas o colapsadas}
 \label{sec:vistas-por-colapso}
 
-La técnica de colapsar no produce una sola escala ni una familia de escalas
-pentatónicas: produce una colección de \emph{vistas}. Llamaremos \emph{vista
+La técnica de colapsar no produce una sola escala ni una única familia:
+produce una colección de \emph{vistas}. Llamaremos \emph{vista
 compacta} o \emph{vista colapsada} a cada resultado de ocultar una de las dos
 notas de cada semitono que toca un tritono. La operación conserva el centro
 tonal y la key del padre y reindexa los grados visibles de 1 a $n$, pero no crea
 una escala padre nueva: es una proyección de la escala padre.
 
+Para nombrarlas usaremos dos letras: \texttt{U} de \emph{up} (subir) y
+\texttt{D} de \emph{down} (bajar). El primer par se refiere al primer grupo de
+semitonos en orden ascendente y el segundo al segundo grupo. Así, \texttt{WHITE
+UU} conserva las notas superiores de ambos semitonos, \texttt{WHITE DD} las
+inferiores, \texttt{WHITE DU} la inferior del primero y la superior del segundo,
+y \texttt{WHITE UD} la superior del primero y la inferior del segundo.
+
 No hay que buscar un nombre por número de notas. Las vistas pueden tener 3, 4 o
 5 notas; algunas conservan semitonos, otras no; algunas conservan uno o dos
 tritonos, otras ninguno. Lo único que comparten es la operación: tienen menos
 notas que el padre (salvo \texttt{TONES}, que no tiene semitonos y es la
-identidad) y nunca más tritonos. \textsf{PENTA} es solo la etiqueta
-convencional de una de las vistas de cinco notas; no es el nombre de la
-categoría.
+identidad) y nunca más tritonos. La vista de cinco notas sin tritonos es
+\texttt{WHITE DU} desde \texttt{WHITE} y \texttt{BLUE UD} desde \texttt{BLUE};
+no hay un nombre único para la categoría.
 
 En la figura siguiente se muestran los grados de cada vista, con el grado 1
-abajo, centro; las líneas rojas unen los tritonos que se conservan.
+abajo, centro; las líneas rojas unen los tritonos que se conservan. Cada celda
+se nombra con el padre y las dos letras: \texttt{WHITE UU}, \texttt{WHITE DD},
+\texttt{WHITE DU}, \texttt{WHITE UD}, etc.
 
 \newcommand{\collapseviewcoord}[1]{%
 	\ifcase#1
@@ -1636,10 +1643,10 @@ abajo, centro; las líneas rojas unen los tritonos que se conservan.
 		st/.style={rectangle,minimum size=.5cm,node distance=.5cm,inner sep=0cm,draw=black,thick,fill=#1!50,font=\sffamily},
 		st/.default=gray]
 		\useasboundingbox (0,-10.6) rectangle (9.6,3);
-		\node at (2.5,2.8) {\scriptsize subir/subir};
-		\node at (4.5,2.8) {\scriptsize bajar/bajar};
-		\node at (6.5,2.8) {\scriptsize bajar/subir};
-		\node at (8.5,2.8) {\scriptsize subir/bajar};
+		\node at (2.5,2.8) {\scriptsize UU};
+		\node at (4.5,2.8) {\scriptsize DD};
+		\node at (6.5,2.8) {\scriptsize DU};
+		\node at (8.5,2.8) {\scriptsize UD};
 		\node[anchor=east] at (1.1,1) {\texttt{WHITE}};
 		\node[anchor=east] at (1.1,-2) {\texttt{BLUE}};
 		\node[anchor=east] at (1.1,-5) {\texttt{RED}};
@@ -1670,24 +1677,22 @@ abajo, centro; las líneas rojas unen los tritonos que se conservan.
 	\label{tab:collapse-views}
 \end{figure}
 
-La lectura de la figura muestra que no hay una única \textsf{PENTA}. En
-\texttt{WHITE}, tres vistas tienen cinco notas y ningún tritono; la que
-convencionalmente llamamos \textsf{PENTA} es bajar/subir, pero las otras dos
-también son pentatónicas. La cuarta vista, subir/bajar, conserva el tritono
-\texttt{e-A}: tiene cinco notas, pero no es una pentatónica «sin tensión». En
-\texttt{BLUE}, las cuatro vistas tienen cinco notas; dos conservan un tritono,
-una conserva los dos y solo subir/bajar elimina ambos. Esa última coincide en
-notas con una de las vistas de \texttt{WHITE}, aunque su padre y su centro son
-otros: el mismo conjunto de notas con dos lecturas armónicas distintas.
+La figura muestra que las vistas de un mismo padre no son equivalentes. En
+\texttt{WHITE}, \texttt{UU}, \texttt{DD} y \texttt{DU} tienen cinco notas y
+ningún tritono; \texttt{UD} conserva el tritono \texttt{e-A}. En \texttt{BLUE},
+\texttt{UU} y \texttt{DD} conservan un tritono, \texttt{DU} conserva los dos y
+\texttt{UD} no tiene ninguno; \texttt{BLUE UD} coincide en notas con
+\texttt{WHITE DU}, aunque el padre y el centro son distintos: el mismo conjunto
+de notas con dos lecturas armónicas.
 
-\texttt{RED} produce vistas de tres o cuatro notas, no pentatónicas. Ninguna
-tiene tritonos; dos conservan un semitono y dos no tienen ni semitonos ni
-tritonos. Son conjuntos muy abiertos, casi sin dirección. \texttt{BLACK}
-produce vistas de cuatro notas, con dos tritonos cada una: la tensión no
-desaparece, se concentra. \texttt{TONES} no tiene semitonos, así que las cuatro
-vistas son la identidad. \texttt{FULL} no es una escala padre con centro
-propio; en el modelo computacional se trata como el conjunto cromático completo
-y no se proyecta.
+\texttt{RED} produce vistas de tres o cuatro notas, no de cinco.
+\texttt{UU} y \texttt{DD} conservan un semitono y ningún tritono; \texttt{DU} y
+\texttt{UD} no tienen ni semitonos ni tritonos. Son conjuntos muy abiertos, casi
+sin dirección. \texttt{BLACK} produce vistas de cuatro notas, con dos tritonos
+cada una: la tensión no desaparece, se concentra. \texttt{TONES} no tiene
+semitonos, así que las cuatro vistas son la identidad. \texttt{FULL} no es una
+escala padre con centro propio; en el modelo computacional se trata como el
+conjunto cromático completo y no se proyecta.
 
 \begin{table}[H]
 	\centering
@@ -1840,7 +1845,7 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
 			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
 		\end{tikzpicture}
-		\caption{\textsf{PENTA (vista)}}
+		\caption{\textsf{WHITE DU}}
 
 	\end{subfigure}
 	\hfill
@@ -1867,7 +1872,7 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco escalas padre, la vista \textsf{PENTA} y terceras ambiguas}\label{fig:the-six-scales-and-ambiguous-thirds}
+	\caption{Las cinco escalas padre, la vista \textsf{WHITE DU} y terceras ambiguas}\label{fig:the-six-scales-and-ambiguous-thirds}
 \end{figure}
 
 
@@ -1879,7 +1884,7 @@ En este esquema observamos (marcados en tono oscuro) los grados que forman una t
 	\item  \texttt{BLUE} tiene una ambigüedad, en su tercer grado
 	\item  \texttt{RED} tiene tres: segundo, tercero y sexto.
 	\item  \texttt{BLACK} tiene cuatro en notas alternas, primero, tercero,         quinto y séptimo.
-	\item  \texttt{PENTA} no tiene ninguna ambigüedad: es directa, clara y         simple.
+	\item  \texttt{WHITE DU} no tiene ninguna ambigüedad: es directa, clara y         simple.
 	\item  \texttt{TONES} no tiene ninguna ambigüedad, puesto que todas sus         terceras son mayores, pero esto genera una débil capacidad para la         orientación: el oyente no sabrá detectar con facilidad en qué grado de         la escala estamos.
 \end{itemize}
 
@@ -1887,7 +1892,7 @@ La sensación de ambigüedad entre el carácter mayor/menor de una tríada produ
 
 \subsection{Ausencia de terceras}
 
-Si todos los grados de la escala tienen una tercera, mayor o menor, consideraremos que, al menos en ese aspecto, está completa. Podemos observar que, en la escala \texttt{RED} hay un grado que no tiene ninguna clase de tercera: el séptimo, así como en la escala \texttt{PENTA} faltan dos terceras, en el primer y en el tercer grado.
+Si todos los grados de la escala tienen una tercera, mayor o menor, consideraremos que, al menos en ese aspecto, está completa. Podemos observar que, en la escala \texttt{RED} hay un grado que no tiene ninguna clase de tercera: el séptimo, así como en la vista \texttt{WHITE DU} faltan dos terceras, en el primer y en el tercer grado.
 
 \begin{figure}[H]
 	\centering
@@ -1934,7 +1939,7 @@ Si todos los grados de la escala tienen una tercera, mayor o menor, considerarem
 			\node (11)[st=white,below of= 12] { }; \node (21) [st=red,   right of=11] {1}; \node (31) [st=white, right of= 21] { };
 
 		\end{tikzpicture}
-		\caption{\textsf{PENTA (vista)}}
+		\caption{\textsf{WHITE DU}}
 
 	\end{subfigure}
 	\caption{Escalas con grados sin tercera}\label{fig:scales-with-no-thirds}
@@ -2450,7 +2455,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
 
 \subsection{Acordes de cada escala}
 
-Los acordes que se forman a partir de cada una de las cinco escalas padre y de la vista \textsf{PENTA} son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos.
+Los acordes que se forman a partir de cada una de las cinco escalas padre y de la vista \textsf{WHITE DU} son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos.
 
 Una posible notación para nombrar los acordes podría consistir en especificar solamente tres elementos:
 \begin{itemize}
@@ -2471,7 +2476,6 @@ Para designar la escala bastaría con la inicial de su nombre (salvo \textsf{BLA
 		\textsf{BLUE}  & B     \\
 		\textsf{RED}   & R     \\
 		\textsf{BLACK} & K     \\
-		\textsf{PENTA} & P     \\
 		\textsf{TONES} & T     \\
 		\bottomrule
 	\end{tabular}
@@ -3329,7 +3333,7 @@ casos mínimos son:
 			Añadir, conservar el primero & \texttt{RED} de \texttt{E} & \texttt{F-B} primero & 2 notas \\
 			Añadir, conservar el segundo & \texttt{RED} de \texttt{C} & \texttt{F-B} segundo & 2 notas \\
 			Invertir & \texttt{WHITE} de \texttt{G\#} & \texttt{B-F} & key $+6$ \\
-			Quitar & --- & --- & es una vista: \texttt{PENTA} \\
+			Quitar & --- & --- & es una vista: \texttt{WHITE DU} \\
 			\bottomrule
 		\end{tabular}%
 	}
@@ -3337,15 +3341,15 @@ casos mínimos son:
 	\label{tab:tritone-count-examples}
 \end{table}
 
-El caso de quitar el último tritono es distinto. \texttt{PENTA} no es una
-escala padre con la que se pueda modular: es una vista pentatónica de
-\texttt{WHITE} o \texttt{BLUE}, obtenida al colapsar los semitonos que tocan
-los tritonos. Su conjunto de notas, sus modos y sus partículas siguen siendo
-válidos, pero su centro y sus tritonos se heredan del padre. En la práctica,
-\texttt{WHITE} con la vista que conserva la nota inferior del primer semitono y
-la superior del segundo produce \texttt{PENTA}; por eso quitar el único tritono
-de \texttt{WHITE} no es una modulación a otra escala padre, sino un cambio de
-vista.
+El caso de quitar el último tritono es distinto. \texttt{WHITE DU} no es una
+escala padre con la que se pueda modular: es una vista compacta de
+\texttt{WHITE}, obtenida al colapsar los semitonos que tocan los tritonos. La
+misma vista desde \texttt{BLUE} se llama \texttt{BLUE UD}. Su conjunto de notas,
+sus modos y sus partículas siguen siendo válidos, pero su centro y sus tritonos
+se heredan del padre. En la práctica, \texttt{WHITE} con la vista que conserva
+la nota inferior del primer semitono y la superior del segundo produce
+\texttt{WHITE DU}; por eso quitar el único tritono de \texttt{WHITE} no es una
+modulación a otra escala padre, sino un cambio de vista.
 
 No hay una escala padre con cinco tritonos. Añadir uno a \texttt{BLACK} o a
 \texttt{FULL}, o quitar uno a \texttt{FULL}, no tiene un destino padre. El paso
@@ -3409,7 +3413,7 @@ En esta tabla vemos el tipo de tríadas que tiene cada escala y en qué grado ap
 	\begingroup\setlength{\tabcolsep}{3pt}\small
 	\begin{tabular}{|l|l|l|l|l|l|l|l|}
 		\hline
-		ESTANDAR & ab & WHITE   & BLUE  & RED     & BLACK   & PENTA & TONES \\
+		ESTANDAR & ab & WHITE   & BLUE  & RED     & BLACK   & WHITE DU & TONES \\
 		\hline
 		menor    & 34 & 1,2,5   & 4,5   & 2,3,4,5 & 1,3,5,7 & 4     & ---   \\
 		\hline
@@ -3731,7 +3735,7 @@ De momento hemos hecho todo esto con la escala \texttt{WHITE}. Vamos a intentar 
 	\caption{Partículas \sffamily{BLUE} de 7 notas}\label{tab:particles-seven-notes-blue}
 \end{table}
 
-Observamos, por supuesto, la misma simetría y el mismo descenso por grados con cada nueva nota. Sin embargo, aparece una nueva partícula con la que no habíamos contado aún: la tríada \texttt{44}. Tendrá que formar parte de nuestro vocabulario. La sensación que produce esta tríada tiene que ver con la orientación. Se trata de dos terceras mayores, no se sabe cuál es la base porque podría ser cualquiera, al estar a distancia de 4 semitonos, apilando 3 de ellas llegamos a la octava, es decir, se termina la escala. Esto es lo mismo que le ocurre a la escala \texttt{TONES}, no tiene orientación. El oyente siente la presencia de tritonos por todas partes, no hay ningún lugar seguro, no se puede huir en ninguna dirección. Da lo mismo en qué grado de la escala estemos, la sensación persiste: amenaza constante y ninguna posibilidad de escape. La diferencia con \texttt{PENTA}, donde no hay ningún tritono es apreciable, aunque allí sí hay una orientación: se sabe en qué grado de la escala estamos, pero no hay necesidad de huir de ningún punto. La tríada \texttt{44} crea una sensación de perplejidad y de amenaza irremisible.
+Observamos, por supuesto, la misma simetría y el mismo descenso por grados con cada nueva nota. Sin embargo, aparece una nueva partícula con la que no habíamos contado aún: la tríada \texttt{44}. Tendrá que formar parte de nuestro vocabulario. La sensación que produce esta tríada tiene que ver con la orientación. Se trata de dos terceras mayores, no se sabe cuál es la base porque podría ser cualquiera, al estar a distancia de 4 semitonos, apilando 3 de ellas llegamos a la octava, es decir, se termina la escala. Esto es lo mismo que le ocurre a la escala \texttt{TONES}, no tiene orientación. El oyente siente la presencia de tritonos por todas partes, no hay ningún lugar seguro, no se puede huir en ninguna dirección. Da lo mismo en qué grado de la escala estemos, la sensación persiste: amenaza constante y ninguna posibilidad de escape. La diferencia con \texttt{WHITE DU}, donde no hay ningún tritono es apreciable, aunque allí sí hay una orientación: se sabe en qué grado de la escala estamos, pero no hay necesidad de huir de ningún punto. La tríada \texttt{44} crea una sensación de perplejidad y de amenaza irremisible.
 
 Este sería nuestro nuevo catálogo de partículas básicas:
 
@@ -3887,7 +3891,7 @@ Bien, hemos de considerar la dificultad intrínseca de cada escala como parte de
 
 Por contra, las pilas \texttt{24} y \texttt{42} hacen su aparición en \texttt{RED}. Tampoco parecen tener un significado especial, más que representar a su escala.
 
-Las cinco escalas padre forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, la vista \texttt{PENTA} se obtiene colapsando los semitonos que tocan el tritono; agregando tritonos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}. \texttt{PENTA} aparece en el mapa por su carácter, pero no como escala padre: es una vista de \texttt{WHITE} o \texttt{BLUE}.
+Las cinco escalas padre forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, la vista \texttt{WHITE DU} se obtiene colapsando los semitonos que tocan el tritono; agregando tritonos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}. \texttt{WHITE DU} aparece en el mapa por su carácter, pero no como escala padre: es una vista de \texttt{WHITE}; desde \texttt{BLUE} se llama \texttt{BLUE UD}.
 
 \begin{figure}[H]
 	\begin{tikzpicture}
@@ -3896,14 +3900,14 @@ Las cinco escalas padre forman un simple esquema donde se expresan tres concepto
 		\node[circle,draw,color=blue,minimum size=6cm,label=340:Desorientación] (B) at (2,0) {};
 		\node[circle,draw,color=green,minimum size=6cm,label=90:Claridad] (B) at (1,2) {};
 
-		\node[align=center] at (1,4) {\texttt{PENTA}\\(vista)};
+		\node at (1,4) {\texttt{WHITE DU}};
 		\node at (1,1) {\texttt{WHITE}};
 		\node at (-1,2) {\texttt{RED}};
 		\node at (3,2) {\texttt{BLUE}};
 		\node at (-2,-1) {\texttt{BLACK}};
 		\node at (4,-1) {\texttt{TONES}};
 	\end{tikzpicture}
-	\caption{Sensaciones de las escalas padre y de la vista \texttt{PENTA}}\label{tab:scale-sensation}
+	\caption{Sensaciones de las escalas padre y de la vista \texttt{WHITE DU}}\label{tab:scale-sensation}
 \end{figure}
 
 En resumen: las nuevas tríadas de nuestro vocabulario no tienen un significado específico, simplemente sirven como señales que indican en qué escala estamos (sea cierto o no) con lo que se creará una sensación claridad, oscuridad o desorientación.

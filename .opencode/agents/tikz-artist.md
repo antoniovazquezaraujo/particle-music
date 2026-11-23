@@ -24,11 +24,13 @@ Crea y mantiene diagramas TikZ para escalas, partículas y esquemas geométricos
 | Escala | Notas | Tritonos | Simetría |
 |--------|-------|----------|----------|
 | WHITE | 7 | 1 | Centrada en nota |
-| BLUE | 7 | 1 | Centrada en nota |
+| BLUE | 7 | 2 | Centrada en nota |
 | RED | 7 | 2 | Centrada en nota |
-| BLACK | 8 | - | Centrada en espacio |
-| PENTA | 5 | 0 | Centrada en nota |
-| TONES | 6 | múltiples | Centrada en nota |
+| BLACK | 8 | 4 | Centrada en espacio |
+| TONES | 6 | 3 | Centrada en nota |
+| WHITE DU | 5 | 0 | Vista compacta de WHITE (no escala padre) |
+
+Las vistas compactas se nombran `<PADRE> UU/DD/DU/UD`.
 
 ## Convenciones de Partículas
 - `\iparticle{1,2,3,0,1}` - inline particle

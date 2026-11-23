@@ -44,7 +44,7 @@ Read `latex/particle-music.tex` to find:
 ## Current priorities
 
 ### High
-1. Pentatonic scales section (3 variants from WHITE)
+1. Compact views section (4 variants per parent, UU/DD/DU/UD)
 2. Blue note analysis as symmetric additional note
 3. Quartal harmony structures
 4. Main ideas outline/map
