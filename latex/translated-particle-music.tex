@@ -1525,11 +1525,10 @@ lines join the tritones that survive.
 		\pgfmathsetmacro{\ay}{\collapsedviewy{\a}}
 		\pgfmathsetmacro{\bx}{\collapsedviewx{\b}}
 		\pgfmathsetmacro{\by}{\collapsedviewy{\b}}
-		\pgfmathsetmacro{\len}{sqrt((\bx-\ax)*(\bx-\ax)+(\by-\ay)*(\by-\ay))}
-		\pgfmathsetmacro{\ux}{(\bx-\ax)/\len}
-		\pgfmathsetmacro{\uy}{(\by-\ay)/\len}
+		% Pairs run from the left column to the right: start at the centre of
+		% the right vertical edge and enter through the left one.
 		\draw[very thick, color=red]
-			(\ax+0.25*\ux,\ay+0.25*\uy) -- (\bx-0.25*\ux,\by-0.25*\uy);
+			(\ax+0.25,\ay) -- (\bx-0.25,\by);
 	}}
 
 \newcommand{\collapsedviewgrid}[4]{%
