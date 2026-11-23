@@ -1489,9 +1489,7 @@ The collapse technique does not produce a single scale: it produces several.
 The idea is simple. Each semitone that touches an endpoint of a tritone has
 two notes; we keep one and hide the other. Since there are two groups of
 semitones (around each tritone or around each pair of tritones), there are four
-possible combinations: up/up, down/down, down/up and up/down. In Carmen's
-implementation they are called \texttt{BOTH\_HIGH}, \texttt{BOTH\_LOW},
-\texttt{LOW\_HIGH} and \texttt{HIGH\_LOW}.
+possible combinations: up/up, down/down, down/up and up/down.
 
 The view keeps the parent's tonal centre and key, but reindexes the visible
 degrees from 1 to $n$. It is not an independent parent scale: it is a lens on

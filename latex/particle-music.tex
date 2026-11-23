@@ -1578,9 +1578,7 @@ La técnica de colapsar no produce una sola escala: produce varias. La idea es
 sencilla. Cada semitono que toca un extremo de un tritono tiene dos notas;
 elegimos una de las dos y ocultamos la otra. Como hay dos grupos de semitonos
 (alrededor de cada tritono o de cada par de tritonos), hay cuatro combinaciones
-posibles: subir/subir, bajar/bajar, bajar/subir y subir/bajar. En la
-implementación de Carmen se llaman \texttt{BOTH\_HIGH}, \texttt{BOTH\_LOW},
-\texttt{LOW\_HIGH} y \texttt{HIGH\_LOW}.
+posibles: subir/subir, bajar/bajar, bajar/subir y subir/bajar.
 
 La vista conserva el centro tonal y la key del padre, pero reindexa los grados
 visibles de 1 a $n$. No es una escala padre independiente: es una lente sobre
