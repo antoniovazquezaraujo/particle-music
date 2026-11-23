@@ -1496,8 +1496,8 @@ implementation they are called \texttt{BOTH\_HIGH}, \texttt{BOTH\_LOW},
 The view keeps the parent's tonal centre and key, but reindexes the visible
 degrees from 1 to $n$. It is not an independent parent scale: it is a lens on
 the parent. Some views keep one or more tritones; others remove them entirely.
-The figure below shows each view's degrees, with degree 1 bottom centre; the
-surviving tritones appear below each ring.
+The figure below shows each view's degrees, with degree 1 bottom centre; red
+lines join the tritones that survive.
 
 \newcommand{\collapsedviewcoord}[1]{%
 	\ifcase#1
@@ -1514,13 +1514,29 @@ surviving tritones appear below each ring.
 		\fi
 	}}
 
+\newcommand{\collapsedviewx}[1]{%
+	\ifcase#1 0.5\or0\or0\or0\or0\or0\or0.5\or1\or1\or1\or1\or1\fi}
+\newcommand{\collapsedviewy}[1]{%
+	\ifcase#1 0\or0\or0.5\or1\or1.5\or2\or2\or2\or1.5\or1\or0.5\or0\fi}
+
+\newcommand{\collapsedviewtritones}[1]{%
+	\foreach \a/\b in {#1} {
+		\pgfmathsetmacro{\ax}{\collapsedviewx{\a}}
+		\pgfmathsetmacro{\ay}{\collapsedviewy{\a}}
+		\pgfmathsetmacro{\bx}{\collapsedviewx{\b}}
+		\pgfmathsetmacro{\by}{\collapsedviewy{\b}}
+		\pgfmathsetmacro{\len}{sqrt((\bx-\ax)*(\bx-\ax)+(\by-\ay)*(\by-\ay))}
+		\pgfmathsetmacro{\ux}{(\bx-\ax)/\len}
+		\pgfmathsetmacro{\uy}{(\by-\ay)/\len}
+		\draw[very thick, color=red]
+			(\ax+0.25*\ux,\ay+0.25*\uy) -- (\bx-0.25*\ux,\by-0.25*\uy);
+	}}
+
 \newcommand{\collapsedviewgrid}[4]{%
 	\begin{scope}[shift={(#1,#2)}]
 		\collapsedviewbody{#3}
-	\end{scope}
-	\pgfmathsetmacro{\collapsedviewlabelx}{#1+0.5}
-	\pgfmathsetmacro{\collapsedviewlabely}{#2-0.55}
-	\node at (\collapsedviewlabelx,\collapsedviewlabely) {\scriptsize #4};}
+		\collapsedviewtritones{#4}
+	\end{scope}}
 
 \begin{figure}[H]
 	\centering
@@ -1537,28 +1553,28 @@ surviving tritones appear below each ring.
 		\node[anchor=east] at (1.1,-5) {\texttt{RED}};
 		\node[anchor=east] at (1.1,-8) {\texttt{BLACK}};
 
-		\collapsedviewgrid{2}{0}{1,0,0,2,0,3,0,4,0,0,5,0}{---}
-		\collapsedviewgrid{4}{0}{1,0,2,0,0,3,0,4,0,5,0,0}{---}
-		\collapsedviewgrid{6}{0}{1,0,2,0,0,3,0,4,0,0,5,0}{---}
-		\collapsedviewgrid{8}{0}{1,0,0,2,0,3,0,4,0,5,0,0}{e-A}
+		\collapsedviewgrid{2}{0}{1,0,0,2,0,3,0,4,0,0,5,0}{}
+		\collapsedviewgrid{4}{0}{1,0,2,0,0,3,0,4,0,5,0,0}{}
+		\collapsedviewgrid{6}{0}{1,0,2,0,0,3,0,4,0,0,5,0}{}
+		\collapsedviewgrid{8}{0}{1,0,0,2,0,3,0,4,0,5,0,0}{3/9}
 
-		\collapsedviewgrid{2}{-3}{1,0,2,0,0,3,0,0,4,0,5,0}{D-a}
-		\collapsedviewgrid{4}{-3}{1,0,2,0,3,0,0,4,0,0,5,0}{E-b}
-		\collapsedviewgrid{6}{-3}{1,0,2,0,3,0,0,0,4,0,5,0}{D-a, E-b}
-		\collapsedviewgrid{8}{-3}{1,0,2,0,0,3,0,4,0,0,5,0}{---}
+		\collapsedviewgrid{2}{-3}{1,0,2,0,0,3,0,0,4,0,5,0}{2/8}
+		\collapsedviewgrid{4}{-3}{1,0,2,0,3,0,0,4,0,0,5,0}{4/10}
+		\collapsedviewgrid{6}{-3}{1,0,2,0,3,0,0,0,4,0,5,0}{2/8,4/10}
+		\collapsedviewgrid{8}{-3}{1,0,2,0,0,3,0,4,0,0,5,0}{}
 
-		\collapsedviewgrid{2}{-6}{1,2,0,0,0,3,0,0,4,0,0,0}{---}
-		\collapsedviewgrid{4}{-6}{1,0,0,0,2,0,0,3,0,0,0,4}{---}
-		\collapsedviewgrid{6}{-6}{1,0,0,0,0,2,0,3,0,0,0,0}{---}
-		\collapsedviewgrid{8}{-6}{0,1,0,0,2,0,0,0,3,0,0,4}{---}
+		\collapsedviewgrid{2}{-6}{1,2,0,0,0,3,0,0,4,0,0,0}{}
+		\collapsedviewgrid{4}{-6}{1,0,0,0,2,0,0,3,0,0,0,4}{}
+		\collapsedviewgrid{6}{-6}{1,0,0,0,0,2,0,3,0,0,0,0}{}
+		\collapsedviewgrid{8}{-6}{0,1,0,0,2,0,0,0,3,0,0,4}{}
 
-		\collapsedviewgrid{2}{-9}{0,0,1,0,0,2,0,0,3,0,0,4}{D-a, F-B}
-		\collapsedviewgrid{4}{-9}{0,1,0,0,2,0,0,3,0,0,4,0}{d-G, E-b}
-		\collapsedviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{d-G, F-B}
-		\collapsedviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{D-a, E-b}
+		\collapsedviewgrid{2}{-9}{0,0,1,0,0,2,0,0,3,0,0,4}{2/8,5/11}
+		\collapsedviewgrid{4}{-9}{0,1,0,0,2,0,0,3,0,0,4,0}{1/7,4/10}
+		\collapsedviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{1/7,5/11}
+		\collapsedviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{2/8,4/10}
 	\end{tikzpicture}
 	\caption{The four collapse views of each parent scale. Degree 1 is bottom
-	centre; empty cells are absent or hidden notes.}
+	centre; red lines join the tritones that survive.}
 	\label{tab:collapse-views-en}
 \end{figure}
 

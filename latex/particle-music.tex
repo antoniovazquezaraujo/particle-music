@@ -1586,8 +1586,8 @@ La vista conserva el centro tonal y la key del padre, pero reindexa los grados
 visibles de 1 a $n$. No es una escala padre independiente: es una lente sobre
 la escala padre. Algunas vistas conservan uno o varios tritonos; otras los
 eliminan por completo. En la figura siguiente se muestran los grados de cada
-vista, con el grado 1 abajo, centro; debajo de cada anillo aparecen los
-tritonos que sobreviven.
+vista, con el grado 1 abajo, centro; las líneas rojas unen los tritonos que se
+conservan.
 
 \newcommand{\collapseviewcoord}[1]{%
 	\ifcase#1
@@ -1604,13 +1604,29 @@ tritonos que sobreviven.
 		\fi
 	}}
 
+\newcommand{\collapseviewx}[1]{%
+	\ifcase#1 0.5\or0\or0\or0\or0\or0\or0.5\or1\or1\or1\or1\or1\fi}
+\newcommand{\collapseviewy}[1]{%
+	\ifcase#1 0\or0\or0.5\or1\or1.5\or2\or2\or2\or1.5\or1\or0.5\or0\fi}
+
+\newcommand{\collapseviewtritones}[1]{%
+	\foreach \a/\b in {#1} {
+		\pgfmathsetmacro{\ax}{\collapseviewx{\a}}
+		\pgfmathsetmacro{\ay}{\collapseviewy{\a}}
+		\pgfmathsetmacro{\bx}{\collapseviewx{\b}}
+		\pgfmathsetmacro{\by}{\collapseviewy{\b}}
+		\pgfmathsetmacro{\len}{sqrt((\bx-\ax)*(\bx-\ax)+(\by-\ay)*(\by-\ay))}
+		\pgfmathsetmacro{\ux}{(\bx-\ax)/\len}
+		\pgfmathsetmacro{\uy}{(\by-\ay)/\len}
+		\draw[very thick, color=red]
+			(\ax+0.25*\ux,\ay+0.25*\uy) -- (\bx-0.25*\ux,\by-0.25*\uy);
+	}}
+
 \newcommand{\collapseviewgrid}[4]{%
 	\begin{scope}[shift={(#1,#2)}]
 		\collapseviewbody{#3}
-	\end{scope}
-	\pgfmathsetmacro{\collapseviewlabelx}{#1+0.5}
-	\pgfmathsetmacro{\collapseviewlabely}{#2-0.55}
-	\node at (\collapseviewlabelx,\collapseviewlabely) {\scriptsize #4};}
+		\collapseviewtritones{#4}
+	\end{scope}}
 
 \begin{figure}[H]
 	\centering
@@ -1627,28 +1643,28 @@ tritonos que sobreviven.
 		\node[anchor=east] at (1.1,-5) {\texttt{RED}};
 		\node[anchor=east] at (1.1,-8) {\texttt{BLACK}};
 
-		\collapseviewgrid{2}{0}{1,0,0,2,0,3,0,4,0,0,5,0}{---}
-		\collapseviewgrid{4}{0}{1,0,2,0,0,3,0,4,0,5,0,0}{---}
-		\collapseviewgrid{6}{0}{1,0,2,0,0,3,0,4,0,0,5,0}{---}
-		\collapseviewgrid{8}{0}{1,0,0,2,0,3,0,4,0,5,0,0}{e-A}
+		\collapseviewgrid{2}{0}{1,0,0,2,0,3,0,4,0,0,5,0}{}
+		\collapseviewgrid{4}{0}{1,0,2,0,0,3,0,4,0,5,0,0}{}
+		\collapseviewgrid{6}{0}{1,0,2,0,0,3,0,4,0,0,5,0}{}
+		\collapseviewgrid{8}{0}{1,0,0,2,0,3,0,4,0,5,0,0}{3/9}
 
-		\collapseviewgrid{2}{-3}{1,0,2,0,0,3,0,0,4,0,5,0}{D-a}
-		\collapseviewgrid{4}{-3}{1,0,2,0,3,0,0,4,0,0,5,0}{E-b}
-		\collapseviewgrid{6}{-3}{1,0,2,0,3,0,0,0,4,0,5,0}{D-a, E-b}
-		\collapseviewgrid{8}{-3}{1,0,2,0,0,3,0,4,0,0,5,0}{---}
+		\collapseviewgrid{2}{-3}{1,0,2,0,0,3,0,0,4,0,5,0}{2/8}
+		\collapseviewgrid{4}{-3}{1,0,2,0,3,0,0,4,0,0,5,0}{4/10}
+		\collapseviewgrid{6}{-3}{1,0,2,0,3,0,0,0,4,0,5,0}{2/8,4/10}
+		\collapseviewgrid{8}{-3}{1,0,2,0,0,3,0,4,0,0,5,0}{}
 
-		\collapseviewgrid{2}{-6}{1,2,0,0,0,3,0,0,4,0,0,0}{---}
-		\collapseviewgrid{4}{-6}{1,0,0,0,2,0,0,3,0,0,0,4}{---}
-		\collapseviewgrid{6}{-6}{1,0,0,0,0,2,0,3,0,0,0,0}{---}
-		\collapseviewgrid{8}{-6}{0,1,0,0,2,0,0,0,3,0,0,4}{---}
+		\collapseviewgrid{2}{-6}{1,2,0,0,0,3,0,0,4,0,0,0}{}
+		\collapseviewgrid{4}{-6}{1,0,0,0,2,0,0,3,0,0,0,4}{}
+		\collapseviewgrid{6}{-6}{1,0,0,0,0,2,0,3,0,0,0,0}{}
+		\collapseviewgrid{8}{-6}{0,1,0,0,2,0,0,0,3,0,0,4}{}
 
-		\collapseviewgrid{2}{-9}{0,0,1,0,0,2,0,0,3,0,0,4}{D-a, F-B}
-		\collapseviewgrid{4}{-9}{0,1,0,0,2,0,0,3,0,0,4,0}{d-G, E-b}
-		\collapseviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{d-G, F-B}
-		\collapseviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{D-a, E-b}
+		\collapseviewgrid{2}{-9}{0,0,1,0,0,2,0,0,3,0,0,4}{2/8,5/11}
+		\collapseviewgrid{4}{-9}{0,1,0,0,2,0,0,3,0,0,4,0}{1/7,4/10}
+		\collapseviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{1/7,5/11}
+		\collapseviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{2/8,4/10}
 	\end{tikzpicture}
 	\caption{Las cuatro vistas por colapso de cada escala padre. El grado 1
-	está abajo, centro; las celdas vacías son notas ausentes u ocultas.}
+	está abajo, centro; las líneas rojas unen los tritonos que se conservan.}
 	\label{tab:collapse-views}
 \end{figure}
 
