@@ -9,7 +9,7 @@
 
 | File | Purpose |
 |------|---------|
-| `latex/particle-music.tex` | Main LaTeX manuscript (~3,770 lines) |
+| `latex/particle-music.tex` | Main LaTeX manuscript (~4,150 lines) |
 | `latex/translated-particle-music.tex` | English translation (synced with the Spanish manuscript) |
 | `latex/build/particle-music.pdf` | Compiled PDF (generated, not versioned) |
 | `Ideas.adoc` | Pending ideas, notes, and outline |
@@ -33,15 +33,19 @@ bash scripts/clean.sh
 
 ## 📚 Core Theory Summary
 
-### Five Parent Scales + Compact Views
+### Five Symmetric Parent Scales + Two Non-Symmetric Extensions
 - **WHITE** - Diatonic (7 notes, 1 tritone, centered on RE)
-- **BLUE** - Melodic minor (7 notes, 1 tritone)
-- **RED** - Harmonic minor (7 notes, 2 tritones)
-- **BLACK** - Diminished (8 notes, space-centered symmetry)
-- **TONES** - Whole tone (6 notes, multiple tritones)
+- **BLUE** - Melodic minor (7 notes, 2 tritones)
+- **RED** - Double harmonic major (7 notes, 2 tritones)
+- **BLACK** - Diminished (8 notes, 4 tritones, space-centered symmetry)
+- **TONES** - Whole tone (6 notes, 3 tritones)
+- **GREEN** - Harmonic minor (7 notes, 2 tritones, `3,3` skeleton, non-symmetric)
+- **PINK** - Harmonic major (7 notes, 2 tritones, `3,3` skeleton, non-symmetric)
 - **FULL** - Complete chromatic set (implementation limit, no tonal center of its own)
 
-Compact views are named `<PARENT> <UU|DD|DU|UD>` (U = up, D = down). Each parent exposes four semitone-collapse views. They vary in cardinality, semitones and surviving tritones: WHITE/BLUE give 5-note views (some keep one or two tritones), RED gives 3/4-note views with no tritones, BLACK gives 4-note views with two tritones, TONES is the identity. No view has more tritones than its parent.
+Compact views are named `<PARENT> <UU|DD|DU|UD>` (U = up, D = down) and apply to the symmetric parents. They vary in cardinality, semitones and surviving tritones: WHITE/BLUE give 5-note views (some keep one or two tritones), RED gives 3/4-note views with no tritones, BLACK gives 4-note views with two tritones, TONES is the identity. No view has more tritones than its parent. A projection rule for GREEN/PINK is still pending.
+
+GREEN and PINK share the `3,3` tritone skeleton: their two tritones are separated by three semitones between the lower notes and three between the upper notes. RED and BLUE use the alternating `4,2` skeleton. Phrygian dominant is the fifth mode of GREEN, not a base scale.
 
 Tritones are **oriented by their first appearance in the scale**: `F-B` and `B-F` are different. Modulation by tritone count preserves orientation; `INVERT` (`KEY + 6`) is a separate operation.
 

@@ -29,13 +29,17 @@ Revisa coherencia teórica, terminología y estructura académica del manuscrito
 | Cambio de centro | Reorientación | Modulación (solo si cambia centro tonal) |
 | Partícula | Pila de grados alternos | Acorde |
 
-## Escalas padre y vistas compactas
+## Escalas padre, extensiones y vistas compactas
 - **WHITE** - Diatónica (7 notas, 1 tritono, centrada en RE)
 - **BLUE** - Menor melódica (7 notas, 2 tritonos)
-- **RED** - Menor armónica (7 notas, 2 tritonos)
+- **RED** - Doble armónica mayor (7 notas, 2 tritonos)
 - **BLACK** - Disminuida (8 notas, 4 tritonos, simetría centrada en espacio)
 - **TONES** - Por tonos (6 notas, 3 tritonos)
-- **Vistas compactas** - Cada padre tiene cuatro vistas nombradas `<PADRE> UU/DD/DU/UD` (U = up, D = down). Varían en cardinalidad (3–5 notas), semitonos y tritonos; nunca tienen más tritonos que el padre.
+- **GREEN** - Menor armónica (7 notas, 2 tritonos, esqueleto `3,3`, no simétrica)
+- **PINK** - Mayor armónica (7 notas, 2 tritonos, esqueleto `3,3`, no simétrica)
+- **Vistas compactas** - Cada padre simétrico tiene cuatro vistas nombradas `<PADRE> UU/DD/DU/UD` (U = up, D = down). Varían en cardinalidad (3–5 notas), semitonos y tritonos; nunca tienen más tritonos que el padre. La regla de proyección para GREEN/PINK está pendiente.
+
+El frigio dominante es el quinto modo de GREEN, no una escala base. RED y BLUE comparten el esqueleto alterno `4,2`; GREEN y PINK comparten el esqueleto equiespaciado `3,3`.
 
 ## Notas (notación del proyecto)
 - A-G mayúsculas: notas naturales
