@@ -1615,11 +1615,10 @@ conservan.
 		\pgfmathsetmacro{\ay}{\collapseviewy{\a}}
 		\pgfmathsetmacro{\bx}{\collapseviewx{\b}}
 		\pgfmathsetmacro{\by}{\collapseviewy{\b}}
-		\pgfmathsetmacro{\len}{sqrt((\bx-\ax)*(\bx-\ax)+(\by-\ay)*(\by-\ay))}
-		\pgfmathsetmacro{\ux}{(\bx-\ax)/\len}
-		\pgfmathsetmacro{\uy}{(\by-\ay)/\len}
+		% Los pares van de la columna izquierda a la derecha: la línea sale
+		% del centro de la arista vertical derecha y entra por la izquierda.
 		\draw[very thick, color=red]
-			(\ax+0.25*\ux,\ay+0.25*\uy) -- (\bx-0.25*\ux,\by-0.25*\uy);
+			(\ax+0.25,\ay) -- (\bx-0.25,\by);
 	}}
 
 \newcommand{\collapseviewgrid}[4]{%
