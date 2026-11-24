@@ -37,7 +37,7 @@ Revisa coherencia teórica, terminología y estructura académica del manuscrito
 - **TONES** - Por tonos (6 notas, 3 tritonos)
 - **GREEN** - Menor armónica (7 notas, 2 tritonos, esqueleto `3,3`, no simétrica)
 - **PINK** - Mayor armónica (7 notas, 2 tritonos, esqueleto `3,3`, no simétrica)
-- **Vistas compactas** - Cada padre simétrico tiene cuatro vistas nombradas `<PADRE> UU/DD/DU/UD` (U = up, D = down). Varían en cardinalidad (3–5 notas), semitonos y tritonos; nunca tienen más tritonos que el padre. La regla de proyección para GREEN/PINK está pendiente.
+- **Vistas compactas** - Cada padre simétrico tiene cuatro vistas de dos letras `<PADRE> UU/DD/DU/UD` (U = up, D = down). GREEN y PINK, al romper la simetría, usan tres letras, una por semitono: ocho vistas (`DDD`, `DDU`, `DUD`, `DUU`, `UDD`, `UDU`, `UUD`, `UUU`). Las cuatro de dos letras son el subconjunto en el que los dos semitonos del mismo tritono se mueven juntos. Varían en cardinalidad (3–5 notas en las simétricas; 4 en GREEN/PINK), semitonos y tritonos; nunca tienen más tritonos que el padre. `GREEN UDD` y `PINK UUD` conservan los dos tritonos y dan el tetracordo D-F-Ab-B.
 
 El frigio dominante es el quinto modo de GREEN, no una escala base. RED y BLUE comparten el esqueleto alterno `4,2`; GREEN y PINK comparten el esqueleto equiespaciado `3,3`.
 

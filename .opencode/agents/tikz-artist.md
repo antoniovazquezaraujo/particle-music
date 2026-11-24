@@ -32,7 +32,7 @@ Crea y mantiene diagramas TikZ para escalas, partículas y esquemas geométricos
 | PINK | 7 | 2 | No simétrica (`3,3`), grado 1 = tónica estándar |
 | WHITE DU | 5 | 0 | Vista compacta de WHITE (no escala padre) |
 
-Las vistas compactas se nombran `<PADRE> UU/DD/DU/UD` y se aplican a las escalas simétricas. En GREEN y PINK no hay centro de simetría: la figura usa la tónica estándar como grado 1.
+Las vistas compactas de las escalas simétricas se nombran `<PADRE> UU/DD/DU/UD`. GREEN y PINK usan tres letras, una por semitono (`GREEN UDD`, `PINK UUD`, etc.), porque su simetría se rompe. En sus figuras, el grado 1 es el grado central (F en GREEN, D en PINK), no la tónica estándar.
 
 ## Convenciones de Partículas
 - `\iparticle{1,2,3,0,1}` - inline particle

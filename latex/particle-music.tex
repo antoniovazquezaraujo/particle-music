@@ -1572,6 +1572,11 @@ UU} conserva las notas superiores de ambos semitonos, \texttt{WHITE DD} las
 inferiores, \texttt{WHITE DU} la inferior del primero y la superior del segundo,
 y \texttt{WHITE UD} la superior del primero y la inferior del segundo.
 
+En las escalas simétricas bastan dos letras porque los dos semitonos que rodean
+un mismo tritono son imágenes especulares y se colapsan juntos. \textsf{GREEN} y
+\textsf{PINK}, al romper esa simetría, usan una letra por semitono; sus ocho
+vistas se estudian al final de esta sección.
+
 No hay que buscar un nombre por número de notas. Las vistas pueden tener 3, 4 o
 5 notas; algunas conservan semitonos, otras no; algunas conservan uno o dos
 tritonos, otras ninguno. Lo único que comparten es la operación: tienen menos
@@ -1582,7 +1587,7 @@ no hay un nombre único para la categoría.
 
 En la figura siguiente se muestran los grados de cada vista, con el grado 1
 abajo, centro; las líneas rojas unen los tritonos que se conservan. Cada celda
-se nombra con el padre y las dos letras: \texttt{WHITE UU}, \texttt{WHITE DD},
+se nombra con el padre y sus letras: \texttt{WHITE UU}, \texttt{WHITE DD},
 \texttt{WHITE DU}, \texttt{WHITE UD}, etc.
 
 \newcommand{\collapseviewcoord}[1]{%
@@ -1658,8 +1663,11 @@ se nombra con el padre y las dos letras: \texttt{WHITE UU}, \texttt{WHITE DD},
 		\collapseviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{1/7,5/11}
 		\collapseviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{2/8,4/10}
 	\end{tikzpicture}
-	\caption{Las cuatro vistas por colapso de cada escala padre. El grado 1
-	está abajo, centro; las líneas rojas unen los tritonos que se conservan.}
+	\caption{Las cuatro vistas por colapso de \textsf{WHITE}, \textsf{BLUE},
+	\textsf{RED} y \textsf{BLACK}. El grado 1 está abajo, centro; las líneas
+	rojas unen los tritonos que se conservan. \textsf{TONES} es la identidad y
+	las vistas de \textsf{GREEN} y \textsf{PINK} se estudian al final de la
+	sección.}
 	\label{tab:collapse-views}
 \end{figure}
 
@@ -1680,6 +1688,9 @@ semitonos, así que las cuatro vistas son la identidad. \texttt{FULL} no es una
 escala padre con centro propio; en el modelo computacional se trata como el
 conjunto cromático completo y no se proyecta.
 
+\textsf{GREEN} y \textsf{PINK} no aparecen en la figura porque tienen tres
+semitonos y ocho vistas. Se estudian al final de la sección.
+
 \begin{table}[H]
 	\centering
 	\begin{tabular}{lccc}
@@ -1691,6 +1702,8 @@ conjunto cromático completo y no se proyecta.
 		\texttt{RED}   & 3 o 4 & 0 o 1 & 0 \\
 		\texttt{BLACK} & 4 & 0 & 2 \\
 		\texttt{TONES} & 6 & 0 & 3 (identidad) \\
+		\texttt{GREEN} & 4 & 0 & 0, 1 o 2 \\
+		\texttt{PINK}  & 4 & 0 & 0, 1 o 2 \\
 		\bottomrule
 	\end{tabular}
 	\caption{Rasgos de las vistas compactas. Ninguna vista tiene más tritonos
@@ -1702,6 +1715,62 @@ Estas vistas explican también por qué la modulación por conteo no busca en la
 vistas: una vista no tiene una escala padre de destino, solo hereda el centro y
 los tritonos del padre. Para bajar de un tritono a cero se cambia de vista; para
 cambiar de padre se usa la modulación.
+
+\subsubsection{Vistas de \textsf{GREEN} y \textsf{PINK}}
+\label{sec:vistas-green-pink}
+
+Las dos escalas base no simétricas, \textsf{GREEN} y \textsf{PINK}, que se
+presentan más adelante, tienen tres semitonos. En las escalas simétricas, los
+dos semitonos que tocan un mismo tritono son imágenes especulares y se colapsan
+juntos: por eso bastan dos letras, una por grupo. Aquí la simetría se
+rompe y los dos semitonos del mismo tritono ya no son equivalentes. Por eso se
+elige cada semitono por separado, con una letra por semitono en orden de
+aparición desde el grado 1:
+
+\begin{itemize}
+	\item \textsf{GREEN} de \texttt{F}: \texttt{G-Ab}, \texttt{B-C},
+	\texttt{D-Eb}.
+	\item \textsf{PINK} de \texttt{D}: \texttt{E-F}, \texttt{G-Ab},
+	\texttt{B-C}.
+\end{itemize}
+
+Las ocho combinaciones son \texttt{DDD}, \texttt{DDU}, \texttt{DUD},
+\texttt{DUU}, \texttt{UDD}, \texttt{UDU}, \texttt{UUD} y \texttt{UUU}. Las
+cuatro vistas de dos letras siguen siendo válidas como el subconjunto en el que
+los dos semitonos del mismo tritono se mueven juntos; son \texttt{DDD},
+\texttt{DUD}, \texttt{UDU} y \texttt{UUU}. La correspondencia es \texttt{UU} =
+\texttt{UUU}, \texttt{UD} = \texttt{UDU}, \texttt{DU} = \texttt{DUD} y
+\texttt{DD} = \texttt{DDD}. La tercera letra añade las cuatro combinaciones
+mixtas.
+
+La vista que conserva los dos tritonos es \texttt{GREEN UDD} en \textsf{GREEN}
+y \texttt{PINK UUD} en \textsf{PINK}. Las dos producen el mismo tetracordo,
+\texttt{D-F-Ab-B}, que es el esqueleto \texttt{3,3} completo. Sin la tercera
+letra, ninguna de las dos escalas puede alcanzarlo.
+
+\begin{table}[H]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcccc}
+			\toprule
+			Código & \textsf{GREEN}: notas & Tritonos & \textsf{PINK}: notas & Tritonos \\
+			\midrule
+			\texttt{DDD} & F G B D & F-B & D E G B & --- \\
+			\texttt{DDU} & F G B Eb & F-B & D E G C & --- \\
+			\texttt{DUD} & F G C D & --- & D E Ab B & D-Ab \\
+			\texttt{DUU} & F G C Eb & --- & D E Ab C & D-Ab \\
+			\texttt{UDD} & F Ab B D & F-B, D-Ab & D F G B & F-B \\
+			\texttt{UDU} & F Ab B Eb & F-B & D F G C & --- \\
+			\texttt{UUD} & F Ab C D & D-Ab & D F Ab B & D-Ab, F-B \\
+			\texttt{UUU} & F Ab C Eb & --- & D F Ab C & D-Ab \\
+			\bottomrule
+		\end{tabular}
+	}
+	\caption{Las ocho vistas de \textsf{GREEN} de \texttt{F} y \textsf{PINK} de
+	\texttt{D}. Las notas son las que quedan tras elegir la nota superior
+	(\texttt{U}) o inferior (\texttt{D}) de cada semitono.}
+	\label{tab:green-pink-views}
+\end{table}
 
 \subsection{Sentido tritonal}
 Es importante observar que la situación de los tritonos tiene un sentido, es decir, puede no ser lo mismo ir de una nota a otra cambiando la nota de partida, eso depende de si hay las mismas notas entre ambas por los dos caminos. Vemos que en \texttt{WHITE}, yendo desde el grado 6 hasta el 3, apilando notas alternas, formaríamos el acorde 6 1 3. Sin embargo, para ir desde 3 a 6 apilaríamos 3,5,7,2,4,6. Es decir, el grado 3 está mucho más lejos de llegar a tener un tritono que el 6, concretamente, cuatro niveles de apilamiento más lejos.
@@ -2395,10 +2464,11 @@ estándar de la menor y la mayor armónica.
 
 \textsf{GREEN} y \textsf{PINK} no son modos entre sí: son dos conjuntos
 distintos. Desde su centro, \textsf{GREEN} tiene \#4 y 5, mientras que
-\textsf{PINK} tiene 4 y b5; el resto de grados coincide. Las dos tienen tres
-segundas menores aisladas, no dos grupos de semitonos consecutivos, así que las
-vistas compactas actuales, definidas para las escalas simétricas, no se les
-aplican directamente. Queda pendiente una regla de proyección para ellas.
+\textsf{PINK} tiene 4 y b5; el resto de grados coincide. Sus vistas compactas
+usan tres letras, una por semitono, porque la simetría se rompe (véase
+\hyperref[sec:vistas-green-pink]{la sección de vistas de \textsf{GREEN} y
+\textsf{PINK}}). La vista \texttt{GREEN UDD} y la vista \texttt{PINK UUD}
+conservan los dos tritonos y producen el mismo tetracordo, \texttt{D-F-Ab-B}.
 
 El quinto modo de la menor armónica es el frigio dominante. No lo añadimos como
 escala base: es un modo, igual que los demás. \textsf{PINK} no es un modo de
