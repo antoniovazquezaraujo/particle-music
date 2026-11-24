@@ -33,19 +33,19 @@ bash scripts/clean.sh
 
 ## 📚 Core Theory Summary
 
-### Five Symmetric Parent Scales + Two Non-Symmetric Extensions
+### Five Core Scales + the 3,3 Family
 - **WHITE** - Diatonic (7 notes, 1 tritone, centered on RE)
 - **BLUE** - Melodic minor (7 notes, 2 tritones)
 - **RED** - Double harmonic major (7 notes, 2 tritones)
-- **BLACK** - Diminished (8 notes, 4 tritones, space-centered symmetry)
+- **BLACK** - Diminished (8 notes, 4 tritones, space-centred)
 - **TONES** - Whole tone (6 notes, 3 tritones)
-- **GREEN** - Harmonic minor (7 notes, 2 tritones, `3,3` skeleton, non-symmetric)
-- **PINK** - Harmonic major (7 notes, 2 tritones, `3,3` skeleton, non-symmetric)
+- **GREEN** - Harmonic minor (7 notes, 2 tritones, `3,3` skeleton)
+- **PINK** - Harmonic major (7 notes, 2 tritones, `3,3` skeleton)
 - **FULL** - Complete chromatic set (implementation limit, no tonal center of its own)
 
-Compact views use two letters (U = up, D = down) in the symmetric parents: `<PARENT> <UU|DD|DU|UD>`. They vary in cardinality, semitones and surviving tritones: WHITE/BLUE give 5-note views (some keep one or two tritones), RED gives 3/4-note views with no tritones, BLACK gives 4-note views with two tritones, TONES is the identity. No view has more tritones than its parent.
+Compact views use two letters (U = up, D = down) in the core scales: `<PARENT> <UU|DD|DU|UD>`. They vary in cardinality, semitones and surviving tritones: WHITE/BLUE give 5-note views (some keep one or two tritones), RED gives 3/4-note views with no tritones, BLACK gives 4-note views with two tritones, TONES is the identity. No view has more tritones than its parent.
 
-GREEN and PINK use one letter per semitone because their symmetry is broken: three letters, eight views (`DDD`, `DDU`, `DUD`, `DUU`, `UDD`, `UDU`, `UUD`, `UUU`), in order from degree 1. The two-letter views are the subset where the two semitones of the same tritone move together. `GREEN UDD` and `PINK UUD` keep both tritones and produce the same tetrachord, D-F-Ab-B.
+GREEN and PINK use one letter per semitone because the two semitones of the same tritone are not equivalent: three letters, eight views (`DDD`, `DDU`, `DUD`, `DUU`, `UDD`, `UDU`, `UUD`, `UUU`), in order from degree 1. The two-letter views are the subset where the two semitones of the same tritone move together. `GREEN UDD` and `PINK UUD` keep both tritones and produce the same tetrachord, D-F-Ab-B.
 
 GREEN and PINK share the `3,3` tritone skeleton: their two tritones are separated by three semitones between the lower notes and three between the upper notes. RED and BLUE use the alternating `4,2` skeleton. Phrygian dominant is the fifth mode of GREEN, not a base scale.
 
@@ -58,7 +58,7 @@ Tritones are **oriented by their first appearance in the scale**: `F-B` and `B-F
 - Notes: A-G with lowercase for flats (a = A#/Bb)
 
 ### Key Concepts
-- **Symmetric orientation** - Scales centered on geometric center, NOT tonic
+- **Central orientation** - Scales centered on their tonal centre, NOT the tonic
 - **Tritone distance** - Determines stability/tension of scale degrees
 - **Triads as geometry** - Major/minor as small/large stacking relationships
 
@@ -66,7 +66,7 @@ Tritones are **oriented by their first appearance in the scale**: `F-B` and `B-F
 
 ### High
 1. Integrate `Ideas.adoc` content into main document
-2. ~~Add compact views section~~ (done: 4 variants per symmetric parent, 8 for GREEN/PINK)
+2. ~~Add compact views section~~ (done: 4 variants per core scale, 8 for GREEN/PINK)
 3. Blue note integration analysis
 4. Quartal harmony structures
 
@@ -163,5 +163,5 @@ Skills are reusable workflows for common tasks. Located in `.opencode/skills/`:
 
 1. Provide clearer explanations than traditional theory
 2. Replace arbitrary rules with physical/mathematical reasoning
-3. Create notation that reveals scale symmetry
+3. Create notation that reveals the tritone structure
 4. Make harmony accessible without losing precision

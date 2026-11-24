@@ -197,12 +197,12 @@ This document is an attempt to \emph{understand how music works} from an explici
 
 Traditional music theory is very effective as \emph{notation and craft} (it allows writing, performing and transmitting music), but it is less useful when we look for explanations: answers of the type ``\emph{that's how it's done}'', ``\emph{it sounds better}'' or ``\emph{such and such composer did it that way}'' appear far too often.
 
-The starting hypothesis is simple: many harmonic sensations can be described as consequences of internal relations (symmetries, distances, presence of tritones, etc.). Instead of taking for granted that a note is ``fundamental'' because it produces rest, we will try to describe what conditions produce that sensation.
+The starting hypothesis is simple: many harmonic sensations can be described as consequences of internal relations (distances, presence of tritones, regularities, etc.). Instead of taking for granted that a note is ``fundamental'' because it produces rest, we will try to describe what conditions produce that sensation.
 
 Throughout the text, two tools are proposed:
 \begin{itemize}
 	\tightlist%
-	\item a graphical/numerical notation to see patterns (symmetries, tritones, ambiguities),
+	\item a graphical/numerical notation to see patterns (tritones, ambiguities, distances),
 	\item a minimal vocabulary of ``particles'' to name structures without depending on historical terminology.
 \end{itemize}
 
@@ -260,7 +260,7 @@ If we take the harmonics generated from a base frequency and order them, we obta
 Thus, a \emph{scale} is a subset of notes selected from that space of relations. In Western practice we speak of 12 notes per octave, and from there subsets (often of 7) are usually chosen that serve as a ``map'' to orient perception.
 
 \subsection{Tonality}
-The term \emph{tonality} refers to the selected scale at any given time, the listener assimilates it as a whole, getting an idea of the situation. The proportions between the notes form a perfect scheme that acts as a map, and allows the listener to orient themselves when listening to the musical message. Most music is in a single tonality, but it is very common to change it on the fly. Its function as a map is increased if the scale is symmetrical, in the same way that we more easily assimilate a regular map such as a street map than an irregular map of a mountainous area.
+The term \emph{tonality} refers to the selected scale at any given time, the listener assimilates it as a whole, getting an idea of the situation. The proportions between the notes form a perfect scheme that acts as a map, and allows the listener to orient themselves when listening to the musical message. Most music is in a single tonality, but it is very common to change it on the fly. Its function as a map is increased if the scale is regular, in the same way that we more easily assimilate a regular map such as a street map than an irregular map of a mountainous area.
 \subsection{Predictive Listening}
 We listen to music by guessing the future. In a painting, the data is there. All you have to do is look at each point and the strokes are there, expressing what the painter wants them to express. In music it is different. Before it starts we have nothing. Only silence. As soon as the piece begins, it's like a journey begins, that advances, sound by sound, through a strange unknown space.
 With each note we receive a new stimulus. It wasn't there before, and suddenly it appears. We need to assimilate it, sometimes at breakneck speed.
@@ -331,35 +331,41 @@ It is the distance that a degree of the scale maintains with respect to some tri
 The degrees that are very far away from some tritone suggest stability, relaxation. There are scales that do not contain any tritone. The feeling of linearity and stability (and possibly monotony) is quite strong in them. It is no coincidence that we used them in our primitive stages of civilization. We will delve into this later.
 \subsection{Misorientation}
 In traditional notation, the degree farthest from the tritone is called \emph{fundamental}, and it is also considered that the scale begins and ends on that degree. This is a serious error; that a degree is far from a tritone does not mean that it is the beginning. This is done because the listener feels comfortable when a song ends on the fundamental degree, as is usually the case. As we have already said, this is one of the serious errors that we want to solve: the angle from which music is seen, the excessive prominence of the listener, (obviously because he is the one who pays and the one who decides whether the composer will succeed or not). In any case, we need to continue composing music for humans, so we will have to continue taking into account what makes them feel comfortable or not, but we need to understand why.
-\subsection{Symmetrical Orientation}
-The symmetric scales we use as the core are the ones studied in this first
-part. Symmetry is a pattern that helps the listener recognize harmony. If a scale is symmetrical, it will help us a lot in its analysis to use a notation that respects this symmetry, where the central point is graphically represented in the center. In the notation we present, this idea is very important.
+\subsection{Orientation and centre}
+The scales that form the core are studied in this first part. The regularity of
+their structure helps the listener recognize harmony. When the centre of the
+scale is well defined, it will help us a lot in its analysis to use a notation
+that represents it graphically in the centre. In the notation we present, this
+idea is very important.
 \subsection{Scales}
 These are the scales that are commonly used and the names that have been assigned to them:
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \small
 \begin{tabular}{lll}
 \toprule
-\textbf{\textsf{Scale}} & \textbf{Name} & \textbf{Type} \\
+\textbf{\textsf{Scale}} & \textbf{Name} & \textbf{Tritones} \\
 \midrule
-\textsf{WHITE} & Diatonic & symmetric \\
-\textsf{BLUE} & Melodic minor & symmetric \\
-\textsf{RED} & Double harmonic major & symmetric \\
-\textsf{BLACK} & Diminished & symmetric \\
-\textsf{TONES} & Whole tone & symmetric \\
-\textsf{GREEN} & Harmonic minor & non-symmetric \\
-\textsf{PINK} & Harmonic major & non-symmetric \\
+\textsf{WHITE} & Diatonic & 1 \\
+\textsf{BLUE} & Melodic minor & 2 (4,2) \\
+\textsf{RED} & Double harmonic major & 2 (4,2) \\
+\textsf{BLACK} & Diminished & 4 \\
+\textsf{TONES} & Whole tone & 3 \\
+\textsf{GREEN} & Harmonic minor & 2 (3,3) \\
+\textsf{PINK} & Harmonic major & 2 (3,3) \\
 \bottomrule
 \end{tabular}
 \caption{Table of musical scales}\label{tab:scale-name-equivalences}
 \end{table}
 
-The catalogue contains seven base scales: the first five are symmetric and
-\textsf{GREEN} and \textsf{PINK} are non-symmetric. The last two are studied
-below, in the non-symmetric base scales section. Compact views are not parent
-scales. \textsf{FULL} is the complete chromatic set. We will return to these
-distinctions when discussing modulation and oriented tritones.
+For two-tritone scales, the parenthesis shows how the four notes that form the
+tritones are spaced: \texttt{4,2} or \texttt{3,3}.
+
+The catalogue contains seven base scales. The first five form the core studied
+in this first part; \textsf{GREEN} and \textsf{PINK} are studied below, in the
+\texttt{3,3} family. Compact views are not parent scales. \textsf{FULL} is the
+complete chromatic set. We will return to these distinctions when discussing
+modulation and oriented tritones.
 
 In the notation created, the degrees of the scale are represented as numbers. It should be noted that the first degree of the scale is not, as in traditional notation, the degree farthest from the tritone (in the diatonic scale it would be C), but the degree that, as the figures show, occupies the center of the structure (in the diatonic scale it would be D). Starting from the initial note and rotating clockwise, we go up a tone until we return to the initial tone, that is, we go up an octave.
 \begin{figure}[H]
@@ -484,12 +490,12 @@ In the notation created, the degrees of the scale are represented as numbers. It
 
 	\end{subfigure}
 	\hfill
-	\caption{The five symmetric parent scales}\label{fig:the-five-scales}
+	\caption{The five core parent scales}\label{fig:the-five-scales}
 \end{figure}
 \textsf{GREEN} and \textsf{PINK} do not appear in this figure because they are
-not symmetric; they are studied in the non-symmetric base scales section.
-Note that in the \textsf{BLACK} scale, the symmetry is not based on the notes, but on the space between them, and there is not a central note, but a space between notes in the center. The feeling of symmetry that the listener perceives is identical and the notation reflects this.
-This notation is very simple, portable and practical. At a glance, one can observe the symmetry of the symmetric scales. If you compare it with traditional notation, where no symmetry is appreciated, you will notice an incredible improvement in the possibilities it offers for analysis, study and assimilation.
+studied below, in the \texttt{3,3} family.
+Note that in the \textsf{BLACK} scale the centre is not a note, but a space between two notes: there is no central note, but a central space. The regularity that the listener perceives is the same and the notation reflects this.
+This notation is very simple, portable and practical. At a glance, one can observe the regularity of the core scales. If you compare it with traditional notation, where no regularity is appreciated, you will notice an incredible improvement in the possibilities it offers for analysis, study and assimilation.
 \subsection{Names of the scales}
 Following the same line of reasoning, we will stop referring to a scale with the name of the note that is farthest from the tritone, and we will use its central note. For example, the scale that has no sharps will no longer be called ``C scale'', and will become ``D scale''. The note that names a scale is its central note, not the note that seems to us to suggest rest, fullness or resolution.
 A particular case would be that of the \textsf{BLACK} scale. As we have seen, the central note is not such a thing, but a space between two notes. So when referring to the \textsf{BLACK} scale of F we are indicating the scale whose first note after the space is an F.
@@ -1290,7 +1296,9 @@ The only idea that is officially taught repeatedly is that adding a \emph{flat s
 Again the same answer: Is it ``possible''? And again those nightmarish words\ldots{}
 It would be better if we stopped talking about colors.
 \subsection{Representation of tritones}
-When representing the tritones, it is observed that they also occupy their perfectly symmetrical place. They will be represented by a line connecting them. Let's see the representation of the five symmetric scales with their tritones.
+When representing the tritones, it is observed that they also occupy a regular
+place in the scheme. They will be represented by a line connecting them. Let's
+see the representation of the five core scales with their tritones.
 \begin{figure}[h]
 
 	\begin{subfigure}{0.3\textwidth}
@@ -1452,7 +1460,7 @@ When representing the tritones, it is observed that they also occupy their perfe
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{The five symmetric parent scales, the \textsf{WHITE DU} view and their tritones}\label{fig:the-six-scales-and-tritones}
+	\caption{The five core scales, the \textsf{WHITE DU} view and their tritones}\label{fig:the-six-scales-and-tritones}
 \end{figure}
 As you can see, the \texttt{WHITE} scale (diatonic major scale, the most used in classical music) only has one tritone.
 The \texttt{BLUE} scale (remember, in standard terminology, \emph{melodic minor}) is, by far, the most used in jazz. It has two tritones and this allows for greater capacity for deception and surprise, varying almost imperceptibly between major/minor and minor/major sensations.
@@ -1483,10 +1491,11 @@ lower ones, \texttt{WHITE DU} the lower note of the first and the upper note of
 the second, and \texttt{WHITE UD} the upper note of the first and the lower note
 of the second.
 
-In symmetric scales two letters are enough because the two semitones around the
-same tritone are mirror images and are collapsed together. \textsf{GREEN} and
-\textsf{PINK}, which break that symmetry, use one letter per semitone; their
-eight views are studied at the end of this section.
+In the core scales two letters are enough because the two semitones around the
+same tritone are equivalent and are collapsed together. In \textsf{GREEN} and
+\textsf{PINK} the two semitones of the same tritone are not equivalent, so they
+use one letter per semitone; their eight views are studied at the end of this
+section.
 
 There is no need to name a view after its note count. Views can have 3, 4 or 5
 notes; some keep semitones, others do not; some keep one or two tritones, others
@@ -1629,13 +1638,13 @@ parent, use modulation.
 \subsubsection{Views of \textsf{GREEN} and \textsf{PINK}}
 \label{sec:green-pink-views-en}
 
-The two non-symmetric base scales, \textsf{GREEN} and \textsf{PINK}, presented
-later, have three semitones. In symmetric scales, the two semitones that touch
-the same tritone are mirror images and are collapsed together: that is why two
-letters are enough, one per group. Here the symmetry
-is broken and the two semitones of the same tritone are no longer equivalent.
-Each semitone is therefore chosen separately, with one letter per semitone in
-order of appearance from degree 1:
+The two scales of the \texttt{3,3} family, \textsf{GREEN} and \textsf{PINK},
+presented later, have three semitones. In the core scales, the two semitones
+that touch the same tritone are equivalent and are collapsed together: that is
+why two letters are enough, one per group. In \textsf{GREEN} and \textsf{PINK}
+the two semitones of the same tritone are not equivalent, so each semitone is
+chosen separately, with one letter per semitone in order of appearance from
+degree 1:
 
 \begin{itemize}
 	\item \textsf{GREEN} of \texttt{F}: \texttt{G-Ab}, \texttt{B-C},
@@ -1684,7 +1693,7 @@ third letter, neither scale can reach it.
 \subsection{Tritonal sense}
 It is important to observe that the situation of the tritones has a sense, that is, it may not be the same to go from one note to another by changing the starting note, that depends on whether there are the same notes between the two by both paths. We see that in \texttt{WHITE}, going from degree 6 to degree 3, stacking alternate notes, we would form the chord 6 1 3. However, to go from 3 to 6 we would stack 3, 5, 7, 2, 4, 6. That is, degree 3 is much further away from having a tritone than degree 6, specifically, four levels of stacking further away.
 \subsection{Tonal center}
-We will call the \emph{tonal center} the central note of the scale. In all of them, it is the note that maintains the same distance with all the tritones by both paths, descending and ascending. It is the most stable degree of all. Do not confuse it with the one that offers a greater sense of relaxation, that is the one that is farthest from some tritone. The central note does not give a feeling of relaxation, but of balance. We could say that it is the most \emph{neutral} degree of the scale. In the \texttt{BLACK} scale, there is no note that occupies that tonal center, although it is perfectly symmetrical, like the others.
+We will call the \emph{tonal center} the central note of the scale. In all of them, it is the note that maintains the same distance with all the tritones by both paths, descending and ascending. It is the most stable degree of all. Do not confuse it with the one that offers a greater sense of relaxation, that is the one that is farthest from some tritone. The central note does not give a feeling of relaxation, but of balance. We could say that it is the most \emph{neutral} degree of the scale. In the \texttt{BLACK} scale, there is no note that occupies that tonal center: its centre is a space between two notes, as we have seen.
 \subsection{Ambiguous thirds}
 Some scales have an ambiguous third on one of their degrees, that is, it could be a major third or also a minor third. This greatly expands the possibilities for deception and surprise, and is a great help for \emph{modulation} which consists of changing tonality, that is, selecting another scale.
 \begin{figure}
@@ -1831,7 +1840,7 @@ Some scales have an ambiguous third on one of their degrees, that is, it could b
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{The five symmetric parent scales, the \textsf{WHITE DU} view and ambiguous thirds}\label{fig:the-six-scales-and-ambiguous-thirds}
+	\caption{The five core scales, the \textsf{WHITE DU} view and ambiguous thirds}\label{fig:the-six-scales-and-ambiguous-thirds}
 \end{figure}
 In this scheme we observe (marked in dark) the degrees that form a third that can be major and also minor.
 \begin{itemize} \tightlist
@@ -2095,11 +2104,11 @@ Looking for more is an interesting exercise. It would be fantastic to find some,
 \item Whether or not there are tritones
 \item Whether all degrees have a third or not
 \item Whether all the thirds are major or minor
-\item That they form a symmetrical combination
+\item That the semitones are grouped in equivalent pairs
 \item That the orientation is unique
 \item That the notes are distributed without being grouped into blocks
 \end{itemize}
-Any combination that is found will simply be a different ordering of one of the five symmetric parent scales presented or one of their projections (which would be a mode, remember). If you rotate it in the scheme you will get to it. Non-symmetric scales are outside this argument and are studied below. Let's try a few:
+Any combination that is found will simply be a different ordering of one of the five core scales presented or one of their projections (which would be a mode, remember). If you rotate it in the scheme you will get to it. The \texttt{3,3} family is outside this argument and is studied below. Let's try a few:
 \begin{figure}[H]
 	\begin{subfigure}{0.15\textwidth}
 		\centering
@@ -2238,12 +2247,11 @@ X5 & 0 & 6 & 3 \\
 \end{tabular}
 \caption{Characteristics of different musical scales}\label{tab:escalas}
 \end{table}
-\subsection{Non-symmetric base scales: \textsf{GREEN} and \textsf{PINK}}
+\subsection{The \texttt{3,3} family: \textsf{GREEN} and \textsf{PINK}}
 \label{sec:green-pink-en}
 
-The catalogue of base scales is expanded with two non-symmetric scales:
-\textsf{GREEN}, which is harmonic minor, and \textsf{PINK}, which is harmonic
-major. They are not modes of each other: they are two different scales that
+The catalogue is expanded with the \texttt{3,3} family: \textsf{GREEN}, which
+is harmonic minor, and \textsf{PINK}, which is harmonic major. They are not modes of each other: they are two different scales that
 share the same tritone skeleton.
 
 We call the \texttt{3,3} skeleton the arrangement in which the four notes that
@@ -2310,26 +2318,26 @@ minor and C harmonic major, but are named after their centre.
 		\end{tikzpicture}
 		\caption{\textsf{PINK} (harmonic major, centre \texttt{D})}
 	\end{subfigure}
-	\caption{The two non-symmetric base scales. Red lines join the tritones
-	\texttt{D-Ab} and \texttt{F-B}. \textsf{GREEN} is centred on \texttt{F};
-	\textsf{PINK}, on \texttt{D}.}
+	\caption{The two scales of the \texttt{3,3} family. Red lines join the
+	tritones \texttt{D-Ab} and \texttt{F-B}. \textsf{GREEN} is centred on
+	\texttt{F}; \textsf{PINK}, on \texttt{D}.}
 	\label{fig:green-pink-en}
 \end{figure}
 
 \begin{table}[H]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{llcccc}
+		\begin{tabular}{llccc}
 			\toprule
-			Scale & Set & Formula (from the centre) & Tritones & Minor seconds & Symmetric \\
+			Scale & Set & Formula (from the centre) & Tritones & Minor seconds \\
 			\midrule
-			\textsf{GREEN} & Harmonic minor & 1, 2, b3, \#4, 5, 6, b7 & D-Ab, F-B & 3 & no \\
-			\textsf{PINK}  & Harmonic major & 1, 2, b3, 4, b5, 6, b7 & D-Ab, F-B & 3 & no \\
-			\textsf{RED}   & Double harmonic major & 1, b2, 3, 4, 5, b6, 7 & Db-G, F-B & 4 & yes \\
+			\textsf{GREEN} & Harmonic minor & 1, 2, b3, \#4, 5, 6, b7 & D-Ab, F-B & 3 \\
+			\textsf{PINK}  & Harmonic major & 1, 2, b3, 4, b5, 6, b7 & D-Ab, F-B & 3 \\
+			\textsf{RED}   & Double harmonic major & 1, b2, 3, 4, 5, b6, 7 & Db-G, F-B & 4 \\
 			\bottomrule
 		\end{tabular}
 	}
-	\caption{Comparison of the non-symmetric scales with \textsf{RED}.}
+	\caption{Comparison of the \texttt{3,3} family with \textsf{RED}.}
 	\label{tab:green-pink-en}
 \end{table}
 
@@ -2340,7 +2348,8 @@ standard harmonic minor and harmonic major formulas.
 \textsf{GREEN} and \textsf{PINK} are not modes of each other: they are two
 different sets. From their centre, \textsf{GREEN} has \#4 and 5, while
 \textsf{PINK} has 4 and b5; the remaining degrees coincide. Their compact views
-use three letters, one per semitone, because symmetry is broken (see
+use three letters, one per semitone, because the two semitones of the same
+tritone are not equivalent (see
 \hyperref[sec:green-pink-views-en]{the GREEN and PINK views section}).
 \texttt{GREEN UDD} and \texttt{PINK UUD} keep both tritones and produce the
 same tetrachord, \texttt{D-F-Ab-B}.
@@ -2360,7 +2369,7 @@ harmonic minor (A B C D E F G\#), that is, E F G\# A B C D. The difference is th
 seventh. The review of that example is still pending.
 
 \subsection{Order of triads by distances to the tritones}
-In these two scales \texttt{WHITE} and \texttt{BLUE} the shaded tritones are appreciated. The first has one: \texttt{B-F}, and the second has two: \texttt{A-e} and \texttt{B-F}. To modulate between one and the other, simply change the note \texttt{E} for \texttt{e} (\texttt{Mi} for \texttt{Mi flat}). The symmetrical center was the note \texttt{D} in \texttt{WHITE} and now it becomes \texttt{G} in \texttt{BLUE}.
+In these two scales \texttt{WHITE} and \texttt{BLUE} the shaded tritones are appreciated. The first has one: \texttt{B-F}, and the second has two: \texttt{A-e} and \texttt{B-F}. To modulate between one and the other, simply change the note \texttt{E} for \texttt{e} (\texttt{Mi} for \texttt{Mi flat}). The centre was the note \texttt{D} in \texttt{WHITE} and now it becomes \texttt{G} in \texttt{BLUE}.
 Let's look at all the triads of the scale and the distance they keep with the next tritone, that is, the number of thirds that would have to be added to it so that it contains a tritone. We will also note if the triad already includes any note belonging to some tritone. The distance that the listener perceives is what decides whether the triad can be considered the safe target of a resolution.
 For the moment, we do not have a mathematical formula that allows us to calculate this force, but it seems clear that the triads considered as ``rest'' in which the melody must ``resolve'' are the ones that are farthest from containing a tritone. In the case of \textsf{WHITE}, the triads \textsf{ACE} and \textsf{CEG}, also called ``tonics'', one minor and the other major. Only \textsf{DFA} is at the same distance, but it already contains a note from the tritone ( \textsf{F} ) which makes it less ``safe''.
 \begin{figure}[H]
@@ -2502,7 +2511,7 @@ FAC & 2 & 1 \\
 \caption{Table of triads and their characteristics}\label{tab:triadas}
 \end{table}
 \subsection{Chords of each scale}
-The chords that are formed from each of the five symmetric parent scales and the \textsf{WHITE DU} view are the same ones that are normally used, but it would be necessary to refer to them without having to use the inconsistent classical names.
+The chords that are formed from each of the five core scales and the \textsf{WHITE DU} view are the same ones that are normally used, but it would be necessary to refer to them without having to use the inconsistent classical names.
 A possible notation for naming chords could consist of specifying only three elements:
 \begin{itemize}
 \item The scale
@@ -2692,7 +2701,7 @@ If a song were a map and each triad were a point, we could consider the position
 The listener perceives the sound map as a set of points that maintain a position with respect to that elevation of the terrain. To agree, let's call it \emph{tritone center}.
 Now we have two distinct concepts:
 \begin{itemize} \tightlist
-\item \emph{Tonal center}, remember, the most neutral note of the scale, equidistant from all the tritones and in the symmetrical center of the scale
+\item \emph{Tonal center}, remember, the most neutral note of the scale, equidistant from all the tritones and in the centre of the scale
 \item \emph{Tritone centers}, a kind of terrain elevations whose surrounding slope exerts a force that pushes us away from them
 \end{itemize}
 If we change the position of the tritone center, the listener will feel disoriented: they will have to recalculate where they have to ``run away'' to, looking for some point of reference as quickly as possible or they will lose track of the theme.
@@ -3442,7 +3451,7 @@ So we could say that each stack of notes gives us two types of information:
 \end{itemize}
 We can coin two new terms for this, \emph{structural} information and \emph{positional} information. When we talk about the feelings that major and minor triads give us, of joy or sadness, we were simply showing triads separately, without knowing what scale they belonged to, and even so they transmitted that idea. We can conclude that the triad structure has the most clear possible structural information. As we stack notes on top of each other, we lose a bit of structural information and gain positional information, that is, more ``piece of map'' is presented so that the listener can know what the terrain is like and where they are at this moment.
 \subsection{Ordering of the note groups}
-As we said, the tonal center of a scale is marked by the note that is equidistant from the tritones, let's say the most neutral note. What happens when we stack notes? Will the same symmetry be maintained? Will something unexpected happen? I'm afraid so, at least for me.
+As we said, the tonal center of a scale is marked by the note that is equidistant from the tritones, let's say the most neutral note. What happens when we stack notes? Will the same centre be maintained? Will something unexpected happen? I'm afraid so, at least for me.
 Let's see it in a table.
 \floatsetup[table]{capposition=below,capbesideposition={right,center}}
 \begin{table}[H]
@@ -3546,12 +3555,12 @@ G & B & D & F & A & C & E \\
   \caption{Particles \sffamily{WHITE} of 7 notes}\label{tab:particles-seven-notes-white}
 \end{table}
 
-When we have simply one note, we observe that, in the \texttt{WHITE} scale, the center is the note \texttt{D}. Remember that it marks the tonal center. It is the symmetrical center of the scale and is at the same distance from the tritone, both upwards and downwards.
-When we stack two alternate notes, the pairs that are formed can be of 3 or 4 semitones. If we look at the scheme, the symmetrical center now becomes the note \texttt{C}. We have gone down a tone.
-When stacking three, to form a triad, we obtain stacks \texttt{43}, \texttt{34} and \texttt{33} so now, the symmetrical center becomes the triad formed from the note \texttt{B}. Remember that the triads had a strong meaning because of their shape: justice/injustice, good/evil, life/death, joy/sadness, etc.
+When we have simply one note, we observe that, in the \texttt{WHITE} scale, the center is the note \texttt{D}. Remember that it marks the tonal center. It is the centre of the structure and is at the same distance from the tritone, both upwards and downwards.
+When we stack two alternate notes, the pairs that are formed can be of 3 or 4 semitones. If we look at the scheme, the centre of the structure now becomes the note \texttt{C}. We have gone down a tone.
+When stacking three, to form a triad, we obtain stacks \texttt{43}, \texttt{34} and \texttt{33} so now, the centre of the structure becomes the triad formed from the note \texttt{B}. Remember that the triads had a strong meaning because of their shape: justice/injustice, good/evil, life/death, joy/sadness, etc.
 If we use four notes, the character of the triads moves to a secondary plane. We no longer see a large oppressor entity on top of a small oppressed one. Now there are three entities, forming different combinations. If we had a large oppressor on top of a small oppressed one, now the one on top also supports another small one, so it seems more balanced, and vice versa, if there was a small one resting on a large one, which seemed fair to us, now the small one has another large one on top of it. In short, the feeling of large/small imbalance is somewhat blurred. However, by adding more notes, the possibility of confusion also decreases: there are no longer as many common chords.
-We had 3 types of triads (\texttt{43}, \texttt{34} and \texttt{33}) so \texttt{F}, \texttt{C} and \texttt{G} could be confused, \texttt{E}, \texttt{A} and \texttt{D} also and only \texttt{B} was different. Now we have four types of four-note chords (\texttt{334}, \texttt{344}, \texttt{433}, \texttt{334}) so \texttt{E}, \texttt{A} and \texttt{D} remain the same, \texttt{F} and \texttt{C} also but \texttt{G} and \texttt{B} are different. We have managed to differentiate \texttt{G} and \texttt{B}. Besides, we have gone down a degree again: now the symmetrical center is in the triad of \texttt{A}.
-In summary: we observe that the more notes we stack, the lower the symmetrical center. It is not the tonal center of the scale: no matter how many notes we stack, the listener continues to perceive the same tonal center, and above all, the same tritones. They know the orientation of the map correctly. That doesn't change. What are we changing then?
+We had 3 types of triads (\texttt{43}, \texttt{34} and \texttt{33}) so \texttt{F}, \texttt{C} and \texttt{G} could be confused, \texttt{E}, \texttt{A} and \texttt{D} also and only \texttt{B} was different. Now we have four types of four-note chords (\texttt{334}, \texttt{344}, \texttt{433}, \texttt{334}) so \texttt{E}, \texttt{A} and \texttt{D} remain the same, \texttt{F} and \texttt{C} also but \texttt{G} and \texttt{B} are different. We have managed to differentiate \texttt{G} and \texttt{B}. Besides, we have gone down a degree again: now the centre of the structure is in the triad of \texttt{A}.
+In summary: we observe that the more notes we stack, the lower the centre of the structure. It is not the tonal center of the scale: no matter how many notes we stack, the listener continues to perceive the same tonal center, and above all, the same tritones. They know the orientation of the map correctly. That doesn't change. What are we changing then?
 Remember how we measured the distance to the tritone of a group of notes. We considered the number of notes that must be added to the group so that it contains a tritone. We assume that the listener does this automatically. It's like they are completing the missing notes and noticing that they are close to hearing a tritone. We are left with the fact that there should be some formula to correctly calculate the perceived distance to the tritone and that probably, the fact that the group of notes already contained a note belonging to the tritone, would increase that perception.
 If we were talking about a matter made up of particles, these would be the basic combinations. First we have the major third and then the minor third. Those would be the atomic particles. By stacking them we would obtain the basic ``bricks'': the major triad, the minor triad and the diminished triad, remember, summarizing a lot: justice, injustice and unanswered question, respectively. With particles of this type, we could already build 90% of the universal matter. For more complex matter, we use stacks of four notes, that is, one of the previous stacks with one more note on top. This combination shares the central particle, so we have, for example, a major triad over a minor triad.
 With particles of four notes we have a stack of two basic elements, which do not share notes.
@@ -3697,7 +3706,7 @@ So far we have done all this with the \texttt{WHITE} scale. Let's try the same w
   \caption{Particles \sffamily{BLUE} of 7 notes}\label{tab:particles-seven-notes-blue}
 \end{table}
 
-We observe, of course, the same symmetry and the same descent by degrees with each new note. However, a new particle appears that we hadn't counted on yet: the \texttt{44} triad. It will have to be part of our vocabulary. The feeling that this triad produces has to do with orientation. It is two major thirds, you don't know which one is the base because it could be any, being 4 semitones apart, stacking 3 of them we reach the octave, that is, the scale ends. This is the same thing that happens with the \texttt{TONES} scale, it has no orientation. The listener feels the presence of tritones everywhere, there is no safe place, there is nowhere to escape. It doesn't matter what degree of the scale we are on, the feeling persists: constant threat and no possibility of escape. The difference with \texttt{WHITE DU}, where there is no tritone is noticeable, although there is an orientation there: you know what degree of the scale you are on, but there is no need to escape from any point. The \texttt{44} triad creates a feeling of perplexity and unremitting threat.
+We observe, of course, the same regularity and the same descent by degrees with each new note. However, a new particle appears that we hadn't counted on yet: the \texttt{44} triad. It will have to be part of our vocabulary. The feeling that this triad produces has to do with orientation. It is two major thirds, you don't know which one is the base because it could be any, being 4 semitones apart, stacking 3 of them we reach the octave, that is, the scale ends. This is the same thing that happens with the \texttt{TONES} scale, it has no orientation. The listener feels the presence of tritones everywhere, there is no safe place, there is nowhere to escape. It doesn't matter what degree of the scale we are on, the feeling persists: constant threat and no possibility of escape. The difference with \texttt{WHITE DU}, where there is no tritone is noticeable, although there is an orientation there: you know what degree of the scale you are on, but there is no need to escape from any point. The \texttt{44} triad creates a feeling of perplexity and unremitting threat.
 This would be our new basic particle catalog:
 \floatsetup[table]{capposition=below,capbesideposition={right,center}}
 \begin{table}[H]
@@ -3839,10 +3848,10 @@ Let's create the table
   \caption{Particles \sffamily{RED} of 7 notes}\label{tab:particles-seven-notes-red}
 \end{table}
 
-New particles! We have found a new interval of 2 semitones, so two new triads appear: \texttt{24} and \texttt{42}. We have represented them with a black background. The symmetry remains perfect. What will be the meaning of these triads?
+New particles! We have found a new interval of 2 semitones, so two new triads appear: \texttt{24} and \texttt{42}. We have represented them with a black background. The regularity remains perfect. What will be the meaning of these triads?
 Well, we have to consider the intrinsic difficulty of each scale as part of the problem. Let's say that the listener will feel better in a scale with few tritones and few ambiguous degrees. If each scale has a certain sound that characterizes it, the fact of presenting the listener with that sound will make them believe that we are in that scale. Remember that the \texttt{44} triad appeared in \texttt{BLUE} and not in \texttt{WHITE}, so it acts as a kind of unmistakable aroma.
 On the other hand, the stacks \texttt{24} and \texttt{42} make their appearance in \texttt{RED}. They don't seem to have a special meaning either, other than representing their scale.
-The five symmetric parent scales form a simple scheme where three basic concepts are expressed: \emph{clarity, darkness and disorientation}. When analyzing each one, we saw that there were differences in the number of tritones, the ability to orient, the number of ambiguous stacks, etc. We consider the \texttt{WHITE} scale the central scale, the most balanced and complete. From it, the \texttt{WHITE DU} view is obtained by collapsing the semitones that touch the tritone; by adding tritones we can reach \texttt{BLUE}, which is a little disconcerting but not as much as \texttt{TONES}, or else to \texttt{RED}, which is a little darker, but not as much as \texttt{BLACK}. \texttt{WHITE DU} appears on the map for its character, but not as a parent scale: it is a view of \texttt{WHITE}; from \texttt{BLUE} it is called \texttt{BLUE UD}. \texttt{GREEN} and \texttt{PINK} remain outside this symmetric map; they are studied as non-symmetric base scales.
+The five core scales form a simple scheme where three basic concepts are expressed: \emph{clarity, darkness and disorientation}. When analyzing each one, we saw that there were differences in the number of tritones, the ability to orient, the number of ambiguous stacks, etc. We consider the \texttt{WHITE} scale the central scale, the most balanced and complete. From it, the \texttt{WHITE DU} view is obtained by collapsing the semitones that touch the tritone; by adding tritones we can reach \texttt{BLUE}, which is a little disconcerting but not as much as \texttt{TONES}, or else to \texttt{RED}, which is a little darker, but not as much as \texttt{BLACK}. \texttt{WHITE DU} appears on the map for its character, but not as a parent scale: it is a view of \texttt{WHITE}; from \texttt{BLUE} it is called \texttt{BLUE UD}. \texttt{GREEN} and \texttt{PINK} are studied in the \texttt{3,3} family.
 \begin{figure}[H]
 \begin{tikzpicture}
 % Dibuja los círculos para los conjuntos A y B

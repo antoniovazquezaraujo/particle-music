@@ -197,12 +197,12 @@ Este documento es un intento de \emph{entender cómo funciona la música} desde 
 
 La teoría musical tradicional es muy eficaz como \emph{notación y oficio} (permite escribir, interpretar y transmitir música), pero es menos útil cuando buscamos explicaciones: con demasiada frecuencia aparecen respuestas del tipo ``\emph{se hace así}'', ``\emph{queda mejor}'' o ``\emph{tal compositor lo hizo}''.
 
-La hipótesis de partida es simple: muchas sensaciones armónicas pueden describirse como consecuencias de relaciones internas (simetrías, distancias, presencia de tritonos, etc.). En lugar de tomar como axiomático que una nota es ``fundamental'' porque produce descanso, intentaremos describir qué condiciones producen esa sensación.
+La hipótesis de partida es simple: muchas sensaciones armónicas pueden describirse como consecuencias de relaciones internas (distancias, presencia de tritonos, regularidades, etc.). En lugar de tomar como axiomático que una nota es ``fundamental'' porque produce descanso, intentaremos describir qué condiciones producen esa sensación.
 
 A lo largo del texto se proponen dos herramientas:
 \begin{itemize}
 	\tightlist%
-	\item una notación gráfica/numérica para ver patrones (simetrías, tritonos, ambigüedades),
+	\item una notación gráfica/numérica para ver patrones (tritonos, ambigüedades, distancias),
 	\item un vocabulario mínimo de ``partículas'' para nombrar estructuras sin depender de terminología histórica.
 \end{itemize}
 
@@ -261,7 +261,7 @@ Así pues, una \emph{escala} es un subconjunto de notas seleccionado de ese espa
 
 \subsection{Tonalidad}
 
-Se llama \emph{tonalidad} a la escala seleccionada en cada momento, el oyente la asimila en conjunto, haciéndose una idea de situación. Las proporciones entre las notas forman un esquema perfecto que actúa como un mapa, y que permite al oyente orientarse al escuchar el mensaje musical. La mayor parte de la música está en una sola tonalidad, pero es muy habitual cambiarla sobre la marcha. Su función como mapa se incrementa si la escala es simetrica, de la misma forma que asimilamos más fácilmente un mapa regular como un callejero que un mapa irregular de una zona montañosa.
+Se llama \emph{tonalidad} a la escala seleccionada en cada momento, el oyente la asimila en conjunto, haciéndose una idea de situación. Las proporciones entre las notas forman un esquema perfecto que actúa como un mapa, y que permite al oyente orientarse al escuchar el mensaje musical. La mayor parte de la música está en una sola tonalidad, pero es muy habitual cambiarla sobre la marcha. Su función como mapa se incrementa si la escala es regular, de la misma forma que asimilamos más fácilmente un mapa regular como un callejero que un mapa irregular de una zona montañosa.
 
 \subsection{Escucha predictiva}
 
@@ -369,40 +369,45 @@ Los grados que quedan muy lejos de algún tritono sugieren estabilidad, relax. H
 
 En la notación tradicional, al grado más lejano al tritono se le llama \emph{fundamental}, y además se considera que la escala comienza y termina en ese grado. Esto es un error grave; que un grado esté lejos de un tritono no significa que sea el principio. Se hace porque el oyente se siente cómodo cuando una canción termina en el grado fundamental, como suele ocurrir. Como ya hemos dicho, este es uno de los errores graves que queremos solucionar: el ángulo desde el que se ve la música, el excesivo protagonismo del oyente, (evidentemente porque es el que paga y el que decide si el compositor triunfará o no). En todo caso, necesitamos seguir componiendo música para humanos, así que deberemos seguir teniendo en cuenta lo que les hace sentir cómodos o lo que no, pero necesitamos entender por qué.
 
-\subsection{Orientación simétrica}
+\subsection{Orientación y centro}
 
-Las escalas simétricas que usamos como núcleo son las que se estudian en esta
-primera parte. La simetría es un patrón que ayuda al oyente a reconocer la armonía. Si una escala es simétrica, nos ayudará mucho en su análisis usar una notación que respete esta simetría, donde el punto central se represente gráficamente en el centro. En la notación que presentamos, esta idea es muy importante.
+Las escalas que forman el núcleo se estudian en esta primera parte. La
+regularidad de su estructura ayuda al oyente a reconocer la armonía. Cuando el
+centro de la escala está bien definido, nos ayudará mucho en su análisis usar
+una notación que lo represente gráficamente en el centro. En la notación que
+presentamos, esta idea es muy importante.
 
 \subsection{Escalas}
 
 Estas son las escalas que se usan habitualmente y los nombres que se les han asignado:
 
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
 	\small
 	\begin{tabular}{lll}
 		\toprule
-		\textbf{\textsf{Escala}} & \textbf{Nombre}       & \textbf{Tipo} \\
+		\textbf{\textsf{Escala}} & \textbf{Nombre}       & \textbf{Tritonos} \\
 		\midrule
-		\textsf{WHITE}           & Diatónica             & simétrica \\
-		\textsf{BLUE}            & Menor melódica        & simétrica \\
-		\textsf{RED}             & Doble armónica mayor  & simétrica \\
-		\textsf{BLACK}           & Disminuida            & simétrica \\
-		\textsf{TONES}           & Por tonos             & simétrica \\
-		\textsf{GREEN}           & Menor armónica        & no simétrica \\
-		\textsf{PINK}            & Mayor armónica        & no simétrica \\
+		\textsf{WHITE}           & Diatónica             & 1 \\
+		\textsf{BLUE}            & Menor melódica        & 2 (4,2) \\
+		\textsf{RED}             & Doble armónica mayor  & 2 (4,2) \\
+		\textsf{BLACK}           & Disminuida            & 4 \\
+		\textsf{TONES}           & Por tonos             & 3 \\
+		\textsf{GREEN}           & Menor armónica        & 2 (3,3) \\
+		\textsf{PINK}            & Mayor armónica        & 2 (3,3) \\
 		\bottomrule
 	\end{tabular}
 	\caption{Tabla de escalas musicales}\label{tab:scale-name-equivalences}
 \end{table}
 
-El catálogo queda formado por siete escalas base: las cinco primeras son
-simétricas y \textsf{GREEN} y \textsf{PINK} no lo son. Las dos últimas
-se estudian más adelante, en la sección de escalas base no simétricas. Las vistas
-compactas no son escalas padre. \textsf{FULL} es el conjunto cromático completo.
-Volveremos sobre estas distinciones al hablar de modulación y de tritonos
-orientados.
+En las escalas de dos tritonos, el paréntesis indica cómo se separan las cuatro
+notas que forman los tritonos: \texttt{4,2} o \texttt{3,3}.
+
+El catálogo queda formado por siete escalas base. Las cinco primeras forman el
+núcleo que se estudia en esta primera parte; \textsf{GREEN} y \textsf{PINK} se
+estudian más adelante, en la familia \texttt{3,3}. Las vistas compactas no son
+escalas padre. \textsf{FULL} es el conjunto cromático completo. Volveremos sobre
+estas distinciones al hablar de modulación y de tritonos orientados.
 
 En la notación creada se representan los grados de la escala como números. Se ha de prestar atención a que el primer grado de la escala no es, como en la notación tradicional, el grado más lejano al tritono (en la escala diatónica sería el DO), sino el grado que, como muestran las figuras, ocupa el centro de la estructura (en la escala diatónica sería el RE). Partiendo de la nota inicial y girando en sentido agujas del reloj se sube de tono hasta que se vuelve al tono inicial, es decir, se sube una octava.
 
@@ -530,15 +535,20 @@ En la notación creada se representan los grados de la escala como números. Se 
 
 	\end{subfigure}
 	\hfill
-	\caption{Las cinco escalas padre simétricas}\label{fig:the-five-scales}
+	\caption{Las cinco escalas padre del núcleo}\label{fig:the-five-scales}
 \end{figure}
 
-\textsf{GREEN} y \textsf{PINK} no aparecen en esta figura porque no son
-simétricas; se estudian en la sección de escalas base no simétricas.
+\textsf{GREEN} y \textsf{PINK} no aparecen en esta figura porque se estudian más
+adelante, en la familia \texttt{3,3}.
 
-Téngase en cuenta que en la escala \textsf{BLACK}, la simetría no se basa en las notas, sino en el espacio entre ellas, y no hay una nota central, sino un espacio entre notas central. La sensación de simetría que percibe el oyente es idéntica y la notación así lo refleja.
+Téngase en cuenta que en la escala \textsf{BLACK} el centro no es una nota, sino
+un espacio entre dos notas: no hay una nota central, sino un espacio central. La
+regularidad que percibe el oyente es la misma y la notación así lo refleja.
 
-Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se puede observar la simetría de las escalas simétricas. Si se compara con la notación tradicional, donde no se aprecia simetría alguna, se notará una increible mejoría en las posibilidades que ofrece para su análisis, estudio y asimilación.
+Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se puede
+observar la regularidad de las escalas del núcleo. Si se compara con la notación
+tradicional, donde no se aprecia regularidad alguna, se notará una increible
+mejoría en las posibilidades que ofrece para su análisis, estudio y asimilación.
 
 \subsection{Nombres de las escalas}
 Siguiendo con el mismo razonamiento, dejaremos de referirnos a una escala con el nombre de la nota que está más lejos del tritono, y usaremos su nota central. Por ejemplo, la escala que no tiene ningún sostenido dejará de llamarse ``escala de DO'', y pasará a llamarse ``escala de RE''. La nota que da nombre a una escala es su nota central, no la nota que nos parece que sugiere descanso, plenitud o resolución.
@@ -1368,7 +1378,9 @@ Será mejor que dejemos de hablar de colores.
 
 \subsection{Representación de tritonos}
 
-Al representar los tritonos se observa que también ocupan su lugar perfectamente simétrico. Se hará mediante una linea que los una. Veamos la representación de las cinco escalas simétricas con sus tritonos.
+Al representar los tritonos se observa que también ocupan un lugar regular en el
+esquema. Se hará mediante una linea que los una. Veamos la representación de las
+cinco escalas del núcleo con sus tritonos.
 
 \begin{figure}[h]
 
@@ -1531,7 +1543,7 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco escalas padre simétricas, la vista \textsf{WHITE DU} y sus tritonos}\label{fig:the-six-scales-and-tritones}
+	\caption{Las cinco escalas del núcleo, la vista \textsf{WHITE DU} y sus tritonos}\label{fig:the-six-scales-and-tritones}
 \end{figure}
 
 
@@ -1572,10 +1584,11 @@ UU} conserva las notas superiores de ambos semitonos, \texttt{WHITE DD} las
 inferiores, \texttt{WHITE DU} la inferior del primero y la superior del segundo,
 y \texttt{WHITE UD} la superior del primero y la inferior del segundo.
 
-En las escalas simétricas bastan dos letras porque los dos semitonos que rodean
-un mismo tritono son imágenes especulares y se colapsan juntos. \textsf{GREEN} y
-\textsf{PINK}, al romper esa simetría, usan una letra por semitono; sus ocho
-vistas se estudian al final de esta sección.
+En las escalas del núcleo bastan dos letras porque los dos semitonos que rodean
+un mismo tritono son equivalentes y se colapsan juntos. En \textsf{GREEN} y
+\textsf{PINK} los dos semitonos del mismo tritono no son equivalentes, así que
+usan una letra por semitono; sus ocho vistas se estudian al final de esta
+sección.
 
 No hay que buscar un nombre por número de notas. Las vistas pueden tener 3, 4 o
 5 notas; algunas conservan semitonos, otras no; algunas conservan uno o dos
@@ -1719,13 +1732,13 @@ cambiar de padre se usa la modulación.
 \subsubsection{Vistas de \textsf{GREEN} y \textsf{PINK}}
 \label{sec:vistas-green-pink}
 
-Las dos escalas base no simétricas, \textsf{GREEN} y \textsf{PINK}, que se
-presentan más adelante, tienen tres semitonos. En las escalas simétricas, los
-dos semitonos que tocan un mismo tritono son imágenes especulares y se colapsan
-juntos: por eso bastan dos letras, una por grupo. Aquí la simetría se
-rompe y los dos semitonos del mismo tritono ya no son equivalentes. Por eso se
-elige cada semitono por separado, con una letra por semitono en orden de
-aparición desde el grado 1:
+Las dos escalas de la familia \texttt{3,3}, \textsf{GREEN} y \textsf{PINK}, que
+se presentan más adelante, tienen tres semitonos. En las escalas del núcleo, los
+dos semitonos que tocan un mismo tritono son equivalentes y se colapsan juntos:
+por eso bastan dos letras, una por grupo. En \textsf{GREEN} y \textsf{PINK} los
+dos semitonos del mismo tritono no son equivalentes, así que se elige cada
+semitono por separado, con una letra por semitono en orden de aparición desde el
+grado 1:
 
 \begin{itemize}
 	\item \textsf{GREEN} de \texttt{F}: \texttt{G-Ab}, \texttt{B-C},
@@ -1777,7 +1790,7 @@ Es importante observar que la situación de los tritonos tiene un sentido, es de
 
 \subsection{Centro tonal}
 
-Llamaremos \emph{centro tonal} a la nota central de la escala. En todas, es la nota que guarda la misma distancia con todos los tritonos por ambos caminos, descendiendo y ascendiendo. Se trata del grado más estable de todos. No confundir con el que ofrece una mayor sensación de relajación, ese es el que quede más lejos de algún tritono. La nota central no da sensación de relajación, sino de equilibrio. Podríamos decir que es el grado más \emph{neutral} de la escala. En la escala \texttt{BLACK} no hay ninguna nota que ocupe ese centro tonal, aunque es perfectamente simétrica, como las demás.
+Llamaremos \emph{centro tonal} a la nota central de la escala. En todas, es la nota que guarda la misma distancia con todos los tritonos por ambos caminos, descendiendo y ascendiendo. Se trata del grado más estable de todos. No confundir con el que ofrece una mayor sensación de relajación, ese es el que quede más lejos de algún tritono. La nota central no da sensación de relajación, sino de equilibrio. Podríamos decir que es el grado más \emph{neutral} de la escala. En la escala \texttt{BLACK} no hay ninguna nota que ocupe ese centro tonal: su centro es un espacio entre dos notas, como hemos visto.
 
 \subsection{Terceras ambiguas}
 
@@ -1927,7 +1940,7 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco escalas padre simétricas, la vista \textsf{WHITE DU} y terceras ambiguas}\label{fig:the-six-scales-and-ambiguous-thirds}
+	\caption{Las cinco escalas del núcleo, la vista \textsf{WHITE DU} y terceras ambiguas}\label{fig:the-six-scales-and-ambiguous-thirds}
 \end{figure}
 
 
@@ -2213,12 +2226,12 @@ Buscar más es un interesante ejercicio. Sería fantástico encontrar alguna, pe
 	\item Que haya o no tritonos
 	\item Que todos los grados tengan o no tercera
 	\item Que todas las terceras sean mayores o menores
-	\item Que formen una combinación simétrica
+	\item Que los semitonos se agrupen en pares equivalentes
 	\item Que la orientación sea única
 	\item Que las notas esten distribuidas sin agruparse en bloques
 \end{itemize}
 
-Cualquier combinación que se encuentre será simplemente una ordenación diferente de alguna de las cinco escalas padre simétricas presentadas o de una de sus proyecciones (lo que sería un modo, recordemos). Si se hace girar en el esquema se llegará a ella. Las escalas no simétricas quedan fuera de este argumento y se estudian a continuación. Vamos a intentar algunas:
+Cualquier combinación que se encuentre será simplemente una ordenación diferente de alguna de las cinco escalas del núcleo presentadas o de una de sus proyecciones (lo que sería un modo, recordemos). Si se hace girar en el esquema se llegará a ella. La familia \texttt{3,3} queda fuera de este argumento y se estudia a continuación. Vamos a intentar algunas:
 
 \begin{figure}[H]
 	\begin{subfigure}{0.15\textwidth}
@@ -2360,16 +2373,15 @@ Cualquier combinación que se encuentre será simplemente una ordenación difere
 	\caption{Características de diferentes escalas musicales}\label{tab:escalas}
 \end{table}
 
-Esta conclusión se refiere al núcleo simétrico. Las escalas no simétricas se
-estudian a continuación.
+Esta conclusión se refiere a las escalas del núcleo. La familia \texttt{3,3} se
+estudia a continuación.
 
-\subsection{Escalas base no simétricas: \textsf{GREEN} y \textsf{PINK}}
+\subsection{La familia \texttt{3,3}: \textsf{GREEN} y \textsf{PINK}}
 \label{sec:green-pink}
 
-El catálogo de escalas base se amplía con dos escalas no simétricas:
-\textsf{GREEN}, que es la menor armónica, y \textsf{PINK}, que es la mayor
-armónica. No son modos entre sí: son dos escalas distintas que comparten el
-mismo esqueleto de tritonos.
+El catálogo se amplía con la familia \texttt{3,3}: \textsf{GREEN}, que es la
+menor armónica, y \textsf{PINK}, que es la mayor armónica. No son modos entre
+sí: son dos escalas distintas que comparten el mismo esqueleto de tritonos.
 
 Llamamos esqueleto \texttt{3,3} a la disposición en la que las cuatro notas que
 forman los dos tritonos quedan equiespaciadas cada tres semitonos. En
@@ -2435,8 +2447,8 @@ armónica y la mayor armónica de \texttt{C}, pero se nombran por su centro.
 		\end{tikzpicture}
 		\caption{\textsf{PINK} (mayor armónica, centro \texttt{D})}
 	\end{subfigure}
-	\caption{Las dos escalas base no simétricas. Las líneas rojas unen los
-	tritonos \texttt{D-Ab} y \texttt{F-B}. \textsf{GREEN} está centrada en
+	\caption{Las dos escalas de la familia \texttt{3,3}. Las líneas rojas unen
+	los tritonos \texttt{D-Ab} y \texttt{F-B}. \textsf{GREEN} está centrada en
 	\texttt{F}; \textsf{PINK}, en \texttt{D}.}
 	\label{fig:green-pink}
 \end{figure}
@@ -2444,17 +2456,17 @@ armónica y la mayor armónica de \texttt{C}, pero se nombran por su centro.
 \begin{table}[H]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{llcccc}
+		\begin{tabular}{llccc}
 			\toprule
-			Escala & Conjunto & Fórmula (desde el centro) & Tritonos & Segundas menores & Simétrica \\
+			Escala & Conjunto & Fórmula (desde el centro) & Tritonos & Segundas menores \\
 			\midrule
-			\textsf{GREEN} & Menor armónica & 1, 2, b3, \#4, 5, 6, b7 & D-Ab, F-B & 3 & no \\
-			\textsf{PINK}  & Mayor armónica & 1, 2, b3, 4, b5, 6, b7 & D-Ab, F-B & 3 & no \\
-			\textsf{RED}   & Doble armónica mayor & 1, b2, 3, 4, 5, b6, 7 & Db-G, F-B & 4 & sí \\
+			\textsf{GREEN} & Menor armónica & 1, 2, b3, \#4, 5, 6, b7 & D-Ab, F-B & 3 \\
+			\textsf{PINK}  & Mayor armónica & 1, 2, b3, 4, b5, 6, b7 & D-Ab, F-B & 3 \\
+			\textsf{RED}   & Doble armónica mayor & 1, b2, 3, 4, 5, b6, 7 & Db-G, F-B & 4 \\
 			\bottomrule
 		\end{tabular}
 	}
-	\caption{Comparación de las escalas no simétricas con \textsf{RED}.}
+	\caption{Comparación de la familia \texttt{3,3} con \textsf{RED}.}
 	\label{tab:green-pink}
 \end{table}
 
@@ -2465,7 +2477,8 @@ estándar de la menor y la mayor armónica.
 \textsf{GREEN} y \textsf{PINK} no son modos entre sí: son dos conjuntos
 distintos. Desde su centro, \textsf{GREEN} tiene \#4 y 5, mientras que
 \textsf{PINK} tiene 4 y b5; el resto de grados coincide. Sus vistas compactas
-usan tres letras, una por semitono, porque la simetría se rompe (véase
+usan tres letras, una por semitono, porque los dos semitonos del mismo tritono
+no son equivalentes (véase
 \hyperref[sec:vistas-green-pink]{la sección de vistas de \textsf{GREEN} y
 \textsf{PINK}}). La vista \texttt{GREEN UDD} y la vista \texttt{PINK UUD}
 conservan los dos tritonos y producen el mismo tetracordo, \texttt{D-F-Ab-B}.
@@ -2487,7 +2500,7 @@ pendiente.
 
 \subsection{Orden de tríadas por distancias a los tritonos}
 
-En estas dos escalas \texttt{WHITE} y \texttt{BLUE} se aprecian los tritonos sombreados. La primera tiene uno: \texttt{B-F}, y la segunda tiene dos: \texttt{A-e} y \texttt{B-F}. Para modular entre una y otra basta con cambiar la nota \texttt{E} por \texttt{e} (\texttt{Mi} por \texttt{Mi\ bemol}). El centro simétrico era la nota \texttt{D} en \texttt{WHITE} y ahora pasa a ser \texttt{G} en \texttt{BLUE}.
+En estas dos escalas \texttt{WHITE} y \texttt{BLUE} se aprecian los tritonos sombreados. La primera tiene uno: \texttt{B-F}, y la segunda tiene dos: \texttt{A-e} y \texttt{B-F}. Para modular entre una y otra basta con cambiar la nota \texttt{E} por \texttt{e} (\texttt{Mi} por \texttt{Mi\ bemol}). El centro era la nota \texttt{D} en \texttt{WHITE} y ahora pasa a ser \texttt{G} en \texttt{BLUE}.
 
 Veamos todas las tríadas de la escala y la distancia que guardan con el siguiente tritono, es decir, la cantidad de terceras que habría que agregarle para que contuviese un tritono. Anotaremos también si la tríada incluye ya alguna nota perteneciente a algún tritono. La distancia que percibe el oyente es la que decide si la tríada se puede considerar el objetivo seguro de una resolución.
 
@@ -2635,7 +2648,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
 
 \subsection{Acordes de cada escala}
 
-Los acordes que se forman a partir de cada una de las cinco escalas padre simétricas y de la vista \textsf{WHITE DU} son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos.
+Los acordes que se forman a partir de cada una de las cinco escalas del núcleo y de la vista \textsf{WHITE DU} son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos.
 
 Una posible notación para nombrar los acordes podría consistir en especificar solamente tres elementos:
 \begin{itemize}
@@ -2852,7 +2865,7 @@ El oyente percibe el mapa sonoro como un conjunto de puntos que mantienen una po
 
 Ahora tenemos dos conceptos distintos:
 \begin{itemize}   \tightlist
-	\item \emph{Centro tonal}, recordemos, la nota más neutra de la escala, a igual distancia de todos los tritonos y en el centro simétrico de la escala
+	\item \emph{Centro tonal}, recordemos, la nota más neutra de la escala, a igual distancia de todos los tritonos y en el centro de la escala
 	\item \emph{Centros tritonales}, especie de elevaciones del terreno cuya pendiente circundante ejerce una fuerza que nos aleja de ellos
 \end{itemize}
 
@@ -3642,7 +3655,7 @@ Podemos acuñar dos nuevos términos para esto, información \emph{estructural} 
 
 \subsection{Ordenación de los grupos de notas}
 
-Como dijimos, el centro tonal de una escala lo marca la nota que queda a la misma distancia de los tritonos, digamos la nota más neutra. Qué pasa cuando apilamos notas? Se mantendrá la misma simetría? Pasará algo inesperado? Me temo que sí, al menos para mí.
+Como dijimos, el centro tonal de una escala lo marca la nota que queda a la misma distancia de los tritonos, digamos la nota más neutra. Qué pasa cuando apilamos notas? Se mantendrá el mismo centro? Pasará algo inesperado? Me temo que sí, al menos para mí.
 
 Veámoslo en una tabla.
 
@@ -3750,17 +3763,17 @@ Veámoslo en una tabla.
 	\caption{Partículas \sffamily{WHITE} de 7 notas}\label{tab:particles-seven-notes-white}
 \end{table}
 
-Cuando tenemos simplemente una nota, observamos que, en la escala \texttt{WHITE}, el centro es la nota \texttt{D}. Recordemos que marca el centro tonal. Es el centro simétrico de la escala y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo.
+Cuando tenemos simplemente una nota, observamos que, en la escala \texttt{WHITE}, el centro es la nota \texttt{D}. Recordemos que marca el centro tonal. Es el centro de la estructura y está a la misma distancia del tritono, tanto hacia arriba como hacia abajo.
 
-Cuando apilamos dos notas alternas, los pares que se forman pueden ser de 3 o de 4 semitonos. Si nos fijamos en el esquema, el centro simétrico ahora pasa a ser la nota \texttt{C}. Hemos bajado un tono.
+Cuando apilamos dos notas alternas, los pares que se forman pueden ser de 3 o de 4 semitonos. Si nos fijamos en el esquema, el centro de la estructura ahora pasa a ser la nota \texttt{C}. Hemos bajado un tono.
 
-Al apilar tres, para formar una tríada, obtenemos pilas \texttt{43}, \texttt{34} y \texttt{33} de manera que ahora, el centro simétrico pasa a ser la tríada formada a partir de la nota \texttt{B}. Recordemos que las tríadas tenían un fuerte significado debido a su forma: justicia/injusticia, bien/mal, vida/muerte, alegría/tristeza, etc.
+Al apilar tres, para formar una tríada, obtenemos pilas \texttt{43}, \texttt{34} y \texttt{33} de manera que ahora, el centro de la estructura pasa a ser la tríada formada a partir de la nota \texttt{B}. Recordemos que las tríadas tenían un fuerte significado debido a su forma: justicia/injusticia, bien/mal, vida/muerte, alegría/tristeza, etc.
 
 Si usamos cuatro notas, el carácter de las tríadas pasa a un plano secundario. Ya no vemos una entidad grande apoyada sobre una más pequeña. Ahora hay tres entidades, formando distintas combinaciones. Si teníamos arriba un grande opresor sobre uno pequeño oprimido, ahora el de arriba también soporta a otro pequeño, así que parece más equilibrado, y al revés, si había uno pequeño apoyado sobre uno grande, lo cual nos parecía justo, ahora el pequeño tiene a su vez otro grande encima. En resumen, se difumina un poco la sensación de desequilibrio grande/pequeño. Sin embargo, al agregar más notas, disminuye también la posibilidad de confusión: ya no hay tantos acordes comunes.
 
-Teníamos 3 tipos de tríadas (\texttt{43}, \texttt{34} y \texttt{33}) con lo que \texttt{F}, \texttt{C} y \texttt{G} podrían confundirse, \texttt{E}, \texttt{A} y \texttt{D} también y solo era diferente \texttt{B}. Ahora tenemos cuatro tipos de cuatríadas (\texttt{334}, \texttt{344}, \texttt{433}, \texttt{334}) así que \texttt{E}, \texttt{A} y \texttt{D} siguen siendo iguales, \texttt{F} y \texttt{C} también pero \texttt{G} y \texttt{B} son distintos. Hemos conseguido diferenciar a \texttt{G} y a \texttt{B}. Además hemos vuelto a bajar de grado: ahora el centro simétrico está en la tríada de \texttt{A}.
+Teníamos 3 tipos de tríadas (\texttt{43}, \texttt{34} y \texttt{33}) con lo que \texttt{F}, \texttt{C} y \texttt{G} podrían confundirse, \texttt{E}, \texttt{A} y \texttt{D} también y solo era diferente \texttt{B}. Ahora tenemos cuatro tipos de cuatríadas (\texttt{334}, \texttt{344}, \texttt{433}, \texttt{334}) así que \texttt{E}, \texttt{A} y \texttt{D} siguen siendo iguales, \texttt{F} y \texttt{C} también pero \texttt{G} y \texttt{B} son distintos. Hemos conseguido diferenciar a \texttt{G} y a \texttt{B}. Además hemos vuelto a bajar de grado: ahora el centro de la estructura está en la tríada de \texttt{A}.
 
-En resumen: observamos que cuantas más notas apilamos, más baja el centro simétrico. No es el centro tonal de la escala: sea cual sea la cantidad de notas que apilemos, el oyente sigue percibiendo el mismo centro tonal, y sobre todo, los mismos tritonos. Conoce la orientación del mapa correctamente. Eso no cambia. Qué estamos cambiando entonces?
+En resumen: observamos que cuantas más notas apilamos, más baja el centro de la estructura. No es el centro tonal de la escala: sea cual sea la cantidad de notas que apilemos, el oyente sigue percibiendo el mismo centro tonal, y sobre todo, los mismos tritonos. Conoce la orientación del mapa correctamente. Eso no cambia. Qué estamos cambiando entonces?
 
 Recordemos de qué manera medíamos la distancia al tritono de un grupo de notas. Considerábamos la cantidad de notas que hay que agregar al grupo para que contenga un tritono. Suponemos que el oyente hace esto de manera automática. Es como si completase las notas que faltan y notase que está cerca de escuchar un tritono. Nos quedamos en que debería haber alguna fórmula para calcular correctamente la distancia al tritono que se percibe y que probablemente, el hecho de que en el grupo de notas ya estuviese presente una nota perteneciente al tritono, aumentaría esa percepción.
 
@@ -3921,7 +3934,7 @@ De momento hemos hecho todo esto con la escala \texttt{WHITE}. Vamos a intentar 
 	\caption{Partículas \sffamily{BLUE} de 7 notas}\label{tab:particles-seven-notes-blue}
 \end{table}
 
-Observamos, por supuesto, la misma simetría y el mismo descenso por grados con cada nueva nota. Sin embargo, aparece una nueva partícula con la que no habíamos contado aún: la tríada \texttt{44}. Tendrá que formar parte de nuestro vocabulario. La sensación que produce esta tríada tiene que ver con la orientación. Se trata de dos terceras mayores, no se sabe cuál es la base porque podría ser cualquiera, al estar a distancia de 4 semitonos, apilando 3 de ellas llegamos a la octava, es decir, se termina la escala. Esto es lo mismo que le ocurre a la escala \texttt{TONES}, no tiene orientación. El oyente siente la presencia de tritonos por todas partes, no hay ningún lugar seguro, no se puede huir en ninguna dirección. Da lo mismo en qué grado de la escala estemos, la sensación persiste: amenaza constante y ninguna posibilidad de escape. La diferencia con \texttt{WHITE DU}, donde no hay ningún tritono es apreciable, aunque allí sí hay una orientación: se sabe en qué grado de la escala estamos, pero no hay necesidad de huir de ningún punto. La tríada \texttt{44} crea una sensación de perplejidad y de amenaza irremisible.
+Observamos, por supuesto, la misma regularidad y el mismo descenso por grados con cada nueva nota. Sin embargo, aparece una nueva partícula con la que no habíamos contado aún: la tríada \texttt{44}. Tendrá que formar parte de nuestro vocabulario. La sensación que produce esta tríada tiene que ver con la orientación. Se trata de dos terceras mayores, no se sabe cuál es la base porque podría ser cualquiera, al estar a distancia de 4 semitonos, apilando 3 de ellas llegamos a la octava, es decir, se termina la escala. Esto es lo mismo que le ocurre a la escala \texttt{TONES}, no tiene orientación. El oyente siente la presencia de tritonos por todas partes, no hay ningún lugar seguro, no se puede huir en ninguna dirección. Da lo mismo en qué grado de la escala estemos, la sensación persiste: amenaza constante y ninguna posibilidad de escape. La diferencia con \texttt{WHITE DU}, donde no hay ningún tritono es apreciable, aunque allí sí hay una orientación: se sabe en qué grado de la escala estamos, pero no hay necesidad de huir de ningún punto. La tríada \texttt{44} crea una sensación de perplejidad y de amenaza irremisible.
 
 Este sería nuestro nuevo catálogo de partículas básicas:
 
@@ -4071,13 +4084,13 @@ Vamos a crear la tabla
 \end{table}
 
 
-Nuevas partículas! Hemos hallado un nuevo intervalo de 2 semitonos, así que aparecen dos nuevas tríadas: \texttt{24} y \texttt{42}. Las hemos representado con fondo negro. La simetría sigue siendo perfecta. Cuál será el significado de estas tríadas?
+Nuevas partículas! Hemos hallado un nuevo intervalo de 2 semitonos, así que aparecen dos nuevas tríadas: \texttt{24} y \texttt{42}. Las hemos representado con fondo negro. La regularidad sigue siendo perfecta. Cuál será el significado de estas tríadas?
 
 Bien, hemos de considerar la dificultad intrínseca de cada escala como parte del problema. Digamos que el oyente se sentirá mejor en una escala con pocos tritonos y pocos grados equívocos. Si cada escala tiene algun sonido concreto que la caracteriza, el hecho de presentar al oyente ese sonido hará que se crea que estamos en esa escala. Recordemos que la tríada \texttt{44} aparecía en \texttt{BLUE} y no en \texttt{WHITE}, de manera que actúa como una especie de aroma inconfundible.
 
 Por contra, las pilas \texttt{24} y \texttt{42} hacen su aparición en \texttt{RED}. Tampoco parecen tener un significado especial, más que representar a su escala.
 
-Las cinco escalas padre simétricas forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, la vista \texttt{WHITE DU} se obtiene colapsando los semitonos que tocan el tritono; agregando tritonos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}. \texttt{WHITE DU} aparece en el mapa por su carácter, pero no como escala padre: es una vista de \texttt{WHITE}; desde \texttt{BLUE} se llama \texttt{BLUE UD}. \texttt{GREEN} y \texttt{PINK} quedan fuera de este mapa simétrico; se estudian como escalas base no simétricas.
+Las cinco escalas del núcleo forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, la vista \texttt{WHITE DU} se obtiene colapsando los semitonos que tocan el tritono; agregando tritonos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}. \texttt{WHITE DU} aparece en el mapa por su carácter, pero no como escala padre: es una vista de \texttt{WHITE}; desde \texttt{BLUE} se llama \texttt{BLUE UD}. \texttt{GREEN} y \texttt{PINK} se estudian en la familia \texttt{3,3}.
 
 \begin{figure}[H]
 	\begin{tikzpicture}
