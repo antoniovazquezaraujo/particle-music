@@ -1726,10 +1726,15 @@ se nombra con el padre y sus letras: \texttt{WHITE UU}, \texttt{WHITE DD},
 		\pgfmathsetmacro{\ay}{\collapseviewy{\a}}
 		\pgfmathsetmacro{\bx}{\collapseviewx{\b}}
 		\pgfmathsetmacro{\by}{\collapseviewy{\b}}
-		% Los pares van de la columna izquierda a la derecha: la línea sale
-		% del centro de la arista vertical derecha y entra por la izquierda.
-		\draw[very thick, color=red]
-			(\ax+0.25,\ay) -- (\bx-0.25,\by);
+		\ifdim\ax pt=\bx pt
+			% Par vertical: sale por la arista superior y entra por la inferior.
+			\draw[very thick, color=red]
+				(\ax,\ay+0.25) -- (\bx,\by-0.25);
+		\else
+			% Par horizontal o diagonal: de la arista derecha a la izquierda.
+			\draw[very thick, color=red]
+				(\ax+0.25,\ay) -- (\bx-0.25,\by);
+		\fi
 	}}
 
 \newcommand{\collapseviewgrid}[4]{%

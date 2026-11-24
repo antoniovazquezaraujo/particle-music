@@ -1634,10 +1634,15 @@ UD}, etc.
 		\pgfmathsetmacro{\ay}{\collapsedviewy{\a}}
 		\pgfmathsetmacro{\bx}{\collapsedviewx{\b}}
 		\pgfmathsetmacro{\by}{\collapsedviewy{\b}}
-		% Pairs run from the left column to the right: start at the centre of
-		% the right vertical edge and enter through the left one.
-		\draw[very thick, color=red]
-			(\ax+0.25,\ay) -- (\bx-0.25,\by);
+		\ifdim\ax pt=\bx pt
+			% Vertical pair: leave through the top edge and enter through the bottom.
+			\draw[very thick, color=red]
+				(\ax,\ay+0.25) -- (\bx,\by-0.25);
+		\else
+			% Horizontal or diagonal pair: from the right edge to the left one.
+			\draw[very thick, color=red]
+				(\ax+0.25,\ay) -- (\bx-0.25,\by);
+		\fi
 	}}
 
 \newcommand{\collapsedviewgrid}[4]{%
