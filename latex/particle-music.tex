@@ -1584,7 +1584,63 @@ cinco primeras escalas con sus tritonos.
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco primeras escalas, la vista \textsf{WHITE DU} y sus tritonos}\label{fig:the-six-scales-and-tritones}
+	\\[2em]
+	\hfill
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[st/.style={
+						rectangle,
+						minimum size=.5cm,
+						node distance=.5cm,
+						inner sep = 0cm,
+						draw=black,thick,fill=#1!50,
+						font=\sffamily
+					},
+				st/.default=gray]
+
+			\node (15)[st=white,            ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st,       right of= 25] {5};
+			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+
+			\draw[very thick, color=red] (21.north) -- (25.south);
+			\draw[very thick, color=red] (13.east) -- (33.west);
+
+		\end{tikzpicture}
+		\caption{\textsf{GREEN}}
+
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[st/.style={
+						rectangle,
+						minimum size=.5cm,
+						node distance=.5cm,
+						inner sep = 0cm,
+						draw=black,thick,fill=#1!50,
+						font=\sffamily
+					},
+				st/.default=gray]
+
+			\node (15)[st,                  ] {4}; \node (25) [st,       right of=15] {5}; \node (35) [st=white, right of= 25] { };
+			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+
+			\draw[very thick, color=red] (21.north) -- (25.south);
+			\draw[very thick, color=red] (13.east) -- (33.west);
+
+		\end{tikzpicture}
+		\caption{\textsf{PINK}}
+
+	\end{subfigure}
+	\hfill
+	\caption{Las siete escalas base, la vista \textsf{WHITE DU} y sus tritonos}\label{fig:the-six-scales-and-tritones}
 \end{figure}
 
 
@@ -1592,7 +1648,7 @@ Como se puede observar, la escala \texttt{WHITE} (escala mayor diatónica, la m�
 
 La escala \texttt{BLUE} (recordemos, en terminología estandar, \emph{menor melódica}) es, con mucho, la más utilizada en el jazz. Tiene dos tritonos y eso permite una mayor capacidad para el engaño y la sorpresa, variando casi imperceptiblemente entre la sensaciones mayor/menor y menor/mayor.
 
-La escala \texttt{RED} se utiliza ampliamente en el flamenco, también con dos tritonos.
+La escala \texttt{RED} se utiliza ampliamente en el flamenco, también con dos tritonos. \texttt{GREEN} y \texttt{PINK} tienen dos tritonos: \texttt{D-Ab} y \texttt{F-B}.
 
 La escala \texttt{BLACK} tiene 4 tritonos, se utiliza mucho en la música clásica cuando se desea remarcar la sensación tritonal, sin paliativos ni trucos, no ofrece ningún espacio para el relax y suele usarse durante periodos cortos.
 
@@ -1682,7 +1738,7 @@ se nombra con el padre y sus letras: \texttt{WHITE UU}, \texttt{WHITE DD},
 		\collapseviewtritones{#4}
 	\end{scope}}
 
-\begin{figure}[H]
+\begin{figure}[p]
 	\centering
 	\begin{tikzpicture}[
 		st/.style={rectangle,minimum size=.5cm,node distance=.5cm,inner sep=0cm,draw=black,thick,fill=#1!50,font=\sffamily},
@@ -1717,11 +1773,48 @@ se nombra con el padre y sus letras: \texttt{WHITE UU}, \texttt{WHITE DD},
 		\collapseviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{1/7,5/11}
 		\collapseviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{2/8,4/10}
 	\end{tikzpicture}
-	\caption{Las cuatro vistas por colapso de \textsf{WHITE}, \textsf{BLUE},
-	\textsf{RED} y \textsf{BLACK}. El grado 1 está abajo, centro; las líneas
-	rojas unen los tritonos que se conservan. \textsf{TONES} es la identidad y
-	las vistas de \textsf{GREEN} y \textsf{PINK} se estudian al final de la
-	sección.}
+
+	\vspace{1em}
+	\resizebox{\textwidth}{!}{%
+	\begin{tikzpicture}[
+		st/.style={rectangle,minimum size=.5cm,node distance=.5cm,inner sep=0cm,draw=black,thick,fill=#1!50,font=\sffamily},
+		st/.default=gray]
+		\useasboundingbox (0,-3.6) rectangle (17.6,3);
+		\node at (2.5,2.8) {\scriptsize DDD};
+		\node at (4.5,2.8) {\scriptsize DDU};
+		\node at (6.5,2.8) {\scriptsize DUD};
+		\node at (8.5,2.8) {\scriptsize DUU};
+		\node at (10.5,2.8) {\scriptsize UDD};
+		\node at (12.5,2.8) {\scriptsize UDU};
+		\node at (14.5,2.8) {\scriptsize UUD};
+		\node at (16.5,2.8) {\scriptsize UUU};
+		\node[anchor=east] at (1.1,1) {\texttt{GREEN}};
+		\node[anchor=east] at (1.1,-2) {\texttt{PINK}};
+
+		\collapseviewgrid{2}{0}{1,0,2,0,0,0,3,0,0,4,0,0}{0/6}
+		\collapseviewgrid{4}{0}{1,0,2,0,0,0,3,0,0,0,4,0}{0/6}
+		\collapseviewgrid{6}{0}{1,0,2,0,0,0,0,3,0,4,0,0}{}
+		\collapseviewgrid{8}{0}{1,0,2,0,0,0,0,3,0,0,4,0}{}
+		\collapseviewgrid{10}{0}{1,0,0,2,0,0,3,0,0,4,0,0}{0/6,3/9}
+		\collapseviewgrid{12}{0}{1,0,0,2,0,0,3,0,0,0,4,0}{0/6}
+		\collapseviewgrid{14}{0}{1,0,0,2,0,0,0,3,0,4,0,0}{3/9}
+		\collapseviewgrid{16}{0}{1,0,0,2,0,0,0,3,0,0,4,0}{}
+
+		\collapseviewgrid{2}{-3}{1,0,2,0,0,3,0,0,0,4,0,0}{}
+		\collapseviewgrid{4}{-3}{1,0,2,0,0,3,0,0,0,0,4,0}{}
+		\collapseviewgrid{6}{-3}{1,0,2,0,0,0,3,0,0,4,0,0}{0/6}
+		\collapseviewgrid{8}{-3}{1,0,2,0,0,0,3,0,0,0,4,0}{0/6}
+		\collapseviewgrid{10}{-3}{1,0,0,2,0,3,0,0,0,4,0,0}{3/9}
+		\collapseviewgrid{12}{-3}{1,0,0,2,0,3,0,0,0,0,4,0}{}
+		\collapseviewgrid{14}{-3}{1,0,0,2,0,0,3,0,0,4,0,0}{0/6,3/9}
+		\collapseviewgrid{16}{-3}{1,0,0,2,0,0,3,0,0,0,4,0}{0/6}
+	\end{tikzpicture}
+	}
+	\caption{Arriba, las cuatro vistas por colapso de \textsf{WHITE},
+	\textsf{BLUE}, \textsf{RED} y \textsf{BLACK}. Abajo, las ocho vistas de tres
+	letras de \textsf{GREEN} y \textsf{PINK}. El grado 1 está abajo, centro; las
+	líneas rojas unen los tritonos que se conservan. \textsf{TONES} es la
+	identidad.}
 	\label{tab:collapse-views}
 \end{figure}
 

@@ -1502,11 +1502,67 @@ see the representation of the first five scales with their tritones.
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{The first five scales, the \textsf{WHITE DU} view and their tritones}\label{fig:the-six-scales-and-tritones}
+	\\[2em]
+	\hfill
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[st/.style={
+						rectangle,
+						minimum size=.5cm,
+						node distance=.5cm,
+						inner sep = 0cm,
+						draw=black,thick,fill=#1!50,
+						font=\sffamily
+					},
+				st/.default=gray]
+
+			\node (15)[st=white,            ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st,       right of= 25] {5};
+			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+
+			\draw[very thick, color=red] (21.north) -- (25.south);
+			\draw[very thick, color=red] (13.east) -- (33.west);
+
+		\end{tikzpicture}
+		\caption{\textsf{GREEN}}
+
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[st/.style={
+						rectangle,
+						minimum size=.5cm,
+						node distance=.5cm,
+						inner sep = 0cm,
+						draw=black,thick,fill=#1!50,
+						font=\sffamily
+					},
+				st/.default=gray]
+
+			\node (15)[st,                  ] {4}; \node (25) [st,       right of=15] {5}; \node (35) [st=white, right of= 25] { };
+			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+
+			\draw[very thick, color=red] (21.north) -- (25.south);
+			\draw[very thick, color=red] (13.east) -- (33.west);
+
+		\end{tikzpicture}
+		\caption{\textsf{PINK}}
+
+	\end{subfigure}
+	\hfill
+	\caption{The seven base scales, the \textsf{WHITE DU} view and their tritones}\label{fig:the-six-scales-and-tritones}
 \end{figure}
 As you can see, the \texttt{WHITE} scale (diatonic major scale, the most used in classical music) only has one tritone.
 The \texttt{BLUE} scale (remember, in standard terminology, \emph{melodic minor}) is, by far, the most used in jazz. It has two tritones and this allows for greater capacity for deception and surprise, varying almost imperceptibly between major/minor and minor/major sensations.
-The \texttt{RED} scale is widely used in flamenco, also with two tritones.
+The \texttt{RED} scale is widely used in flamenco, also with two tritones. \texttt{GREEN} and \texttt{PINK} have two tritones: \texttt{D-Ab} and \texttt{F-B}.
 The \texttt{BLACK} scale has 4 tritones, it is used a lot in classical music when you want to emphasize the tritone sensation, without palliatives or tricks, it does not offer any space for relaxation and is usually used for short periods of time.
 The \texttt{WHITE DU} view does not have any tritone. There are no threats, it is used in simple music, children's songs or basically in all primitive civilizations. There is no possibility of deception or surprise and it does not ask the listener any questions. It is rather decorative, suitable for the adornment of parties and primary expressions. Its triads give rise to a type of harmony called \emph{fourths harmony}.
 The \texttt{TONES} scale has three tritones, but only six notes and also, it has no possible orientation. We will talk about this later.
@@ -1590,7 +1646,7 @@ UD}, etc.
 		\collapsedviewtritones{#4}
 	\end{scope}}
 
-\begin{figure}[H]
+\begin{figure}[p]
 	\centering
 	\begin{tikzpicture}[
 		st/.style={rectangle,minimum size=.5cm,node distance=.5cm,inner sep=0cm,draw=black,thick,fill=#1!50,font=\sffamily},
@@ -1625,10 +1681,47 @@ UD}, etc.
 		\collapsedviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{1/7,5/11}
 		\collapsedviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{2/8,4/10}
 	\end{tikzpicture}
-	\caption{The four collapse views of \textsf{WHITE}, \textsf{BLUE},
-	\textsf{RED} and \textsf{BLACK}. Degree 1 is bottom centre; red lines join
-	the tritones that survive. \textsf{TONES} is the identity and the views of
-	\textsf{GREEN} and \textsf{PINK} are studied at the end of the section.}
+
+	\vspace{1em}
+	\resizebox{\textwidth}{!}{%
+	\begin{tikzpicture}[
+		st/.style={rectangle,minimum size=.5cm,node distance=.5cm,inner sep=0cm,draw=black,thick,fill=#1!50,font=\sffamily},
+		st/.default=gray]
+		\useasboundingbox (0,-3.6) rectangle (17.6,3);
+		\node at (2.5,2.8) {\scriptsize DDD};
+		\node at (4.5,2.8) {\scriptsize DDU};
+		\node at (6.5,2.8) {\scriptsize DUD};
+		\node at (8.5,2.8) {\scriptsize DUU};
+		\node at (10.5,2.8) {\scriptsize UDD};
+		\node at (12.5,2.8) {\scriptsize UDU};
+		\node at (14.5,2.8) {\scriptsize UUD};
+		\node at (16.5,2.8) {\scriptsize UUU};
+		\node[anchor=east] at (1.1,1) {\texttt{GREEN}};
+		\node[anchor=east] at (1.1,-2) {\texttt{PINK}};
+
+		\collapsedviewgrid{2}{0}{1,0,2,0,0,0,3,0,0,4,0,0}{0/6}
+		\collapsedviewgrid{4}{0}{1,0,2,0,0,0,3,0,0,0,4,0}{0/6}
+		\collapsedviewgrid{6}{0}{1,0,2,0,0,0,0,3,0,4,0,0}{}
+		\collapsedviewgrid{8}{0}{1,0,2,0,0,0,0,3,0,0,4,0}{}
+		\collapsedviewgrid{10}{0}{1,0,0,2,0,0,3,0,0,4,0,0}{0/6,3/9}
+		\collapsedviewgrid{12}{0}{1,0,0,2,0,0,3,0,0,0,4,0}{0/6}
+		\collapsedviewgrid{14}{0}{1,0,0,2,0,0,0,3,0,4,0,0}{3/9}
+		\collapsedviewgrid{16}{0}{1,0,0,2,0,0,0,3,0,0,4,0}{}
+
+		\collapsedviewgrid{2}{-3}{1,0,2,0,0,3,0,0,0,4,0,0}{}
+		\collapsedviewgrid{4}{-3}{1,0,2,0,0,3,0,0,0,0,4,0}{}
+		\collapsedviewgrid{6}{-3}{1,0,2,0,0,0,3,0,0,4,0,0}{0/6}
+		\collapsedviewgrid{8}{-3}{1,0,2,0,0,0,3,0,0,0,4,0}{0/6}
+		\collapsedviewgrid{10}{-3}{1,0,0,2,0,3,0,0,0,4,0,0}{3/9}
+		\collapsedviewgrid{12}{-3}{1,0,0,2,0,3,0,0,0,0,4,0}{}
+		\collapsedviewgrid{14}{-3}{1,0,0,2,0,0,3,0,0,4,0,0}{0/6,3/9}
+		\collapsedviewgrid{16}{-3}{1,0,0,2,0,0,3,0,0,0,4,0}{0/6}
+	\end{tikzpicture}
+	}
+	\caption{Above, the four collapse views of \textsf{WHITE}, \textsf{BLUE},
+	\textsf{RED} and \textsf{BLACK}. Below, the eight three-letter views of
+	\textsf{GREEN} and \textsf{PINK}. Degree 1 is bottom centre; red lines join
+	the tritones that survive. \textsf{TONES} is the identity.}
 	\label{tab:collapse-views-en}
 \end{figure}
 
