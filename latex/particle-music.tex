@@ -371,32 +371,38 @@ En la notación tradicional, al grado más lejano al tritono se le llama \emph{f
 
 \subsection{Orientación simétrica}
 
-Las escalas que usamos son simétricas. La simetría es un patrón que ayuda al oyente a reconocer la armonía. Si una escala es simétrica, nos ayudará mucho en su análisis usar una notación que respete esta simetría, donde el punto central se represente gráficamente en el centro. En la notación que presentamos, esta idea es muy importante.
+Las escalas simétricas que usamos como núcleo son las que se estudian en esta
+primera parte. La simetría es un patrón que ayuda al oyente a reconocer la armonía. Si una escala es simétrica, nos ayudará mucho en su análisis usar una notación que respete esta simetría, donde el punto central se represente gráficamente en el centro. En la notación que presentamos, esta idea es muy importante.
 
 \subsection{Escalas}
 
-Estas son las escalas que se usan habitualmente y los nombres que se le han asignado. En notación estandar, la equivalencia sería la siguiente:
+Estas son las escalas que se usan habitualmente y los nombres que se les han asignado:
 
 \begin{table}[htbp]
 	\centering
+	\small
 	\begin{tabular}{lll}
 		\toprule
-		\textbf{\textsf{Escala}} & \textbf{Nombre}       & \textbf{Estandar} \\
+		\textbf{\textsf{Escala}} & \textbf{Nombre}       & \textbf{Tipo} \\
 		\midrule
-		\textsf{WHITE}           & Escala diatónica      &                   \\
-		\textsf{BLUE}            & Escala menor melódica &                   \\
-		\textsf{RED}             & Escala menor armónica &                   \\
-		\textsf{BLACK}           & Escala disminuida     &                   \\
-		\textsf{TONES}           & Escala por tonos      &                   \\
+		\textsf{WHITE}           & Diatónica             & simétrica \\
+		\textsf{BLUE}            & Menor melódica        & simétrica \\
+		\textsf{RED}             & Doble armónica mayor  & simétrica \\
+		\textsf{BLACK}           & Disminuida            & simétrica \\
+		\textsf{TONES}           & Por tonos             & simétrica \\
+		\textsf{GREEN}           & Menor armónica        & no simétrica \\
+		\textsf{PINK}            & Mayor armónica        & no simétrica \\
 		\bottomrule
 	\end{tabular}
 	\caption{Tabla de escalas musicales}\label{tab:scale-name-equivalences}
 \end{table}
 
-Las vistas compactas no son escalas padre y se estudian más adelante. Las
-escalas padre son \textsf{WHITE}, \textsf{BLUE}, \textsf{RED}, \textsf{BLACK} y
-\textsf{TONES}; \textsf{FULL} es el conjunto cromático completo. Volveremos
-sobre esta distinción al hablar de modulación y de tritonos orientados.
+El catálogo queda formado por siete escalas base: las cinco primeras son
+simétricas y \textsf{GREEN} y \textsf{PINK} no lo son. Las dos últimas
+se estudian más adelante, en la sección de escalas base no simétricas. Las vistas
+compactas no son escalas padre. \textsf{FULL} es el conjunto cromático completo.
+Volveremos sobre estas distinciones al hablar de modulación y de tritonos
+orientados.
 
 En la notación creada se representan los grados de la escala como números. Se ha de prestar atención a que el primer grado de la escala no es, como en la notación tradicional, el grado más lejano al tritono (en la escala diatónica sería el DO), sino el grado que, como muestran las figuras, ocupa el centro de la estructura (en la escala diatónica sería el RE). Partiendo de la nota inicial y girando en sentido agujas del reloj se sube de tono hasta que se vuelve al tono inicial, es decir, se sube una octava.
 
@@ -475,6 +481,7 @@ En la notación creada se representan los grados de la escala como números. Se 
 
 	\end{subfigure}
 	\\[2em]
+	\hfill
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\begin{tikzpicture}
@@ -512,30 +519,6 @@ En la notación creada se representan los grados de la escala como números. Se 
 					},
 				st/.default=gray]
 
-			\node (15)[st                   ] {3}; \node (25) [st=white, right of=15] { }; \node (35) [st,       right of= 25] {4};
-			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
-			\node (13)[st=white,below of= 14] { };                                         \node (33) [st=white, below of= 34] { };
-			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {5};
-			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
-
-		\end{tikzpicture}
-		\caption{\textsf{WHITE DU}}
-
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.3\textwidth}
-		\centering
-		\begin{tikzpicture}
-			[st/.style={
-						rectangle,
-						minimum size=.5cm,
-						node distance=.5cm,
-						inner sep = 0cm,
-						draw=black,thick,fill=#1!50,
-						font=\sffamily
-					},
-				st/.default=gray]
-
 			\node (15)[st=white             ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st=white, right of= 25] { };
 			\node (14)[st,      below of= 15] {3};                                         \node (34)[st,       below of= 35] {5};
 			\node (13)[st=white,below of= 14] { };                                         \node (33)[st=white, below of= 34] { };
@@ -546,13 +529,16 @@ En la notación creada se representan los grados de la escala como números. Se 
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco escalas padre y la vista \textsf{WHITE DU}}\label{fig:the-six-scales}
+	\hfill
+	\caption{Las cinco escalas padre simétricas}\label{fig:the-five-scales}
 \end{figure}
 
+\textsf{GREEN} y \textsf{PINK} no aparecen en esta figura porque no son
+simétricas; se estudian en la sección de escalas base no simétricas.
 
 Téngase en cuenta que en la escala \textsf{BLACK}, la simetría no se basa en las notas, sino en el espacio entre ellas, y no hay una nota central, sino un espacio entre notas central. La sensación de simetría que percibe el oyente es idéntica y la notación así lo refleja.
 
-Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se puede observar la simetría de todas las escalas. Si se compara con la notación tradicional, donde no se aprecia simetría alguna, se notará una increible mejoría en las posibilidades que ofrece para su análisis, estudio y asimilación.
+Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se puede observar la simetría de las escalas simétricas. Si se compara con la notación tradicional, donde no se aprecia simetría alguna, se notará una increible mejoría en las posibilidades que ofrece para su análisis, estudio y asimilación.
 
 \subsection{Nombres de las escalas}
 Siguiendo con el mismo razonamiento, dejaremos de referirnos a una escala con el nombre de la nota que está más lejos del tritono, y usaremos su nota central. Por ejemplo, la escala que no tiene ningún sostenido dejará de llamarse ``escala de DO'', y pasará a llamarse ``escala de RE''. La nota que da nombre a una escala es su nota central, no la nota que nos parece que sugiere descanso, plenitud o resolución.
@@ -1382,7 +1368,7 @@ Será mejor que dejemos de hablar de colores.
 
 \subsection{Representación de tritonos}
 
-Al representar los tritonos se observa que también ocupan su lugar perfectamente simétrico. Se hará mediante una linea que los una. Veamos la representación de todas las escalas con sus tritonos.
+Al representar los tritonos se observa que también ocupan su lugar perfectamente simétrico. Se hará mediante una linea que los una. Veamos la representación de las cinco escalas simétricas con sus tritonos.
 
 \begin{figure}[h]
 
@@ -1545,7 +1531,7 @@ Al representar los tritonos se observa que también ocupan su lugar perfectament
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco escalas padre, la vista \textsf{WHITE DU} y sus tritonos}\label{fig:the-six-scales-and-tritones}
+	\caption{Las cinco escalas padre simétricas, la vista \textsf{WHITE DU} y sus tritonos}\label{fig:the-six-scales-and-tritones}
 \end{figure}
 
 
@@ -1586,6 +1572,11 @@ UU} conserva las notas superiores de ambos semitonos, \texttt{WHITE DD} las
 inferiores, \texttt{WHITE DU} la inferior del primero y la superior del segundo,
 y \texttt{WHITE UD} la superior del primero y la inferior del segundo.
 
+En las escalas simétricas bastan dos letras porque los dos semitonos que rodean
+un mismo tritono son imágenes especulares y se colapsan juntos. \textsf{GREEN} y
+\textsf{PINK}, al romper esa simetría, usan una letra por semitono; sus ocho
+vistas se estudian al final de esta sección.
+
 No hay que buscar un nombre por número de notas. Las vistas pueden tener 3, 4 o
 5 notas; algunas conservan semitonos, otras no; algunas conservan uno o dos
 tritonos, otras ninguno. Lo único que comparten es la operación: tienen menos
@@ -1596,7 +1587,7 @@ no hay un nombre único para la categoría.
 
 En la figura siguiente se muestran los grados de cada vista, con el grado 1
 abajo, centro; las líneas rojas unen los tritonos que se conservan. Cada celda
-se nombra con el padre y las dos letras: \texttt{WHITE UU}, \texttt{WHITE DD},
+se nombra con el padre y sus letras: \texttt{WHITE UU}, \texttt{WHITE DD},
 \texttt{WHITE DU}, \texttt{WHITE UD}, etc.
 
 \newcommand{\collapseviewcoord}[1]{%
@@ -1672,8 +1663,11 @@ se nombra con el padre y las dos letras: \texttt{WHITE UU}, \texttt{WHITE DD},
 		\collapseviewgrid{6}{-9}{0,1,0,0,0,2,0,3,0,0,0,4}{1/7,5/11}
 		\collapseviewgrid{8}{-9}{0,0,1,0,2,0,0,0,3,0,4,0}{2/8,4/10}
 	\end{tikzpicture}
-	\caption{Las cuatro vistas por colapso de cada escala padre. El grado 1
-	está abajo, centro; las líneas rojas unen los tritonos que se conservan.}
+	\caption{Las cuatro vistas por colapso de \textsf{WHITE}, \textsf{BLUE},
+	\textsf{RED} y \textsf{BLACK}. El grado 1 está abajo, centro; las líneas
+	rojas unen los tritonos que se conservan. \textsf{TONES} es la identidad y
+	las vistas de \textsf{GREEN} y \textsf{PINK} se estudian al final de la
+	sección.}
 	\label{tab:collapse-views}
 \end{figure}
 
@@ -1694,6 +1688,9 @@ semitonos, así que las cuatro vistas son la identidad. \texttt{FULL} no es una
 escala padre con centro propio; en el modelo computacional se trata como el
 conjunto cromático completo y no se proyecta.
 
+\textsf{GREEN} y \textsf{PINK} no aparecen en la figura porque tienen tres
+semitonos y ocho vistas. Se estudian al final de la sección.
+
 \begin{table}[H]
 	\centering
 	\begin{tabular}{lccc}
@@ -1705,6 +1702,8 @@ conjunto cromático completo y no se proyecta.
 		\texttt{RED}   & 3 o 4 & 0 o 1 & 0 \\
 		\texttt{BLACK} & 4 & 0 & 2 \\
 		\texttt{TONES} & 6 & 0 & 3 (identidad) \\
+		\texttt{GREEN} & 4 & 0 & 0, 1 o 2 \\
+		\texttt{PINK}  & 4 & 0 & 0, 1 o 2 \\
 		\bottomrule
 	\end{tabular}
 	\caption{Rasgos de las vistas compactas. Ninguna vista tiene más tritonos
@@ -1716,6 +1715,62 @@ Estas vistas explican también por qué la modulación por conteo no busca en la
 vistas: una vista no tiene una escala padre de destino, solo hereda el centro y
 los tritonos del padre. Para bajar de un tritono a cero se cambia de vista; para
 cambiar de padre se usa la modulación.
+
+\subsubsection{Vistas de \textsf{GREEN} y \textsf{PINK}}
+\label{sec:vistas-green-pink}
+
+Las dos escalas base no simétricas, \textsf{GREEN} y \textsf{PINK}, que se
+presentan más adelante, tienen tres semitonos. En las escalas simétricas, los
+dos semitonos que tocan un mismo tritono son imágenes especulares y se colapsan
+juntos: por eso bastan dos letras, una por grupo. Aquí la simetría se
+rompe y los dos semitonos del mismo tritono ya no son equivalentes. Por eso se
+elige cada semitono por separado, con una letra por semitono en orden de
+aparición desde el grado 1:
+
+\begin{itemize}
+	\item \textsf{GREEN} de \texttt{F}: \texttt{G-Ab}, \texttt{B-C},
+	\texttt{D-Eb}.
+	\item \textsf{PINK} de \texttt{D}: \texttt{E-F}, \texttt{G-Ab},
+	\texttt{B-C}.
+\end{itemize}
+
+Las ocho combinaciones son \texttt{DDD}, \texttt{DDU}, \texttt{DUD},
+\texttt{DUU}, \texttt{UDD}, \texttt{UDU}, \texttt{UUD} y \texttt{UUU}. Las
+cuatro vistas de dos letras siguen siendo válidas como el subconjunto en el que
+los dos semitonos del mismo tritono se mueven juntos; son \texttt{DDD},
+\texttt{DUD}, \texttt{UDU} y \texttt{UUU}. La correspondencia es \texttt{UU} =
+\texttt{UUU}, \texttt{UD} = \texttt{UDU}, \texttt{DU} = \texttt{DUD} y
+\texttt{DD} = \texttt{DDD}. La tercera letra añade las cuatro combinaciones
+mixtas.
+
+La vista que conserva los dos tritonos es \texttt{GREEN UDD} en \textsf{GREEN}
+y \texttt{PINK UUD} en \textsf{PINK}. Las dos producen el mismo tetracordo,
+\texttt{D-F-Ab-B}, que es el esqueleto \texttt{3,3} completo. Sin la tercera
+letra, ninguna de las dos escalas puede alcanzarlo.
+
+\begin{table}[H]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcccc}
+			\toprule
+			Código & \textsf{GREEN}: notas & Tritonos & \textsf{PINK}: notas & Tritonos \\
+			\midrule
+			\texttt{DDD} & F G B D & F-B & D E G B & --- \\
+			\texttt{DDU} & F G B Eb & F-B & D E G C & --- \\
+			\texttt{DUD} & F G C D & --- & D E Ab B & D-Ab \\
+			\texttt{DUU} & F G C Eb & --- & D E Ab C & D-Ab \\
+			\texttt{UDD} & F Ab B D & F-B, D-Ab & D F G B & F-B \\
+			\texttt{UDU} & F Ab B Eb & F-B & D F G C & --- \\
+			\texttt{UUD} & F Ab C D & D-Ab & D F Ab B & D-Ab, F-B \\
+			\texttt{UUU} & F Ab C Eb & --- & D F Ab C & D-Ab \\
+			\bottomrule
+		\end{tabular}
+	}
+	\caption{Las ocho vistas de \textsf{GREEN} de \texttt{F} y \textsf{PINK} de
+	\texttt{D}. Las notas son las que quedan tras elegir la nota superior
+	(\texttt{U}) o inferior (\texttt{D}) de cada semitono.}
+	\label{tab:green-pink-views}
+\end{table}
 
 \subsection{Sentido tritonal}
 Es importante observar que la situación de los tritonos tiene un sentido, es decir, puede no ser lo mismo ir de una nota a otra cambiando la nota de partida, eso depende de si hay las mismas notas entre ambas por los dos caminos. Vemos que en \texttt{WHITE}, yendo desde el grado 6 hasta el 3, apilando notas alternas, formaríamos el acorde 6 1 3. Sin embargo, para ir desde 3 a 6 apilaríamos 3,5,7,2,4,6. Es decir, el grado 3 está mucho más lejos de llegar a tener un tritono que el 6, concretamente, cuatro niveles de apilamiento más lejos.
@@ -1872,7 +1927,7 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco escalas padre, la vista \textsf{WHITE DU} y terceras ambiguas}\label{fig:the-six-scales-and-ambiguous-thirds}
+	\caption{Las cinco escalas padre simétricas, la vista \textsf{WHITE DU} y terceras ambiguas}\label{fig:the-six-scales-and-ambiguous-thirds}
 \end{figure}
 
 
@@ -2163,7 +2218,7 @@ Buscar más es un interesante ejercicio. Sería fantástico encontrar alguna, pe
 	\item Que las notas esten distribuidas sin agruparse en bloques
 \end{itemize}
 
-Cualquier combinación que se encuentre será simplemente una ordenación diferente de alguna de las cinco escalas padre presentadas o de una de sus proyecciones (lo que sería un modo, recordemos). Si se hace girar en el esquema se llegará a ella. Vamos a intentar algunas:
+Cualquier combinación que se encuentre será simplemente una ordenación diferente de alguna de las cinco escalas padre simétricas presentadas o de una de sus proyecciones (lo que sería un modo, recordemos). Si se hace girar en el esquema se llegará a ella. Las escalas no simétricas quedan fuera de este argumento y se estudian a continuación. Vamos a intentar algunas:
 
 \begin{figure}[H]
 	\begin{subfigure}{0.15\textwidth}
@@ -2304,6 +2359,131 @@ Cualquier combinación que se encuentre será simplemente una ordenación difere
 	\end{tabular}
 	\caption{Características de diferentes escalas musicales}\label{tab:escalas}
 \end{table}
+
+Esta conclusión se refiere al núcleo simétrico. Las escalas no simétricas se
+estudian a continuación.
+
+\subsection{Escalas base no simétricas: \textsf{GREEN} y \textsf{PINK}}
+\label{sec:green-pink}
+
+El catálogo de escalas base se amplía con dos escalas no simétricas:
+\textsf{GREEN}, que es la menor armónica, y \textsf{PINK}, que es la mayor
+armónica. No son modos entre sí: son dos escalas distintas que comparten el
+mismo esqueleto de tritonos.
+
+Llamamos esqueleto \texttt{3,3} a la disposición en la que las cuatro notas que
+forman los dos tritonos quedan equiespaciadas cada tres semitonos. En
+\textsf{GREEN} y \textsf{PINK} los tritonos son \texttt{D-Ab} y \texttt{F-B};
+entre las notas graves (\texttt{D} y \texttt{F}) hay tres semitonos, y entre
+las agudas (\texttt{Ab} y \texttt{B}) otros tres. En \textsf{RED} y
+\textsf{BLUE} el esqueleto es \texttt{4,2}: las cuatro notas alternan
+distancias de cuatro y dos semitonos.
+
+El grado 1 es el grado central, no la tónica estándar. En \textsf{GREEN} el
+centro es \texttt{F}; en \textsf{PINK}, \texttt{D}. Las figuras colocan ese
+grado en la casilla inferior central. Por eso \textsf{GREEN} de \texttt{F} y
+\textsf{PINK} de \texttt{D} usan, respectivamente, los conjuntos de la menor
+armónica y la mayor armónica de \texttt{C}, pero se nombran por su centro.
+
+\begin{figure}[H]
+	\begin{subfigure}{0.38\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[st/.style={
+						rectangle,
+						minimum size=.5cm,
+						node distance=.5cm,
+						inner sep = 0cm,
+						draw=black,thick,fill=#1!50,
+						font=\sffamily
+					},
+				st/.default=gray]
+
+			\node (15)[st=white,            ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st,       right of= 25] {5};
+			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+
+			\draw[very thick, color=red] (21.north) -- (25.south);
+			\draw[very thick, color=red] (13.east) -- (33.west);
+		\end{tikzpicture}
+		\caption{\textsf{GREEN} (menor armónica, centro \texttt{F})}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.38\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[st/.style={
+						rectangle,
+						minimum size=.5cm,
+						node distance=.5cm,
+						inner sep = 0cm,
+						draw=black,thick,fill=#1!50,
+						font=\sffamily
+					},
+				st/.default=gray]
+
+			\node (15)[st,                  ] {4}; \node (25) [st,       right of=15] {5}; \node (35) [st=white, right of= 25] { };
+			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+
+			\draw[very thick, color=red] (21.north) -- (25.south);
+			\draw[very thick, color=red] (13.east) -- (33.west);
+		\end{tikzpicture}
+		\caption{\textsf{PINK} (mayor armónica, centro \texttt{D})}
+	\end{subfigure}
+	\caption{Las dos escalas base no simétricas. Las líneas rojas unen los
+	tritonos \texttt{D-Ab} y \texttt{F-B}. \textsf{GREEN} está centrada en
+	\texttt{F}; \textsf{PINK}, en \texttt{D}.}
+	\label{fig:green-pink}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{llcccc}
+			\toprule
+			Escala & Conjunto & Fórmula (desde el centro) & Tritonos & Segundas menores & Simétrica \\
+			\midrule
+			\textsf{GREEN} & Menor armónica & 1, 2, b3, \#4, 5, 6, b7 & D-Ab, F-B & 3 & no \\
+			\textsf{PINK}  & Mayor armónica & 1, 2, b3, 4, b5, 6, b7 & D-Ab, F-B & 3 & no \\
+			\textsf{RED}   & Doble armónica mayor & 1, b2, 3, 4, 5, b6, 7 & Db-G, F-B & 4 & sí \\
+			\bottomrule
+		\end{tabular}
+	}
+	\caption{Comparación de las escalas no simétricas con \textsf{RED}.}
+	\label{tab:green-pink}
+\end{table}
+
+Las fórmulas se expresan desde el grado central, como en el resto del libro;
+por eso las de \textsf{GREEN} y \textsf{PINK} no coinciden con la fórmula
+estándar de la menor y la mayor armónica.
+
+\textsf{GREEN} y \textsf{PINK} no son modos entre sí: son dos conjuntos
+distintos. Desde su centro, \textsf{GREEN} tiene \#4 y 5, mientras que
+\textsf{PINK} tiene 4 y b5; el resto de grados coincide. Sus vistas compactas
+usan tres letras, una por semitono, porque la simetría se rompe (véase
+\hyperref[sec:vistas-green-pink]{la sección de vistas de \textsf{GREEN} y
+\textsf{PINK}}). La vista \texttt{GREEN UDD} y la vista \texttt{PINK UUD}
+conservan los dos tritonos y producen el mismo tetracordo, \texttt{D-F-Ab-B}.
+
+El quinto modo de la menor armónica es el frigio dominante. No lo añadimos como
+escala base: es un modo, igual que los demás. \textsf{PINK} no es un modo de
+\textsf{GREEN}. Sus tríadas y partículas se pueden analizar con las mismas
+herramientas, pero de momento no se catalogan aquí.
+
+\textsf{RED} es la doble armónica mayor, no la menor armónica. El conjunto de
+notas de \textsf{GREEN} es el de la menor armónica de \texttt{C}
+(C D Eb F G Ab B); \textsf{RED} de \texttt{C} es C Db E F G Ab B. Si comparamos
+los conjuntos desde \texttt{C}, la diferencia es doble: \textsf{RED} tiene
+segunda bemol y tercera mayor; \textsf{GREEN}, segunda mayor y tercera menor. El ejemplo flamenco del manuscrito usa
+\textsf{RED} de \texttt{E} (E F G\# A B C D\#); el frigio dominante flamenco es
+el quinto modo de la menor armónica de \texttt{A} (A B C D E F G\#), es decir,
+E F G\# A B C D. La diferencia es la séptima. La revisión de ese ejemplo queda
+pendiente.
 
 \subsection{Orden de tríadas por distancias a los tritonos}
 
@@ -2455,7 +2635,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
 
 \subsection{Acordes de cada escala}
 
-Los acordes que se forman a partir de cada una de las cinco escalas padre y de la vista \textsf{WHITE DU} son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos.
+Los acordes que se forman a partir de cada una de las cinco escalas padre simétricas y de la vista \textsf{WHITE DU} son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos.
 
 Una posible notación para nombrar los acordes podría consistir en especificar solamente tres elementos:
 \begin{itemize}
@@ -2922,6 +3102,12 @@ En más resumen todavía: resulta que cambiando \texttt{E} por \texttt{e}, estam
 
 \subsection{El sistema flamenco}
 Otro ejemplo de modulación muy utilizado, entre \texttt{WHITE} de \texttt{D} y \texttt{RED} de \texttt{E}. Simplemente agregamos un tritono pero la orientación sigue manteniéndose. Aquí las dos tríada más lejanas a un tritono pasan a ser \texttt{EaB} y \texttt{FAC}, puesto que \texttt{CEG} pasa a ser \texttt{CEa} (dos terceras mayores apiladas).
+
+\emph{Nota sobre la escala.} \texttt{RED} de \texttt{E} es la doble armónica
+mayor (E F G\# A B C D\#). El frigio dominante flamenco (E F G\# A B C D) es el
+quinto modo de la menor armónica de \texttt{A} (A B C D E F G\#). La diferencia
+es la séptima; el ejemplo y sus acordes se mantienen, pero la identificación de
+la escala queda pendiente de revisión.
 
 Deberíamos poner atención al hecho de que una enorme cantidad de música flamenca está basada en solo dos acordes, \texttt{EaB} y \texttt{FAC}. La razón es que esos son los dos más estables de la escala, y de los pocos que tienen una tercera. Se puedes pasar de uno a otro constantemente sin ver la posibilidad de salir de ahí, a no ser que se vuelva a la escala \texttt{WHITE}, haciéndo desaparecer el amenazante tritono entre \texttt{A} y \texttt{e}. Basta con saltar a la tríada \texttt{ACE}, lo cual hacen la mayor parte de las veces, para luego volver a \texttt{GBD}, a \texttt{FAC} y de nuevo a \texttt{EaB}.
 
@@ -3891,7 +4077,7 @@ Bien, hemos de considerar la dificultad intrínseca de cada escala como parte de
 
 Por contra, las pilas \texttt{24} y \texttt{42} hacen su aparición en \texttt{RED}. Tampoco parecen tener un significado especial, más que representar a su escala.
 
-Las cinco escalas padre forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, la vista \texttt{WHITE DU} se obtiene colapsando los semitonos que tocan el tritono; agregando tritonos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}. \texttt{WHITE DU} aparece en el mapa por su carácter, pero no como escala padre: es una vista de \texttt{WHITE}; desde \texttt{BLUE} se llama \texttt{BLUE UD}.
+Las cinco escalas padre simétricas forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, la vista \texttt{WHITE DU} se obtiene colapsando los semitonos que tocan el tritono; agregando tritonos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}. \texttt{WHITE DU} aparece en el mapa por su carácter, pero no como escala padre: es una vista de \texttt{WHITE}; desde \texttt{BLUE} se llama \texttt{BLUE UD}. \texttt{GREEN} y \texttt{PINK} quedan fuera de este mapa simétrico; se estudian como escalas base no simétricas.
 
 \begin{figure}[H]
 	\begin{tikzpicture}

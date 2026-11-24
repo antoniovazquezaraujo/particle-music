@@ -17,7 +17,7 @@ Integra contenido pendiente desde `Ideas.adoc` y otras fuentes al documento prin
 
 ### Alta
 1. Integrar contenido de `Ideas.adoc`
-2. Sección de vistas compactas (4 por padre, UU/DD/DU/UD)
+2. Sección de vistas compactas (4 por padre simétrico, UU/DD/DU/UD; 8 en GREEN/PINK, tres letras)
 3. Análisis de blue note integration
 4. Estructuras de armonía cuartal
 
@@ -46,7 +46,7 @@ Integra contenido pendiente desde `Ideas.adoc` y otras fuentes al documento prin
 - Esquema de ideas principales agrupadas por nivel de importancia
 - Mapa de ideas
 - Blue note como nota simétrica adicional
-- Vistas compactas (WHITE UU/DD/DU/UD, BLUE UU/DD/DU/UD, etc.)
+- Vistas compactas (WHITE UU/DD/DU/UD, BLUE UU/DD/DU/UD, etc.; GREEN/PINK con tres letras, p. ej. GREEN UDD y PINK UUD)
 - Blue note y su relación con las vistas compactas
 - Armonía cuartal
 - Intro completa (qué es, quién soy, por qué, para quién, dónde estoy, a dónde voy)
