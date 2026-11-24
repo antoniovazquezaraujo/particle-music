@@ -1742,8 +1742,8 @@ semitonos, así que las cuatro vistas son la identidad. \texttt{FULL} no es una
 escala padre con centro propio; en el modelo computacional se trata como el
 conjunto cromático completo y no se proyecta.
 
-\textsf{GREEN} y \textsf{PINK} no aparecen en la figura porque tienen tres
-semitonos y ocho vistas. Se estudian al final de la sección.
+La figura muestra las vistas de dos letras. \textsf{GREEN} y \textsf{PINK}, con
+tres letras, se explican a continuación.
 
 \begin{table}[H]
 	\centering
@@ -1770,11 +1770,7 @@ vistas: una vista no tiene una escala padre de destino, solo hereda el centro y
 los tritonos del padre. Para bajar de un tritono a cero se cambia de vista; para
 cambiar de padre se usa la modulación.
 
-\subsubsection{Vistas de \textsf{GREEN} y \textsf{PINK}}
-\label{sec:vistas-green-pink}
-
-\textsf{GREEN} y \textsf{PINK}, que se presentan más adelante, tienen tres
-semitonos. En las cinco primeras escalas, los dos semitonos que tocan un mismo
+\textsf{GREEN} y \textsf{PINK} tienen tres semitonos. En las cinco primeras escalas, los dos semitonos que tocan un mismo
 tritono son equivalentes y se colapsan juntos:
 por eso bastan dos letras, una por grupo. En \textsf{GREEN} y \textsf{PINK} los
 dos semitonos del mismo tritono no son equivalentes, así que se elige cada
@@ -2414,129 +2410,7 @@ Cualquier combinación que se encuentre será simplemente una ordenación difere
 	\caption{Características de diferentes escalas musicales}\label{tab:escalas}
 \end{table}
 
-Esta conclusión se refiere a las cinco primeras escalas. \textsf{GREEN} y
-\textsf{PINK} se estudian a continuación.
-
-\subsection{\textsf{GREEN} y \textsf{PINK}}
-\label{sec:green-pink}
-
-\textsf{GREEN} es la menor armónica y \textsf{PINK} la mayor armónica. No son
-modos entre
-sí: son dos escalas distintas que comparten la misma disposición de tritonos.
-
-En \textsf{GREEN} y \textsf{PINK}, las cuatro notas que forman los dos tritonos
-quedan equiespaciadas cada tres semitonos. En
-\textsf{GREEN} y \textsf{PINK} los tritonos son \texttt{D-Ab} y \texttt{F-B};
-entre las notas graves (\texttt{D} y \texttt{F}) hay tres semitonos, y entre
-las agudas (\texttt{Ab} y \texttt{B}) otros tres. En \textsf{RED} y
-\textsf{BLUE} las cuatro notas alternan distancias de cuatro y dos semitonos.
-
-El grado 1 es el grado central, no la tónica estándar. En \textsf{GREEN} el
-centro es \texttt{F}; en \textsf{PINK}, \texttt{D}. Las figuras colocan ese
-grado en la casilla inferior central. Por eso \textsf{GREEN} de \texttt{F} y
-\textsf{PINK} de \texttt{D} usan, respectivamente, los conjuntos de la menor
-armónica y la mayor armónica de \texttt{C}, pero se nombran por su centro.
-
-\begin{figure}[H]
-	\begin{subfigure}{0.38\textwidth}
-		\centering
-		\begin{tikzpicture}
-			[st/.style={
-						rectangle,
-						minimum size=.5cm,
-						node distance=.5cm,
-						inner sep = 0cm,
-						draw=black,thick,fill=#1!50,
-						font=\sffamily
-					},
-				st/.default=gray]
-
-			\node (15)[st=white,            ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st,       right of= 25] {5};
-			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
-			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
-			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
-			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
-
-			\draw[very thick, color=red] (21.north) -- (25.south);
-			\draw[very thick, color=red] (13.east) -- (33.west);
-		\end{tikzpicture}
-		\caption{\textsf{GREEN} (menor armónica, centro \texttt{F})}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.38\textwidth}
-		\centering
-		\begin{tikzpicture}
-			[st/.style={
-						rectangle,
-						minimum size=.5cm,
-						node distance=.5cm,
-						inner sep = 0cm,
-						draw=black,thick,fill=#1!50,
-						font=\sffamily
-					},
-				st/.default=gray]
-
-			\node (15)[st,                  ] {4}; \node (25) [st,       right of=15] {5}; \node (35) [st=white, right of= 25] { };
-			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
-			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
-			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
-			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
-
-			\draw[very thick, color=red] (21.north) -- (25.south);
-			\draw[very thick, color=red] (13.east) -- (33.west);
-		\end{tikzpicture}
-		\caption{\textsf{PINK} (mayor armónica, centro \texttt{D})}
-	\end{subfigure}
-	\caption{\textsf{GREEN} y \textsf{PINK}. Las líneas rojas unen
-	los tritonos \texttt{D-Ab} y \texttt{F-B}. \textsf{GREEN} está centrada en
-	\texttt{F}; \textsf{PINK}, en \texttt{D}.}
-	\label{fig:green-pink}
-\end{figure}
-
-\begin{table}[H]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{llccc}
-			\toprule
-			Escala & Conjunto & Fórmula (desde el centro) & Tritonos & Segundas menores \\
-			\midrule
-			\textsf{GREEN} & Menor armónica & 1, 2, b3, \#4, 5, 6, b7 & D-Ab, F-B & 3 \\
-			\textsf{PINK}  & Mayor armónica & 1, 2, b3, 4, b5, 6, b7 & D-Ab, F-B & 3 \\
-			\textsf{RED}   & Doble armónica mayor & 1, b2, 3, 4, 5, b6, 7 & Db-G, F-B & 4 \\
-			\bottomrule
-		\end{tabular}
-	}
-	\caption{Comparación de \textsf{GREEN} y \textsf{PINK} con \textsf{RED}.}
-	\label{tab:green-pink}
-\end{table}
-
-Las fórmulas se expresan desde el grado central, como en el resto del libro;
-por eso las de \textsf{GREEN} y \textsf{PINK} no coinciden con la fórmula
-estándar de la menor y la mayor armónica.
-
-\textsf{GREEN} y \textsf{PINK} no son modos entre sí: son dos conjuntos
-distintos. Desde su centro, \textsf{GREEN} tiene \#4 y 5, mientras que
-\textsf{PINK} tiene 4 y b5; el resto de grados coincide. Sus vistas compactas
-usan tres letras, una por semitono, porque los dos semitonos del mismo tritono
-no son equivalentes (véase
-\hyperref[sec:vistas-green-pink]{la sección de vistas de \textsf{GREEN} y
-\textsf{PINK}}). La vista \texttt{GREEN UDD} y la vista \texttt{PINK UUD}
-conservan los dos tritonos y producen el mismo tetracordo, \texttt{D-F-Ab-B}.
-
-El quinto modo de la menor armónica es el frigio dominante. No lo añadimos como
-escala base: es un modo, igual que los demás. \textsf{PINK} no es un modo de
-\textsf{GREEN}. Sus tríadas y partículas se pueden analizar con las mismas
-herramientas, pero de momento no se catalogan aquí.
-
-\textsf{RED} es la doble armónica mayor, no la menor armónica. El conjunto de
-notas de \textsf{GREEN} es el de la menor armónica de \texttt{C}
-(C D Eb F G Ab B); \textsf{RED} de \texttt{C} es C Db E F G Ab B. Si comparamos
-los conjuntos desde \texttt{C}, la diferencia es doble: \textsf{RED} tiene
-segunda bemol y tercera mayor; \textsf{GREEN}, segunda mayor y tercera menor. El ejemplo flamenco del manuscrito usa
-\textsf{RED} de \texttt{E} (E F G\# A B C D\#); el frigio dominante flamenco es
-el quinto modo de la menor armónica de \texttt{A} (A B C D E F G\#), es decir,
-E F G\# A B C D. La diferencia es la séptima. La revisión de ese ejemplo queda
-pendiente.
+Esta conclusión se refiere a las cinco primeras escalas.
 
 \subsection{Orden de tríadas por distancias a los tritonos}
 
