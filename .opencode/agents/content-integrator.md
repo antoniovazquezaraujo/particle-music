@@ -17,7 +17,7 @@ Integra contenido pendiente desde `Ideas.adoc` y otras fuentes al documento prin
 
 ### Alta
 1. Integrar contenido de `Ideas.adoc`
-2. Sección de vistas compactas (4 por escala del núcleo, UU/DD/DU/UD; 8 en GREEN/PINK, tres letras)
+2. Sección de vistas compactas (4 para WHITE/BLUE/RED/BLACK, UU/DD/DU/UD; 8 en GREEN/PINK, tres letras)
 3. Análisis de blue note integration
 4. Estructuras de armonía cuartal
 

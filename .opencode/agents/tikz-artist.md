@@ -32,7 +32,7 @@ Crea y mantiene diagramas TikZ para escalas, partículas y esquemas geométricos
 | PINK | 7 | 2 | Nota (D) |
 | WHITE DU | 5 | 0 | Vista compacta de WHITE (no escala padre) |
 
-Las vistas compactas de las escalas del núcleo se nombran `<PADRE> UU/DD/DU/UD`. GREEN y PINK usan tres letras, una por semitono (`GREEN UDD`, `PINK UUD`, etc.), porque los dos semitonos del mismo tritono no son equivalentes. En sus figuras, el grado 1 es el grado central (F en GREEN, D en PINK), no la tónica estándar.
+Las vistas compactas de WHITE, BLUE, RED y BLACK se nombran `<PADRE> UU/DD/DU/UD`. GREEN y PINK usan tres letras, una por semitono (`GREEN UDD`, `PINK UUD`, etc.), porque los dos semitonos del mismo tritono no son equivalentes. En sus figuras, el grado 1 es el grado central (F en GREEN, D en PINK), no la tónica estándar.
 
 ## Convenciones de Partículas
 - `\iparticle{1,2,3,0,1}` - inline particle

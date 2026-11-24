@@ -371,8 +371,8 @@ En la notación tradicional, al grado más lejano al tritono se le llama \emph{f
 
 \subsection{Orientación y centro}
 
-Las escalas que forman el núcleo se estudian en esta primera parte. La
-regularidad de su estructura ayuda al oyente a reconocer la armonía. Cuando el
+Las escalas se estudian en esta primera parte. La regularidad de su estructura
+ayuda al oyente a reconocer la armonía. Cuando el
 centro de la escala está bien definido, nos ayudará mucho en su análisis usar
 una notación que lo represente gráficamente en el centro. En la notación que
 presentamos, esta idea es muy importante.
@@ -389,23 +389,18 @@ Estas son las escalas que se usan habitualmente y los nombres que se les han asi
 		\textbf{\textsf{Escala}} & \textbf{Nombre}       & \textbf{Tritonos} \\
 		\midrule
 		\textsf{WHITE}           & Diatónica             & 1 \\
-		\textsf{BLUE}            & Menor melódica        & 2 (4,2) \\
-		\textsf{RED}             & Doble armónica mayor  & 2 (4,2) \\
+		\textsf{BLUE}            & Menor melódica        & 2 \\
+		\textsf{RED}             & Doble armónica mayor  & 2 \\
 		\textsf{BLACK}           & Disminuida            & 4 \\
 		\textsf{TONES}           & Por tonos             & 3 \\
-		\textsf{GREEN}           & Menor armónica        & 2 (3,3) \\
-		\textsf{PINK}            & Mayor armónica        & 2 (3,3) \\
+		\textsf{GREEN}           & Menor armónica        & 2 \\
+		\textsf{PINK}            & Mayor armónica        & 2 \\
 		\bottomrule
 	\end{tabular}
 	\caption{Tabla de escalas musicales}\label{tab:scale-name-equivalences}
 \end{table}
 
-En las escalas de dos tritonos, el paréntesis indica cómo se separan las cuatro
-notas que forman los tritonos: \texttt{4,2} o \texttt{3,3}.
-
-El catálogo queda formado por siete escalas base. Las cinco primeras forman el
-núcleo que se estudia en esta primera parte; \textsf{GREEN} y \textsf{PINK} se
-estudian más adelante, en la familia \texttt{3,3}. Las vistas compactas no son
+El catálogo queda formado por siete escalas base. Las vistas compactas no son
 escalas padre. \textsf{FULL} es el conjunto cromático completo. Volveremos sobre
 estas distinciones al hablar de modulación y de tritonos orientados.
 
@@ -534,19 +529,65 @@ En la notación creada se representan los grados de la escala como números. Se 
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
+	\\[2em]
 	\hfill
-	\caption{Las cinco escalas padre del núcleo}\label{fig:the-five-scales}
-\end{figure}
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[st/.style={
+						rectangle,
+						minimum size=.5cm,
+						node distance=.5cm,
+						inner sep = 0cm,
+						draw=black,thick,fill=#1!50,
+						font=\sffamily
+					},
+				st/.default=gray]
 
-\textsf{GREEN} y \textsf{PINK} no aparecen en esta figura porque se estudian más
-adelante, en la familia \texttt{3,3}.
+			\node (15)[st=white,            ] { }; \node (25) [st,       right of=15] {4}; \node (35) [st,       right of= 25] {5};
+			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+
+		\end{tikzpicture}
+		\caption{\textsf{GREEN}}
+
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\begin{tikzpicture}
+			[st/.style={
+						rectangle,
+						minimum size=.5cm,
+						node distance=.5cm,
+						inner sep = 0cm,
+						draw=black,thick,fill=#1!50,
+						font=\sffamily
+					},
+				st/.default=gray]
+
+			\node (15)[st,                  ] {4}; \node (25) [st,       right of=15] {5}; \node (35) [st=white, right of= 25] { };
+			\node (14)[st=white,below of= 15] { };                                         \node (34) [st=white, below of= 35] { };
+			\node (13)[st,      below of= 14] {3};                                         \node (33) [st,       below of= 34] {6};
+			\node (12)[st,      below of= 13] {2};                                         \node (32) [st,       below of= 33] {7};
+			\node (11)[st=white,below of= 12] { }; \node (21) [st,       right of=11] {1}; \node (31) [st=white, right of= 21] { };
+
+		\end{tikzpicture}
+		\caption{\textsf{PINK}}
+
+	\end{subfigure}
+	\hfill
+	\caption{Las siete escalas base}\label{fig:the-seven-scales}
+\end{figure}
 
 Téngase en cuenta que en la escala \textsf{BLACK} el centro no es una nota, sino
 un espacio entre dos notas: no hay una nota central, sino un espacio central. La
 regularidad que percibe el oyente es la misma y la notación así lo refleja.
 
 Esta notación es muy sencilla, portable y práctica. De un solo vistazo, se puede
-observar la regularidad de las escalas del núcleo. Si se compara con la notación
+observar la regularidad de las escalas. Si se compara con la notación
 tradicional, donde no se aprecia regularidad alguna, se notará una increible
 mejoría en las posibilidades que ofrece para su análisis, estudio y asimilación.
 
@@ -1380,7 +1421,7 @@ Será mejor que dejemos de hablar de colores.
 
 Al representar los tritonos se observa que también ocupan un lugar regular en el
 esquema. Se hará mediante una linea que los una. Veamos la representación de las
-cinco escalas del núcleo con sus tritonos.
+cinco primeras escalas con sus tritonos.
 
 \begin{figure}[h]
 
@@ -1543,7 +1584,7 @@ cinco escalas del núcleo con sus tritonos.
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco escalas del núcleo, la vista \textsf{WHITE DU} y sus tritonos}\label{fig:the-six-scales-and-tritones}
+	\caption{Las cinco primeras escalas, la vista \textsf{WHITE DU} y sus tritonos}\label{fig:the-six-scales-and-tritones}
 \end{figure}
 
 
@@ -1570,7 +1611,7 @@ La sensación para el oyente de que la pila que está sonando está cerca o lejo
 \subsection{Las vistas compactas o colapsadas}
 \label{sec:vistas-por-colapso}
 
-La técnica de colapsar no produce una sola escala ni una única familia:
+La técnica de colapsar no produce una sola escala ni una única categoría:
 produce una colección de \emph{vistas}. Llamaremos \emph{vista
 compacta} o \emph{vista colapsada} a cada resultado de ocultar una de las dos
 notas de cada semitono que toca un tritono. La operación conserva el centro
@@ -1584,8 +1625,8 @@ UU} conserva las notas superiores de ambos semitonos, \texttt{WHITE DD} las
 inferiores, \texttt{WHITE DU} la inferior del primero y la superior del segundo,
 y \texttt{WHITE UD} la superior del primero y la inferior del segundo.
 
-En las escalas del núcleo bastan dos letras porque los dos semitonos que rodean
-un mismo tritono son equivalentes y se colapsan juntos. En \textsf{GREEN} y
+En las cinco primeras escalas bastan dos letras porque los dos semitonos que
+rodean un mismo tritono son equivalentes y se colapsan juntos. En \textsf{GREEN} y
 \textsf{PINK} los dos semitonos del mismo tritono no son equivalentes, así que
 usan una letra por semitono; sus ocho vistas se estudian al final de esta
 sección.
@@ -1732,9 +1773,9 @@ cambiar de padre se usa la modulación.
 \subsubsection{Vistas de \textsf{GREEN} y \textsf{PINK}}
 \label{sec:vistas-green-pink}
 
-Las dos escalas de la familia \texttt{3,3}, \textsf{GREEN} y \textsf{PINK}, que
-se presentan más adelante, tienen tres semitonos. En las escalas del núcleo, los
-dos semitonos que tocan un mismo tritono son equivalentes y se colapsan juntos:
+\textsf{GREEN} y \textsf{PINK}, que se presentan más adelante, tienen tres
+semitonos. En las cinco primeras escalas, los dos semitonos que tocan un mismo
+tritono son equivalentes y se colapsan juntos:
 por eso bastan dos letras, una por grupo. En \textsf{GREEN} y \textsf{PINK} los
 dos semitonos del mismo tritono no son equivalentes, así que se elige cada
 semitono por separado, con una letra por semitono en orden de aparición desde el
@@ -1758,7 +1799,7 @@ mixtas.
 
 La vista que conserva los dos tritonos es \texttt{GREEN UDD} en \textsf{GREEN}
 y \texttt{PINK UUD} en \textsf{PINK}. Las dos producen el mismo tetracordo,
-\texttt{D-F-Ab-B}, que es el esqueleto \texttt{3,3} completo. Sin la tercera
+\texttt{D-F-Ab-B}, que contiene las cuatro notas de los dos tritonos. Sin la tercera
 letra, ninguna de las dos escalas puede alcanzarlo.
 
 \begin{table}[H]
@@ -1940,7 +1981,7 @@ Algunas escalas tienen en alguno de sus grados una tercera ambigua, es decir, qu
 		\caption{\textsf{TONES}}
 
 	\end{subfigure}
-	\caption{Las cinco escalas del núcleo, la vista \textsf{WHITE DU} y terceras ambiguas}\label{fig:the-six-scales-and-ambiguous-thirds}
+	\caption{Las cinco primeras escalas, la vista \textsf{WHITE DU} y terceras ambiguas}\label{fig:the-six-scales-and-ambiguous-thirds}
 \end{figure}
 
 
@@ -2231,7 +2272,7 @@ Buscar más es un interesante ejercicio. Sería fantástico encontrar alguna, pe
 	\item Que las notas esten distribuidas sin agruparse en bloques
 \end{itemize}
 
-Cualquier combinación que se encuentre será simplemente una ordenación diferente de alguna de las cinco escalas del núcleo presentadas o de una de sus proyecciones (lo que sería un modo, recordemos). Si se hace girar en el esquema se llegará a ella. La familia \texttt{3,3} queda fuera de este argumento y se estudia a continuación. Vamos a intentar algunas:
+Cualquier combinación que se encuentre será simplemente una ordenación diferente de alguna de las cinco primeras escalas presentadas o de una de sus proyecciones (lo que sería un modo, recordemos). Si se hace girar en el esquema se llegará a ella. El argumento se refiere a esas cinco escalas; \textsf{GREEN} y \textsf{PINK} se estudian a continuación. Vamos a intentar algunas:
 
 \begin{figure}[H]
 	\begin{subfigure}{0.15\textwidth}
@@ -2373,23 +2414,22 @@ Cualquier combinación que se encuentre será simplemente una ordenación difere
 	\caption{Características de diferentes escalas musicales}\label{tab:escalas}
 \end{table}
 
-Esta conclusión se refiere a las escalas del núcleo. La familia \texttt{3,3} se
-estudia a continuación.
+Esta conclusión se refiere a las cinco primeras escalas. \textsf{GREEN} y
+\textsf{PINK} se estudian a continuación.
 
-\subsection{La familia \texttt{3,3}: \textsf{GREEN} y \textsf{PINK}}
+\subsection{\textsf{GREEN} y \textsf{PINK}}
 \label{sec:green-pink}
 
-El catálogo se amplía con la familia \texttt{3,3}: \textsf{GREEN}, que es la
-menor armónica, y \textsf{PINK}, que es la mayor armónica. No son modos entre
-sí: son dos escalas distintas que comparten el mismo esqueleto de tritonos.
+\textsf{GREEN} es la menor armónica y \textsf{PINK} la mayor armónica. No son
+modos entre
+sí: son dos escalas distintas que comparten la misma disposición de tritonos.
 
-Llamamos esqueleto \texttt{3,3} a la disposición en la que las cuatro notas que
-forman los dos tritonos quedan equiespaciadas cada tres semitonos. En
+En \textsf{GREEN} y \textsf{PINK}, las cuatro notas que forman los dos tritonos
+quedan equiespaciadas cada tres semitonos. En
 \textsf{GREEN} y \textsf{PINK} los tritonos son \texttt{D-Ab} y \texttt{F-B};
 entre las notas graves (\texttt{D} y \texttt{F}) hay tres semitonos, y entre
 las agudas (\texttt{Ab} y \texttt{B}) otros tres. En \textsf{RED} y
-\textsf{BLUE} el esqueleto es \texttt{4,2}: las cuatro notas alternan
-distancias de cuatro y dos semitonos.
+\textsf{BLUE} las cuatro notas alternan distancias de cuatro y dos semitonos.
 
 El grado 1 es el grado central, no la tónica estándar. En \textsf{GREEN} el
 centro es \texttt{F}; en \textsf{PINK}, \texttt{D}. Las figuras colocan ese
@@ -2447,7 +2487,7 @@ armónica y la mayor armónica de \texttt{C}, pero se nombran por su centro.
 		\end{tikzpicture}
 		\caption{\textsf{PINK} (mayor armónica, centro \texttt{D})}
 	\end{subfigure}
-	\caption{Las dos escalas de la familia \texttt{3,3}. Las líneas rojas unen
+	\caption{\textsf{GREEN} y \textsf{PINK}. Las líneas rojas unen
 	los tritonos \texttt{D-Ab} y \texttt{F-B}. \textsf{GREEN} está centrada en
 	\texttt{F}; \textsf{PINK}, en \texttt{D}.}
 	\label{fig:green-pink}
@@ -2466,7 +2506,7 @@ armónica y la mayor armónica de \texttt{C}, pero se nombran por su centro.
 			\bottomrule
 		\end{tabular}
 	}
-	\caption{Comparación de la familia \texttt{3,3} con \textsf{RED}.}
+	\caption{Comparación de \textsf{GREEN} y \textsf{PINK} con \textsf{RED}.}
 	\label{tab:green-pink}
 \end{table}
 
@@ -2648,7 +2688,7 @@ Por el momento, no disponemos de una fórmula matemática que nos permita calcul
 
 \subsection{Acordes de cada escala}
 
-Los acordes que se forman a partir de cada una de las cinco escalas del núcleo y de la vista \textsf{WHITE DU} son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos.
+Los acordes que se forman a partir de cada una de las cinco primeras escalas y de la vista \textsf{WHITE DU} son los mismos que se utilizan normalmente, pero sería necesario referirse a ellos sin tener que usar los inconsistentes nombre clásicos.
 
 Una posible notación para nombrar los acordes podría consistir en especificar solamente tres elementos:
 \begin{itemize}
@@ -4090,7 +4130,7 @@ Bien, hemos de considerar la dificultad intrínseca de cada escala como parte de
 
 Por contra, las pilas \texttt{24} y \texttt{42} hacen su aparición en \texttt{RED}. Tampoco parecen tener un significado especial, más que representar a su escala.
 
-Las cinco escalas del núcleo forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, la vista \texttt{WHITE DU} se obtiene colapsando los semitonos que tocan el tritono; agregando tritonos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}. \texttt{WHITE DU} aparece en el mapa por su carácter, pero no como escala padre: es una vista de \texttt{WHITE}; desde \texttt{BLUE} se llama \texttt{BLUE UD}. \texttt{GREEN} y \texttt{PINK} se estudian en la familia \texttt{3,3}.
+Las cinco primeras escalas forman un simple esquema donde se expresan tres conceptos básicos: \emph{claridad, oscuridad y desorientación}. Al analizar cada una, vimos que había diferencias en la cantidad de tritonos, la capacidad de orientación, la cantidad de pilas equívocas, etc. Consideramos la escala \texttt{WHITE} la escala central, la más equilibrada y completa. A partir de ella, la vista \texttt{WHITE DU} se obtiene colapsando los semitonos que tocan el tritono; agregando tritonos podemos llegar a \texttt{BLUE}, que es un poco desconcertante pero no tanto como \texttt{TONES}, o bién a \texttt{RED}, que es un poco más oscura, pero no tanto como \texttt{BLACK}. \texttt{WHITE DU} aparece en el mapa por su carácter, pero no como escala padre: es una vista de \texttt{WHITE}; desde \texttt{BLUE} se llama \texttt{BLUE UD}. \texttt{GREEN} y \texttt{PINK} completan el catálogo.
 
 \begin{figure}[H]
 	\begin{tikzpicture}
