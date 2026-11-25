@@ -21,18 +21,18 @@ Crea y mantiene diagramas TikZ para escalas, partículas y esquemas geométricos
 - Centro del grid: posición `23` (fila 3, columna 2)
 
 ## Escalas existentes
-| Escala | Notas | Tritonos | Simetría |
-|--------|-------|----------|----------|
-| WHITE | 7 | 1 | Centrada en nota |
-| BLUE | 7 | 2 | Centrada en nota |
-| RED | 7 | 2 | Centrada en nota |
-| BLACK | 8 | 4 | Centrada en espacio |
-| TONES | 6 | 3 | Centrada en nota |
-| GREEN | 7 | 2 | No simétrica (`3,3`), grado 1 = tónica estándar |
-| PINK | 7 | 2 | No simétrica (`3,3`), grado 1 = tónica estándar |
+| Escala | Notas | Tritonos | Centro |
+|--------|-------|----------|--------|
+| WHITE | 7 | 1 | Nota |
+| BLUE | 7 | 2 | Nota |
+| RED | 7 | 2 | Nota |
+| BLACK | 8 | 4 | Espacio |
+| TONES | 6 | 3 | Nota |
+| GREEN | 7 | 2 | Nota (F) |
+| PINK | 7 | 2 | Nota (D) |
 | WHITE DU | 5 | 0 | Vista compacta de WHITE (no escala padre) |
 
-Las vistas compactas de las escalas simétricas se nombran `<PADRE> UU/DD/DU/UD`. GREEN y PINK usan tres letras, una por semitono (`GREEN UDD`, `PINK UUD`, etc.), porque su simetría se rompe. En sus figuras, el grado 1 es el grado central (F en GREEN, D en PINK), no la tónica estándar.
+Las vistas compactas de WHITE, BLUE, RED y BLACK se nombran `<PADRE> UU/DD/DU/UD`. GREEN y PINK usan tres letras, una por semitono (`GREEN UDD`, `PINK UUD`, etc.), porque los dos semitonos del mismo tritono no son equivalentes. En sus figuras, el grado 1 es el grado central (F en GREEN, D en PINK), no la tónica estándar.
 
 ## Convenciones de Partículas
 - `\iparticle{1,2,3,0,1}` - inline particle
