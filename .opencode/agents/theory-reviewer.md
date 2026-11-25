@@ -33,10 +33,10 @@ Revisa coherencia teórica, terminología y estructura académica del manuscrito
 - **WHITE** - Diatónica (7 notas, 1 tritono, centrada en RE)
 - **BLUE** - Menor melódica (7 notas, 2 tritonos)
 - **RED** - Doble armónica mayor (7 notas, 2 tritonos)
-- **BLACK** - Disminuida (8 notas, 4 tritonos, centro en espacio)
-- **TONES** - Por tonos (6 notas, 3 tritonos)
 - **GREEN** - Menor armónica (7 notas, 2 tritonos)
 - **PINK** - Mayor armónica (7 notas, 2 tritonos)
+- **TONES** - Por tonos (6 notas, 3 tritonos)
+- **BLACK** - Disminuida (8 notas, 4 tritonos, centro en espacio)
 - **Vistas compactas** - WHITE, BLUE, RED y BLACK tienen cuatro vistas de dos letras `<PADRE> UU/DD/DU/UD` (U = up, D = down). GREEN y PINK usan tres letras, una por semitono, porque los dos semitonos del mismo tritono no son equivalentes: ocho vistas (`DDD`, `DDU`, `DUD`, `DUU`, `UDD`, `UDU`, `UUD`, `UUU`). Las cuatro de dos letras son el subconjunto en el que los dos semitonos del mismo tritono se mueven juntos. Varían en cardinalidad (3–5 notas en WHITE/BLUE/RED/BLACK; 4 en GREEN/PINK), semitonos y tritonos; nunca tienen más tritonos que el padre. `GREEN UDD` y `PINK UUD` conservan los dos tritonos y dan el tetracordo D-F-Ab-B.
 
 El frigio dominante es el quinto modo de GREEN, no una escala base. RED y BLUE alternan distancias de cuatro y dos semitonos; GREEN y PINK tienen las cuatro notas de los tritonos equiespaciadas cada tres semitonos.

@@ -6,7 +6,7 @@ This document presents a new framework for understanding musical harmony, based 
 
 **Key Ideas:**
 
-* **Scale Representation:** The notation of musical scales is redefined, using their central note and a numerical system to represent their degrees. Seven base scales are distinguished (WHITE, BLUE, RED, BLACK, TONES, GREEN and PINK), as well as compact views with two letters (`WHITE UU`, `WHITE DD`, `WHITE DU`, `WHITE UD`, etc.) and three letters in GREEN and PINK (`GREEN UDD`, `PINK UUD`, etc.). FULL is the complete chromatic set.
+* **Scale Representation:** The notation of musical scales is redefined, using their central note and a numerical system to represent their degrees. Seven base scales are distinguished (WHITE, BLUE, RED, GREEN, PINK, TONES and BLACK), as well as compact views with two letters (`WHITE UU`, `WHITE DD`, `WHITE DU`, `WHITE UD`, etc.) and three letters in GREEN and PINK (`GREEN UDD`, `PINK UUD`, etc.). FULL is the complete chromatic set.
 * **The Tritone as an Element of Tension:** The role of the tritone as a central element of tension and uncertainty in music is explored.
 * **Triads as Building Blocks:** A new system is proposed for naming and understanding triads, using numbers to represent their intervals. The emotions evoked by different triads are analyzed.
 * **Modulation as a Change of Tritonal Center:** It is explained how modulation is based on the addition of new tritonal centers, without changing the original tonal center. Tritones are read oriented by their order in the scale, and inversion (KEY + 6) is treated as a separate operation.

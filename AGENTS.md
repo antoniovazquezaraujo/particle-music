@@ -37,10 +37,10 @@ bash scripts/clean.sh
 - **WHITE** - Diatonic (7 notes, 1 tritone, centered on RE)
 - **BLUE** - Melodic minor (7 notes, 2 tritones)
 - **RED** - Double harmonic major (7 notes, 2 tritones)
-- **BLACK** - Diminished (8 notes, 4 tritones, space-centred)
-- **TONES** - Whole tone (6 notes, 3 tritones)
 - **GREEN** - Harmonic minor (7 notes, 2 tritones)
 - **PINK** - Harmonic major (7 notes, 2 tritones)
+- **TONES** - Whole tone (6 notes, 3 tritones)
+- **BLACK** - Diminished (8 notes, 4 tritones, space-centred)
 - **FULL** - Complete chromatic set (implementation limit, no tonal center of its own)
 
 WHITE, BLUE, RED and BLACK use two-letter views (U = up, D = down): `<PARENT> <UU|DD|DU|UD>`. They vary in cardinality, semitones and surviving tritones: WHITE/BLUE give 5-note views (some keep one or two tritones), RED gives 3/4-note views with no tritones, BLACK gives 4-note views with two tritones, TONES is the identity. No view has more tritones than its parent.
